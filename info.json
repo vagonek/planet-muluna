@@ -2,14 +2,19 @@
   "name": "[internal-mod-name]",
   "version": "0.0.0",
   "title": "[MOD DISPLAY NAME]",
-  "author": "[YOUR MODS.FACTORIO.COM USERNAME]",
-  "homepage": "[HOMEPAGE/REPO URL]",
+  "author": "MeteorSwarm",
+  "homepage": "https://github.com/nicholasgower/planet-muluna",
   "description": "[SHORT DESCRIPTION]",
   "factorio_version": "2.0",
   "dependencies": [
-    "base"
+    "base >=2.0.28",
+    "space-age",
+    "quality",
+    "elevated-rails",
+    "alien-biomes-graphics >=0.7.0",
+    "flib"
   ],
-  "quality_required": false,
+  "quality_required": true,
   "rail_bridges_required": false,
   "space_travel_required": false,
   "spoiling_required": false,
