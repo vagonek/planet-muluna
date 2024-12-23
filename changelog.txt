@@ -1,0 +1,8 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2024-12-23
+  Info:
+    - Defined name, description, and license.
+  Bugfixes:
+    - Added internal name to info.json
+    - Fix info.json dependencies syntax
