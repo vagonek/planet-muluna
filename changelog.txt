@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.0
+Date: 2024-12-24
+  Features:
+    - Implemented initial planet properties, terrain, and resources
+    - Modified vanilla recipes to justify existence of Muluna
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2024-12-23
   Info:
