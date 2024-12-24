@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.1.1
+Date: 2024-12-24
+  Bugfixes:
+    - Disabled dynamic modification of science pack recipe surface conditions when recipe not found.
+---------------------------------------------------------------------------------------------------
 Version: 1.1.0
 Date: 2024-12-24
   Features:
