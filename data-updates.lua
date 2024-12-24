@@ -93,16 +93,18 @@ data.raw.recipe["space-science-pack"].results[1].amount=1
 
 for _,pack in pairs(data.raw["tool"]) do
     local recipe = data.raw["recipe"][pack.name]
-    if recipe.surface_conditions == nil then
-        recipe.surface_conditions={
-            {property="gravity",
-                min=0.2,
-                --max=0.1,
-            },
-            {property="pressure",
-                min=55,
-                --max=50,
-            },
-        }
+    if recipe then
+        if recipe.surface_conditions == nil then
+            recipe.surface_conditions={
+                {property="gravity",
+                    min=0.2,
+                    --max=0.1,
+                },
+                {property="pressure",
+                    min=55,
+                    --max=50,
+                },
+            }
+        end
     end
 end
