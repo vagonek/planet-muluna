@@ -85,4 +85,14 @@ local bot_power=0.2
 
 muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*bot_power
 
-data:extend{muluna}
+local muluna_connection = {
+  type="space-connection",
+  name="nauvis-muluna",
+  from = "nauvis",
+  to = "muluna",
+  length = 1000
+
+}
+
+
+data:extend{muluna,muluna_connection}

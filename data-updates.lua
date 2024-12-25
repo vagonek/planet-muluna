@@ -108,3 +108,10 @@ for _,pack in pairs(data.raw["tool"]) do
         end
     end
 end
+
+for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to technologies without icon
+    if tech.icon==nil then
+        tech.icon=data.raw["technology"]["space-science-pack"].icon
+    end
+end
+
