@@ -21,8 +21,10 @@ local ten_pressure_condition =
 }
 
 
-
-
+data.raw["recipe"]["thruster-fuel"].surface_conditions=nil
+data.raw["recipe"]["thruster-oxidizer"].surface_conditions=nil
+data.raw["recipe"]["advanced-thruster-fuel"].surface_conditions=nil
+data.raw["recipe"]["advanced-thruster-oxidizer"].surface_conditions=nil
 
 data.raw["fluid-turret"]["flamethrower-turret"].surface_conditions = ten_pressure_condition
 data.raw["furnace"]["stone-furnace"].surface_conditions = ten_pressure_condition
