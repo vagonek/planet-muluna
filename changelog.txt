@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 2024-12-25
+  Features:
+    - Added Space boiler(entity only), which consumes oxidizer instead of water and can operate in Space and on Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.3.0
 Date: 2024-12-25
   Features:
