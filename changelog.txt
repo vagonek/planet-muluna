@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.1
+Date: 2024-12-25
+  Bugfixes:
+    - Planet code now removes vanilla entities removed by Alien Biomes from world generationwhen it is installed. Temporary fix until Alien Biomes entities or custom entities can be implemented.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.0
 Date: 2024-12-25
   Features:
