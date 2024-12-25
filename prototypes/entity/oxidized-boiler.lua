@@ -15,9 +15,11 @@ data.raw["fluid"]["thruster-oxidizer"].fuel_value=nil
 
 local space_boiler=table.deepcopy(data.raw["boiler"]["boiler"])
 space_boiler.name="space-boiler"
+space_boiler.surface_conditions=nil
 space_boiler.fluid_box.filter="thruster-oxidizer"
 --space_boiler.energy_source.effectivity=64/60
-space_boiler.energy_consumption = "1.8MW",
+space_boiler.energy_consumption = "1.8MW"
+space_boiler.minable.result="space-boiler"
 
 
 data:extend{space_boiler}

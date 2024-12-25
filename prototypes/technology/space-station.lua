@@ -75,19 +75,44 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "metallic-asteroid-crushing"
             },
+            
             {
                 type="unlock-recipe",
                 recipe="carbonic-asteroid-crushing"
-            },
-            {
-                type="unlock-recipe",
-                recipe="oxide-asteroid-crushing"
             }
         },
         prerequisites = {
             "space-platform-thruster"
         },
         icon=data.raw["item"]["crusher"].icon
+    },
+    {
+        type = "technology",
+        name = "space-boiler",
+        research_trigger = {
+            type = "mine-entity",
+            entity = "oxide-asteroid-chunk"
+        },
+        localised_name={"entity-name.space-boiler"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "space-boiler"
+            },
+            {
+                type="unlock-recipe",
+                recipe="oxide-asteroid-crushing"
+            },
+            {
+                type="unlock-recipe",
+                recipe="ice-melting"
+            },
+        },
+        prerequisites = {
+            "space-platform-thruster"
+        },
+        icon=data.raw["technology"]["steam-power"].icon,
+        icon_size=data.raw["technology"]["steam-power"].icon_size,
     }
 
 }
