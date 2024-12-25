@@ -13,7 +13,8 @@
     "elevated-rails",
     "alien-biomes-graphics >= 0.7.0",
     "flib",
-    "aai-signal-transmission"
+    "aai-signal-transmission",
+    "? alien-biomes"
   ],
   "quality_required": true,
   "rail_bridges_required": false,

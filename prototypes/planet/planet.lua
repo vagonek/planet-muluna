@@ -1,3 +1,4 @@
+rro=require("lib.remove-replace-object")
 local nauvis=data.raw["planet"]["nauvis"]
 local nauvis_gen=nauvis.map_gen_settings
 local map_gen={
@@ -60,6 +61,12 @@ local map_gen={
 
 
 }
+if mods["alien-biomes"] then
+  map_gen.autoplace_settings["decorative"]=nil
+  map_gen.autoplace_settings["entity"].settings["big-sand-rock"]=nil
+  map_gen.autoplace_settings["entity"].settings["huge-rock"]=nil
+  map_gen.autoplace_settings["entity"].settings["big-rock"]=nil
+end
 
 
 local muluna= {
