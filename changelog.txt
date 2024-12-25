@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.0
+Date: 2024-12-25
+  Features:
+    - Further rearranged tech tree, added space connection and technological path to reach Muluna(Still not playable without cheats, but we're getting close to that)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.0
 Date: 2024-12-25
   Features:
