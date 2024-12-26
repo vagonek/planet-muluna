@@ -80,7 +80,7 @@ end
 for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
     local tech= table.deepcopy(rocket_prod)
     tech.name=rocket_prod.name .. "-".. planet_name[i]
-    
+    tech.localised_name={"",{"technology-name.rocket-part-productivity-"..planet_name[i]}," ",tostring(i)}
     rro.replace(tech.prerequisites,"space-science-pack",science_pack[i])
     --table.insert(tech.prerequisites,pack)
     table.insert(tech.unit.ingredients,{science_pack[i],1})
