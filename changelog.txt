@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.9
+Date: 2024-12-26
+  Bugfixes:
+    - Reverted oxidizer default temperature to default value, because changing it seems to break thrusters.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.8
 Date: 2024-12-26
   Bugfixes:
