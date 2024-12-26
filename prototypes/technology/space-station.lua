@@ -1,3 +1,20 @@
+local function technology_icon_constant_planet(technology_icon,icon_size)
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = 1920,
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-planet.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50}
+      }
+    }
+    return icons
+  end
+
 data:extend{
     -- {
     --     type="technology",
@@ -82,7 +99,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "space-platform-thruster"
+             "planet-discovery-muluna"
         },
         icon=data.raw["item"]["crusher"].icon
     },
@@ -109,10 +126,35 @@ data:extend{
             },
         },
         prerequisites = {
-            "space-platform-thruster"
+            "planet-discovery-muluna"
         },
         icon=data.raw["technology"]["steam-power"].icon,
         icon_size=data.raw["technology"]["steam-power"].icon_size,
+    },
+    {
+        type = "technology",
+        name = "planet-discovery-muluna",
+        research_trigger = {
+            type = "build-entity",
+            entity = "thruster"
+        },
+        effects = {
+            {
+                type="unlock-space-location",
+                space_location="muluna"
+            }
+        },
+        prerequisites = {
+            "space-platform-thruster"
+        },
+        icons = technology_icon_constant_planet("__planet-muluna__/graphics/moon-icon.png",1920),
+        -- icons={
+        --     {
+        --         icon=data.raw["planet"]["muluna"].icon,
+        --         icon_size=data.raw["planet"]["muluna"].icon_size,
+        --     }
+        -- }
+        
     }
 
 }
