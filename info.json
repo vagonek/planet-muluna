@@ -14,7 +14,8 @@
     "alien-biomes-graphics >= 0.7.0",
     "flib",
     "aai-signal-transmission",
-    "? alien-biomes"
+    "? alien-biomes",
+    "hurricane-graphics"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
