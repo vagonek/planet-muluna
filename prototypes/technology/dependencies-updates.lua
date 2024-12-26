@@ -40,7 +40,8 @@ rro.replace(rocket_prod.unit.ingredients,{"cryogenic-science-pack",1},{"space-sc
 rro.replace(rocket_prod.prerequisites,"cryogenic-science-pack","space-science-pack")
 rocket_prod.unit.count=500
 rocket_prod.unit.count_formula=nil
-
+--rocket_prod.localised_name={"technology-name.rocket-part-productivity-muluna"}
+rocket_prod.localised_name={"",{"technology-name.rocket-part-productivity-muluna"}," ",tostring(1)}
 local science_pack = {
     "metallurgic-science-pack",
     "agricultural-science-pack",
@@ -62,6 +63,7 @@ for i = 2,4,1 do --Lunar rocket prod 2-4
     local tech = table.deepcopy(rocket_prod)
     tech.name=rocket_prod.name .. "-" .. tostring(i)
     tech.unit.count=i*rocket_prod.unit.count
+    tech.localised_name={"",{"technology-name.rocket-part-productivity-muluna"}," ",tostring(i)}
     if i ~=2 then
         tech.prerequisites={rocket_prod.name .. "-" .. tostring(i-1)}
     else 
@@ -78,6 +80,7 @@ end
 for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
     local tech= table.deepcopy(rocket_prod)
     tech.name=rocket_prod.name .. "-".. planet_name[i]
+    
     rro.replace(tech.prerequisites,"space-science-pack",science_pack[i])
     --table.insert(tech.prerequisites,pack)
     table.insert(tech.unit.ingredients,{science_pack[i],1})
