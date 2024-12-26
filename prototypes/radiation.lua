@@ -11,9 +11,9 @@ local radiation={
 
 for _,drill in pairs(data.raw["mining-drill"]) do
     if drill.emissions_per_second then
-        drill.emissions_per_second["radiation"]=drill.mining_speed*0.01
+        drill.emissions_per_second["radiation"]=drill.mining_speed*0.1
     else
-        drill.emissions_per_second={["radiation"]=drill.mining_speed*0.01}
+        drill.emissions_per_second={["radiation"]=drill.mining_speed*0.1}
     end
     
 end

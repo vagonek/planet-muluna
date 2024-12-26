@@ -72,14 +72,21 @@ end
 local muluna= {
     type="planet",
     name="muluna",
-    distance=nauvis.distance*1.05,
+    distance=nauvis.distance*1.0,
     draw_orbit=false,
     solar_power_in_space=nauvis.solar_power_in_space,
     auto_save_on_first_trip=true,
     order=nauvis.order .. "a",
-    magnitude=nauvis.magnitude/2,
+    magnitude=nauvis.magnitude*3/4,
     orientation=nauvis.orientation-0.02,
-    icon=nauvis.icon,
+    -- icons={
+    --   {
+    --     icon="__planet-muluna__/graphics/moon-icon.png",
+    --   }
+    -- },
+    icon="__planet-muluna__/graphics/moon-icon.png",
+    icon_size = 1920,
+    subgroup=nauvis.subgroup,
     pollutant_type="radiation",
     surface_properties={
         ["solar-power"]=100,
@@ -98,9 +105,13 @@ local muluna_connection = {
   name="nauvis-muluna",
   from = "nauvis",
   to = "muluna",
+  subgroup=data.raw["space-connection"]["nauvis-vulcanus"].subgroup,
   length = 1000
 
 }
 
+data.raw["space-connection"]["nauvis-vulcanus"].from="muluna"
+data.raw["space-connection"]["nauvis-gleba"].from="muluna"
+data.raw["space-connection"]["nauvis-fulgora"].from="muluna"
 
 data:extend{muluna,muluna_connection}
