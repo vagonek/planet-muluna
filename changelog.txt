@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.0
+Date: 2024-12-26
+  Features:
+    - Added radiation pollution type, made all mining drills produce pollution for testing purposes, made radiation pollutant type for Muluna
+---------------------------------------------------------------------------------------------------
 Version: 1.5.0
 Date: 2024-12-25
   Features:
