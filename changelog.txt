@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.11
+Date: 2024-12-26
+  Compatibility:
+    - Added startup setting "override-space-connection" to make connections to Nauvis detour to Muluna. This feature has moved from mandatory to optional.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.10
 Date: 2024-12-26
   Locale:
