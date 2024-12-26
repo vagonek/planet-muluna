@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.10
+Date: 2024-12-26
+  Locale:
+    - Updated Russian localisation(Thank you Astorin) https://github.com/nicholasgower/planet-muluna/pull/9/commits/7d487d6c9d3249fa914279d1274da8385af64142
+---------------------------------------------------------------------------------------------------
 Version: 1.6.9
 Date: 2024-12-26
   Bugfixes:
