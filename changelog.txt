@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2024-12-26
+  Features:
+    - Added "Moon Discovery Muluna" technology, addressing https://github.com/nicholasgower/planet-muluna/issues/11
+---------------------------------------------------------------------------------------------------
 Version: 1.6.12
 Date: 2024-12-26
   Bugfixes:
