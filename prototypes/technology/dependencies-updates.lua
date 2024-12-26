@@ -119,8 +119,10 @@ rro.remove(space_platform.effects,{type="unlock-recipe",recipe="aai-signal-recei
 rro.remove(data.raw["technology"]["aai-signal-transmission"].effects,{type="unlock-recipe",recipe="aai-signal-sender"})
 data.raw["technology"]["aai-signal-transmission"].unit=nil
 data.raw["technology"]["aai-signal-transmission"].research_trigger = {
-    type="send-item-to-orbit",
-    item="aai-signal-sender"
+    --type="send-item-to-orbit",
+    type="build-entity",
+    --item="aai-signal-sender"
+    entity="aai-signal-sender"
 }
 data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
