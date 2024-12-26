@@ -80,6 +80,7 @@ local muluna= {
     magnitude=nauvis.magnitude/2,
     orientation=nauvis.orientation-0.02,
     icon=nauvis.icon,
+    pollutant_type="radiation",
     surface_properties={
         ["solar-power"]=100,
         ["pressure"]=50,
