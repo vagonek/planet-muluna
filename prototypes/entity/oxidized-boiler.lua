@@ -8,7 +8,7 @@ data.raw["fluid"]["thruster-oxidizer"].heat_capacity=tostring(heat/15) .. str
 data.raw["fluid"]["thruster-oxidizer"].default_temperature=data.raw["fluid"]["water"].default_temperature
 --data.raw["fluid"]["thruster-fuel"].fuel_value=
 --data.raw["fluid"]["thruster-fuel"].fuel_value=data.raw["fluid"]["thruster-fuel"].fuel_value+data.raw["fluid"]["thruster-oxidizer"].fuel_value
-data.raw["fluid"]["thruster-oxidizer"].fuel_value=nil
+--data.raw["fluid"]["thruster-oxidizer"].fuel_value=nil
 
 
 
