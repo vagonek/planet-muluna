@@ -5,7 +5,9 @@ local water_capacity=data.raw["fluid"]["water"].heat_capacity
 local heat,str=data_util.get_energy_value(water_capacity)
 
 data.raw["fluid"]["thruster-oxidizer"].heat_capacity=tostring(heat/15) .. str
-data.raw["fluid"]["thruster-oxidizer"].default_temperature=data.raw["fluid"]["water"].default_temperature
+--data.raw["fluid"]["thruster-oxidizer"].default_temperature=data.raw["fluid"]["water"].default_temperature
+--data.raw["fluid"]["thruster-fuel"].default_temperature=data.raw["fluid"]["water"].default_temperature
+
 --data.raw["fluid"]["thruster-fuel"].fuel_value=
 --data.raw["fluid"]["thruster-fuel"].fuel_value=data.raw["fluid"]["thruster-fuel"].fuel_value+data.raw["fluid"]["thruster-oxidizer"].fuel_value
 --data.raw["fluid"]["thruster-oxidizer"].fuel_value=nil
