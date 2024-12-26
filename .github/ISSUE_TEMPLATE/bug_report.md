@@ -7,7 +7,7 @@ assignees: ''
 
 ---
 
-**Factorio & Maraxsis version number**
+**Factorio & Muluna version number**
 Please post both the Factorio and Muluna version numbers here. If relevant post the version number of other mods used.
 
 **Describe the bug**
@@ -15,8 +15,8 @@ A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior from a new save:
-1. Start a new save with Maraxsis installed.
-2. Run command `/cheat maraxsis`
+1. Start a new save with Muluna installed.
+2. Run command `/cheat muluna`
 3. Click on '....'
 4. Scroll down to '....'
 5. See error
