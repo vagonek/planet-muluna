@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.6
+Date: 2024-12-26
+  Bugfixes:
+    - Changed "Signal Transmission" technology from "send-item-to-orbit" trigger to "build-entity" trigger to get around engine bug rendering "send-item-to-orbit" trigger nonfunctional.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.5
 Date: 2024-12-26
   Locale:
