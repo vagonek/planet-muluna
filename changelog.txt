@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.1
+Date: 2024-12-26
+  Graphics:
+    - Added mod thumbnail and planet sprite. Base textures are AI-generated, and textures were expanded, spherized, and pasted over a black background to create the thumbnail.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.0
 Date: 2024-12-26
   Features:
