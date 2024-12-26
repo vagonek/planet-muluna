@@ -110,7 +110,7 @@ local muluna_connection = {
 
 }
 
-if settings.startup["override-space-connection"] then
+if settings.startup["override-space-connection"]==true then
   data.raw["space-connection"]["nauvis-vulcanus"].from="muluna"
   data.raw["space-connection"]["nauvis-gleba"].from="muluna"
   data.raw["space-connection"]["nauvis-fulgora"].from="muluna"
