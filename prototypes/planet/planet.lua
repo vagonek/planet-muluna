@@ -110,8 +110,11 @@ local muluna_connection = {
 
 }
 
-data.raw["space-connection"]["nauvis-vulcanus"].from="muluna"
-data.raw["space-connection"]["nauvis-gleba"].from="muluna"
-data.raw["space-connection"]["nauvis-fulgora"].from="muluna"
+if settings.startup["override-space-connection"] then
+  data.raw["space-connection"]["nauvis-vulcanus"].from="muluna"
+  data.raw["space-connection"]["nauvis-gleba"].from="muluna"
+  data.raw["space-connection"]["nauvis-fulgora"].from="muluna"
+end
+
 
 data:extend{muluna,muluna_connection}
