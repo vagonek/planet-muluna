@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.8
+Date: 2024-12-26
+  Bugfixes:
+    - Rolled back change to oxidizer fuel value, to fix issues related to platforms not moving as expected. This resulted in no changes to oxidizer behavior in Space Boilers.
+---------------------------------------------------------------------------------------------------
 Version: 1.6.7
 Date: 2024-12-26
   Bugfixes:
