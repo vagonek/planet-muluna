@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 2024-12-27
+  Bugfixes:
+    - Changed Space boiler to require water instead of oxidizer(Temporary measure until better version of space boiler is available based on Hurricane's Thermal Plant sprite.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.1
 Date: 2024-12-27
   Locale:
