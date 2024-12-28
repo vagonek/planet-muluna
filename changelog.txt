@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 2024-12-28
+  Locale:
+    - Added a large number of currently-unused locale strings to allow localisers to localise these strings before they are used.
+---------------------------------------------------------------------------------------------------
 Version: 1.7.3
 Date: 2024-12-28
   Locale:
