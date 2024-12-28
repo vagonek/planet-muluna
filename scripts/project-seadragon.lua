@@ -9,7 +9,8 @@ script.on_event(defines.events.on_built_entity, function(event)
     if prototype.type ~= "rocket-silo" then return end
     if not prototype.crafting_categories["rocket-building"] then return end
 
-    if entity.get_recipe() then return end
+    --if entity.get_recipe() or mods["maraxsis"] then return end
+    if entity.surface.name == "maraxsis" then return end
     if entity.surface.name == "muluna" then
         
         entity.recipe_locked = false

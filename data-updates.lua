@@ -117,3 +117,26 @@ for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to techno
     end
 end
 
+if not(mods["maraxsis"]) then
+    data:extend {{
+        type = "item-subgroup",
+        name = "maraxsis-atmosphere-barreling",
+        order = "ff",
+        group = "intermediate-products",
+    }}
+    
+    for recipe, category in pairs {
+        ["empty-maraxsis-atmosphere-barrel"] = "chemistry",
+        ["maraxsis-atmosphere-barrel"] = "chemistry",
+        --["empty-maraxsis-liquid-atmosphere-barrel"] = "cryogenics",
+        --["maraxsis-liquid-atmosphere-barrel"] = "cryogenics",
+    } do
+        local recipe = data.raw.recipe[recipe]
+        recipe.hidden_in_factoriopedia = false
+        recipe.category = category
+        recipe.subgroup = "maraxsis-atmosphere-barreling"
+    end
+    data.raw.recipe["empty-maraxsis-atmosphere-barrel"].results[1].temperature = 25
+    
+end
+
