@@ -15,7 +15,8 @@
     "flib",
     "aai-signal-transmission",
     "? alien-biomes",
-    "hurricane-graphics"
+    "hurricane-graphics",
+    "? maraxsis"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
