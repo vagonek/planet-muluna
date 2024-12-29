@@ -67,8 +67,17 @@ data.raw.recipe["rocket-part"].ingredients =
   {type = "item", name = "low-density-structure", amount = 2},
   {type = "item", name = "rocket-fuel", amount = 2}
 }
+if mods["maraxsis"] then
+    data.raw.recipe["rocket-part"].ingredients =
+    {
+    {type = "item", name = "processing-unit", amount = 2},
+    {type = "item", name = "low-density-structure", amount = 2},
+    {type = "item", name = "rocket-fuel", amount = 2}
+    }
+end
 
-rocket_part_muluna.enabled=true
+
+
 
 data:extend{rocket_part_muluna}
 
