@@ -86,7 +86,10 @@ local muluna= {
     -- },
     icon="__planet-muluna__/graphics/moon-icon.png",
     icon_size = 1920,
+    starmap_icon="__planet-muluna__/graphics/moon-icon.png",
+    starmap_icon_size = 1920,
     subgroup=nauvis.subgroup,
+
     pollutant_type="radiation",
     surface_properties={
         ["solar-power"]=100,
