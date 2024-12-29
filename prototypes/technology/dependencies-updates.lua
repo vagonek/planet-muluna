@@ -102,6 +102,16 @@ for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
 end
 
 rocket_prod_aquilo.name="rocket-part-productivity-aquilo"
+rro.replace(data.raw["cargo-landing-pad"]["cargo-landing-pad"].surface_conditions,
+{
+    property = "gravity",
+    min = 1,
+},
+{
+    property = "gravity",
+    min = 0.1,
+}
+)
 rocket_prod_aquilo.localised_name={"technology-name.rocket-part-productivity"}
 table.insert(rocket_prod_aquilo.unit.ingredients,{"space-science-pack",1})
 -- for entry in ipairs(t2_planet_rocket_prod) do
