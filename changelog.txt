@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.3
+Date: 2024-12-29
+  Bugfixes:
+    - Added starmap icon to Muluna to make it visible in "Visible Planets in Space"
+---------------------------------------------------------------------------------------------------
+Version: 1.9.2
+Date: 2024-12-29
+  Compatibility:
+    - MT-lib Compatibility
+---------------------------------------------------------------------------------------------------
+Version: 1.9.1
+Date: 2024-12-29
+  Bugfixes:
+    - Moved planet discovery technologies for Vulcanus, Gleba, and Fulgora to have Asteroid collectors as a prerequisite.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.0
+Date: 2024-12-29
+  Features:
+    - Added "Thruster fuel from rocket fuel" recipe
+---------------------------------------------------------------------------------------------------
 Version: 1.8.0
 Date: 2024-12-28
   Features:
@@ -22,12 +42,12 @@ Date: 2024-12-28
 Version: 1.7.2
 Date: 2024-12-27
   Bugfixes:
-    - Changed Space boiler to require water instead of oxidizer(Temporary measure until better version of space boiler is available based on Hurricane's Thermal Plant sprite.
+    - Changed Space boiler to require water instead of oxidizer(Temporary measure until better version of space boiler is available based on Hurricane's Thermal Plant sprite).
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.1
 Date: 2024-12-27
   Locale:
-    - Update Russian Locale(by Astorin)
+    - Updated Russian Locale(by Astorin)
 ---------------------------------------------------------------------------------------------------
 Version: 1.7.0
 Date: 2024-12-26

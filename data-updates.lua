@@ -67,8 +67,17 @@ data.raw.recipe["rocket-part"].ingredients =
   {type = "item", name = "low-density-structure", amount = 2},
   {type = "item", name = "rocket-fuel", amount = 2}
 }
+if mods["maraxsis"] then
+    data.raw.recipe["rocket-part"].ingredients =
+    {
+    {type = "item", name = "processing-unit", amount = 2},
+    {type = "item", name = "low-density-structure", amount = 2},
+    {type = "item", name = "rocket-fuel", amount = 2}
+    }
+end
 
-rocket_part_muluna.enabled=true
+
+
 
 data:extend{rocket_part_muluna}
 
@@ -89,6 +98,10 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     max=50,
     },
 }
+
+rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
+rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
+rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
 data.raw.recipe["space-science-pack"].results[1].amount=1
 
