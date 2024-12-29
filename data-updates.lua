@@ -99,6 +99,10 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     },
 }
 
+rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
+rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
+rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
+
 data.raw.recipe["space-science-pack"].results[1].amount=1
 
 
