@@ -8,3 +8,4 @@ require("prototypes.radiation")
 require("prototypes.entity.oxidized-boiler")
 require("prototypes.atmosphere")
 require("compat.maraxsis")
+if mods["MT-lib"] then require("compat.MT-lib") end
