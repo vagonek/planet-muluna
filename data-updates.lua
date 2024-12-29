@@ -1,4 +1,4 @@
-
+local rro=require("lib.remove-replace-object")
 for k, type in ipairs({"furnace"}) do
     for i,entity in ipairs(data.raw[type]) do
         if entity.surface_conditions then
@@ -153,3 +153,18 @@ if not(mods["maraxsis"]) then
     
 end
 
+local planets={
+    "arrakis",
+    "tiber"
+}
+
+for _,planet in pairs(planets) do
+    if data.raw["technology"]["planet-discovery-"..planet] then
+        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
+    end
+    
+end
+
+data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
