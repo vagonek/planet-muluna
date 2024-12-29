@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.8
+Date: 2024-12-29
+  Bugfixes:
+    - Moved "Planet Discovery Arrakis" and "Planet Discovery Tiber" technologies to have "Asteroid Crusher" as prerequisite when the relevant mod is installed.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.7
 Date: 2024-12-29
   Locale:
