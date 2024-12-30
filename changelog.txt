@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.10
+Date: 2024-12-30
+  Bugfixes:
+    - Adjusted prerequisites for rocket part productivity technologies.
+  Changes:
+    - Added support for Tiered-Solar-System. https://mods.factorio.com/mod/Tiered-Solar-System
+---------------------------------------------------------------------------------------------------
 Version: 1.9.9
 Date: 2024-12-30
   Bugfixes:
