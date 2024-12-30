@@ -165,6 +165,23 @@ for _,planet in pairs(planets) do
     
 end
 
-data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
-data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
-data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
+--data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
+
+data.raw["tool"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["recipe"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["tool"]["space-science-pack"].icons=nil
+
+local nauvis=data.raw["planet"]["nauvis"]
+
+
+if mods["Tiered-Solar-System"] then
+    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.01
+    data.raw["planet"]["muluna"].distance=nauvis.distance*0.90
+else
+    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.02
+    data.raw["planet"]["muluna"].distance=nauvis.distance*1.0
+end
+
+

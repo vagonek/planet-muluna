@@ -72,13 +72,12 @@ end
 local muluna= {
     type="planet",
     name="muluna",
-    distance=nauvis.distance*1.0,
+    
     draw_orbit=false,
     solar_power_in_space=nauvis.solar_power_in_space,
     auto_save_on_first_trip=true,
     order=nauvis.order .. "a",
-    magnitude=nauvis.magnitude*3/4,
-    orientation=nauvis.orientation-0.02,
+    
     -- icons={
     --   {
     --     icon="__planet-muluna__/graphics/moon-icon.png",
@@ -89,7 +88,7 @@ local muluna= {
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
     subgroup=nauvis.subgroup,
-
+    magnitude=nauvis.magnitude*3/4,
     pollutant_type="radiation",
     surface_properties={
         ["solar-power"]=100,
@@ -99,6 +98,7 @@ local muluna= {
     },
     map_gen_settings=map_gen
 }
+--Muluna's position is defined relative to Nauvis in data-updates.lua.
 local bot_power=0.2
 
 muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*bot_power
@@ -118,6 +118,8 @@ if settings.startup["override-space-connection"]==true then
   data.raw["space-connection"]["nauvis-gleba"].from="muluna"
   data.raw["space-connection"]["nauvis-fulgora"].from="muluna"
 end
+
+
 
 
 data:extend{muluna,muluna_connection}
