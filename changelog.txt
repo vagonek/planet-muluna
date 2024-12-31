@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.14
+Date: 2024-12-31
+  Bugfixes:
+    - Changed new rocket productivity recipes to apply to Maraxsis rocket part recipe.
+    - Doubled cost of Maraxsis rocket part recipe to be in line with vanilla rocket part cost.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.13
 Date: 2024-12-31
   Bugfixes:
