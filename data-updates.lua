@@ -184,4 +184,8 @@ else
     data.raw["planet"]["muluna"].distance=nauvis.distance*1.0
 end
 
+for _,silo in pairs(data.raw["rocket-silo"]) do
+    silo.crafting_speed=silo.crafting_speed/2
+end
+
 
