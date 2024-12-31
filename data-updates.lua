@@ -188,4 +188,18 @@ for _,silo in pairs(data.raw["rocket-silo"]) do
     silo.crafting_speed=silo.crafting_speed/2
 end
 
+if mods["maraxsis"] then
+    for _,tech in pairs(data.raw["technology"]) do
+        if string.find(tech.name,"rocket-part-productivity-",0,true) then
+            table.insert(tech.effects,{
+                type = "change-recipe-productivity",
+                recipe = "maraxsis-rocket-part",
+                change = 0.1,
+                hidden = false
+            })
+        end
+    end 
+end
+
+
 
