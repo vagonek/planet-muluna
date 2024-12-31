@@ -84,6 +84,8 @@ local muluna= {
     --   }
     -- },
     icon="__planet-muluna__/graphics/moon-icon.png",
+    orientation=nauvis.orientation-0.02,
+    distance=nauvis.distance*1.0,
     icon_size = 1920,
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
@@ -98,7 +100,7 @@ local muluna= {
     },
     map_gen_settings=map_gen
 }
---Muluna's position is defined relative to Nauvis in data-updates.lua.
+--Muluna's position is defined relative to Nauvis in data-updates.lua. This is to accomodate for Tiered-Solar-System.
 local bot_power=0.2
 
 muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*bot_power
