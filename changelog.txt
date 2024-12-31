@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.13
+Date: 2024-12-31
+  Bugfixes:
+    - Added migration to preserve rocket-part-productivity when installing mod in existing save.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.12
 Date: 2024-12-31
   Balancing:
