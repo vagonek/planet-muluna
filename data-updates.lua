@@ -199,6 +199,11 @@ if mods["maraxsis"] then
             })
         end
     end 
+    
+    for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
+        ingredient.amount=ingredient.amount*2
+    end
+    
 end
 
 
