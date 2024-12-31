@@ -37,7 +37,19 @@ rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"
 
 
 
+
+
 local rocket_prod=data.raw["technology"]["rocket-part-productivity"]
+
+if data.raw.technology["rocket-part-productivity"] then
+    table.insert(data.raw.technology["rocket-part-productivity"].effects, {
+        type = "change-recipe-productivity",
+        recipe = "rocket-part-muluna",
+        change = 0.1,
+        hidden = true
+    })
+end
+
 local rocket_prod_aquilo=table.deepcopy(rocket_prod)
 
 rocket_prod.max_level=nil
@@ -144,6 +156,8 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
 }
+
+data.raw["recipe"]["space-science-pack"].energy_required=7
 
 
 
