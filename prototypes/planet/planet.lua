@@ -96,7 +96,8 @@ local muluna= {
         ["solar-power"]=100,
         ["pressure"]=50,
         ["magnetic-field"]=0.01,
-        ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3
+        ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3,
+        ["temperature"]=264, --PlanetsLib Temperature
     },
     map_gen_settings=map_gen
 }
