@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.17
+Date: 2025-01-01
+  Graphics:
+    - Updated graphics of "Oxide Asteroid Chunk" resource entity to look more like ice.
+  Locale:
+    - Added "Oxidized Water" string to locale
+  Changes:
+    - Minor refactoring of orbital ion cannon compatibility code
+---------------------------------------------------------------------------------------------------
 Version: 1.9.16
 Date: 2025-01-01
   Compatibility:
