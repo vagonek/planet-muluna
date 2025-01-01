@@ -165,6 +165,47 @@ for _,planet in pairs(planets) do
     
 end
 
-data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
-data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
-data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
+--data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
+
+data.raw["tool"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["recipe"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["tool"]["space-science-pack"].icons=nil
+
+
+
+local nauvis=data.raw["planet"]["nauvis"]
+if mods["Tiered-Solar-System"] then
+    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.01
+    data.raw["planet"]["muluna"].distance=nauvis.distance*0.90
+else
+    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.02
+    data.raw["planet"]["muluna"].distance=nauvis.distance*1.0
+end
+
+for _,silo in pairs(data.raw["rocket-silo"]) do
+    silo.crafting_speed=silo.crafting_speed/2
+end
+
+if mods["maraxsis"] then
+    for _,tech in pairs(data.raw["technology"]) do
+        if string.find(tech.name,"rocket-part-productivity-",0,true) then
+            table.insert(tech.effects,{
+                type = "change-recipe-productivity",
+                recipe = "maraxsis-rocket-part",
+                change = 0.1,
+                hidden = false
+            })
+        end
+    end 
+    
+    for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
+        ingredient.amount=ingredient.amount*2
+    end
+    
+end
+
+require("compat.orbital-ion-cannon")
+
+

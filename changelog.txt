@@ -1,4 +1,53 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.17
+Date: 2025-01-01
+  Graphics:
+    - Updated graphics of "Oxide Asteroid Chunk" resource entity to look more like ice.
+  Locale:
+    - Added "Oxidized Water" string to locale
+  Changes:
+    - Minor refactoring of orbital ion cannon compatibility code
+---------------------------------------------------------------------------------------------------
+Version: 1.9.16
+Date: 2025-01-01
+  Compatibility:
+    - Moved "Orbital Ion Cannon" techs to require "Space science pack" as a prerequisite instead of "Rocket Silo"
+  Graphics:
+    - Replaced MT-lib orbit sprite with higher resolution version
+---------------------------------------------------------------------------------------------------
+Version: 1.9.15
+Date: 2024-12-31
+  Sounds:
+    - Added ambient soundtrack containing one song("Sandy Boys/ Beth Cohen's" by Perpetual E-motion, slowed down 20% and pitch-shifted down one octave. )
+---------------------------------------------------------------------------------------------------
+Version: 1.9.14
+Date: 2024-12-31
+  Bugfixes:
+    - Changed new rocket productivity recipes to apply to Maraxsis rocket part recipe.
+    - Doubled cost of Maraxsis rocket part recipe to be in line with vanilla rocket part cost.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.13
+Date: 2024-12-31
+  Bugfixes:
+    - Added migration to preserve rocket-part-productivity when installing mod in existing save.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.12
+Date: 2024-12-31
+  Balancing:
+    - Halved crafting speed of all rocket silos
+---------------------------------------------------------------------------------------------------
+Version: 1.9.11
+Date: 2024-12-31
+  Bugfixes:
+    - Fixed crash with Factorissimo 3. https://github.com/nicholasgower/planet-muluna/issues/21
+---------------------------------------------------------------------------------------------------
+Version: 1.9.10
+Date: 2024-12-30
+  Bugfixes:
+    - Adjusted prerequisites for rocket part productivity technologies.
+  Changes:
+    - Added support for Tiered-Solar-System. https://mods.factorio.com/mod/Tiered-Solar-System
+---------------------------------------------------------------------------------------------------
 Version: 1.9.9
 Date: 2024-12-30
   Bugfixes:

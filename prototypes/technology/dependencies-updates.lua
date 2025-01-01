@@ -37,7 +37,19 @@ rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"
 
 
 
+
+
 local rocket_prod=data.raw["technology"]["rocket-part-productivity"]
+
+if data.raw.technology["rocket-part-productivity"] then
+    table.insert(data.raw.technology["rocket-part-productivity"].effects, {
+        type = "change-recipe-productivity",
+        recipe = "rocket-part-muluna",
+        change = 0.1,
+        hidden = true
+    })
+end
+
 local rocket_prod_aquilo=table.deepcopy(rocket_prod)
 
 rocket_prod.max_level=nil
@@ -89,12 +101,13 @@ for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
     rro.replace(tech.prerequisites,"space-science-pack",science_pack[i])
     --table.insert(tech.prerequisites,pack)
     table.insert(tech.unit.ingredients,{science_pack[i],1})
+    tech.prerequisites={"rocket-part-productivity-2",science_pack[i]}
     tech.unit.count=1000
 
     local tech_2=table.deepcopy(tech)
     tech_2.name=tech_2.name .. "-2"
     tech_2.unit.count=2000
-    tech_2.prerequisites={tech.name,"rocket-part-productivity-2"}
+    tech_2.prerequisites={tech.name}
     tech_2.localised_name={"",{"technology-name.rocket-part-productivity-"..planet_name[i]}," ",tostring(2)}
     --table.insert(t2_planet_rocket_prod,tech_2.name)
     table.insert(rocket_prod_aquilo.prerequisites,tech_2.name)
@@ -143,6 +156,8 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
 }
+
+data.raw["recipe"]["space-science-pack"].energy_required=7
 
 
 

@@ -1,6 +1,6 @@
 {
   "name": "planet-muluna",
-  "version": "1.9.9",
+  "version": "1.9.17",
   "title": "Muluna, Moon of Nauvis",
   "author": "MeteorSwarm",
   "homepage": "https://github.com/nicholasgower/planet-muluna",
@@ -18,7 +18,8 @@
     "hurricane-graphics",
     "? maraxsis",
     "? MT-lib",
-    "! external-rocket-parts"
+    "! external-rocket-parts",
+    "? Tiered-Solar-System >= 1.1.3"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
