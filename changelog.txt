@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.16
+Date: 2025-01-01
+  Compatibility:
+    - Moved "Orbital Ion Cannon" techs to require "Space science pack" as a prerequisite instead of "Rocket Silo"
+  Graphics:
+    - Replaced MT-lib orbit sprite with higher resolution version
+---------------------------------------------------------------------------------------------------
 Version: 1.9.15
 Date: 2024-12-31
   Sounds:
