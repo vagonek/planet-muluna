@@ -147,7 +147,7 @@ data:extend{
         prerequisites = {
             "space-platform-thruster"
         },
-        icons = technology_icon_constant_planet("__planet-muluna__/graphics/moon-icon.png",1920),
+        icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1920),
         -- icons = {
         --     {
         --         icon = data.raw["planet"]["muluna"].icon,
