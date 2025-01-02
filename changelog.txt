@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.22
+Date: 2025-01-02
+  Graphics:
+    - Added MTLib-style orbit info to main Muluna code block, in preparation for PlanetsLib to also display orbits.
+    - Added PlanetLib's Moon discovery technology icon to "Moon Discovery Muluna" technology.
+  Changes:
+    - Changed Muluna subgroup to "satellites," in compliance with PlanetsLib's convention for moons.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.21
 Date: 2025-01-02
   Changes:
