@@ -59,7 +59,7 @@ end
 
 -- Deep copy the table so we don't mutate the original
 local space_boiler = table.deepcopy(base_boiler)
-space_boiler.name = "space-boiler"
+space_boiler.name = "space-boiler-legacy"
 space_boiler.surface_conditions = nil  -- Remove any surface restrictions
 space_boiler.energy_consumption = "1.8MW"
 space_boiler.minable.result = "space-boiler"
@@ -82,7 +82,7 @@ data:extend({
 
 local space_boiler_new = {
   type="boiler",
-  name= "space-boiler-new",
+  name= "space-boiler",
   icon = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png",
   flags = {"placeable-neutral", "player-creation"},
   minable = {mining_time = 0.5, result = "boiler"},
@@ -99,9 +99,11 @@ local space_boiler_new = {
   collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
   selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
   burning_cooldown = 20,
+  fire_flicker_enabled = true,
+  fire_glow_flicker_enabled = true,
   --damaged_trigger_effect = hit_effects.entity(),
 
-  target_temperature = 50,
+  target_temperature = 65,
     fluid_box =
     {
       volume = 200,
@@ -142,7 +144,8 @@ local space_boiler_new = {
               line_length = 8,
               width = 330,
               height = 410,
-              --shift = util.by_pixel(-1.25, 5.25),
+              animation_speed = 0.5,
+              shift = util.by_pixel(0, -20),
               scale = 0.35,
             },
             -- {
@@ -156,6 +159,20 @@ local space_boiler_new = {
             -- }
           }
         },
+        fire_glow =
+        {
+          filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+          draw_as_glow = true,
+          priority = "extra-high",
+          frame_count = 64,
+          line_length = 8,
+          width = 330,
+          height = 410,
+          animation_speed = 0.5,
+          shift = util.by_pixel(0, -20),
+          scale = 0.35,
+          blend_mode="additive"
+        },
         fire =
         {
           filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
@@ -166,27 +183,25 @@ local space_boiler_new = {
           width = 330,
           height = 410,
           animation_speed = 0.5,
-          --shift = util.by_pixel(0, -8.5),
+          shift = util.by_pixel(0, -20),
           scale = 0.35,
           blend_mode="additive"
         },
-        -- fire_glow =
-        -- {
-        --   filename = "__base__/graphics/entity/boiler/boiler-N-light.png",
-        --   draw_as_glow = true,
-        --   priority = "extra-high",
-        --   width = 200,
-        --   height = 173,
-        --   shift = util.by_pixel(-1, -6.75),
-        --   blend_mode = "additive",
-        --   scale = 0.5
-        -- },
       },
   }
 }
 space_boiler_new.pictures.east=space_boiler_new.pictures.north
 space_boiler_new.pictures.west=space_boiler_new.pictures.north
 space_boiler_new.pictures.south=space_boiler_new.pictures.north
+
+space_boiler_new.energy_source.light_flicker =
+  {
+    color = {0,0,0},
+    minimum_intensity = 0.6*3,
+    maximum_intensity = 0.95*3
+  }
+
+
 data:extend{space_boiler_new}
 
 data.raw["generator"]["steam-engine"].fluid_box.minimum_temperature=50
