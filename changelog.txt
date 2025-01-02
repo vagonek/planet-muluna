@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.24
+Date: 2025-01-02
+  Bugfixes:
+    - Fixed orientation and distance values of Muluna to be in line with PlanetLib's rules for moons, reenabled orbit information.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.23
 Date: 2025-01-02
   Bugfixes:
