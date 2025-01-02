@@ -1,6 +1,8 @@
-rro=require("lib.remove-replace-object")
+local rro=require("lib.remove-replace-object")
+local planet_lib=require("__PlanetsLib__.lib.planet")
 local nauvis=data.raw["planet"]["nauvis"]
 local nauvis_gen=nauvis.map_gen_settings
+local tau = 2*math.pi
 local map_gen={
     cliff_settings=
     {
@@ -89,7 +91,6 @@ local muluna= {
     icon_size = 1920,
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
-    subgroup=nauvis.subgroup,
     subgroup="satellites",
     magnitude=nauvis.magnitude*3/4,
     pollutant_type="radiation",
@@ -100,7 +101,19 @@ local muluna= {
         ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3,
         ["temperature"]=264, --PlanetsLib Temperature
     },
-    map_gen_settings=map_gen
+    map_gen_settings=map_gen,
+    orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
+      polar = {2,0.005*tau},
+      parent={
+        type="planet",
+        name="nauvis"
+      },
+      sprite={
+        type="sprite",
+        filename="__planet-muluna__/graphics/orbits/orbit_muluna.png",
+        size=512
+      }
+    }
 }
 --Muluna's position is defined relative to Nauvis in data-updates.lua. This is to accomodate for Tiered-Solar-System.
 local bot_power=0.2
