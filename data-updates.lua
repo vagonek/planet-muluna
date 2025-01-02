@@ -15,8 +15,8 @@ end
 local ten_pressure_condition =
 {
   {
-    property = "pressure",
-    min = 55
+    property = "oxygen",
+    min = 1
   }
 }
 
@@ -35,12 +35,12 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
-data.raw["assembling-machine"]["crusher"].surface_conditions = {
-    {property = "gravity",
-    min = 0,
-    max = 0.1,
-    }   
-}
+-- data.raw["assembling-machine"]["crusher"].surface_conditions = {
+--     {property = "gravity",
+--     min = 0,
+--     max = 0.1,
+--     }   
+-- }
 
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
@@ -93,9 +93,9 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     min = 0.1,
     max = 0.1,
     },
-    {property = "pressure",
-    min = 50,
-    max = 50,
+    {property = "oxygen",
+    min = 1,
+    max = 1,
     },
 }
 
@@ -111,13 +111,8 @@ for _,pack in pairs(data.raw["tool"]) do
     if recipe then
         if recipe.surface_conditions == nil then
             recipe.surface_conditions = {
-                {property = "gravity",
-                    min = 0.2,
-                    --max = 0.1,
-                },
-                {property = "pressure",
-                    min = 55,
-                    --max = 50,
+                {property = "oxygen",
+                    min = 1,
                 },
             }
         end
