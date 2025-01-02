@@ -3,6 +3,8 @@ Version: 1.9.21
 Date: 2025-01-02
   Changes:
     - Compatibility added to future PlanetsLib update. https://github.com/danielmartin0/PlanetsLib/pull/4
+  Balancing:
+    - Cargo bay technology removed. "Space Platform" technology now unlocks Cargo bay.
 ---------------------------------------------------------------------------------------------------
 Version: 1.9.20
 Date: 2025-01-01
