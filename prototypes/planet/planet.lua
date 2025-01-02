@@ -90,6 +90,7 @@ local muluna= {
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
     subgroup=nauvis.subgroup,
+    subgroup="satellites",
     magnitude=nauvis.magnitude*3/4,
     pollutant_type="radiation",
     surface_properties={
