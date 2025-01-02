@@ -206,6 +206,11 @@ if mods["maraxsis"] then
     
 end
 
+table.insert(data.raw["technology"]["space-platform"].effects,{
+    type = "unlock-recipe",
+    recipe = "cargo-bay"
+})
+
 require("compat.orbital-ion-cannon")
 
 

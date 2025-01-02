@@ -55,26 +55,26 @@ data:extend{
         },
         icon = data.raw["item"]["asteroid-collector"].icon
     },
-    {
-        type = "technology",
-        name = "cargo-bay",
-        localised_name = {"entity-name.cargo-bay"},
-        unit = {
-            count = 100,
-            time = 60,
-            ingredients = data.raw["technology"]["planet-discovery-vulcanus"].unit.ingredients
-        },
-        effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "cargo-bay"
-            }
-        },
-        prerequisites = {
-            "space-science-pack"
-        },
-        icon = data.raw["item"]["cargo-bay"].icon
-    },
+    -- {
+    --     type = "technology",
+    --     name = "cargo-bay",
+    --     localised_name = {"entity-name.cargo-bay"},
+    --     unit = {
+    --         count = 100,
+    --         time = 60,
+    --         ingredients = data.raw["technology"]["planet-discovery-vulcanus"].unit.ingredients
+    --     },
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe = "cargo-bay"
+    --         }
+    --     },
+    --     prerequisites = {
+    --         "space-science-pack"
+    --     },
+    --     icon = data.raw["item"]["cargo-bay"].icon
+    -- },
     {
         type = "technology",
         name = "crusher",
