@@ -101,7 +101,6 @@ local muluna= {
         ["pressure"]=50,
         ["magnetic-field"]=0.01,
         ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3,
-        ["temperature"]=264, --PlanetsLib Temperature
     },
     map_gen_settings=map_gen,
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
@@ -123,6 +122,9 @@ local bot_power=0.2
 
 muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*bot_power
 
+if settings.startup["PlanetsLib-enable-temperature"].value == true then
+  muluna.surface_properties["temperature"]=264
+end
 local muluna_connection = {
   type="space-connection",
   name="nauvis-muluna",
