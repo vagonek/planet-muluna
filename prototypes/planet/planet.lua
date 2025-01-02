@@ -86,8 +86,10 @@ local muluna= {
     --   }
     -- },
     icon="__planet-muluna__/graphics/moon-icon.png",
-    orientation=nauvis.orientation-0.02,
-    distance=nauvis.distance*1.0,
+    --orientation=nauvis.orientation-0.02,
+    --distance=nauvis.distance*1.0,
+    orientation=0.08, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
+    distance=2,
     icon_size = 1920,
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
@@ -102,18 +104,19 @@ local muluna= {
         ["temperature"]=264, --PlanetsLib Temperature
     },
     map_gen_settings=map_gen,
-    -- orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
-    --    polar = {2,0.005*tau},
-    --   parent={
-    --     type="planet",
-    --     name="nauvis"
-    --   },
-    --   sprite={
-    --     type="sprite",
-    --     filename="__planet-muluna__/graphics/orbits/orbit-muluna.png",
-    --     size=512
-    --   }
-    -- }
+    orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
+       polar = {2,0.005*tau},
+      parent={
+        type="planet",
+        name="nauvis"
+      },
+      sprite={
+        type="sprite",
+        filename="__planet-muluna__/graphics/orbits/orbit-muluna.png",
+        size=512,
+        scale=0.25,
+      }
+    }
 }
 --Muluna's position is defined relative to Nauvis in data-updates.lua. This is to accomodate for Tiered-Solar-System.
 local bot_power=0.2
