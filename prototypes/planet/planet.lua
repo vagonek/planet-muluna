@@ -125,6 +125,10 @@ muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*b
 if settings.startup["PlanetsLib-enable-temperature"].value == true then
   muluna.surface_properties["temperature"]=264
 end
+
+if settings.startup["PlanetsLib-enable-oxygen"].value == true then
+  muluna.surface_properties["oxygen"]=0
+end
 local muluna_connection = {
   type="space-connection",
   name="nauvis-muluna",
