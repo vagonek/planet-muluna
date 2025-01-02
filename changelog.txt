@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.25
+Date: 2025-01-02
+  Changes:
+    - Disabled default display of temperature information as it unnecessary in this mod.
+    - Enable oxygen surface property, add oxygen surface property to Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.24
 Date: 2025-01-02
   Bugfixes:
