@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.26
+Date: 2025-01-02
+  Changes:
+    - Changed surface conditions of most vanilla burner items to require at least 1% oxygen, and to not pay attention to pressure.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.25
 Date: 2025-01-02
   Changes:
