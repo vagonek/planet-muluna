@@ -1,4 +1,34 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.22
+Date: 2025-01-02
+  Graphics:
+    - Added MTLib-style orbit info to main Muluna code block, in preparation for PlanetsLib to also display orbits.
+    - Added PlanetLib's Moon discovery technology icon to "Moon Discovery Muluna" technology.
+  Changes:
+    - Changed Muluna subgroup to "satellites," in compliance with PlanetsLib's convention for moons.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.21
+Date: 2025-01-02
+  Changes:
+    - Compatibility added to future PlanetsLib update. https://github.com/danielmartin0/PlanetsLib/pull/4
+  Balancing:
+    - Cargo bay technology removed. "Space Platform" technology now unlocks Cargo bay.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.20
+Date: 2025-01-01
+  Compatibility:
+    - Added PlanetsLib dependency and temperature value.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.19
+Date: 2025-01-01
+  Changes:
+    - Automated addition of whitespace around equals signs
+---------------------------------------------------------------------------------------------------
+Version: 1.9.18
+Date: 2025-01-01
+  Changes:
+    - Refactoring of Space Boiler code https://github.com/nicholasgower/planet-muluna/pull/22
+---------------------------------------------------------------------------------------------------
 Version: 1.9.17
 Date: 2025-01-01
   Graphics:

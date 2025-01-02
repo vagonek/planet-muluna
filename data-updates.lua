@@ -1,10 +1,10 @@
-local rro=require("lib.remove-replace-object")
+local rro = require("lib.remove-replace-object")
 for k, type in ipairs({"furnace"}) do
     for i,entity in ipairs(data.raw[type]) do
         if entity.surface_conditions then
             for j,property in ipairs(entity.surface_conditions) do
-                if property.property=="pressure" and property.min==10 then
-                    property.min=55
+                if property.property == "pressure" and property.min == 10 then
+                    property.min = 55
                 end
             end 
         end
@@ -21,10 +21,10 @@ local ten_pressure_condition =
 }
 
 
-data.raw["recipe"]["thruster-fuel"].surface_conditions=nil
-data.raw["recipe"]["thruster-oxidizer"].surface_conditions=nil
-data.raw["recipe"]["advanced-thruster-fuel"].surface_conditions=nil
-data.raw["recipe"]["advanced-thruster-oxidizer"].surface_conditions=nil
+data.raw["recipe"]["thruster-fuel"].surface_conditions = nil
+data.raw["recipe"]["thruster-oxidizer"].surface_conditions = nil
+data.raw["recipe"]["advanced-thruster-fuel"].surface_conditions = nil
+data.raw["recipe"]["advanced-thruster-oxidizer"].surface_conditions = nil
 
 data.raw["fluid-turret"]["flamethrower-turret"].surface_conditions = ten_pressure_condition
 data.raw["furnace"]["stone-furnace"].surface_conditions = ten_pressure_condition
@@ -36,28 +36,28 @@ data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condit
 
 
 data.raw["assembling-machine"]["crusher"].surface_conditions = {
-    {property="gravity",
-    min=0,
-    max=0.1,
+    {property = "gravity",
+    min = 0,
+    max = 0.1,
     }   
 }
 
-local rocket_part_muluna=table.deepcopy(data.raw["recipe"]["rocket-part"])
-rocket_part_muluna.name="rocket-part-muluna"
+local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
+rocket_part_muluna.name = "rocket-part-muluna"
 rocket_part_muluna.surface_conditions = {
-    {property="gravity",
-    max=5,
+    {property = "gravity",
+    max = 5,
     }   
 }
 
-rocket_part_muluna.results = {{type="item", name="rocket-part", amount=1}}
+rocket_part_muluna.results = {{type = "item", name = "rocket-part", amount = 1}}
 
-rocket_part_muluna.localised_name={"item-name.rocket-part"}
+rocket_part_muluna.localised_name = {"item-name.rocket-part"}
 
 
 -- data.raw["recipe"]["rocket-part"].surface_conditions = {
---     {property="gravity",
---     min=5.01,
+--     {property = "gravity",
+--     min = 5.01,
 --     }
 -- }
 
@@ -89,13 +89,13 @@ for _, silo in pairs(data.raw["rocket-silo"]) do
 end
 
 data.raw.recipe["space-science-pack"].surface_conditions = {
-    {property="gravity",
-    min=0.1,
-    max=0.1,
+    {property = "gravity",
+    min = 0.1,
+    max = 0.1,
     },
-    {property="pressure",
-    min=50,
-    max=50,
+    {property = "pressure",
+    min = 50,
+    max = 50,
     },
 }
 
@@ -103,21 +103,21 @@ rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"s
 rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
 rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
-data.raw.recipe["space-science-pack"].results[1].amount=1
+data.raw.recipe["space-science-pack"].results[1].amount = 1
 
 
 for _,pack in pairs(data.raw["tool"]) do
     local recipe = data.raw["recipe"][pack.name]
     if recipe then
         if recipe.surface_conditions == nil then
-            recipe.surface_conditions={
-                {property="gravity",
-                    min=0.2,
-                    --max=0.1,
+            recipe.surface_conditions = {
+                {property = "gravity",
+                    min = 0.2,
+                    --max = 0.1,
                 },
-                {property="pressure",
-                    min=55,
-                    --max=50,
+                {property = "pressure",
+                    min = 55,
+                    --max = 50,
                 },
             }
         end
@@ -125,8 +125,8 @@ for _,pack in pairs(data.raw["tool"]) do
 end
 
 for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to technologies without icon
-    if tech.icon==nil then
-        tech.icon=data.raw["technology"]["space-science-pack"].icon
+    if tech.icon == nil then
+        tech.icon = data.raw["technology"]["space-science-pack"].icon
     end
 end
 
@@ -153,7 +153,7 @@ if not(mods["maraxsis"]) then
     
 end
 
-local planets={
+local planets = {
     "arrakis",
     "tiber"
 }
@@ -165,27 +165,27 @@ for _,planet in pairs(planets) do
     
 end
 
---data.raw["tool"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
---data.raw["technology"]["space-science-pack"].localised_name={"item-name.lunar-science-pack"}
---data.raw["technology"]["space-science-pack"].localised_description={"technology-description.lunar-science-pack"}
+--data.raw["tool"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
+--data.raw["technology"]["space-science-pack"].localised_description = {"technology-description.lunar-science-pack"}
 
-data.raw["tool"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon="__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
-data.raw["tool"]["space-science-pack"].icons=nil
+data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["tool"]["space-science-pack"].icons = nil
 
 
 
-local nauvis=data.raw["planet"]["nauvis"]
+local nauvis = data.raw["planet"]["nauvis"]
 if mods["Tiered-Solar-System"] then
-    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.01
-    data.raw["planet"]["muluna"].distance=nauvis.distance*0.90
+    data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.01
+    data.raw["planet"]["muluna"].distance = nauvis.distance*0.90
 else
-    data.raw["planet"]["muluna"].orientation=nauvis.orientation-0.02
-    data.raw["planet"]["muluna"].distance=nauvis.distance*1.0
+    data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.02
+    data.raw["planet"]["muluna"].distance = nauvis.distance*1.0
 end
 
 for _,silo in pairs(data.raw["rocket-silo"]) do
-    silo.crafting_speed=silo.crafting_speed/2
+    silo.crafting_speed = silo.crafting_speed/2
 end
 
 if mods["maraxsis"] then
@@ -201,10 +201,15 @@ if mods["maraxsis"] then
     end 
     
     for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
-        ingredient.amount=ingredient.amount*2
+        ingredient.amount = ingredient.amount*2
     end
     
 end
+
+table.insert(data.raw["technology"]["space-platform"].effects,{
+    type = "unlock-recipe",
+    recipe = "cargo-bay"
+})
 
 require("compat.orbital-ion-cannon")
 
