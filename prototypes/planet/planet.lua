@@ -92,6 +92,7 @@ local muluna= {
     distance=2,
     icon_size = 1920,
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
+    label_orientation = 0.55,
     starmap_icon_size = 1920,
     subgroup="satellites",
     magnitude=nauvis.magnitude*3/4,
@@ -114,6 +115,19 @@ local muluna= {
         filename="__planet-muluna__/graphics/orbits/orbit-muluna.png",
         size=512,
         scale=0.25,
+      --polar = {2,0.005*tau},
+      orientation = 0.75, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
+      distance = 1.6,
+      parent = {
+        type = "planet",
+        name = "nauvis"
+        },
+      
+      sprite = {
+        type = "sprite",
+        filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
+        size = 409,
+        scale = 0.25,
       }
     }
 }
