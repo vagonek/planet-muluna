@@ -94,8 +94,8 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     max = 0.1,
     },
     {property = "oxygen",
-    min = 1,
-    max = 1,
+    min = 0,
+    max = 0,
     },
 }
 
