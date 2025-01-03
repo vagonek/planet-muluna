@@ -12,6 +12,7 @@
     "quality",
     "elevated-rails",
     "alien-biomes-graphics >= 0.7.0",
+    "space-exploration-graphics-4",
     "flib",
     "aai-signal-transmission",
     "PlanetsLib >= 1.0.8",
