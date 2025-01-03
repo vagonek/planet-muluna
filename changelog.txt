@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.28
+Date: 2025-01-03
+  Bugfixes:
+    - Reduced distance of Muluna from Nauvis on starmap, and adjusted orbit sprite to match. Adjusted orientation and label orientation as well.
+    - Removed redundant code in data-changes.lua that overrode orbit orientation when Tiered-solar-system is not installed.
+  Graphics:
+    - Changed starmap size of Muluna from 0.75*Nauvis to 0.6*Nauvis.
+  Changes:
+    - .pyc files added to gitignore
+    - Automated addition of whitespace around equals signs in planet.lua
+    - Created python script to quickly generate orbit sprites for PlanetsLib
+    - PlanetsLib:extend now handles the creation of Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.27
 Date: 2025-01-03
   Bugfixes:
