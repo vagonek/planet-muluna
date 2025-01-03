@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.27
+Date: 2025-01-03
+  Bugfixes:
+    - Changed Space Science pack's oxygen requirement from 1% to 0%, fixing uncraftable issue https://github.com/nicholasgower/planet-muluna/issues/26
+---------------------------------------------------------------------------------------------------
 Version: 1.9.26
 Date: 2025-01-02
   Changes:
