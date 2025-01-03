@@ -160,6 +160,6 @@ if settings.startup["override-space-connection"]==true then
 end
 
 
+PlanetsLib:extend({muluna})
 
-
-data:extend{muluna,muluna_connection}
+data:extend{muluna_connection}
