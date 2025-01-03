@@ -16,6 +16,7 @@ for i = 1,6,1 do
     local muluna_dirt=table.deepcopy(muluna_dirt_base)
     muluna_dirt.name="muluna-dirt-"..tostring(i)
     muluna_dirt.autoplace = {probability_expression = 'expression_in_range_base(0.45, -10, 0.55, 0.35) + 0.25*noise_layer_noise('..tostring(i)..')'}
+    muluna_dirt.localised_name={"tile-name.muluna-dirt",tostring(i)}
     muluna_dirt.variants = tile_variations_template(
     "__alien-biomes-graphics__/graphics/terrain/mineral-grey-dirt-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-1.png",
     {

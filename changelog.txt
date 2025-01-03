@@ -1,4 +1,208 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.28
+Date: 2025-01-03
+  Bugfixes:
+    - Reduced distance of Muluna from Nauvis on starmap, and adjusted orbit sprite to match. Adjusted orientation and label orientation as well.
+    - Removed redundant code in data-changes.lua that overrode orbit orientation when Tiered-solar-system is not installed.
+  Graphics:
+    - Changed starmap size of Muluna from 0.75*Nauvis to 0.6*Nauvis.
+  Changes:
+    - .pyc files added to gitignore
+    - Automated addition of whitespace around equals signs in planet.lua
+    - Created python script to quickly generate orbit sprites for PlanetsLib
+    - PlanetsLib:extend now handles the creation of Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.27
+Date: 2025-01-03
+  Bugfixes:
+    - Changed Space Science pack's oxygen requirement from 1% to 0%, fixing uncraftable issue https://github.com/nicholasgower/planet-muluna/issues/26
+---------------------------------------------------------------------------------------------------
+Version: 1.9.26
+Date: 2025-01-02
+  Changes:
+    - Changed surface conditions of most vanilla burner items to require at least 1% oxygen, and to not pay attention to pressure.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.25
+Date: 2025-01-02
+  Changes:
+    - Disabled default display of temperature information as it unnecessary in this mod.
+    - Enable oxygen surface property, add oxygen surface property to Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.24
+Date: 2025-01-02
+  Bugfixes:
+    - Fixed orientation and distance values of Muluna to be in line with PlanetLib's rules for moons, reenabled orbit information.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.23
+Date: 2025-01-02
+  Bugfixes:
+    - Rolled back display of orbit information, because orbits appear broken in PlanetsLib.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.22
+Date: 2025-01-02
+  Graphics:
+    - Added MTLib-style orbit info to main Muluna code block, in preparation for PlanetsLib to also display orbits.
+    - Added PlanetLib's Moon discovery technology icon to "Moon Discovery Muluna" technology.
+  Changes:
+    - Changed Muluna subgroup to "satellites," in compliance with PlanetsLib's convention for moons.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.21
+Date: 2025-01-02
+  Changes:
+    - Compatibility added to future PlanetsLib update. https://github.com/danielmartin0/PlanetsLib/pull/4
+  Balancing:
+    - Cargo bay technology removed. "Space Platform" technology now unlocks Cargo bay.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.20
+Date: 2025-01-01
+  Compatibility:
+    - Added PlanetsLib dependency and temperature value.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.19
+Date: 2025-01-01
+  Changes:
+    - Automated addition of whitespace around equals signs
+---------------------------------------------------------------------------------------------------
+Version: 1.9.18
+Date: 2025-01-01
+  Changes:
+    - Refactoring of Space Boiler code https://github.com/nicholasgower/planet-muluna/pull/22
+---------------------------------------------------------------------------------------------------
+Version: 1.9.17
+Date: 2025-01-01
+  Graphics:
+    - Updated graphics of "Oxide Asteroid Chunk" resource entity to look more like ice.
+  Locale:
+    - Added "Oxidized Water" string to locale
+  Changes:
+    - Minor refactoring of orbital ion cannon compatibility code
+---------------------------------------------------------------------------------------------------
+Version: 1.9.16
+Date: 2025-01-01
+  Compatibility:
+    - Moved "Orbital Ion Cannon" techs to require "Space science pack" as a prerequisite instead of "Rocket Silo"
+  Graphics:
+    - Replaced MT-lib orbit sprite with higher resolution version
+---------------------------------------------------------------------------------------------------
+Version: 1.9.15
+Date: 2024-12-31
+  Sounds:
+    - Added ambient soundtrack containing one song("Sandy Boys/ Beth Cohen's" by Perpetual E-motion, slowed down 20% and pitch-shifted down one octave. )
+---------------------------------------------------------------------------------------------------
+Version: 1.9.14
+Date: 2024-12-31
+  Bugfixes:
+    - Changed new rocket productivity recipes to apply to Maraxsis rocket part recipe.
+    - Doubled cost of Maraxsis rocket part recipe to be in line with vanilla rocket part cost.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.13
+Date: 2024-12-31
+  Bugfixes:
+    - Added migration to preserve rocket-part-productivity when installing mod in existing save.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.12
+Date: 2024-12-31
+  Balancing:
+    - Halved crafting speed of all rocket silos
+---------------------------------------------------------------------------------------------------
+Version: 1.9.11
+Date: 2024-12-31
+  Bugfixes:
+    - Fixed crash with Factorissimo 3. https://github.com/nicholasgower/planet-muluna/issues/21
+---------------------------------------------------------------------------------------------------
+Version: 1.9.10
+Date: 2024-12-30
+  Bugfixes:
+    - Adjusted prerequisites for rocket part productivity technologies.
+  Changes:
+    - Added support for Tiered-Solar-System. https://mods.factorio.com/mod/Tiered-Solar-System
+---------------------------------------------------------------------------------------------------
+Version: 1.9.9
+Date: 2024-12-30
+  Bugfixes:
+    - Added incompatibility tag to external-rocket-parts
+---------------------------------------------------------------------------------------------------
+Version: 1.9.8
+Date: 2024-12-29
+  Bugfixes:
+    - Moved "Planet Discovery Arrakis" and "Planet Discovery Tiber" technologies to have "Asteroid Crusher" as prerequisite when the relevant mod is installed.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.7
+Date: 2024-12-29
+  Locale:
+    - Increased modularity of locale files
+---------------------------------------------------------------------------------------------------
+Version: 1.9.6
+Date: 2024-12-29
+  Locale:
+    - fix autoplace control missing localised names
+    - update zh-CN locale
+---------------------------------------------------------------------------------------------------
+Version: 1.9.5
+Date: 2024-12-29
+  Locale:
+    - update zh-CN locale
+---------------------------------------------------------------------------------------------------
+Version: 1.9.4
+Date: 2024-12-29
+  Bugfixes:
+    - Changed cargo landing pad's surface conditions to make it placeable on Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.3
+Date: 2024-12-29
+  Bugfixes:
+    - Added starmap icon to Muluna to make it visible in "Visible Planets in Space"
+---------------------------------------------------------------------------------------------------
+Version: 1.9.2
+Date: 2024-12-29
+  Compatibility:
+    - MT-lib Compatibility
+---------------------------------------------------------------------------------------------------
+Version: 1.9.1
+Date: 2024-12-29
+  Bugfixes:
+    - Moved planet discovery technologies for Vulcanus, Gleba, and Fulgora to have Asteroid collectors as a prerequisite.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.0
+Date: 2024-12-29
+  Features:
+    - Added "Thruster fuel from rocket fuel" recipe
+---------------------------------------------------------------------------------------------------
+Version: 1.8.0
+Date: 2024-12-28
+  Features:
+    - Added atmosphere fluid(Taken from and cross-compatible with Maraxsis)
+---------------------------------------------------------------------------------------------------
+Version: 1.7.5
+Date: 2024-12-28
+  Locale:
+    - Added localisation for Muluna dirt
+---------------------------------------------------------------------------------------------------
+Version: 1.7.4
+Date: 2024-12-28
+  Locale:
+    - Added a large number of currently-unused locale strings to allow localisers to localise these strings before they are used.
+---------------------------------------------------------------------------------------------------
+Version: 1.7.3
+Date: 2024-12-28
+  Locale:
+    - Add Simplified Chinese locale
+---------------------------------------------------------------------------------------------------
+Version: 1.7.2
+Date: 2024-12-27
+  Bugfixes:
+    - Changed Space boiler to require water instead of oxidizer(Temporary measure until better version of space boiler is available based on Hurricane's Thermal Plant sprite).
+---------------------------------------------------------------------------------------------------
+Version: 1.7.1
+Date: 2024-12-27
+  Locale:
+    - Updated Russian Locale(by Astorin)
+---------------------------------------------------------------------------------------------------
+Version: 1.7.0
+Date: 2024-12-26
+  Features:
+    - Added "Moon Discovery Muluna" technology, addressing https://github.com/nicholasgower/planet-muluna/issues/11
+---------------------------------------------------------------------------------------------------
 Version: 1.6.12
 Date: 2024-12-26
   Bugfixes:
