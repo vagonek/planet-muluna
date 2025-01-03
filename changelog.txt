@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.26
+Date: 2025-01-02
+  Changes:
+    - Changed surface conditions of most vanilla burner items to require at least 1% oxygen, and to not pay attention to pressure.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.25
+Date: 2025-01-02
+  Changes:
+    - Disabled default display of temperature information as it unnecessary in this mod.
+    - Enable oxygen surface property, add oxygen surface property to Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.24
+Date: 2025-01-02
+  Bugfixes:
+    - Fixed orientation and distance values of Muluna to be in line with PlanetLib's rules for moons, reenabled orbit information.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.23
+Date: 2025-01-02
+  Bugfixes:
+    - Rolled back display of orbit information, because orbits appear broken in PlanetsLib.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.22
 Date: 2025-01-02
   Graphics:

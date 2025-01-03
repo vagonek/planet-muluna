@@ -86,8 +86,10 @@ local muluna= {
     --   }
     -- },
     icon="__planet-muluna__/graphics/moon-icon.png",
-    orientation=nauvis.orientation-0.02,
-    distance=nauvis.distance*1.0,
+    --orientation=nauvis.orientation-0.02,
+    --distance=nauvis.distance*1.0,
+    orientation=0.08, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
+    distance=2,
     icon_size = 1920,
     starmap_icon="__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1920,
@@ -99,19 +101,19 @@ local muluna= {
         ["pressure"]=50,
         ["magnetic-field"]=0.01,
         ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3,
-        ["temperature"]=264, --PlanetsLib Temperature
     },
     map_gen_settings=map_gen,
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
-      polar = {2,0.005*tau},
+       polar = {2,0.005*tau},
       parent={
         type="planet",
         name="nauvis"
       },
       sprite={
         type="sprite",
-        filename="__planet-muluna__/graphics/orbits/orbit_muluna.png",
-        size=512
+        filename="__planet-muluna__/graphics/orbits/orbit-muluna.png",
+        size=512,
+        scale=0.25,
       }
     }
 }
@@ -120,6 +122,13 @@ local bot_power=0.2
 
 muluna.surface_properties["gravity"]=muluna.surface_properties["pressure"]/100*bot_power
 
+if settings.startup["PlanetsLib-enable-temperature"].value == true then
+  muluna.surface_properties["temperature"]=264
+end
+
+if settings.startup["PlanetsLib-enable-oxygen"].value == true then
+  muluna.surface_properties["oxygen"]=0
+end
 local muluna_connection = {
   type="space-connection",
   name="nauvis-muluna",
