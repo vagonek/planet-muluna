@@ -95,13 +95,13 @@ local muluna= {
     label_orientation = 0.55,
     starmap_icon_size = 1920,
     subgroup="satellites",
-    magnitude=nauvis.magnitude*3/4,
     pollutant_type="radiation",
     surface_properties={
         ["solar-power"]=100,
         ["pressure"]=50,
         ["magnetic-field"]=0.01,
         ["day-night-cycle"]=nauvis.surface_properties["day-night-cycle"]*3,
+    magnitude = nauvis.magnitude*3/5,
     },
     map_gen_settings=map_gen,
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
