@@ -4,6 +4,7 @@ local space_boiler = table.deepcopy(data.raw["item"]["boiler"])
 
 space_boiler.name = "space-boiler"
 space_boiler.place_result = "space-boiler"
+space_boiler.icon="__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png"
 space_boiler.localised_name = {"entity-name.space-boiler"}
 
 
