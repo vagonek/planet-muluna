@@ -15,8 +15,8 @@ end
 local ten_pressure_condition =
 {
   {
-    property = "pressure",
-    min = 55
+    property = "oxygen",
+    min = 1
   }
 }
 
@@ -35,12 +35,12 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
-data.raw["assembling-machine"]["crusher"].surface_conditions = {
-    {property = "gravity",
-    min = 0,
-    max = 0.1,
-    }   
-}
+-- data.raw["assembling-machine"]["crusher"].surface_conditions = {
+--     {property = "gravity",
+--     min = 0,
+--     max = 0.1,
+--     }   
+-- }
 
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
@@ -93,9 +93,9 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     min = 0.1,
     max = 0.1,
     },
-    {property = "pressure",
-    min = 50,
-    max = 50,
+    {property = "oxygen",
+    min = 0,
+    max = 0,
     },
 }
 
@@ -111,13 +111,8 @@ for _,pack in pairs(data.raw["tool"]) do
     if recipe then
         if recipe.surface_conditions == nil then
             recipe.surface_conditions = {
-                {property = "gravity",
-                    min = 0.2,
-                    --max = 0.1,
-                },
-                {property = "pressure",
-                    min = 55,
-                    --max = 50,
+                {property = "oxygen",
+                    min = 1,
                 },
             }
         end
@@ -179,9 +174,9 @@ local nauvis = data.raw["planet"]["nauvis"]
 if mods["Tiered-Solar-System"] then
     data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.01
     data.raw["planet"]["muluna"].distance = nauvis.distance*0.90
-else
-    data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.02
-    data.raw["planet"]["muluna"].distance = nauvis.distance*1.0
+-- else
+--     data.raw["planet"]["muluna"].orbit.orientation = nauvis.orientation-0.02
+--     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
 for _,silo in pairs(data.raw["rocket-silo"]) do

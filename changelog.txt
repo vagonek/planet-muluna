@@ -1,4 +1,43 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.28
+Date: 2025-01-03
+  Bugfixes:
+    - Reduced distance of Muluna from Nauvis on starmap, and adjusted orbit sprite to match. Adjusted orientation and label orientation as well.
+    - Removed redundant code in data-changes.lua that overrode orbit orientation when Tiered-solar-system is not installed.
+  Graphics:
+    - Changed starmap size of Muluna from 0.75*Nauvis to 0.6*Nauvis.
+  Changes:
+    - .pyc files added to gitignore
+    - Automated addition of whitespace around equals signs in planet.lua
+    - Created python script to quickly generate orbit sprites for PlanetsLib
+    - PlanetsLib:extend now handles the creation of Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.27
+Date: 2025-01-03
+  Bugfixes:
+    - Changed Space Science pack's oxygen requirement from 1% to 0%, fixing uncraftable issue https://github.com/nicholasgower/planet-muluna/issues/26
+---------------------------------------------------------------------------------------------------
+Version: 1.9.26
+Date: 2025-01-02
+  Changes:
+    - Changed surface conditions of most vanilla burner items to require at least 1% oxygen, and to not pay attention to pressure.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.25
+Date: 2025-01-02
+  Changes:
+    - Disabled default display of temperature information as it unnecessary in this mod.
+    - Enable oxygen surface property, add oxygen surface property to Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.24
+Date: 2025-01-02
+  Bugfixes:
+    - Fixed orientation and distance values of Muluna to be in line with PlanetLib's rules for moons, reenabled orbit information.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.23
+Date: 2025-01-02
+  Bugfixes:
+    - Rolled back display of orbit information, because orbits appear broken in PlanetsLib.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.22
 Date: 2025-01-02
   Graphics:
