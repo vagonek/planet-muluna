@@ -174,9 +174,9 @@ local nauvis = data.raw["planet"]["nauvis"]
 if mods["Tiered-Solar-System"] then
     data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.01
     data.raw["planet"]["muluna"].distance = nauvis.distance*0.90
-else
-    data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.02
-    data.raw["planet"]["muluna"].distance = nauvis.distance*1.0
+-- else
+--     data.raw["planet"]["muluna"].orbit.orientation = nauvis.orientation-0.02
+--     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
 for _,silo in pairs(data.raw["rocket-silo"]) do
