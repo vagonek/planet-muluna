@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.29
+Date: 2025-01-04
+  Bugfixes:
+    - Reverted accidental rollback of Crusher surface conditions that made it unbuildable on Muluna.  https://github.com/nicholasgower/planet-muluna/issues/30
+---------------------------------------------------------------------------------------------------
 Version: 1.9.28
 Date: 2025-01-03
   Bugfixes:
