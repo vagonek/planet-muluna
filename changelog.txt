@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.10.0
+Date: 2025-01-05
+  Features:
+    - Added "Carbon-lubricated electric engine unit" recipe, unlocking with Crushers.
+  Balancing:
+    - Changed cost of "Asteroid Collector" technology from 100 to 300
+    - Moved Requester Chest recipe unlock from "Logistic System" to "Logistic Robotics."
+  Graphics:
+    - Adjusted icon for "Thruster fuel from rocket fuel" recipe.
+    - Imported icons from "Unused Renders" of aluminum ingots, crushed ores, and scrap aluminum metal.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.30
 Date: 2025-01-05
   Balancing:
