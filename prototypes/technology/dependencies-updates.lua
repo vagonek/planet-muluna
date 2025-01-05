@@ -160,5 +160,13 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
 data.raw["recipe"]["space-science-pack"].energy_required=7
 
 
+--Moves rocket silo science packs down to prereqs, makes rocket silo into a trigger technology.
+local techs_change={"logistic-robotics","rocket-fuel","processing-unit","advanced-material-processing-2","low-density-structure"}
+for _,technology in pairs(techs_change) do
+    if data.raw["technology"][technology] then
+        data.raw["technology"][technology].unit.count = data.raw.technology[technology].unit.count + 200
+    end
+    
+end
 
 
