@@ -10,6 +10,20 @@ rro.replace(motor_carbon.ingredients,
 {type = "item", name = "carbon", amount = 1}
 )
 
+motor_carbon.icons= {
+    {
+        icon=data.raw["item"]["electric-engine-unit"].icon,
+        icon_size=data.raw["item"]["electric-engine-unit"].icon_size,
+        scale=0.35
+    },
+    {
+        icon=data.raw["item"]["carbon"].icon,
+        icon_size=data.raw["item"]["carbon"].icon_size,
+        scale=0.30,
+        shift = {10,-10},
+    },
+}
+
 -- local rocket_fuel_thruster_fuel = table.deepcopy(data.raw["recipe"]["rocket_fuel"])
 
 -- rocket_fuel_thruster_fuel.name="rocket-fuel-from-thruster-fuel"
