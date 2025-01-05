@@ -96,7 +96,11 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "carbonic-asteroid-crushing"
-            }
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electric-engine-unit-from-carbon"
+            },
         },
         prerequisites = {
              "planet-discovery-muluna"
