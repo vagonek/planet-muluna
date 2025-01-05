@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.9.30
+Date: 2025-01-05
+  Balancing:
+    - Increased cost of five Rocket Silo prerequisites by 200.
+    - Replaced Rocket silo technology unit cost with a trigger technology, requiring the crafting of 100 logistic robots.
+---------------------------------------------------------------------------------------------------
 Version: 1.9.29
 Date: 2025-01-04
   Bugfixes:
