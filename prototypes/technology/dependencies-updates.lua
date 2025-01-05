@@ -169,4 +169,9 @@ for _,technology in pairs(techs_change) do
     
 end
 
-
+data.raw.technology["rocket-silo"].unit=nil
+data.raw.technology["rocket-silo"].research_trigger={
+    type="craft-item",
+    item="logistic-robot",
+    count=100,
+}
