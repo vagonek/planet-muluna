@@ -164,8 +164,8 @@ end
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
 --data.raw["technology"]["space-science-pack"].localised_description = {"technology-description.lunar-science-pack"}
 
-data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
 data.raw["tool"]["space-science-pack"].icons = nil
 
 
