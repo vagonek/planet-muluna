@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.10.1
+Date: 2025-01-06
+  Graphics:
+    - Replaced sa-science-packs Space science pack icon with custom icon based on metallurgic science pack icon.
+---------------------------------------------------------------------------------------------------
 Version: 1.10.0
 Date: 2025-01-05
   Features:
