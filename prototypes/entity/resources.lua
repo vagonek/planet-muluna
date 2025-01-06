@@ -7,7 +7,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "oxide-asteroid-chunk",
-    localised_name = {"", "[item = oxide-asteroid-chunk]", {"item-name.oxide-asteroid-chunk"}},
+    localised_name = {"", "[item=oxide-asteroid-chunk]", {"item-name.oxide-asteroid-chunk"}},
     order = "e-0",
     richness = true
 }}
@@ -15,7 +15,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "metallic-asteroid-chunk",
-    localised_name = {"","[item = metallic-asteroid-chunk]" ,{"item-name.metallic-asteroid-chunk"}},
+    localised_name = {"","[item=metallic-asteroid-chunk]" ,{"item-name.metallic-asteroid-chunk"}},
     order = "e-1",
     richness = true
 }}
@@ -23,7 +23,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "carbonic-asteroid-chunk",
-    localised_name = {"", "[item = carbonic-asteroid-chunk]", {"item-name.carbonic-asteroid-chunk"}},
+    localised_name = {"", "[item=carbonic-asteroid-chunk]", {"item-name.carbonic-asteroid-chunk"}},
     order = "e-2",
     richness = true
 }}
@@ -140,6 +140,22 @@ metal_ore.autoplace.control = "metallic-asteroid-chunk"
 carbon_ore.autoplace.control = "carbonic-asteroid-chunk"
 ice_ore.autoplace.control = "oxide-asteroid-chunk"
 
+local anorthite=table.deepcopy(ice_ore)
+
+anorthite.minable.result= "anorthite"
+anorthite.minable.mining_time = 1
+anorthite.stages =
+{
+  sheet =
+  {
+    filename = "__planet-muluna__/graphics/entities/oxide-asteroid-ore/grayscale-ore.png",
+    priority = "extra-high",
+    size = 128,
+    frame_count = 8,
+    variation_count = 8,
+    scale = 0.5,
+  }
+}
 
 -- ice_ore.autoplace = {
 --     control = "ice",
