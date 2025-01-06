@@ -40,7 +40,7 @@ data:extend{
         name = "asteroid-collector",
         localised_name = {"entity-name.asteroid-collector"},
         unit= {
-            count = 100,
+            count = 300,
             time = 60,
             ingredients = data.raw["technology"]["planet-discovery-vulcanus"].unit.ingredients
         },
@@ -96,7 +96,11 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "carbonic-asteroid-crushing"
-            }
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electric-engine-unit-from-carbon"
+            },
         },
         prerequisites = {
              "planet-discovery-muluna"

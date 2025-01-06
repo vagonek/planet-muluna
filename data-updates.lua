@@ -35,12 +35,12 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
--- data.raw["assembling-machine"]["crusher"].surface_conditions = {
---     {property = "gravity",
---     min = 0,
---     max = 0.1,
---     }   
--- }
+data.raw["assembling-machine"]["crusher"].surface_conditions = {
+    {property = "gravity",
+    min = 0,
+    max = 0.1,
+    }   
+}
 
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
@@ -94,8 +94,8 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     max = 0.1,
     },
     {property = "oxygen",
-    min = 1,
-    max = 1,
+    min = 0,
+    max = 0,
     },
 }
 
@@ -164,8 +164,8 @@ end
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
 --data.raw["technology"]["space-science-pack"].localised_description = {"technology-description.lunar-science-pack"}
 
-data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/sasp-space-science-pack.png"
+data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
 data.raw["tool"]["space-science-pack"].icons = nil
 
 
@@ -174,9 +174,9 @@ local nauvis = data.raw["planet"]["nauvis"]
 if mods["Tiered-Solar-System"] then
     data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.01
     data.raw["planet"]["muluna"].distance = nauvis.distance*0.90
-else
-    data.raw["planet"]["muluna"].orientation = nauvis.orientation-0.02
-    data.raw["planet"]["muluna"].distance = nauvis.distance*1.0
+-- else
+--     data.raw["planet"]["muluna"].orbit.orientation = nauvis.orientation-0.02
+--     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
 for _,silo in pairs(data.raw["rocket-silo"]) do
@@ -208,4 +208,33 @@ table.insert(data.raw["technology"]["space-platform"].effects,{
 
 require("compat.orbital-ion-cannon")
 
+local one_gravity_condition =
+{
+  {
+    property = "gravity",
+    min = 0.1
+  }
+}
+
+data.raw["spider-vehicle"]["spidertron"].surface_conditions = one_gravity_condition
+data.raw["legacy-curved-rail"]["legacy-curved-rail"].surface_conditions = one_gravity_condition
+data.raw["legacy-straight-rail"]["legacy-straight-rail"].surface_conditions = one_gravity_condition
+data.raw["locomotive"]["locomotive"].surface_conditions = one_gravity_condition
+data.raw["cargo-wagon"]["cargo-wagon"].surface_conditions = one_gravity_condition
+data.raw["fluid-wagon"]["fluid-wagon"].surface_conditions = one_gravity_condition
+data.raw["artillery-wagon"]["artillery-wagon"].surface_conditions = one_gravity_condition
+data.raw["train-stop"]["train-stop"].surface_conditions = one_gravity_condition
+data.raw["rail-signal"]["rail-signal"].surface_conditions = one_gravity_condition
+data.raw["rail-chain-signal"]["rail-chain-signal"].surface_conditions = one_gravity_condition
+data.raw["curved-rail-b"]["curved-rail-b"].surface_conditions = one_gravity_condition
+data.raw["curved-rail-a"]["curved-rail-a"].surface_conditions = one_gravity_condition
+data.raw["half-diagonal-rail"]["half-diagonal-rail"].surface_conditions = one_gravity_condition
+data.raw["straight-rail"]["straight-rail"].surface_conditions = one_gravity_condition
+
+data.raw["rail-ramp"]["rail-ramp"].surface_conditions = one_gravity_condition
+data.raw["elevated-straight-rail"]["elevated-straight-rail"].surface_conditions = one_gravity_condition
+data.raw["elevated-half-diagonal-rail"]["elevated-half-diagonal-rail"].surface_conditions = one_gravity_condition
+data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions = one_gravity_condition
+data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions = one_gravity_condition
+data.raw["rail-support"]["rail-support"].surface_conditions = one_gravity_condition
 

@@ -10,12 +10,12 @@ thruster_fuel.icons= {
     {
         icon=data.raw["fluid"]["thruster-fuel"].icon,
         icon_size=data.raw["fluid"]["thruster-fuel"].icon_size,
-        scale=0.40
+        scale=0.35
     },
     {
         icon=data.raw["item"]["rocket-fuel"].icon,
         icon_size=data.raw["item"]["rocket-fuel"].icon_size,
-        scale=0.25,
+        scale=0.30,
         shift = {10,-10},
     },
     -- {

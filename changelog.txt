@@ -1,4 +1,61 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.10.3
+Date: 2025-01-06
+  Bugfixes:
+    - Fixed asteroid autoplace localisation broken by addition of whitespace around equals signs.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.2
+Date: 2025-01-06
+  Bugfixes:
+    - Rails, locomotives, and wagons now function on Muluna.
+  Changes:
+    - Cleanup of unused graphics.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.1
+Date: 2025-01-06
+  Graphics:
+    - Replaced sa-science-packs Space science pack icon with custom icon based on metallurgic science pack icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.0
+Date: 2025-01-05
+  Features:
+    - Added "Carbon-lubricated electric engine unit" recipe, unlocking with Crushers.
+  Balancing:
+    - Changed cost of "Asteroid Collector" technology from 100 to 300
+    - Moved Requester Chest recipe unlock from "Logistic System" to "Logistic Robotics."
+  Graphics:
+    - Adjusted icon for "Thruster fuel from rocket fuel" recipe.
+    - Imported icons from "Unused Renders" of aluminum ingots, crushed ores, and scrap aluminum metal.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.30
+Date: 2025-01-05
+  Balancing:
+    - Increased cost of five Rocket Silo prerequisites by 200.
+    - Replaced Rocket silo technology unit cost with a trigger technology, requiring the crafting of 100 logistic robots.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.29
+Date: 2025-01-04
+  Bugfixes:
+    - Reverted accidental rollback of Crusher surface conditions that made it unbuildable on Muluna.  https://github.com/nicholasgower/planet-muluna/issues/30
+---------------------------------------------------------------------------------------------------
+Version: 1.9.28
+Date: 2025-01-03
+  Bugfixes:
+    - Reduced distance of Muluna from Nauvis on starmap, and adjusted orbit sprite to match. Adjusted orientation and label orientation as well.
+    - Removed redundant code in data-changes.lua that overrode orbit orientation when Tiered-solar-system is not installed.
+  Graphics:
+    - Changed starmap size of Muluna from 0.75*Nauvis to 0.6*Nauvis.
+  Changes:
+    - .pyc files added to gitignore
+    - Automated addition of whitespace around equals signs in planet.lua
+    - Created python script to quickly generate orbit sprites for PlanetsLib
+    - PlanetsLib:extend now handles the creation of Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.27
+Date: 2025-01-03
+  Bugfixes:
+    - Changed Space Science pack's oxygen requirement from 1% to 0%, fixing uncraftable issue https://github.com/nicholasgower/planet-muluna/issues/26
+---------------------------------------------------------------------------------------------------
 Version: 1.9.26
 Date: 2025-01-02
   Changes:
