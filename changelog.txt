@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.10.3
+Date: 2025-01-06
+  Bugfixes:
+    - Fixed asteroid autoplace localisation broken by addition of whitespace around equals signs.
+---------------------------------------------------------------------------------------------------
 Version: 1.10.2
 Date: 2025-01-06
   Bugfixes:
