@@ -35,12 +35,13 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
-data.raw["assembling-machine"]["crusher"].surface_conditions = {
-    {property = "gravity",
-    min = 0,
-    max = 0.1,
-    }   
-}
+data.raw["assembling-machine"]["crusher"].surface_conditions = nil
+--  {
+--     {property = "gravity",
+--     min = 0,
+--     max = 0.1,
+--     }   
+-- }
 
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
