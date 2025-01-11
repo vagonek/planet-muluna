@@ -3,11 +3,77 @@
 local simulations = require("__base__.prototypes.factoriopedia-simulations")
 
 local resource = require("__base__.prototypes.entity.resources")
+local resource_autoplace = require("resource-autoplace")
+
+local function resource(resource_parameters, autoplace_parameters)
+  return
+  {
+    type = "resource",
+    name = resource_parameters.name,
+    icon = "__planet-muluna__/graphics/icons/" .. resource_parameters.name .. ".png",
+    flags = {"placeable-neutral"},
+    order="a-b-"..resource_parameters.order,
+    tree_removal_probability = 0.8,
+    tree_removal_max_distance = 32 * 32,
+    minable = resource_parameters.minable or
+    {
+      mining_particle = resource_parameters.name .. "-particle",
+      mining_time = resource_parameters.mining_time,
+      result = resource_parameters.name
+    },
+    category = resource_parameters.category,
+    subgroup = resource_parameters.subgroup,
+    walking_sound = resource_parameters.walking_sound,
+    driving_sound = resource_parameters.driving_sound,
+    collision_mask = resource_parameters.collision_mask,
+    collision_box = {{-0.1, -0.1}, {0.1, 0.1}},
+    selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
+    autoplace = resource_autoplace.resource_autoplace_settings
+    {
+      name = resource_parameters.name,
+      order = resource_parameters.order,
+      base_density = autoplace_parameters.base_density,
+      base_spots_per_km = autoplace_parameters.base_spots_per_km2,
+      has_starting_area_placement = true,
+      regular_rq_factor_multiplier = autoplace_parameters.regular_rq_factor_multiplier,
+      starting_rq_factor_multiplier = autoplace_parameters.starting_rq_factor_multiplier,
+      candidate_spot_count = autoplace_parameters.candidate_spot_count,
+      tile_restriction = autoplace_parameters.tile_restriction
+    },
+    stage_counts = {15000, 9500, 5500, 2900, 1300, 400, 150, 80},
+    stages =
+    {
+      sheet =
+      {
+        filename = "__planet-muluna__/graphics/entities/" .. resource_parameters.name .. "/" .. resource_parameters.name .. ".png",
+        priority = "extra-high",
+        size = 128,
+        frame_count = 8,
+        variation_count = 8,
+        scale = 0.5
+      }
+    },
+    map_color = resource_parameters.map_color,
+    mining_visualisation_tint = resource_parameters.mining_visualisation_tint,
+    factoriopedia_simulation = resource_parameters.factoriopedia_simulation
+  }
+end
+
+
+
+
+
+
+
+
+
+
+
 data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "oxide-asteroid-chunk",
-    localised_name = {"", "[item=oxide-asteroid-chunk]", {"item-name.oxide-asteroid-chunk"}},
+    localised_name = {"", "[item=oxide-asteroid-chunk]", " ",{"item-name.oxide-asteroid-chunk"}},
     order = "e-0",
     richness = true
 }}
@@ -15,7 +81,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "metallic-asteroid-chunk",
-    localised_name = {"","[item=metallic-asteroid-chunk]" ,{"item-name.metallic-asteroid-chunk"}},
+    localised_name = {"","[item=metallic-asteroid-chunk]" ," ",{"item-name.metallic-asteroid-chunk"}},
     order = "e-1",
     richness = true
 }}
@@ -23,9 +89,17 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "carbonic-asteroid-chunk",
-    localised_name = {"", "[item=carbonic-asteroid-chunk]", {"item-name.carbonic-asteroid-chunk"}},
+    localised_name = {"", "[item=carbonic-asteroid-chunk]"," ", {"item-name.carbonic-asteroid-chunk"}},
     order = "e-2",
     richness = true
+}}
+data:extend {{
+  type = "autoplace-control",
+  category = "resource",
+  name = "anorthite-chunk",
+  localised_name = {"", "[item=calcite]"," ", {"item-name.anorthite-chunk"}},
+  order = "e-3",
+  richness = true
 }}
 
 -- local coral_variants = {}
@@ -108,6 +182,9 @@ ice_ore_particle.pictures = {
     }
   }
 
+  local anorthite_chunk_particle = table.deepcopy(data.raw["optimized-particle"]["copper-ore-particle"])
+  anorthite_chunk_particle.name="anorthite-chunk-particle"
+
 
 -- local ice_ore = resource(
 --     {
@@ -140,22 +217,32 @@ metal_ore.autoplace.control = "metallic-asteroid-chunk"
 carbon_ore.autoplace.control = "carbonic-asteroid-chunk"
 ice_ore.autoplace.control = "oxide-asteroid-chunk"
 
-local anorthite=table.deepcopy(ice_ore)
+local anorthite=table.deepcopy(data.raw["resource"]["calcite"])
 
-anorthite.minable.result= "anorthite"
-anorthite.minable.mining_time = 1
-anorthite.stages =
-{
-  sheet =
+local anorthite=resource(
   {
-    filename = "__planet-muluna__/graphics/entities/oxide-asteroid-ore/grayscale-ore.png",
-    priority = "extra-high",
-    size = 128,
-    frame_count = 8,
-    variation_count = 8,
-    scale = 0.5,
+    name = "anorthite-chunk",
+    order = "b",
+    map_color = {0.700, 0.700, 0.700},
+    mining_time = 1,
+    --walking_sound = sounds.ore,
+    --driving_sound = stone_driving_sound,
+    mining_visualisation_tint = {r = 0.900, g = 0.900, b = .900, a = 1.000}, -- #e4f6ffff
+    --factoriopedia_simulation = simulations.factoriopedia_iron_ore,
+  },
+  {
+    base_density = 10,
+    regular_rq_factor_multiplier = 1.10,
+    starting_rq_factor_multiplier = 1.5,
+    candidate_spot_count = 52, -- To match 0.17.50 placement
   }
-}
+)
+
+anorthite.minable.result= "anorthite-chunk"
+anorthite.minable.mining_time = 20
+anorthite.autoplace.control="anorthite-chunk"
+anorthite.icons=nil
+anorthite.icon="__planet-muluna__/graphics/icons/anorthite-chunk.png"
 
 -- ice_ore.autoplace = {
 --     control = "ice",
@@ -167,4 +254,4 @@ anorthite.stages =
 --     richness_expression = [[var("control:maraxsis-coral:richness") * random_penalty(x, y, 9232 + (sqrt(x*x + y*y) / 10), 99, 1000)]],
 -- }
 
-data:extend{metal_ore,carbon_ore,ice_ore,ice_ore_particle}
+data:extend{metal_ore,carbon_ore,ice_ore,ice_ore_particle,anorthite,anorthite_chunk_particle}
