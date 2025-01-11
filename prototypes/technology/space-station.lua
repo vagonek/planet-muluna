@@ -126,6 +126,10 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe = "anorthite-crushing"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "ice-melting"
             },
         },
