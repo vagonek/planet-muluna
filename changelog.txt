@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.11.0
+Date: 2025-01-11
+  Features:
+    - Added "Anorthite chunk" resource to Muluna surface.
+    - Added placeholder recipe "Anorthite chunk crushing," unlocked with "Space boilers."
+  Balancing:
+    - Removed all surface restrictions from crushers.
+---------------------------------------------------------------------------------------------------
 Version: 1.10.4
 Date: 2025-01-07
   Locale:
