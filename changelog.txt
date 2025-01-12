@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.11.3
+Date: 2025-01-12
+  Graphics:
+    - Updated space-science-pack technology sprite to use recolored metallic-science-pack sprite.
+  Locale:
+    - Fixed item references in locale to create Factoriopedia links in descriptions.
+    - Updated space-science-pack technology description to reflect Muluna's changes.
+---------------------------------------------------------------------------------------------------
 Version: 1.11.2
 Date: 2025-01-12
   Bugfixes:
