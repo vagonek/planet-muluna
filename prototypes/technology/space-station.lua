@@ -107,7 +107,12 @@ data:extend{
         prerequisites = {
              "planet-discovery-muluna"
         },
-        icon = data.raw["item"]["crusher"].icon
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+        }
     },
     {
         type = "technology",
