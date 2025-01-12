@@ -54,7 +54,8 @@ data:extend{
         prerequisites = {
             "space-science-pack"
         },
-        icon = data.raw["item"]["asteroid-collector"].icon
+        icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        icon_size=256,
     },
     -- {
     --     type = "technology",
