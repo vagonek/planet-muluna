@@ -188,3 +188,5 @@ rro.remove(data.raw.technology["logistic-system"].effects,{
 })
 
 data.raw["technology"]["logistic-system"].unit.count=300
+
+table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
