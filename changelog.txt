@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.11.2
+Date: 2025-01-12
+  Bugfixes:
+    - Made general fix for circular dependency issues ressembling issue with Astroponics. https://mods.factorio.com/mod/astroponics/discussion/67830f2195f9d2a303fbf1b0
+---------------------------------------------------------------------------------------------------
 Version: 1.11.1
 Date: 2025-01-11
   Bugfixes:
