@@ -18,6 +18,6 @@ anorthite_crushing.icons = {
 }
 anorthite_crushing.order=anorthite_crushing.order .. "a"
 anorthite_crushing.localised_description={"recipe-description.placeholder"}
-anorthite_crushing.results = {{type = "item",name = "anorthite-chunk",amount = 1}}
+anorthite_crushing.results = {{type = "item",name = "alumina",amount = 20},{type = "item", name = "anorthite-chunk", amount = 1, probability = 0.2}}
 anorthite_crushing.ingredients = {{type = "item",name = "anorthite-chunk",amount = 1}}
 data:extend{anorthite_crushing}
