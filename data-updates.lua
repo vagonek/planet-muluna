@@ -253,3 +253,7 @@ for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prer
 
 end
 data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
+
+if data.raw["tool"]["alien-science-pack"] then
+    data.raw["tool"]["alien-science-pack"].order="fa[alien-science-pack]"
+end
