@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.12.0
+Date: 2025-01-12
+  Features:
+    - Added "ALICE propellant" recipe, turning crushed alumina, water, and ice into rocket fuel.
+    - Added "Alumina crushing" recipe.
+    - Added "alumina" and "crushed alumina" items
+    - Added fully-featured "Anorthite chunk crushing" recipe.
+  Compatibility:
+    - When schall-alien-loot is installed, "Alien Science Pack" order will be moved to be before the Space Science Pack.
+  Bugfixes:
+    - "Production Science Pack" prerequisite added to "Rocket Part Productivity" technology.
+  Graphics:
+    - Changed icon of "Crusher" technology to unused-render's "comminution" icon.
+    - Resized "Anorthite crushing" icon.
+---------------------------------------------------------------------------------------------------
 Version: 1.11.3
 Date: 2025-01-12
   Graphics:
