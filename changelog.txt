@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.12.2
+Date: 2025-01-12
+  Compatibility:
+    - Removed compatibility with MT-Lib, as it has been superceded by PlanetsLib.
+  Graphics:
+    - Added shading to Muluna icon
+---------------------------------------------------------------------------------------------------
 Version: 1.12.1
 Date: 2025-01-12
   Graphics:
