@@ -133,18 +133,53 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
-                recipe = "anorthite-crushing"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "ice-melting"
             },
         },
         prerequisites = {
-            "planet-discovery-muluna"
+            "crusher"
         },
         icon = data.raw["technology"]["steam-power"].icon,
         icon_size = data.raw["technology"]["steam-power"].icon_size,
+    },
+    {
+        type = "technology",
+        name = "anorthite-processing",
+        research_trigger = {
+            type = "mine-entity",
+            entity = "anorthite-chunk"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "anorthite-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "alumina-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "rocket-fuel-aluminum"
+            },
+        },
+        prerequisites = {
+            "crusher"
+        },
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+            {
+                icon = "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+                icon_size=64,
+                --scale=0.3,
+                shift = {45,45},
+                scale=0.75,
+            },
+            
+        }
     },
     {
         type = "technology",
