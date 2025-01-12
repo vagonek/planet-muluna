@@ -39,6 +39,7 @@ data:extend{
         type = "technology",
         name = "asteroid-collector",
         localised_name = {"entity-name.asteroid-collector"},
+        localised_description = {"entity-description.asteroid-collector"},
         unit= {
             count = 300,
             time = 60,
@@ -83,6 +84,7 @@ data:extend{
             entity = "metallic-asteroid-chunk"
         },
         localised_name = {"item-name.crusher"},
+        localised_description = {"entity-description.crusher"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -156,6 +158,7 @@ data:extend{
             "space-platform-thruster"
         },
         icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1920),
+        localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
         --         icon = data.raw["planet"]["muluna"].icon,
