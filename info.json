@@ -18,9 +18,9 @@
     "? alien-biomes",
     "hurricane-graphics",
     "? maraxsis",
-    "? MT-lib",
     "! external-rocket-parts",
-    "? Tiered-Solar-System >= 1.1.3"
+    "? Tiered-Solar-System >= 1.1.3",
+    "! MT-Lib"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
