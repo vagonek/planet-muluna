@@ -156,7 +156,8 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
 }
-
+data.raw["technology"]["space-science-pack"].icon = "__planet-muluna__/graphics/technology/space-science-pack.png"
+data.raw["technology"]["space-science-pack"].localised_description={"technology-description.space-science-pack"}
 data.raw["recipe"]["space-science-pack"].energy_required=7
 
 
@@ -187,3 +188,5 @@ rro.remove(data.raw.technology["logistic-system"].effects,{
 })
 
 data.raw["technology"]["logistic-system"].unit.count=300
+
+table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")

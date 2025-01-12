@@ -35,12 +35,13 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
-data.raw["assembling-machine"]["crusher"].surface_conditions = {
-    {property = "gravity",
-    min = 0,
-    max = 0.1,
-    }   
-}
+data.raw["assembling-machine"]["crusher"].surface_conditions = nil
+--  {
+--     {property = "gravity",
+--     min = 0,
+--     max = 0.1,
+--     }   
+-- }
 
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
@@ -238,3 +239,21 @@ data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions 
 data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions = one_gravity_condition
 data.raw["rail-support"]["rail-support"].surface_conditions = one_gravity_condition
 
+--Overrides any mods which add their own techs to space platform thruster as a prereq.
+--Moves prereq to asteroid collector, which is roughly equivalent to space platform thruster's place in the vanilla tech tree.
+local new_prereqs={}
+for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
+    
+    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then
+        --rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisistes,technology)
+        table.insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
+    else
+        table.insert(new_prereqs,technology)
+    end
+
+end
+data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
+
+if data.raw["tool"]["alien-science-pack"] then
+    data.raw["tool"]["alien-science-pack"].order="fa[alien-science-pack]"
+end

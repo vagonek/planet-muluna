@@ -1,4 +1,62 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.12.2
+Date: 2025-01-12
+  Compatibility:
+    - Removed compatibility with MT-Lib, as it has been superceded by PlanetsLib.
+  Graphics:
+    - Added shading to Muluna icon
+---------------------------------------------------------------------------------------------------
+Version: 1.12.1
+Date: 2025-01-12
+  Graphics:
+    - Replaced "Asteroid Collector" technology icon with AI-upscaled version of item icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.12.0
+Date: 2025-01-12
+  Features:
+    - Added "ALICE propellant" recipe, turning crushed alumina, water, and ice into rocket fuel.
+    - Added "Alumina crushing" recipe.
+    - Added "alumina" and "crushed alumina" items
+    - Added fully-featured "Anorthite chunk crushing" recipe.
+  Compatibility:
+    - When schall-alien-loot is installed, "Alien Science Pack" order will be moved to be before the Space Science Pack.
+  Bugfixes:
+    - "Production Science Pack" prerequisite added to "Rocket Part Productivity" technology.
+  Graphics:
+    - Changed icon of "Crusher" technology to unused-render's "comminution" icon.
+    - Resized "Anorthite crushing" icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.3
+Date: 2025-01-12
+  Graphics:
+    - Updated space-science-pack technology sprite to use recolored metallic-science-pack sprite.
+  Locale:
+    - Fixed item references in locale to create Factoriopedia links in descriptions.
+    - Updated space-science-pack technology description to reflect Muluna's changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.2
+Date: 2025-01-12
+  Bugfixes:
+    - Made general fix for circular dependency issues ressembling issue with Astroponics. https://mods.factorio.com/mod/astroponics/discussion/67830f2195f9d2a303fbf1b0
+---------------------------------------------------------------------------------------------------
+Version: 1.11.1
+Date: 2025-01-11
+  Bugfixes:
+    - Gave Muluna tiles a radiation absorption rate.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.0
+Date: 2025-01-11
+  Features:
+    - Added "Anorthite chunk" resource to Muluna surface.
+    - Added placeholder recipe "Anorthite chunk crushing," unlocked with "Space boilers."
+  Balancing:
+    - Removed all surface restrictions from crushers.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.4
+Date: 2025-01-07
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
 Version: 1.10.3
 Date: 2025-01-06
   Bugfixes:

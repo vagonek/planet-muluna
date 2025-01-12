@@ -39,6 +39,7 @@ data:extend{
         type = "technology",
         name = "asteroid-collector",
         localised_name = {"entity-name.asteroid-collector"},
+        localised_description = {"entity-description.asteroid-collector"},
         unit= {
             count = 300,
             time = 60,
@@ -53,7 +54,8 @@ data:extend{
         prerequisites = {
             "space-science-pack"
         },
-        icon = data.raw["item"]["asteroid-collector"].icon
+        icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        icon_size=256,
     },
     -- {
     --     type = "technology",
@@ -83,6 +85,7 @@ data:extend{
             entity = "metallic-asteroid-chunk"
         },
         localised_name = {"item-name.crusher"},
+        localised_description = {"entity-description.crusher"},
         effects = {
             {
                 type = "unlock-recipe",
@@ -105,7 +108,12 @@ data:extend{
         prerequisites = {
              "planet-discovery-muluna"
         },
-        icon = data.raw["item"]["crusher"].icon
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+        }
     },
     {
         type = "technology",
@@ -130,10 +138,49 @@ data:extend{
             },
         },
         prerequisites = {
-            "planet-discovery-muluna"
+            "crusher"
         },
         icon = data.raw["technology"]["steam-power"].icon,
         icon_size = data.raw["technology"]["steam-power"].icon_size,
+    },
+    {
+        type = "technology",
+        name = "anorthite-processing",
+        research_trigger = {
+            type = "mine-entity",
+            entity = "anorthite-chunk"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "anorthite-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "alumina-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "rocket-fuel-aluminum"
+            },
+        },
+        prerequisites = {
+            "crusher"
+        },
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+            {
+                icon = "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+                icon_size=64,
+                --scale=0.3,
+                shift = {45,45},
+                scale=0.75,
+            },
+            
+        }
     },
     {
         type = "technology",
@@ -152,6 +199,7 @@ data:extend{
             "space-platform-thruster"
         },
         icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1920),
+        localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
         --         icon = data.raw["planet"]["muluna"].icon,
