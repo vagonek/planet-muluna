@@ -190,3 +190,6 @@ rro.remove(data.raw.technology["logistic-system"].effects,{
 data.raw["technology"]["logistic-system"].unit.count=300
 
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
+
+table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
+table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
