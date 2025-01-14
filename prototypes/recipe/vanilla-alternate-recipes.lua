@@ -82,14 +82,14 @@ aluminum_rocket_fuel.icons= dual_icon("rocket-fuel","alumina")
 
 local landfill_crushed_stone=table.deepcopy(data.raw["recipe"]["landfill"])
 --landfill_crushed_stone.category="crafting-with-fluid"
-landfill_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 50},{type = "item",name = "concrete",amount = 10}}
+landfill_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 40},{type = "item",name = "concrete",amount = 5}}
 landfill_crushed_stone.name="landfill-stone-crushed"
 
 landfill_crushed_stone.icons=dual_icon("landfill","stone-crushed")
 
 local bricks_crushed_stone=table.deepcopy(data.raw["recipe"]["stone-brick"])
 
-bricks_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 3}}
+bricks_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 2}}
 bricks_crushed_stone.name="stone-bricks-stone-crushed"
 bricks_crushed_stone.enabled=false
 bricks_crushed_stone.icons = dual_icon("stone-brick","stone-crushed")

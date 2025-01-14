@@ -52,7 +52,7 @@ data:extend{{
         
     -- },
     
-    stack_size=data.raw.item["stone"].stack_size*4,
+    stack_size=data.raw.item["stone"].stack_size*2,
     order="c[stone-crushed]",
     subgroup="muluna-products",
     group=data.raw.item["stone"].group,

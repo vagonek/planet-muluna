@@ -20,6 +20,9 @@ anorthite_crushing.order=anorthite_crushing.order .. "a"
 anorthite_crushing.results = {{type = "item",name = "alumina",amount = 20},{type = "item", name = "anorthite-chunk", amount = 1, probability = 0.2}}
 anorthite_crushing.ingredients = {{type = "item",name = "anorthite-chunk",amount = 1}}
 
+-- anorthite_crushing.surface_conditions={
+--     PlanetsLib.surface_conditions.restrict_to_surface("muluna")
+-- }
 
 local alumina_crushing=table.deepcopy(anorthite_crushing)
 alumina_crushing.icons = {
@@ -42,8 +45,8 @@ alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 5}}
 
 local stone_crushing=table.deepcopy(anorthite_crushing)
 
-stone_crushing.results = {{type = "item",name = "stone-crushed",amount = 10},{type = "item", name = "stone", amount = 1,ignored_by_productivity=1}}
-stone_crushing.ingredients = {{type = "item",name = "stone",amount = 6}}
+stone_crushing.results = {{type = "item",name = "stone-crushed",amount = 9},{type = "item", name = "stone", amount = 1,ignored_by_productivity=1}}
+stone_crushing.ingredients = {{type = "item",name = "stone",amount = 7}}
 stone_crushing.name="stone-crushing"
 stone_crushing.energy_required=0.5
 stone_crushing.icons={
