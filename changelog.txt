@@ -1,4 +1,21 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.13.0
+Date: 2025-01-14
+  Features:
+    - Added "Advanced stone processing" technology.
+    - Added "Crushed stone" item, made by crushing stone in crushers.
+    - Added "Landfill from crushed stone" and "Brick from crushed stone" recipes."
+    - Added "Stone crushing" recipe.
+  Balancing:
+    - Added "Advanced stone processing" to prerequisite lists of "Advanced asteroid processing" and "Asteroid reprocessing."
+    - Adjusted stack sizes and recipes for stone crushing to reduce frustrations with belt ratios.
+  Compatibility:
+    - Raised required PlanetsLib version to 1.1.22
+  Graphics:
+    - Changed parked platforms orientation of Muluna.
+  Locale:
+    - Changed localised description of Muluna and Nauvis to include PlanetsLib planet description templates. With support for Lignumis.
+---------------------------------------------------------------------------------------------------
 Version: 1.12.3
 Date: 2025-01-12
   Locale:
