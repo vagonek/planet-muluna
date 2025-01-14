@@ -107,6 +107,7 @@ local muluna=
         ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*3,
     },
     map_gen_settings = map_gen,
+    parked_platforms_orientation=0.70,
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
       --polar = {2,0.005*tau},
       orientation = 0.75, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
