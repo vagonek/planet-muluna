@@ -99,6 +99,7 @@ local muluna=
     subgroup = "satellites",
     magnitude = nauvis.magnitude*3/5,
     pollutant_type = "radiation",
+    localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet=nauvis]"},
     surface_properties = {
         ["solar-power"] = 100,
         ["pressure"] = 50,
@@ -106,6 +107,7 @@ local muluna=
         ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*3,
     },
     map_gen_settings = map_gen,
+    parked_platforms_orientation=0.70,
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
       --polar = {2,0.005*tau},
       orientation = 0.75, --When planetsLib orbit is added, orientation and distance are set relative to parent body.

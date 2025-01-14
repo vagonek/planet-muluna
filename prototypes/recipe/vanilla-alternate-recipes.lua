@@ -2,19 +2,43 @@ local rro = require("lib.remove-replace-object")
 --Muluna-specific alternative recipes for vanilla items
 
 local function dual_icon(item_1,item_2)
-    local icon = {
-        {
+    local icon = {}
+    if data.raw["item"][item_1].icon then
+        icon[1]={
             icon=data.raw["item"][item_1].icon,
             icon_size=data.raw["item"][item_1].icon_size,
             scale=0.35
-        },
-        {
+        }
+        if data.raw["item"][item_1].icon_size then
+            icon[1].scale=icon[1].scale * 64 /data.raw["item"][item_1].icon_size
+        end
+    else
+        icon[1]={
+            icon=data.raw["item"][item_1].icons[1].icon,
+            icon_size=data.raw["item"][item_1].icons[1].icon_size,
+            scale=0.35
+        }
+    end
+    if data.raw["item"][item_1].icon then
+        icon[2]={
             icon=data.raw["item"][item_2].icon,
             icon_size=data.raw["item"][item_2].icon_size,
             scale=0.30,
             shift = {10,-10},
-        },
-    }
+            }
+            if data.raw["item"][item_2].icon_size then
+                icon[2].scale=icon[2].scale* 64 /data.raw["item"][item_2].icon_size
+            end
+    else
+        icon[2]={
+            icon=data.raw["item"][item_2].icons[1].icon,
+            icon_size=data.raw["item"][item_2].icons[1].icon_size,
+            scale=0.30,
+            shift = {10,-10},
+            }
+    end
+    
+    
     return icon
 end
 
@@ -56,6 +80,19 @@ aluminum_rocket_fuel.icons= dual_icon("rocket-fuel","alumina")
 
 
 
-data:extend{motor_carbon,aluminum_rocket_fuel}
+local landfill_crushed_stone=table.deepcopy(data.raw["recipe"]["landfill"])
+--landfill_crushed_stone.category="crafting-with-fluid"
+landfill_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 40},{type = "item",name = "concrete",amount = 5}}
+landfill_crushed_stone.name="landfill-stone-crushed"
+
+landfill_crushed_stone.icons=dual_icon("landfill","stone-crushed")
+
+local bricks_crushed_stone=table.deepcopy(data.raw["recipe"]["stone-brick"])
+
+bricks_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 2}}
+bricks_crushed_stone.name="stone-bricks-stone-crushed"
+bricks_crushed_stone.enabled=false
+bricks_crushed_stone.icons = dual_icon("stone-brick","stone-crushed")
+data:extend{motor_carbon,aluminum_rocket_fuel,landfill_crushed_stone,bricks_crushed_stone}
 
 

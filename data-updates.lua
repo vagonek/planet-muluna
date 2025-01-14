@@ -257,3 +257,12 @@ data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
 if data.raw["tool"]["alien-science-pack"] then
     data.raw["tool"]["alien-science-pack"].order="fa[alien-science-pack]"
 end
+
+if data.raw.planet["lignumis"] == nil then
+    data.raw.planet["nauvis"].localised_description={"planetslib-templates.planet-description-one-moon",{"space-location-description.nauvis"},"[planet=muluna]"}
+else
+    data.raw.planet["lignumis"].localised_description={"planetslib-templates.moon-description",{"space-location-description.lignumis"},"[planet=nauvis]"}
+    data.raw.planet["nauvis"].localised_description={"planetslib-templates.planet-description-two-moons",{"space-location-description.nauvis"},"[planet=muluna]","[planet=lignumis]"}
+end
+
+

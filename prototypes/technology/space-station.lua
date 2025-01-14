@@ -104,6 +104,7 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "electric-engine-unit-from-carbon"
             },
+            
         },
         prerequisites = {
              "planet-discovery-muluna"
@@ -114,6 +115,46 @@ data:extend{
                 icon_size = 968,
             },  
         }
+    },
+    {
+        type = "technology",
+        name = "advanced-stone-processing",
+        unit= {
+            count = 200,
+            time = 30,
+            ingredients = data.raw["technology"]["productivity-module-2"].unit.ingredients
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "stone-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "landfill-stone-crushed"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "stone-bricks-stone-crushed"
+            },
+        },
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+            {
+                icon = data.raw["item"]["stone"].icon,
+                icon_size=data.raw["item"]["stone"].icon_size,
+                --scale=0.3,
+                shift = {45,45},
+                scale=0.75,
+            },
+            
+        },
+        prerequisites = {
+            "space-science-pack"
+        },
     },
     {
         type = "technology",
