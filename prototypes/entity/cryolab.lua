@@ -5,8 +5,11 @@ cryolab.name="cryolab"
 cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
 cryolab.collision_box=flib_bounding_box.resize(cryolab.collision_box,1)
 cryolab.minable = {mining_time = 0.5, result = "cryolab"}
-cryolab.researching_speed=cryolab.researching_speed*2
-cryolab.energy_usage="750kW"
+cryolab.researching_speed=cryolab.researching_speed*3
+cryolab.science_pack_drain_rate_percent=35
+cryolab.energy_usage="1.5MW"
+cryolab.max_health=500
+cryolab.module_slots=6
 cryolab.energy_source.emissions_per_minute.pollution=cryolab.energy_source.emissions_per_minute.pollution*2
 cryolab.on_animation = {
     layers = {

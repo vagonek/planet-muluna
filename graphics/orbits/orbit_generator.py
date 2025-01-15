@@ -42,8 +42,8 @@ def generate_orbit(distance, output_file, mod_name):
     plt.savefig(output_file, bbox_inches="tight",pad_inches=0, dpi=resolution,transparent=True)
     plt.close()
 
-    print(f"Orbit sprite saved to {os.path.abspath(output_file)}")
-    print(f"Add sprite to planet with following code:")
+    print(f"Orbit sprite saved to {os.path.abspath(output_file)}\n")
+    print(f"Add sprite to planet with following code in your planet object:\n")
     print("""sprite = {{
         type = "sprite",
         filename = "__{}__/graphics/orbits/{}}}",

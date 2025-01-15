@@ -257,7 +257,7 @@ data:extend{
         unit= {
             count = 5000,
             time = 60,
-            ingredients = --Normally, I would based these costs on vanilla technologies to increase tolerance of other mods, but since this tech is intended to 
+            ingredients = --Normally, I would base these costs on vanilla technologies to increase tolerance of other mods, but since this tech is intended to 
                 {
                     {"automation-science-pack", 1},
                     {"logistic-science-pack", 1},
