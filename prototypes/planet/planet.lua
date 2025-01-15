@@ -99,6 +99,7 @@ local muluna=
     subgroup = "satellites",
     magnitude = nauvis.magnitude*3/5,
     pollutant_type = "radiation",
+    persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
     localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet=nauvis]"},
     surface_properties = {
         ["solar-power"] = 100,
