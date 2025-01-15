@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.13.1
+Date: 2025-01-15
+  Balancing:
+    - Adjusted "Alumina crushing" recipe output.
+  Compatibility:
+    - Raised PlanetsLib requirement to 1.1.24 to address locale bug.
+---------------------------------------------------------------------------------------------------
 Version: 1.13.0
 Date: 2025-01-14
   Features:
