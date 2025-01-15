@@ -1,3 +1,7 @@
+
+
+
+
 local anorthite_crushing = table.deepcopy(data.raw["recipe"]["metallic-asteroid-crushing"])
 anorthite_crushing.name = "anorthite-crushing"
 
@@ -40,8 +44,8 @@ alumina_crushing.icons = {
     },
 }
 alumina_crushing.name="alumina-crushing"
-alumina_crushing.results = {{type = "item",name = "alumina-crushed",amount = 10},{type = "item", name = "alumina", amount = 1, probability = 0.2}}
-alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 5}}
+alumina_crushing.results = {{type = "item",name = "alumina-crushed",amount = 10},{type = "item", name = "alumina", amount = 1}}
+alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 6}}
 
 local stone_crushing=table.deepcopy(anorthite_crushing)
 
@@ -66,5 +70,11 @@ stone_crushing.icons={
 
 
 
+
+
+-- table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
+--     effect = "enable-recipe",
+--     recipe = ""
+-- })
 
 data:extend{anorthite_crushing,alumina_crushing,stone_crushing}
