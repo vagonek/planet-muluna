@@ -278,7 +278,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "cryogenic-science-pack","biolab"
+            "biolab","quantum-processor"
         },
         icons = {
             {
