@@ -20,7 +20,7 @@
     "? maraxsis",
     "! external-rocket-parts",
     "? Tiered-Solar-System >= 1.1.3",
-    "! MT-Lib"
+    "! MT-lib"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
