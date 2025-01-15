@@ -36,6 +36,10 @@ data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condit
 
 
 data.raw["assembling-machine"]["crusher"].surface_conditions = nil
+if data.raw["assembling-machine"]["crusher-2"] then
+    data.raw["assembling-machine"]["crusher-2"].surface_conditions = nil
+end
+
 --  {
 --     {property = "gravity",
 --     min = 0,
@@ -265,4 +269,4 @@ else
     data.raw.planet["nauvis"].localised_description={"planetslib-templates.planet-description-two-moons",{"space-location-description.nauvis"},"[planet=muluna]","[planet=lignumis]"}
 end
 
-
+require("prototypes.entity.cryolab")
