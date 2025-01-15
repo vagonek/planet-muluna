@@ -20,6 +20,29 @@ This mod currently relies on vanilla prototypes for many world features. While t
 
 - Stone
 
+## New recipes
+
+Crushers can now be placed on any surface, and in addition to their vanilla recipes, which form the backbone of any Muluna base, a few new crusher recipes have been added, some of which are useful on any planet.
+
+- (Crusher) Anorthite crushing: 1 Anorthite chunk -> 20 Alumina + 20% Anorthite chunk
+
+- (Crusher) Alumina Crushing: 6 Alumina -> 10 crushed alumina + 1 stone
+
+  - (Assembling) ALICE Propellant: 10 crushed alumina + 2 ice + 100 water -> 1 rocket fuel
+
+- (Crusher) Stone crushing: 7 stone -> 9 crushed stone + 1 stone
+
+  - (Furnace) Bricks from crushed stone: 2 crushed stone -> 1 stone brick
+  
+  - (Assembling) Landfill from crushed stone: 40 crushed stone + 5 concrete -> 1 landfill
+    
+- (Chemical planet) Thruster fuel from rocket fuel: 1 rocket fuel + 10 water -> 250 thruster fuel (This is how your first space platform will generate thruster fuel.)
+
+## New Buildings
+
+- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs.
+
+
 
 ## Known to be compatible with:
 
