@@ -89,13 +89,15 @@ local muluna=
     --   }
     -- },
     icon = "__planet-muluna__/graphics/moon-icon.png",
+    icon_size = 1482,
+    
     --orientation = nauvis.orientation-0.02,
     --distance = nauvis.distance*1.0,
     
-    icon_size = 1920,
+    
     label_orientation = 0.55,
     starmap_icon = "__planet-muluna__/graphics/moon-icon.png",
-    starmap_icon_size = 1920,
+    starmap_icon_size = 1482,
     subgroup = "satellites",
     magnitude = nauvis.magnitude*3/5,
     pollutant_type = "radiation",
@@ -105,7 +107,7 @@ local muluna=
         ["solar-power"] = 100,
         ["pressure"] = 50,
         ["magnetic-field"] = 0.01,
-        ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*3,
+        ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*2,
     },
     map_gen_settings = map_gen,
     parked_platforms_orientation=0.70,
@@ -128,7 +130,6 @@ local muluna=
 }
 
 
---Muluna's position is defined relative to Nauvis in data-updates.lua. This is to accomodate for Tiered-Solar-System.
 local bot_power = 0.2
 
 muluna.surface_properties["gravity"] = muluna.surface_properties["pressure"]/100*bot_power
@@ -140,6 +141,7 @@ end
 if settings.startup["PlanetsLib-enable-oxygen"].value == true then
   muluna.surface_properties["oxygen"] = 0
 end
+
 local muluna_connection = {
   type = "space-connection",
   name = "nauvis-muluna",
