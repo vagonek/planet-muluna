@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.14.6
+Date: 2025-01-16
+  Bugfixes:
+    - Fixed graphics-related crash on zipped copies of mod
+  Graphics:
+    - Cleaned up generic crushing icon
+---------------------------------------------------------------------------------------------------
 Version: 1.14.5
 Date: 2025-01-16
   Locale:
