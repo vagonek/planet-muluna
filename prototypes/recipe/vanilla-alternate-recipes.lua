@@ -76,6 +76,7 @@ local aluminum_rocket_fuel=table.deepcopy(data.raw["recipe"]["rocket-fuel"])
 aluminum_rocket_fuel.name="rocket-fuel-aluminum"
 aluminum_rocket_fuel.ingredients = {{type = "item",name = "alumina-crushed",amount = 10},{type = "item",name = "ice",amount = 2},{type = "fluid",name = "water",amount = 100}}
 
+aluminum_rocket_fuel.auto_recycle=false
 aluminum_rocket_fuel.icons= dual_icon("rocket-fuel","alumina")
 
 local carbon_nanotubes_lds = table.deepcopy(data.raw["recipe"]["low-density-structure"])
@@ -91,25 +92,28 @@ carbon_nanotubes_lds.surface_conditions = {{
     min = 0,
     max = 0,
 }}
-
+carbon_nanotubes_lds.auto_recycle=false
 local landfill_crushed_stone=table.deepcopy(data.raw["recipe"]["landfill"])
 --landfill_crushed_stone.category="crafting-with-fluid"
 landfill_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 40},{type = "item",name = "concrete",amount = 5}}
 landfill_crushed_stone.name="landfill-stone-crushed"
 
 landfill_crushed_stone.icons=dual_icon("landfill","stone-crushed")
-
+landfill_crushed_stone.auto_recycle=false
 local bricks_crushed_stone=table.deepcopy(data.raw["recipe"]["stone-brick"])
 
 bricks_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount = 2}}
 bricks_crushed_stone.name="stone-bricks-stone-crushed"
 bricks_crushed_stone.enabled=false
 bricks_crushed_stone.icons = dual_icon("stone-brick","stone-crushed")
-
+bricks_crushed_stone.auto_recycle=false
 
 
 local aluminum_green_circuit = table.deepcopy(data.raw["recipe"]["electronic-circuit"])
 local aluminum_red_circuit = table.deepcopy(data.raw["recipe"]["advanced-circuit"])
+
+aluminum_green_circuit.auto_recycle=false
+aluminum_red_circuit.auto_recycle=false
 
 rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
 rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
