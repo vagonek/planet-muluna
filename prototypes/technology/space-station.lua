@@ -3,7 +3,7 @@ local function technology_icon_constant_planet(technology_icon,icon_size)
     {
       {
         icon = technology_icon,
-        icon_size = 1920,
+        icon_size = 1482,
       },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-planet.png",
