@@ -78,7 +78,19 @@ aluminum_rocket_fuel.ingredients = {{type = "item",name = "alumina-crushed",amou
 
 aluminum_rocket_fuel.icons= dual_icon("rocket-fuel","alumina")
 
+local carbon_nanotubes_lds = table.deepcopy(data.raw["recipe"]["low-density-structure"])
 
+carbon_nanotubes_lds.name = "low-density-structure-from-carbon"
+
+carbon_nanotubes_lds.ingredients = {{type = "item", name = "iron-plate", amount = 5}, {type = "item", name = "alumina-crushed", amount = 5}, {type = "item", name = "carbon", amount = 20}}
+carbon_nanotubes_lds.energy_required=30
+carbon_nanotubes_lds.icons = dual_icon("low-density-structure","carbon")
+
+carbon_nanotubes_lds.surface_conditions = {{
+    property = "oxygen",
+    min = 0,
+    max = 0,
+}}
 
 local landfill_crushed_stone=table.deepcopy(data.raw["recipe"]["landfill"])
 --landfill_crushed_stone.category="crafting-with-fluid"
@@ -93,6 +105,21 @@ bricks_crushed_stone.ingredients = {{type = "item",name = "stone-crushed",amount
 bricks_crushed_stone.name="stone-bricks-stone-crushed"
 bricks_crushed_stone.enabled=false
 bricks_crushed_stone.icons = dual_icon("stone-brick","stone-crushed")
-data:extend{motor_carbon,aluminum_rocket_fuel,landfill_crushed_stone,bricks_crushed_stone}
+
+
+
+local aluminum_green_circuit = table.deepcopy(data.raw["recipe"]["electronic-circuit"])
+local aluminum_red_circuit = table.deepcopy(data.raw["recipe"]["advanced-circuit"])
+
+rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
+rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
+
+aluminum_green_circuit.name="electronic-circuit-aluminum"
+aluminum_red_circuit.name="advanced-circuit-aluminum"
+
+aluminum_green_circuit.icons = dual_icon("electronic-circuit","aluminum-cable")
+aluminum_red_circuit.icons = dual_icon("advanced-circuit","aluminum-cable")
+
+data:extend{motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit}
 
 

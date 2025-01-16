@@ -69,12 +69,21 @@ stone_crushing.icons={
 }
 
 
+local aluminum_plate = table.deepcopy(data.raw["recipe"]["iron-plate"])
+aluminum_plate.ingredients = {{type = "item",name = "alumina",amount = 1}}
+aluminum_plate.results = {{type = "item",name = "aluminum-plate",amount = 1}}
+aluminum_plate.name = "aluminum-plate"
 
 
+local aluminum_cable = table.deepcopy(data.raw["recipe"]["copper-cable"])
+
+aluminum_cable.name = "aluminum-cable"
+aluminum_cable.ingredients = {{type = "item",name = "aluminum-plate",amount = 1}}
+aluminum_cable.results = {{type = "item",name = "aluminum-cable",amount = 2}}
 
 -- table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
 --     effect = "enable-recipe",
 --     recipe = ""
 -- })
 
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing}
+data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable}

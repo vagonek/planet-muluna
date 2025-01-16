@@ -204,6 +204,26 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "rocket-fuel-aluminum"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-plate"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-cable",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "low-density-structure-from-carbon",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electronic-circuit-aluminum",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-circuit-aluminum",
+            },
         },
         prerequisites = {
             "crusher"
