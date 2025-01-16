@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.0
+Date: 2025-01-16
+  Features:
+    - Added alternative recipes for low density structures, electronic circuits, and advanced circuits using a greater proportion of materials local to Muluna. Also adds intermediate items to facilitate these recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.14.7
 Date: 2025-01-16
   Bugfixes:
