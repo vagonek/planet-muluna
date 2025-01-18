@@ -6,7 +6,7 @@ cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
 cryolab.collision_box=flib_bounding_box.resize(cryolab.collision_box,1)
 cryolab.minable = {mining_time = 0.5, result = "cryolab"}
 cryolab.researching_speed=cryolab.researching_speed*3
-cryolab.science_pack_drain_rate_percent=35
+cryolab.science_pack_drain_rate_percent=50
 cryolab.energy_usage="1.5MW"
 cryolab.max_health=500
 cryolab.module_slots=6
