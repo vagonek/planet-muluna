@@ -97,7 +97,7 @@ data:extend {{
   type = "autoplace-control",
   category = "resource",
   name = "anorthite-chunk",
-  localised_name = {"", "[item=calcite]"," ", {"item-name.anorthite-chunk"}},
+  localised_name = {"", "[item=anorthite-chunk]"," ", {"item-name.anorthite-chunk"}},
   order = "e-3",
   richness = true
 }}
