@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.2
+Date: 2025-01-18
+  Balancing:
+    - Removed science pack drain reduction from cryolab.
+  Graphics:
+    - Updated "Anorthite chunk" autoplace icon to use newly designed Anorthite chunk sprite instead of calcite.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.1
 Date: 2025-01-16
   Bugfixes:
