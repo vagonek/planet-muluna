@@ -1,4 +1,121 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.12
+Date: 2025-01-20
+  Compatibility:
+    - Issued fix to ensure compatibility with "Hardcore delayed tech tree."
+---------------------------------------------------------------------------------------------------
+Version: 1.15.11
+Date: 2025-01-20
+  Bugfixes:
+    - Disables addition of ALICE propellent to rocket fuel productivity tech when said tech can't be found.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.10
+Date: 2025-01-20
+  Changes:
+    - test update
+---------------------------------------------------------------------------------------------------
+Version: 1.15.9
+Date: 2025-01-20
+  Changes:
+    - test update
+---------------------------------------------------------------------------------------------------
+Version: 1.15.8
+Date: 2025-01-20
+  Compatibility:
+    - Added compatibility with modules-t4, replacing recipe for productivity module 4 with one that requires Muluna resources.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.7
+Date: 2025-01-20
+  Locale:
+    - Updated locale
+---------------------------------------------------------------------------------------------------
+Version: 1.15.6
+Date: 2025-01-20
+  Bugfixes:
+    - Added "ALICE Propellant" recipe to rocket fuel productivity technology.
+    - Added "Anorthite crushing" recipe to "asteroid productivity" technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.5
+Date: 2025-01-20
+  Graphics:
+    - Deleted unused sprite.
+  Locale:
+    - Added locale values for upcoming fluids.
+  Changes:
+    - Minor refactoring
+    - Moved order of Muluna resource settings to be after Nauvis resources
+---------------------------------------------------------------------------------------------------
+Version: 1.15.4
+Date: 2025-01-20
+  Bugfixes:
+    - Moved Astroponics circular technology dependency fix from data-updates to data-final-fixes.
+  Graphics:
+    - Imported mipmap generator from https://github.com/StephenBarnes/FactorioModScripts
+---------------------------------------------------------------------------------------------------
+Version: 1.15.3
+Date: 2025-01-19
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.15.2
+Date: 2025-01-18
+  Balancing:
+    - Removed science pack drain reduction from cryolab.
+  Graphics:
+    - Updated "Anorthite chunk" autoplace icon to use newly designed Anorthite chunk sprite instead of calcite.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.1
+Date: 2025-01-16
+  Bugfixes:
+    - Set alternate recipe auto_recycle=false.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.0
+Date: 2025-01-16
+  Features:
+    - Added alternative recipes for low density structures, electronic circuits, and advanced circuits using a greater proportion of materials local to Muluna. Also adds intermediate items to facilitate these recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.7
+Date: 2025-01-16
+  Bugfixes:
+    - Another attempt to fix crash that seems to only occur on Windows.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.6
+Date: 2025-01-16
+  Bugfixes:
+    - Fixed graphics-related crash on zipped copies of mod
+  Graphics:
+    - Cleaned up generic crushing icon
+---------------------------------------------------------------------------------------------------
+Version: 1.14.5
+Date: 2025-01-16
+  Locale:
+    - Updated RU locale(By Astorin)
+---------------------------------------------------------------------------------------------------
+Version: 1.14.4
+Date: 2025-01-15
+  Graphics:
+    - Cropped Muluna icon to make its in-game size better match other planet sprites.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.3
+Date: 2025-01-15
+  Bugfixes:
+    - Changed prerequisite of "Cryolab" from "cryogenic-science-pack" to "quantum-processor"
+---------------------------------------------------------------------------------------------------
+Version: 1.14.2
+Date: 2025-01-15
+  Balancing:
+    - Increased speed and module slots of cryolab, while reducing its science pack drain.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.1
+Date: 2025-01-15
+  Bugfixes:
+    - Fixed crash on startup
+---------------------------------------------------------------------------------------------------
+Version: 1.14.0
+Date: 2025-01-15
+  Features:
+    - Added "Cryolab" building and technology.
+---------------------------------------------------------------------------------------------------
 Version: 1.13.2
 Date: 2025-01-15
   Sounds:

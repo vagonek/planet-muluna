@@ -74,7 +74,7 @@ data:extend {{
     category = "resource",
     name = "oxide-asteroid-chunk",
     localised_name = {"", "[item=oxide-asteroid-chunk]", " ",{"item-name.oxide-asteroid-chunk"}},
-    order = "e-0",
+    order = data.raw["autoplace-control"]["uranium-ore"].order.."0",
     richness = true
 }}
 data:extend {{
@@ -82,7 +82,7 @@ data:extend {{
     category = "resource",
     name = "metallic-asteroid-chunk",
     localised_name = {"","[item=metallic-asteroid-chunk]" ," ",{"item-name.metallic-asteroid-chunk"}},
-    order = "e-1",
+    order = data.raw["autoplace-control"]["uranium-ore"].order.."1",
     richness = true
 }}
 data:extend {{
@@ -90,15 +90,15 @@ data:extend {{
     category = "resource",
     name = "carbonic-asteroid-chunk",
     localised_name = {"", "[item=carbonic-asteroid-chunk]"," ", {"item-name.carbonic-asteroid-chunk"}},
-    order = "e-2",
+    order = data.raw["autoplace-control"]["uranium-ore"].order.."2",
     richness = true
 }}
 data:extend {{
   type = "autoplace-control",
   category = "resource",
   name = "anorthite-chunk",
-  localised_name = {"", "[item=calcite]"," ", {"item-name.anorthite-chunk"}},
-  order = "e-3",
+  localised_name = {"", "[item=anorthite-chunk]"," ", {"item-name.anorthite-chunk"}},
+  order = data.raw["autoplace-control"]["uranium-ore"].order.."3",
   richness = true
 }}
 

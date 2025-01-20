@@ -2,7 +2,7 @@
 
 
 
-local anorthite_crushing = table.deepcopy(data.raw["recipe"]["metallic-asteroid-crushing"])
+local anorthite_crushing = table.deepcopy(data.raw["recipe"]["oxide-asteroid-crushing"])
 anorthite_crushing.name = "anorthite-crushing"
 
 anorthite_crushing.icons = {
@@ -52,7 +52,7 @@ local stone_crushing=table.deepcopy(anorthite_crushing)
 stone_crushing.results = {{type = "item",name = "stone-crushed",amount = 9},{type = "item", name = "stone", amount = 1,ignored_by_productivity=1}}
 stone_crushing.ingredients = {{type = "item",name = "stone",amount = 7}}
 stone_crushing.name="stone-crushing"
-stone_crushing.energy_required=0.5
+stone_crushing.energy_required=2
 stone_crushing.icons={
     {
         icon = data.raw.item["stone"].icon,
@@ -69,12 +69,21 @@ stone_crushing.icons={
 }
 
 
+local aluminum_plate = table.deepcopy(data.raw["recipe"]["iron-plate"])
+aluminum_plate.ingredients = {{type = "item",name = "alumina",amount = 1}}
+aluminum_plate.results = {{type = "item",name = "aluminum-plate",amount = 1}}
+aluminum_plate.name = "aluminum-plate"
 
 
+local aluminum_cable = table.deepcopy(data.raw["recipe"]["copper-cable"])
+
+aluminum_cable.name = "aluminum-cable"
+aluminum_cable.ingredients = {{type = "item",name = "aluminum-plate",amount = 1}}
+aluminum_cable.results = {{type = "item",name = "aluminum-cable",amount = 2}}
 
 -- table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
 --     effect = "enable-recipe",
 --     recipe = ""
 -- })
 
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing}
+data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable}

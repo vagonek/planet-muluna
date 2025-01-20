@@ -1,81 +1,69 @@
-[![Release](https://github.com/fgardt/factorio-mod-template/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/fgardt/factorio-mod-template/actions/workflows/release.yml)
-<!--                           ^======[REPLACE THIS]======^                                                                          ^======[REPLACE THIS]======^  -->
+Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna. The surface is devoid of life, but who knows what lurks in the planet's many craters?
 
-# factorio-mod-template
+Muluna's low gravity makes it easier to launch rockets from than from Nauvis or other planets, making it an ideal location for constructing space platforms and shipping materials to other planets. However, the low pressure makes it impossible to craft any science other than Space Science.
 
-A small Factorio Mod template which also contains GitHub Actions for automatic changelog generation, packaging and releasing to the [Factorio Mod Portal](https://mods.factorio.com)
+Your first space platform is likely to look very different from a typical Space Age platform. You will not initially have access to asteroid collectors or crushers, so your first platform will be completely dependent on shipments from Nauvis. Thruster fuel can be made from rocket fuel, and like in vanilla, oxidizer can be made from iron ore. Luckily, there are no dangerous asteroids between Nauvis and Muluna, so you can skip placing turrets on any Nauvis-Muluna ships.
 
-# How it works
+Rocket part costs are doubled on every planet except for Muluna, but in return, Rocket Part Productivity is a technology that is present throughout all of Space Age. Four levels of Rocket Part Productivity are available on Muluna, and two are available on Vulcanus, Gleba, and Fulgora respectively. Unlike other bonus technologies, Rocket Part Productivity has a non-linear research order.
 
-This template uses [semantic-release](https://github.com/semantic-release/semantic-release) to automate the changelog generation aswell as packaging and releasing of the mod. \
-To achieve this it analyzes your commit messages to figure out what the new version should be and what to put into the changelog.
-Packaging and releasing to the factorio mod portal is done with [this plugin](https://github.com/fgardt/semantic-release-factorio). \
-Additionally the GitHub Action will also create a release in your repository on GitHub itself.
+This mod currently relies on vanilla prototypes for many world features. While this is likely to become less true with time, any mod that removes vanilla terrain features, such as Alien Biomes, is likely to crash on startup with this mod unless a fix is made specifically for that mod.
 
-Once you push new commits to the main branch the release action will trigger. \
-First it will analyze all commits since the last release (determined from the last tag) to figure out if a new version should be released and what version it should be. \
-To make this possible you need to follow a commit message convention. The default convention this template uses is [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/) with the following types:
+## Resources
 
-| Commit type                 | Changelog section |
-| --------------------------- | ----------------- |
-| `feat` or `feature`         | `Features`        |
-| `fix`                       | `Bugfixes`        |
-| `perf` or `performance`     | `Optimizations`   |
-| `compat` or `compatibility` | `Compatibility`   |
-| `balance`                   | `Balancing`       |
-| `graphics`                  | `Graphics`        |
-| `sound`                     | `Sounds`          |
-| `gui`                       | `Gui`             |
-| `info`                      | `Info`            |
-| `locale`                    | `Locale`          |
-| `translate`                 | `Translation`     |
-| `control`                   | `Control`         |
-| `other`                     | `Changes`         |
+- Metallic asteroid chunk
 
-Because a push to the main branch triggers the release action it is recommended to work on a separate branch until your work is done and then merge that branch into main to release it. \
-_Or you just work locally and if you want to release you push your changes to main, up to you how you want to do it ;)_
+- Carbonic asteroid chunk
 
-# How to use
+- Oxide asteroid chunk
 
-## Repository setup
+- Anorthite chunk
 
-Click the `Use this template` button and create your own repository.
+- Stone
 
-Once you have your new repository you need to add a Factorio token as a GitHub Actions secret so that the mod releasing can work. \
-To get the token go to [Factorio's website](https://factorio.com/login) and login with your account. \
-Then you need to go to your [profile](https://factorio.com/profile) and generate a new API key. \
-The API key needs `Upload Mods`, `Publish Mods` and `Edit Mods` permissions. Copy the generated key.
+## New recipes
 
-Now you need to go to your repository settings > `Secrets and variables` > `Actions` and add a new Repository secret called `FACTORIO_TOKEN` with your copied key as the secret.
+Crushers can now be placed on any surface, and in addition to their vanilla recipes, which form the backbone of any Muluna base, a few new crusher recipes have been added, some of which are useful on any planet.
 
-## Mod setup
+- (Crusher) Anorthite crushing: 1 Anorthite chunk -> 20 Alumina + 20% Anorthite chunk
 
-- Swap out the [`LICENSE`](LICENSE) to your own liking _**(especially change out my name for yours)**_
-- Populate the [`info.json`](info.json) file with correct values _(the `version` field gets updated automatically)_
-- Add the corresponding text into [`locale.cfg`](locale/en/locale.cfg)
-- Add a `thumbnail.png` to the root of the repository _([ideally 144x144px](https://wiki.factorio.com/Tutorial:Mod_structure#Files))_
+- (Crusher) Alumina Crushing: 6 Alumina -> 10 crushed alumina + 1 stone
 
-# Misc
+  - (Assembling) ALICE Propellant: 10 crushed alumina + 2 ice + 100 water -> 1 rocket fuel
 
-## How the packaging works
+- (Crusher) Stone crushing: 7 stone -> 9 crushed stone + 1 stone
 
-The [`semantic-release-factorio` plugin](https://github.com/fgardt/semantic-release-factorio) uses the `git archive` command to package the mod. \
-That way you can specify what folders / files to exclude from your packaged mod by specifying them in [`.gitattributes`](.gitattributes).
+  - (Furnace) Bricks from crushed stone: 2 crushed stone -> 1 stone brick
+  
+  - (Assembling) Landfill from crushed stone: 40 crushed stone + 5 concrete -> 1 landfill
+    
+- (Chemical planet) Thruster fuel from rocket fuel: 1 rocket fuel + 10 water -> 250 thruster fuel (This is how your first space platform will generate thruster fuel.)
 
-If you want to locally test packaging of your mod you can run the following command:
-```sh
-git archive --format zip --prefix [YOUR-MOD-NAME]/ --worktree-attributes --output [YOUR-MOD-NAME]_[VERSION].zip HEAD
-```
+## New Buildings
 
-## Changing the commit message convention
+- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs.
 
-If you want to change the commit message convention you can do so by changing the 2 `preset` fields in the [`.releaserc.json`](.releaserc.json) file. \
-Possible presets are: [`angular`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-angular), [`atom`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-atom), [`codemirror`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-codemirror), [`ember`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-ember), [`eslint`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-eslint), [`express`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-express), [`jquery`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-jquery), [`jshint`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-jshint), [`conventionalcommits`](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-conventionalcommits).
 
-Additionally you also need to modify the worflow file [`.github/workflows/release.yml`](.github/workflows/release.yml) to use the package that corresponds to your chosen preset. \
-Replace `conventional-changelog-conventionalcommits` with `conventional-changelog-[YOUR PRESET]` accordingly.
 
-## Need help?
+## Known to be compatible with:
 
-Checkout the [official Factorio Discord](https://discord.gg/factorio) and check the pins in the `#mod-making` channel. \
-There is also the [Lua API documentation](https://lua-api.factorio.com/latest/) and the [modding section in the wiki](https://wiki.factorio.com/Modding).
+- Alien Biomes
+
+## Author-maintained locales:
+
+- English
+
+- German(May not always be fully up to date. Translator is not a native speaker.)
+
+## Community-maintained locales:
+
+- Russian
+
+- Simplified Chinese
+
+## Special thanks to the following mods and creators:
+
+- Maraxsis, for code and certain items(atmosphere mainly).
+
+- Hurricane, for their many freely available high-quality art assets.
+
+- Unused-renders, for their numerous freely available icon assets.

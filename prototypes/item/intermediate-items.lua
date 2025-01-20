@@ -58,4 +58,40 @@ data:extend{{
     group=data.raw.item["stone"].group,
     weight=data.raw.item["stone"].weight/2,
 },
+{
+    type="item",
+    name="aluminum-plate",
+    icon="__planet-muluna__/graphics/icons/metal-plate-aluminium.png",
+    icon_size=64,
+    -- icons ={
+    --     {
+            
+    --     }
+        
+    -- },
+    
+    stack_size=data.raw.item["iron-plate"].stack_size,
+    order=data.raw.item["iron-plate"].order,
+    subgroup="muluna-products",
+    group=data.raw.item["iron-plate"].group,
+    weight=data.raw.item["iron-plate"].weight,
+},
+{
+    type="item",
+    name="aluminum-cable",
+    icon="__planet-muluna__/graphics/icons/aluminum-cable.png",
+    icon_size=64,
+    -- icons ={
+    --     {
+            
+    --     }
+        
+    -- },
+    
+    stack_size=data.raw.item["copper-cable"].stack_size,
+    order=data.raw.item["copper-cable"].order,
+    subgroup="muluna-products",
+    group=data.raw.item["copper-cable"].group,
+    weight=data.raw.item["copper-cable"].weight,
+},
 }

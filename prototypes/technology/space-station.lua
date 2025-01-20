@@ -3,7 +3,7 @@ local function technology_icon_constant_planet(technology_icon,icon_size)
     {
       {
         icon = technology_icon,
-        icon_size = 1920,
+        icon_size = 1482,
       },
       {
         icon = "__core__/graphics/icons/technology/constants/constant-planet.png",
@@ -204,6 +204,26 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "rocket-fuel-aluminum"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-plate"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-cable",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "low-density-structure-from-carbon",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electronic-circuit-aluminum",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-circuit-aluminum",
+            },
         },
         prerequisites = {
             "crusher"
@@ -239,7 +259,7 @@ data:extend{
         prerequisites = {
             "space-platform-thruster"
         },
-        icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1920),
+        icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1482),
         localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
@@ -248,7 +268,89 @@ data:extend{
         --     }
         -- }
         
-    }
+    },
+    {
+        type = "technology",
+        name = "cryolab",
+        localised_name = {"entity-name.cryolab"},
+        --localised_description = {"entity-description.asteroid-collector"},
+        unit= {
+            count = 5000,
+            time = 60,
+            ingredients = --Normally, I would base these costs on vanilla technologies to increase tolerance of other mods, but since this tech is intended to 
+                {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    {"utility-science-pack", 1},
+                    {"space-science-pack", 1},
+                    {"metallurgic-science-pack", 1},
+                    {"agricultural-science-pack", 1},
+                    {"electromagnetic-science-pack", 1},
+                    {"cryogenic-science-pack", 1}
+              },
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "cryolab"
+            }
+        },
+        prerequisites = {
+            "biolab","quantum-processor"
+        },
+        icons = {
+            {
+                icon=data.raw["technology"]["biolab"].icon,
+                icon_size=data.raw["technology"]["biolab"].icon_size,
+                tint = {r=0.7,g=0.7,b=1}
+            },
+        }
+        --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        --icon_size=256,
+    },
+    -- {
+    --     type = "technology",
+    --     name = "crusher-2",
+    --     unit= {
+    --         count = 10000,
+    --         time = 60,
+    --         ingredients = data.raw["technology"]["promethium-science-pack"].unit.ingredients
+    --     },
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="crusher-2"
+    --         }
+    --     },
+    --     prerequisites = {
+    --         "promethium-science-pack"
+    --     },
+    --     icons = {
+    --         {
+    --             icon = "__planet-muluna__/graphics/technology/comminution.png",
+    --             icon_size = 968,
+    --         },  
+    --         {
+    --             icon = data.raw["item"]["uranium-ore"].icon,
+    --             icon_size=data.raw["item"]["uranium-ore"].icon_size,
+    --             --scale=0.3,
+    --             shift = {45,45},
+    --             scale=0.75,
+    --         },
+            
+    --     },
+    --     localised_name={"",{"item-name.crusher"}," 2"},
+    --     --localised_description={"space-location-description.muluna"},
+    --     -- icons = {
+    --     --     {
+    --     --         icon = data.raw["planet"]["muluna"].icon,
+    --     --         icon_size = data.raw["planet"]["muluna"].icon_size,
+    --     --     }
+    --     -- }
+        
+    -- }
 
 }
 

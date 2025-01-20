@@ -36,6 +36,10 @@ data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condit
 
 
 data.raw["assembling-machine"]["crusher"].surface_conditions = nil
+if data.raw["assembling-machine"]["crusher-2"] then
+    data.raw["assembling-machine"]["crusher-2"].surface_conditions = nil
+end
+
 --  {
 --     {property = "gravity",
 --     min = 0,
@@ -202,6 +206,48 @@ if mods["maraxsis"] then
     
 end
 
+
+
+
+if data.raw["technology"]["rocket-fuel-productivity"] then
+    table.insert(data.raw["technology"]["rocket-fuel-productivity"].effects,{
+        type = "change-recipe-productivity",
+        recipe = "rocket-fuel-aluminum",
+        change = 0.1,
+        hidden = false
+    })
+end
+
+
+if data.raw["technology"]["asteroid-productivity"] then
+    table.insert(data.raw["technology"]["asteroid-productivity"].effects,{
+        type = "change-recipe-productivity",
+        recipe = "anorthite-crushing",
+        change = 0.1,
+        hidden = false
+    })
+end
+
+for i = 1,10,1 do --For compatibility with Roc's hardcore tech tree.
+    if data.raw["technology"]["asteroid-productivity-"..tostring(i)] then
+        table.insert(data.raw["technology"]["asteroid-productivity-"..tostring(i)].effects,{
+            type = "change-recipe-productivity",
+            recipe = "anorthite-crushing",
+            change = 0.1,
+            hidden = false
+        })
+    end
+    if data.raw["technology"]["rocket-fuel-productivity-"..tostring(i)] then
+        table.insert(data.raw["technology"]["rocket-fuel-productivity-"..tostring(i)].effects,{
+            type = "change-recipe-productivity",
+            recipe = "rocket-fuel-aluminum",
+            change = 0.1,
+            hidden = false
+        })   
+    end
+end
+
+
 table.insert(data.raw["technology"]["space-platform"].effects,{
     type = "unlock-recipe",
     recipe = "cargo-bay"
@@ -239,20 +285,7 @@ data.raw["elevated-curved-rail-a"]["elevated-curved-rail-a"].surface_conditions 
 data.raw["elevated-curved-rail-b"]["elevated-curved-rail-b"].surface_conditions = one_gravity_condition
 data.raw["rail-support"]["rail-support"].surface_conditions = one_gravity_condition
 
---Overrides any mods which add their own techs to space platform thruster as a prereq.
---Moves prereq to asteroid collector, which is roughly equivalent to space platform thruster's place in the vanilla tech tree.
-local new_prereqs={}
-for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
-    
-    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then
-        --rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisistes,technology)
-        table.insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
-    else
-        table.insert(new_prereqs,technology)
-    end
 
-end
-data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
 
 if data.raw["tool"]["alien-science-pack"] then
     data.raw["tool"]["alien-science-pack"].order="fa[alien-science-pack]"
@@ -265,4 +298,39 @@ else
     data.raw.planet["nauvis"].localised_description={"planetslib-templates.planet-description-two-moons",{"space-location-description.nauvis"},"[planet=muluna]","[planet=lignumis]"}
 end
 
+require("prototypes.entity.cryolab")
+
+--Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
+if mods["maraxsis"] then
+    data.raw["recipe"]["maraxsis-water"].ingredients = {
+        {type="fluid",name="maraxsis-hydrogen",amount=2000},
+        {type="fluid",name="maraxsis-oxygen",amount=1000},
+    }
+    data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
+        {type="fluid",name="maraxsis-hydrogen",amount=2000},
+        {type="fluid",name="maraxsis-oxygen",amount=2000},
+    }
+    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
+    {type="fluid",name="maraxsis-hydrogen",amount=200},
+    {type="fluid",name="maraxsis-hydrogen",amount=2000}
+    )
+    
+    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
+    {type="fluid",name="maraxsis-oxygen",amount=100},
+    {type="fluid",name="maraxsis-oxygen",amount=1000}
+    )
+    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    {type="fluid",name="maraxsis-oxygen",amount=100},
+    {type="fluid",name="maraxsis-oxygen",amount=1000}
+    )
+    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    {type="fluid",name="maraxsis-hydrogen",amount=200},
+    {type="fluid",name="maraxsis-hydrogen",amount=2000}
+    )
+    data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
+    data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
+    
+end
+
+require("compat.modules-t4")
 
