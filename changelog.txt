@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.4
+Date: 2025-01-20
+  Bugfixes:
+    - Moved Astroponics circular technology dependency fix from data-updates to data-final-fixes.
+  Graphics:
+    - Imported mipmap generator from https://github.com/StephenBarnes/FactorioModScripts
+---------------------------------------------------------------------------------------------------
 Version: 1.15.3
 Date: 2025-01-19
   Locale:
