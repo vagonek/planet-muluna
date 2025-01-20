@@ -2,7 +2,7 @@ local rro=require("lib.remove-replace-object")
 local thruster_fuel=table.deepcopy(data.raw["recipe"]["thruster-fuel"])
 
 rro.replace(thruster_fuel.ingredients,{type="item", name="carbon", amount=2},{type="item", name="rocket-fuel", amount=1})
---rro.replace(thruster_fuel.ingredients,{type="fluid", name="water", amount=10},{type="item", name="water", amount=35})
+rro.replace(thruster_fuel.ingredients,{type="fluid", name="water", amount=10},{type="fluid", name="water", amount=35})
 thruster_fuel.energy_required=thruster_fuel.energy_required*3.5
 thruster_fuel.results[1].amount=250
 thruster_fuel.name="thruster-fuel-from-rocket-fuel"
