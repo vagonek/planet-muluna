@@ -259,33 +259,33 @@ end
 require("prototypes.entity.cryolab")
 
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
-if mods["maraxsis"] then
-    data.raw["recipe"]["maraxsis-water"].ingredients = {
-        {type="fluid",name="maraxsis-hydrogen",amount=2000},
-        {type="fluid",name="maraxsis-oxygen",amount=1000},
-    }
-    data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
-        {type="fluid",name="maraxsis-hydrogen",amount=2000},
-        {type="fluid",name="maraxsis-oxygen",amount=2000},
-    }
-    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
-    {type="fluid",name="maraxsis-hydrogen",amount=200},
-    {type="fluid",name="maraxsis-hydrogen",amount=2000}
-    )
+-- if mods["maraxsis"] then
+--     data.raw["recipe"]["maraxsis-water"].ingredients = {
+--         {type="fluid",name="maraxsis-hydrogen",amount=2000},
+--         {type="fluid",name="maraxsis-oxygen",amount=1000},
+--     }
+--     data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
+--         {type="fluid",name="maraxsis-hydrogen",amount=2000},
+--         {type="fluid",name="maraxsis-oxygen",amount=2000},
+--     }
+--     rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
+--     {type="fluid",name="maraxsis-hydrogen",amount=200},
+--     {type="fluid",name="maraxsis-hydrogen",amount=2000}
+--     )
     
-    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
-    {type="fluid",name="maraxsis-oxygen",amount=100},
-    {type="fluid",name="maraxsis-oxygen",amount=1000}
-    )
-    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
-    {type="fluid",name="maraxsis-oxygen",amount=100},
-    {type="fluid",name="maraxsis-oxygen",amount=1000}
-    )
-    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
-    {type="fluid",name="maraxsis-hydrogen",amount=200},
-    {type="fluid",name="maraxsis-hydrogen",amount=2000}
-    )
+--     rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
+--     {type="fluid",name="maraxsis-oxygen",amount=100},
+--     {type="fluid",name="maraxsis-oxygen",amount=1000}
+--     )
+--     rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+--     {type="fluid",name="maraxsis-oxygen",amount=100},
+--     {type="fluid",name="maraxsis-oxygen",amount=1000}
+--     )
+--     rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+--     {type="fluid",name="maraxsis-hydrogen",amount=200},
+--     {type="fluid",name="maraxsis-hydrogen",amount=2000}
+--     )
     
-end
-data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
-data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
+-- end
+-- data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
+-- data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
