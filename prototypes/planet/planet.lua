@@ -104,7 +104,7 @@ local muluna=
     persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
     localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet=nauvis]"},
     surface_properties = {
-        ["solar-power"] = 100,
+        ["solar-power"] = 150,
         ["pressure"] = 50,
         ["magnetic-field"] = 0.01,
         ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*2,
