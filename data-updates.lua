@@ -205,6 +205,10 @@ if mods["maraxsis"] then
     end
     
 end
+
+
+
+
 if data.raw["technology"]["rocket-fuel-productivity"] then
     table.insert(data.raw["technology"]["rocket-fuel-productivity"].effects,{
         type = "change-recipe-productivity",
@@ -214,19 +218,35 @@ if data.raw["technology"]["rocket-fuel-productivity"] then
     })
 end
 
-table.insert(data.raw["technology"]["rocket-fuel-productivity"].effects,{
-    type = "change-recipe-productivity",
-    recipe = "rocket-fuel-aluminum",
-    change = 0.1,
-    hidden = false
-})
 
-table.insert(data.raw["technology"]["asteroid-productivity"].effects,{
-    type = "change-recipe-productivity",
-    recipe = "anorthite-crushing",
-    change = 0.1,
-    hidden = false
-})
+if data.raw["technology"]["asteroid-productivity"] then
+    table.insert(data.raw["technology"]["asteroid-productivity"].effects,{
+        type = "change-recipe-productivity",
+        recipe = "anorthite-crushing",
+        change = 0.1,
+        hidden = false
+    })
+end
+
+for i = 1,10,1 do --For compatibility with Roc's hardcore tech tree.
+    if data.raw["technology"]["asteroid-productivity-"..tostring(i)] then
+        table.insert(data.raw["technology"]["asteroid-productivity-"..tostring(i)].effects,{
+            type = "change-recipe-productivity",
+            recipe = "anorthite-crushing",
+            change = 0.1,
+            hidden = false
+        })
+    end
+    if data.raw["technology"]["rocket-fuel-productivity-"..tostring(i)] then
+        table.insert(data.raw["technology"]["rocket-fuel-productivity-"..tostring(i)].effects,{
+            type = "change-recipe-productivity",
+            recipe = "rocket-fuel-aluminum",
+            change = 0.1,
+            hidden = false
+        })   
+    end
+end
+
 
 table.insert(data.raw["technology"]["space-platform"].effects,{
     type = "unlock-recipe",
@@ -281,33 +301,36 @@ end
 require("prototypes.entity.cryolab")
 
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
--- if mods["maraxsis"] then
---     data.raw["recipe"]["maraxsis-water"].ingredients = {
---         {type="fluid",name="maraxsis-hydrogen",amount=2000},
---         {type="fluid",name="maraxsis-oxygen",amount=1000},
---     }
---     data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
---         {type="fluid",name="maraxsis-hydrogen",amount=2000},
---         {type="fluid",name="maraxsis-oxygen",amount=2000},
---     }
---     rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
---     {type="fluid",name="maraxsis-hydrogen",amount=200},
---     {type="fluid",name="maraxsis-hydrogen",amount=2000}
---     )
+if mods["maraxsis"] then
+    data.raw["recipe"]["maraxsis-water"].ingredients = {
+        {type="fluid",name="maraxsis-hydrogen",amount=2000},
+        {type="fluid",name="maraxsis-oxygen",amount=1000},
+    }
+    data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
+        {type="fluid",name="maraxsis-hydrogen",amount=2000},
+        {type="fluid",name="maraxsis-oxygen",amount=2000},
+    }
+    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
+    {type="fluid",name="maraxsis-hydrogen",amount=200},
+    {type="fluid",name="maraxsis-hydrogen",amount=2000}
+    )
     
---     rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
---     {type="fluid",name="maraxsis-oxygen",amount=100},
---     {type="fluid",name="maraxsis-oxygen",amount=1000}
---     )
---     rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
---     {type="fluid",name="maraxsis-oxygen",amount=100},
---     {type="fluid",name="maraxsis-oxygen",amount=1000}
---     )
---     rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
---     {type="fluid",name="maraxsis-hydrogen",amount=200},
---     {type="fluid",name="maraxsis-hydrogen",amount=2000}
---     )
+    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
+    {type="fluid",name="maraxsis-oxygen",amount=100},
+    {type="fluid",name="maraxsis-oxygen",amount=1000}
+    )
+    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    {type="fluid",name="maraxsis-oxygen",amount=100},
+    {type="fluid",name="maraxsis-oxygen",amount=1000}
+    )
+    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    {type="fluid",name="maraxsis-hydrogen",amount=200},
+    {type="fluid",name="maraxsis-hydrogen",amount=2000}
+    )
+    data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
+    data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
     
--- end
--- data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
--- data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
+end
+
+require("compat.modules-t4")
+
