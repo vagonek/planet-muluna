@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.8
+Date: 2025-01-20
+  Compatibility:
+    - Added compatibility with modules-t4, replacing recipe for productivity module 4 with one that requires Muluna resources.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.7
 Date: 2025-01-20
   Locale:
