@@ -108,6 +108,7 @@ rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"s
 rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
 rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
+
 data.raw.recipe["space-science-pack"].results[1].amount = 1
 
 
@@ -155,12 +156,14 @@ end
 
 local planets = {
     "arrakis",
-    "tiber"
+    "tiber",
+    "nauvis",
 }
 
 for _,planet in pairs(planets) do
     if data.raw["technology"]["planet-discovery-"..planet] then
         rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
+        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-platform-thruster","asteroid-collector")
     end
     
 end
@@ -333,4 +336,18 @@ if mods["maraxsis"] then
 end
 
 require("compat.modules-t4")
+require("compat.corrundum")
 
+
+local parent_planet = "nauvis"
+if mods["any-planet-start"] then 
+    local parent_planet = settings.startup["aps-planet"].value
+end
+
+PlanetsLib:update
+    {
+        type = "planet",
+        name = "muluna",
+        asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
+        
+    }

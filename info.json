@@ -21,7 +21,8 @@
     "! external-rocket-parts",
     "? Tiered-Solar-System >= 1.1.3",
     "! MT-lib",
-    "? modules-t4"
+    "? modules-t4",
+    "? any-planet-start"
   ],
   "quality_required": true,
   "rail_bridges_required": false,

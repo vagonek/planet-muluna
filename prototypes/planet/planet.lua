@@ -2,6 +2,7 @@ local rro = require("lib.remove-replace-object")
 local planet_lib = require("__PlanetsLib__.lib.planet")
 local nauvis = data.raw["planet"]["nauvis"]
 local nauvis_gen = nauvis.map_gen_settings
+local asteroid_util = require "__space-age__.prototypes.planet.asteroid-spawn-definitions"
 local tau = 2*math.pi
 local map_gen = {
     cliff_settings = 
@@ -71,6 +72,11 @@ if mods["alien-biomes"] then
   map_gen.autoplace_settings["entity"].settings["big-rock"] = nil
 end
 
+local parent_planet = "nauvis"
+
+if mods["any-planet-start"] then
+  parent_planet = settings.startup["aps-planet"].value
+end
 
 local muluna= 
 {
@@ -117,7 +123,7 @@ local muluna=
       distance = 1.6,
       parent = {
         type = "planet",
-        name = "nauvis"
+        name = parent_planet,
         },
       
       sprite = {
@@ -126,7 +132,8 @@ local muluna=
         size = 409,
         scale = 0.25,
       }
-    }
+    },
+    --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
 }
 
 
@@ -142,14 +149,20 @@ if settings.startup["PlanetsLib-enable-oxygen"].value == true then
   muluna.surface_properties["oxygen"] = 0
 end
 
+local asteroid_spawn_definitions_connection = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus)
+table.remove(asteroid_spawn_definitions_connection,6) --Removes medium asteroids from path
+table.remove(asteroid_spawn_definitions_connection,5)
+table.remove(asteroid_spawn_definitions_connection,4)
+--table.remove(asteroid_spawn_definitions_connection,2)
+
 local muluna_connection = {
   type = "space-connection",
   name = "nauvis-muluna",
-  from = "nauvis",
+  from = parent_planet,
   to = "muluna",
   subgroup = data.raw["space-connection"]["nauvis-vulcanus"].subgroup,
-  length = 1000
-
+  length = 1000,
+  asteroid_spawn_definitions = asteroid_spawn_definitions_connection
 }
 
 if settings.startup["override-space-connection"] == true then
