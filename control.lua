@@ -4,3 +4,8 @@
 require("scripts.project-seadragon")
 
 --muluna.finalize_events()
+
+
+
+
+if script.active_mods["gvv"] then require("__gvv__.gvv")() end
