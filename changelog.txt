@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.16
+Date: 2025-01-22
+  Bugfixes:
+    - Added corrundum compat file
+  Graphics:
+    - Adjusted contrast and shading of Muluna icon.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.15
 Date: 2025-01-21
   Compatibility:
