@@ -126,12 +126,12 @@ local muluna=
         name = parent_planet,
         },
       
-      sprite = {
-        type = "sprite",
-        filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
-        size = 409,
-        scale = 0.25,
-      }
+        sprite = {
+          type = "sprite",
+          filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
+          size = 412,
+          scale = 0.25,
+        }
     },
     --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
 }
