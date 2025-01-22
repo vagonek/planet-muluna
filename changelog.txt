@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.17
+Date: 2025-01-22
+  Compatibility:
+    - Exposed mod's storage to gvv.
+  Graphics:
+    - Added background glow to all double-item icons.
+    - Slightly increased size of Muluna orbit sprite.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.16
 Date: 2025-01-22
   Bugfixes:
