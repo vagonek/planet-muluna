@@ -1,3 +1,5 @@
+local rro = require("lib.remove-replace-object")
+--local  = require("lib.remove-replace-object")
 local i_lunar_pack = table.deepcopy(data.raw["tool"]["space-science-pack"])
 
 local r_lunar_pack = table.deepcopy(data.raw["recipe"]["space-science-pack"])
@@ -30,8 +32,16 @@ t_lunar_pack.prerequisites = {
 }
 i_lunar_pack.order = "ja"
 
-r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 1}}
+r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 3}}
 r_lunar_pack.main_product = "interstellar-science-pack"
+r_lunar_pack.category = "crafting-with-fluid"
+r_lunar_pack.ingredients = {
+    {type = "fluid", name = "helium", amount = 100},
+    {type = "item", name = "rocket-fuel", amount = 3},
+    {type = "item", name = "aluminum-plate", amount = 3},
+    {type = "item", name = "uranium-235", amount = 3}
+}
+
 
 t_lunar_pack.research_trigger = nil
 
@@ -45,5 +55,19 @@ t_lunar_pack.unit.time= 60
 t_lunar_pack.effects = {
     {type = "unlock-recipe", recipe = "interstellar-science-pack"}
 }
+local r_lunar_pack_4 = table.deepcopy(r_lunar_pack)
+r_lunar_pack_4.name = "interstellar-science-pack-helium-4"
+r_lunar_pack.main_product = "interstellar-science-pack"
+r_lunar_pack_4.ingredients = {
+    {type = "fluid", name = "helium-4", amount = 100},
+    {type = "item", name = "rocket-fuel", amount = 2},
+    {type = "item", name = "aluminum-plate", amount = 2},
+    {type = "item", name = "uranium-235", amount = 2}
+}
+
+r_lunar_pack_4.localised_name = nil
+
+
 
 data:extend(all)
+data:extend{r_lunar_pack_4}
