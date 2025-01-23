@@ -23,6 +23,7 @@ local map_gen = {
         ["metallic-asteroid-chunk"] = {},
         ["carbonic-asteroid-chunk"] = {},
         ["anorthite-chunk"] = {},
+        ["helium-4"] = {},
       },
     autoplace_settings = {
         ["tile"] =
