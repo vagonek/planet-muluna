@@ -288,7 +288,8 @@ data:extend{
                     {"metallurgic-science-pack", 1},
                     {"agricultural-science-pack", 1},
                     {"electromagnetic-science-pack", 1},
-                    {"cryogenic-science-pack", 1}
+                    {"cryogenic-science-pack", 1},
+                    {"interstellar-science-pack",1}
               },
         },
         effects = {
