@@ -30,7 +30,9 @@ t_lunar_pack.prerequisites = {
     "metallurgic-science-pack"
 
 }
-i_lunar_pack.order = "ja"
+i_lunar_pack.order = "j[interstellar-science-pack]"
+
+data.raw["tool"]["hydraulic-science-pack"].order = data.raw["tool"]["hydraulic-science-pack"].order .. "a"
 
 r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 3}}
 r_lunar_pack.main_product = "interstellar-science-pack"
