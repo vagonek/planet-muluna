@@ -47,7 +47,19 @@ t_lunar_pack.research_trigger = nil
 
 t_lunar_pack.unit = {}
 
-t_lunar_pack.unit.ingredients = data.raw["technology"]["planet-discovery-aquilo"].unit.ingredients
+t_lunar_pack.unit.ingredients = {
+    {"automation-science-pack", 1},
+    {"logistic-science-pack", 1},
+    {"chemical-science-pack", 1},
+    {"production-science-pack", 1},
+    {"utility-science-pack", 1},
+    {"space-science-pack", 1},
+    {"metallurgic-science-pack", 1},
+    {"agricultural-science-pack", 1},
+    {"electromagnetic-science-pack", 1},
+    --{"cryogenic-science-pack", 1},
+    --{"interstellar-science-pack",1}
+}
 
 t_lunar_pack.unit.count = 1000
 t_lunar_pack.unit.time= 60

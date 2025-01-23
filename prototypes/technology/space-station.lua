@@ -361,6 +361,55 @@ data:extend{
         --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
         --icon_size=256,
     },
+    {
+        type = "technology",
+        name = "thruster-fuel-productivity",
+        --icons = {
+            --{
+                icon=data.raw["technology"]["space-platform-thruster"].icon,
+                icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
+            --},
+        --},
+        max_level = "infinite",
+        prerequisites = {"interstellar-science-pack"},
+        upgrade = true,
+        unit = {
+            count_formula = "2000*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-oxidizer",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-fuel",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-thruster-oxidizer",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-thruster-fuel",
+                change = 0.1,
+            },
+        },
+    }
     -- {
     --     type = "technology",
     --     name = "crusher-2",
