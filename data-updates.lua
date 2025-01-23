@@ -369,3 +369,4 @@ end
 
 table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
 
+table.insert(data.raw["recipe"]["fusion-reactor"].prerequisites, "helium-enrichment")
