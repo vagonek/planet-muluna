@@ -439,6 +439,43 @@ data:extend{
     --             shift = {45,45},
     --             scale=0.75,
     --         },
+    {
+        type = "technology",
+        name = "crusher-2",
+        unit = {
+            count = 1000,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="crusher-2"
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack", "crusher"
+        },
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+            {
+                icon = data.raw["item"]["uranium-ore"].icon,
+                icon_size=data.raw["item"]["uranium-ore"].icon_size,
+                --scale=0.3,
+                shift = {45,45},
+                scale=0.75,
+            },
             
     --     },
     --     localised_name={"",{"item-name.crusher"}," 2"},
@@ -449,8 +486,17 @@ data:extend{
     --     --         icon_size = data.raw["planet"]["muluna"].icon_size,
     --     --     }
     --     -- }
+        },
+        localised_name={"",{"item-name.crusher"}," 2"},
+        --localised_description={"space-location-description.muluna"},
+        -- icons = {
+        --     {
+        --         icon = data.raw["planet"]["muluna"].icon,
+        --         icon_size = data.raw["planet"]["muluna"].icon_size,
+        --     }
+        -- }
         
-    -- }
+    }
 
 }
 

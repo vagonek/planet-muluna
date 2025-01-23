@@ -7,12 +7,13 @@ space_boiler.place_result = "space-boiler"
 space_boiler.localised_name = {"entity-name.space-boiler"}
 
 
--- local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
+ local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
 
--- crusher_2.name = "crusher-2"
--- crusher_2.place_result = "crusher-2"
--- --crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
-local crusher_2=nil
+crusher_2.name = "crusher-2"
+crusher_2.place_result = "crusher-2"
+crusher_2.icon = "__planet-muluna__/graphics/icons/crusher-2.png"
+crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
+--local crusher_2=nil
 
 local cryolab=table.deepcopy(data.raw["item"]["biolab"])
 
@@ -29,4 +30,4 @@ cryolab.icons = {
     
 }
 
-data:extend{space_boiler,cryolab}
+data:extend{space_boiler,crusher_2,cryolab}
