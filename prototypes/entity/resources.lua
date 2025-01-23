@@ -104,8 +104,8 @@ data:extend {{
 data:extend {{
   type = "autoplace-control",
   category = "resource",
-  name = "helium-4",
-  localised_name = {"", "[fluid=helium-4]"," ", {"fluid-name.helium-4"}},
+  name = "helium",
+  localised_name = {"", "[fluid=helium]"," ", {"fluid-name.helium"}},
   order = data.raw["autoplace-control"]["uranium-ore"].order.."4",
   richness = true
 }}
@@ -129,7 +129,7 @@ local helium = table.deepcopy(data.raw["resource"]["crude-oil"])
 metal_ore.name = "metallic-asteroid-chunk"
 carbon_ore.name = "carbonic-asteroid-chunk"
 ice_ore.name = "oxide-asteroid-chunk"
-helium.name = "helium-4"
+helium.name = "helium"
 
 metal_ore.icon = data.raw["item"]["metallic-asteroid-chunk"].icon
 carbon_ore.icon = data.raw["item"]["carbonic-asteroid-chunk"].icon
@@ -141,13 +141,13 @@ ice_ore.icon = data.raw["item"]["oxide-asteroid-chunk"].icon
 metal_ore.localised_name = {"item-name.metallic-asteroid-chunk"}
 carbon_ore.localised_name = {"item-name.carbonic-asteroid-chunk"}
 ice_ore.localised_name = {"item-name.oxide-asteroid-chunk"}
-helium.localised_name = {"item-name.helium-4"}
+helium.localised_name = {"item-name.helium"}
 
 
 metal_ore.name = "metallic-asteroid-chunk"
 carbon_ore.name = "carbonic-asteroid-chunk"
 ice_ore.name = "oxide-asteroid-chunk"
-helium.name = "helium-4"
+helium.name = "helium"
 
 
 ice_ore.map_color = {0.50, 0.50, 1}
@@ -225,7 +225,7 @@ ice_ore_particle.pictures = {
 metal_ore.minable.result = "metallic-asteroid-chunk"
 carbon_ore.minable.result = "carbonic-asteroid-chunk"
 ice_ore.minable.result = "oxide-asteroid-chunk"
-helium.minable.results[1].name = "helium-4"
+helium.minable.results[1].name = "helium"
 
 metal_ore.minable.mining_time = 20
 carbon_ore.minable.mining_time = 20
@@ -234,7 +234,7 @@ ice_ore.minable.mining_time = 20
 metal_ore.autoplace.control = "metallic-asteroid-chunk"
 carbon_ore.autoplace.control = "carbonic-asteroid-chunk"
 ice_ore.autoplace.control = "oxide-asteroid-chunk"
-helium.autoplace.control = "helium-4"
+helium.autoplace.control = "helium"
 
 local anorthite=table.deepcopy(data.raw["resource"]["calcite"])
 
