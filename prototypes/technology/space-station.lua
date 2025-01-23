@@ -364,10 +364,11 @@ data:extend{
     {
         type = "technology",
         name = "thruster-fuel-productivity",
+        icons = util.technology_icon_constant_recipe_productivity(data.raw["technology"]["space-platform-thruster"].icon),
         --icons = {
             --{
-                icon=data.raw["technology"]["space-platform-thruster"].icon,
-                icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
+                --icon= data.raw["technology"]["space-platform-thruster"].icon,
+                --icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
                 --tint = {r=0.7,g=0.7,b=1}
             --},
         --},
@@ -382,7 +383,7 @@ data:extend{
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
-                {"utility-science-pack", 1},
+                --{"utility-science-pack", 1},
                 {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }
@@ -486,15 +487,6 @@ data:extend{
                 scale=0.75,
             },
             
-    --     },
-    --     localised_name={"",{"item-name.crusher"}," 2"},
-    --     --localised_description={"space-location-description.muluna"},
-    --     -- icons = {
-    --     --     {
-    --     --         icon = data.raw["planet"]["muluna"].icon,
-    --     --         icon_size = data.raw["planet"]["muluna"].icon_size,
-    --     --     }
-    --     -- }
         },
         localised_name={"",{"item-name.crusher"}," 2"},
         --localised_description={"space-location-description.muluna"},
