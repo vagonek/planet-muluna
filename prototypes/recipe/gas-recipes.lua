@@ -1,5 +1,5 @@
 local dual_icon = require("lib.dual-item-icon").dual_icon
-
+local dual_icon = require("lib.dual-item-icon").dual_icon
 data:extend{
     {
         type = "recipe",
@@ -70,8 +70,24 @@ data:extend{
     { 
         type = "recipe",
         name = "helium-separation",
-        icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
-        icon_size = 64,
+        icons = {   
+                {
+                    icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                    icon_size = 64,
+                    tint = {1,0.8,1},
+                    scale = 0.5,
+                    shift = {16,0}
+                },
+                {
+                    icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                    icon_size = 64,
+                    tint = {1,0.6,1},
+                    scale = 0.5,
+                    shift = {-16,0}
+                },   
+        },
+        --icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        --icon_size = 64,
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "helium", amount=1000}
@@ -88,7 +104,25 @@ data:extend{
         type = "recipe",
         name = "kovarex-helium-enrichment",
         icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
-        icon_size = 64,
+        --icon_size = 64,
+        icons = {   
+            {
+                icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                icon_size = 64,
+                tint = {1,0.6,1},
+                scale = 0.5,
+                shift = {16,0},
+                draw_background = true,
+            },
+            {
+                icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                icon_size = 64,
+                tint = {1,0.6,1},
+                scale = 0.5,
+                shift = {-16,0},
+                draw_background = true,
+            },   
+    },
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "helium-4", amount=490},
