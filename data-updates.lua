@@ -92,7 +92,6 @@ for _, silo in pairs(data.raw["rocket-silo"]) do
         silo.disabled_when_recipe_not_researched = true
     end
 end
-
 data.raw.recipe["space-science-pack"].surface_conditions = {
     {property = "gravity",
     min = 0.1,
@@ -369,4 +368,22 @@ end
 
 table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
 
-table.insert(data.raw["recipe"]["fusion-reactor"].prerequisites, "helium-enrichment")
+table.insert(data.raw["technology"]["fusion-reactor"].prerequisites, "helium-enrichment")
+
+local techs_interstellar = {
+    "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
+    "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun"
+}
+
+for _,tech in pairs(techs_interstellar) do
+    if data.raw["technology"][tech] then
+        table.insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1})
+    end
+    
+end
+
+local space_science_pack_advanced = table.deepcopy(data.raw["recipe"]["space-science-pack"])
+
+space_science_pack_advanced.surface_conditions = PlanetsLib.restrict_to_surface("space-platform")
+
+data:extend{space_science_pack_advanced}
