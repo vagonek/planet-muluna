@@ -367,3 +367,5 @@ if data.raw["technology"]["planet-discovery-maraxsis"] then
 end
 
 
+table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
+
