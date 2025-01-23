@@ -125,12 +125,12 @@ data:extend{
     },
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "helium-4", amount=490},
-            {type = "fluid",name = "helium-3", amount=10}
+            {type = "fluid",name = "helium-4", amount=5},
+            {type = "fluid",name = "helium-3", amount=400}
         },
         results = {
-            {type = "fluid",name = "helium-4", amount=488},
-            {type = "fluid",name = "helium-3", amount=12}
+            {type = "fluid",name = "helium-4", amount=3},
+            {type = "fluid",name = "helium-3", amount=402}
         },
         energy_required=0.2,
         subgroup="muluna-products"
