@@ -9,5 +9,6 @@ require("prototypes.radiation")
 require("prototypes.entity.oxidized-boiler")
 require("prototypes.atmosphere")
 require("prototypes.subgroups")
+require("prototypes.lunar-science-pack")
 require("compat.maraxsis")
 if mods["MT-lib"] then require("compat.MT-lib") end

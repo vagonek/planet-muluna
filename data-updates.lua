@@ -103,6 +103,7 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     max = 0,
     },
 }
+data.raw.recipe["interstellar-science-pack"].surface_conditions = data.raw.recipe["space-science-pack"].surface_conditions
 
 rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
 rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
@@ -168,12 +169,13 @@ for _,planet in pairs(planets) do
     
 end
 
---data.raw["tool"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
+table.insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
+--table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
+--data.raw["tool"]["space-science-pack"].localised_name = {"item-name."}
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
 --data.raw["technology"]["space-science-pack"].localised_description = {"technology-description.lunar-science-pack"}
 
-data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+
 data.raw["tool"]["space-science-pack"].icons = nil
 
 
@@ -303,6 +305,13 @@ end
 
 require("prototypes.entity.cryolab")
 
+for _,lab in pairs(data.raw["lab"]) do
+    if lab.name ~= "cerys-lab" then
+        table.insert(lab.inputs,"interstellar-science-pack")
+    end
+end
+
+
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
 if mods["maraxsis"] then
     data.raw["recipe"]["maraxsis-water"].ingredients = {
@@ -337,7 +346,8 @@ end
 
 require("compat.modules-t4")
 require("compat.corrundum")
-
+require("compat.maraxsis")
+require("compat.tenebris")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 
@@ -351,3 +361,9 @@ PlanetsLib:update
         asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
         
     }
+
+if data.raw["technology"]["planet-discovery-maraxsis"] then
+    table.insert(data.raw["technology"]["planet-discovery-maraxsis"].prerequisites,"interstellar-science-pack")
+end
+
+
