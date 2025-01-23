@@ -1,4 +1,6 @@
 local rro = require("lib.remove-replace-object")
+local dual_icon = require("lib.dual-item-icon").dual_icon
+
 for k, type in ipairs({"furnace"}) do
     for i,entity in ipairs(data.raw[type]) do
         if entity.surface_conditions then
@@ -384,6 +386,20 @@ end
 
 local space_science_pack_advanced = table.deepcopy(data.raw["recipe"]["space-science-pack"])
 
-space_science_pack_advanced.surface_conditions = PlanetsLib.restrict_to_surface("space-platform")
-
+space_science_pack_advanced.surface_conditions = {
+    {
+        property = "gravity",
+        min = 0,
+        max = 0,
+    },
+    {
+        property = "oxygen",
+        min = 0,
+        max = 0,
+    },
+}
+space_science_pack_advanced.name = "space-science-pack-advanced"
+--space_science_pack_advanced.icons = dual_icon("space-science-pack","asteroid-collector")
 data:extend{space_science_pack_advanced}
+
+--data.raw["recipe"]["interstellar-science-pack-helium-4"].icons = dual_icon("interstellar-science-pack","asteroid-collector")

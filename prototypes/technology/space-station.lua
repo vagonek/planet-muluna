@@ -409,36 +409,45 @@ data:extend{
                 change = 0.1,
             },
         },
-    }
-    -- {
-    --     type = "technology",
-    --     name = "crusher-2",
-    --     unit= {
-    --         count = 10000,
-    --         time = 60,
-    --         ingredients = data.raw["technology"]["promethium-science-pack"].unit.ingredients
-    --     },
-    --     effects = {
-    --         {
-    --             type = "unlock-recipe",
-    --             recipe="crusher-2"
-    --         }
-    --     },
-    --     prerequisites = {
-    --         "promethium-science-pack"
-    --     },
-    --     icons = {
-    --         {
-    --             icon = "__planet-muluna__/graphics/technology/comminution.png",
-    --             icon_size = 968,
-    --         },  
-    --         {
-    --             icon = data.raw["item"]["uranium-ore"].icon,
-    --             icon_size=data.raw["item"]["uranium-ore"].icon_size,
-    --             --scale=0.3,
-    --             shift = {45,45},
-    --             scale=0.75,
-    --         },
+    },
+    {
+        type = "technology",
+        name = "advanced-space-science-pack",
+        prerequisites = {"interstellar-science-pack"},
+        icons = {
+            {
+                icon = data.raw["technology"]["space-science-pack"].icon,
+                icon_size = data.raw["technology"]["space-science-pack"].icon_size,
+            },
+            {
+                icon = data.raw["item"]["asteroid-collector"].icon,
+                icon_size = data.raw["item"]["asteroid-collector"].icon_size,
+                shift = {32,-32},
+                scale = 0.75,
+            },
+        },
+        unit = {
+            count = 300,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                --{"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "space-science-pack-advanced"
+            }
+        }
+    },
+
     {
         type = "technology",
         name = "crusher-2",
