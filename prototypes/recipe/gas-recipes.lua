@@ -67,6 +67,41 @@ data:extend{
         subgroup="muluna-products"
 
     },
+    { 
+        type = "recipe",
+        name = "helium-separation",
+        icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        icon_size = 64,
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "helium", amount=1000}
+        },
+        results = {
+            {type = "fluid",name = "helium-4", amount=993},
+            {type = "fluid",name = "helium-3", amount=7}
+        },
+        energy_required=2,
+        subgroup="muluna-products"
+
+    },
+    { 
+        type = "recipe",
+        name = "kovarex-helium-enrichment",
+        icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        icon_size = 64,
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "helium-4", amount=490},
+            {type = "fluid",name = "helium-3", amount=10}
+        },
+        results = {
+            {type = "fluid",name = "helium-4", amount=488},
+            {type = "fluid",name = "helium-3", amount=12}
+        },
+        energy_required=0.2,
+        subgroup="muluna-products"
+
+    },
 
 
 }
