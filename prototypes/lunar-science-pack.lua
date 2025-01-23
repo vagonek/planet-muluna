@@ -1,4 +1,6 @@
 local rro = require("lib.remove-replace-object")
+
+local dual_icon = require("lib.dual-item-icon").dual_icon
 --local  = require("lib.remove-replace-object")
 local i_lunar_pack = table.deepcopy(data.raw["tool"]["space-science-pack"])
 
@@ -21,7 +23,7 @@ i_lunar_pack.name = "interstellar-science-pack"
 
 i_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
 r_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+--data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png" --Why was this here?
 t_lunar_pack.icon = "__planet-muluna__/graphics/technology/space-science-pack.png"
 
 t_lunar_pack.prerequisites = {
@@ -69,9 +71,12 @@ t_lunar_pack.unit.time= 60
 t_lunar_pack.effects = {
     {type = "unlock-recipe", recipe = "interstellar-science-pack"}
 }
+
 local r_lunar_pack_4 = table.deepcopy(r_lunar_pack)
 r_lunar_pack_4.name = "interstellar-science-pack-helium-4"
 r_lunar_pack.main_product = "interstellar-science-pack"
+data:extend(all)
+
 r_lunar_pack_4.ingredients = {
     {type = "fluid", name = "helium-4", amount = 100},
     {type = "item", name = "rocket-fuel", amount = 2},
@@ -83,5 +88,6 @@ r_lunar_pack_4.localised_name = nil
 
 
 
-data:extend(all)
+
 data:extend{r_lunar_pack_4}
+
