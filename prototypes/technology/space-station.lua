@@ -453,7 +453,7 @@ data:extend{
         type = "technology",
         name = "crusher-2",
         unit = {
-            count = 1000,
+            count = 500,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
