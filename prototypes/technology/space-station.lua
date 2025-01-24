@@ -498,6 +498,8 @@ data:extend{
     {
         type = "technology",
         name = "greenhouses",
+        icon = data.raw["technology"]["tree-seeding"].icon,
+        icon_size = data.raw["technology"]["tree-seeding"].icon_size,
         research_trigger = {
             type = "mine-entity",
             entity = "carbonic-asteroid-chunk"
@@ -518,10 +520,10 @@ data:extend{
                 type = "unlock-recipe",
                 recipe="muluna-electrolysis"
             },
-            {
-                type = "unlock-recipe",
-                recipe="cellulose"
-            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe="cellulose"
+            -- },
             {
                 type = "unlock-recipe",
                 recipe="muluna-tree-growth-greenhouse"

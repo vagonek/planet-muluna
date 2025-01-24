@@ -12,10 +12,10 @@ data:extend{
             {type = "fluid",name = "water", amount=1000},
         },
         results = {
-            {type = "item",name = "wood", amount=3},
+            {type = "item",name = "wood", amount=4},
             {type = "fluid",name = "maraxsis-oxygen", amount=1000}
         },
-        energy_required=10*60,
+        energy_required=5*60,
         subgroup="muluna-products"
 
     },
@@ -63,7 +63,7 @@ data:extend{
         results = {
             {type = "fluid",name = "carbon-dioxide", amount=1000}
         },
-        energy_required=15,
+        energy_required=5,
         subgroup="muluna-products"
 
     },

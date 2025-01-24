@@ -200,7 +200,7 @@ rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type 
 data.raw["technology"]["wood-gas-processing"].unit = nil
 data.raw["technology"]["wood-gas-processing"].research_trigger = {
     type="craft-item",
-    entity="wood"
+    item="wood"
 }
 data.raw["technology"]["advanced-wood-gas-processing"].unit = {
     count = 500,
@@ -231,12 +231,20 @@ data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
 
 table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
     type = "unlock-recipe",
-    recipe="wood-crushing"
+    recipe="plastic-from-wood"
 })
-table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
-    type = "unlock-recipe",
-    recipe="cellulose"
-})
+-- table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+--     type = "unlock-recipe",
+--     recipe="cellulose"
+-- })
 
 table.insert(data.raw["technology"]["advanced-wood-gas-processing"].prerequisites,"interstellar-science-pack")
 table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
+
+--data.raw["item"]["E-greenhouse"]=nil
+-- data.raw["recipe"]["greenhouse"].enabled = false
+
+-- table.insert(data.raw["technology"]["tree-seeding"].effects, {
+--     type = "unlock-recipe",
+--     recipe="greenhouse"
+-- })
