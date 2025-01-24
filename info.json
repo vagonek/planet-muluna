@@ -23,7 +23,8 @@
     "! MT-lib",
     "? modules-t4",
     "? any-planet-start",
-    "? tenebris"
+    "? tenebris",
+    "Wood_Gasification_updated"
   ],
   "quality_required": true,
   "rail_bridges_required": false,

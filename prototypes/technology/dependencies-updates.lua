@@ -193,3 +193,50 @@ table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"p
 
 table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
 table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
+
+table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
+rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 20})
+rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 40})
+data.raw["technology"]["wood-gas-processing"].unit = nil
+data.raw["technology"]["wood-gas-processing"].research_trigger = {
+    type="craft-item",
+    entity="wood"
+}
+data.raw["technology"]["advanced-wood-gas-processing"].unit = {
+    count = 500,
+    time = 60,
+    ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        --{"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"interstellar-science-pack",1},
+    }
+}
+data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
+    count = 500,
+    time = 60,
+    ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        --{"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        --{"interstellar-science-pack",1},
+    }
+}
+
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="wood-crushing"
+})
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="cellulose"
+})
+
+table.insert(data.raw["technology"]["advanced-wood-gas-processing"].prerequisites,"interstellar-science-pack")
+table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")

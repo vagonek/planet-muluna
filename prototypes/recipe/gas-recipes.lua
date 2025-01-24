@@ -5,7 +5,7 @@ data:extend{
         type = "recipe",
         name = "muluna-tree-growth-greenhouse",
         category = "chemistry",
-        icons = dual_icon("wood","carbon"),
+        icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=1}, --Reminder: 1 tree seed = 2 wood
             {type = "fluid",name = "carbon-dioxide", amount=1000},
@@ -97,13 +97,15 @@ data:extend{
             {type = "fluid",name = "helium-3", amount=7}
         },
         energy_required=2,
-        subgroup="muluna-products"
+        subgroup="muluna-products",
+        allow_productivity = false,
 
     },
     { 
         type = "recipe",
         name = "kovarex-helium-enrichment",
         icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        allow_productivity = true,
         --icon_size = 64,
         icons = {   
             {
@@ -121,7 +123,8 @@ data:extend{
                 scale = 0.5,
                 shift = {-16,0},
                 draw_background = true,
-            },   
+            },
+           
     },
         category = "chemistry",
         ingredients = {
@@ -130,7 +133,7 @@ data:extend{
         },
         results = {
             {type = "fluid",name = "helium-4", amount=10},
-            {type = "fluid",name = "helium-3", amount=402}
+            {type = "fluid",name = "helium-3", amount=402, ignored_by_productivity=400}
         },
         energy_required=0.2,
         subgroup="muluna-products"
@@ -141,27 +144,29 @@ data:extend{
         category = "chemistry",
         name = "cellulose",
         ingredients = {
-            {type = "item",name = "wood", amount=10},
+            {type = "item",name = "wood-crushed", amount=20},
             {type = "fluid",name = "sulfuric-acid", amount=50}
         },
         energy_required = 8,
         results = {
             {type = "item",name = "cellulose", amount=20},
         },
+        allow_productivity = true,
     },
-    {
-        type = "recipe",
-        category = "chemistry",
-        name = "heavy-oil-cellulose",
-        ingredients = {
-            {type = "item",name = "cellulose", amount=4},
-            {type = "fluid",name = "steam", amount=100}
-        },
-        energy_required = 8,
-        results = {
-            {type = "fluid",name = "heavy-oil", amount=100},
-        },
-    },
+    -- {
+    --     type = "recipe",
+    --     category = "chemistry",
+    --     name = "heavy-oil-cellulose",
+    --     ingredients = {
+    --         {type = "item",name = "cellulose", amount=40},
+    --         {type = "fluid",name = "steam", amount=100}
+    --     },
+    --     energy_required = 8,
+    --     results = {
+    --         {type = "fluid",name = "heavy-oil", amount=100},
+    --     },
+    --     allow_productivity = true,
+    -- },
 
 
 }
