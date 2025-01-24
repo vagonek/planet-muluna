@@ -39,6 +39,7 @@ cryolab.ingredients = {
     {type = "item", name = "biolab", amount = 1},
     {type = "item", name = "aluminum-plate", amount = 20},
     {type = "fluid", name = "fluoroketone-cold", amount = 100},
+    {type = "fluid", name = "helium-3", amount = 100},
     {type = "item", name = "biter-egg", amount = 5},
     {type = "item", name = "pentapod-egg", amount = 5},
 }
