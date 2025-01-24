@@ -497,6 +497,37 @@ data:extend{
         --     }
         -- }
         
+    },
+    {
+        type = "technology",
+        name = "organic-oil",
+        unit = {
+                    count = 100,
+                    time = 60,
+                    ingredients = {
+                        --{"automation-science-pack", 1},
+                        --{"logistic-science-pack", 1},
+                        --{"chemical-science-pack", 1},
+                        --{"production-science-pack", 1},
+                        --{"utility-science-pack", 1},
+                        {"space-science-pack", 1},
+                        --{"agricultural-science-pack", 1},
+                        --{"interstellar-science-pack",1},
+                    }
+                },
+        prerequisites = {
+            "space-science-pack"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="cellulose"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="heavy-oil-cellulose"
+            },
+        },
     }
 
 }

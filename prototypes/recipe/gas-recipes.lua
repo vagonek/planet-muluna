@@ -136,6 +136,32 @@ data:extend{
         subgroup="muluna-products"
 
     },
+    {
+        type = "recipe",
+        category = "chemistry",
+        name = "cellulose",
+        ingredients = {
+            {type = "item",name = "wood", amount=10},
+            {type = "fluid",name = "sulfuric-acid", amount=50}
+        },
+        energy_required = 8,
+        results = {
+            {type = "item",name = "cellulose", amount=20},
+        },
+    },
+    {
+        type = "recipe",
+        category = "chemistry",
+        name = "heavy-oil-cellulose",
+        ingredients = {
+            {type = "item",name = "cellulose", amount=4},
+            {type = "fluid",name = "steam", amount=100}
+        },
+        energy_required = 8,
+        results = {
+            {type = "fluid",name = "heavy-oil", amount=100},
+        },
+    },
 
 
 }

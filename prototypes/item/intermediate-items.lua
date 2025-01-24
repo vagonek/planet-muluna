@@ -94,4 +94,21 @@ data:extend{{
     group=data.raw.item["copper-cable"].group,
     weight=data.raw.item["copper-cable"].weight,
 },
+{
+    type="item",
+    name="cellulose",
+    icons={
+        {
+            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+            --scale=0.25,
+            --shift={0.25,0}
+            tint = {1,0.8,0.4}
+        },
+    },
+    stack_size=iron_ore.stack_size*2,
+    order="b[cellulose]",
+    subgroup="muluna-products",
+    --recipe_group="intermediate-products",
+    weight=iron_ore.weight*1/2,
+},
 }
