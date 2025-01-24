@@ -37,7 +37,7 @@ cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
 cryolab.ingredients = {
     {type = "item", name = "quantum-processor", amount = 10},
     {type = "item", name = "biolab", amount = 1},
-    {type = "item", name = "pipe", amount = 20},
+    {type = "item", name = "aluminum-plate", amount = 20},
     {type = "fluid", name = "fluoroketone-cold", amount = 100},
     {type = "item", name = "biter-egg", amount = 5},
     {type = "item", name = "pentapod-egg", amount = 5},
@@ -47,6 +47,19 @@ cryolab.surface_conditions = {
         property = "temperature",
         max = 265,
     }
+}
+
+local space_platform_advanced = table.deepcopy(data.raw["recipe"]["space-platform-foundation"])
+space_platform_advanced.name = "advanced-space-platform-foundation"
+space_platform_advanced.ingredients = {
+    {type = "item", name = "aluminum-plate", amount = 10},
+    {type = "item", name = "carbon-fiber", amount = 10},
+    {type = "item", name = "aluminum-cable", amount = 20},
+    {type = "item", name = "space-platform-foundation", amount = 1},
+
+}
+space_platform_advanced.results = {
+    {type = "item", name = "advanced-space-platform-foundation", amount = 1}
 }
 
 data:extend{space_boiler,crusher_2,cryolab}
