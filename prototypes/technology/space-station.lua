@@ -96,10 +96,7 @@ data:extend{
                 recipe = "metallic-asteroid-crushing"
             },
             
-            {
-                type = "unlock-recipe",
-                recipe = "carbonic-asteroid-crushing"
-            },
+            
             {
                 type = "unlock-recipe",
                 recipe = "electric-engine-unit-from-carbon"
@@ -500,35 +497,108 @@ data:extend{
     },
     {
         type = "technology",
-        name = "organic-oil",
-        unit = {
-                    count = 100,
-                    time = 60,
-                    ingredients = {
-                        --{"automation-science-pack", 1},
-                        --{"logistic-science-pack", 1},
-                        --{"chemical-science-pack", 1},
-                        --{"production-science-pack", 1},
-                        --{"utility-science-pack", 1},
-                        {"space-science-pack", 1},
-                        --{"agricultural-science-pack", 1},
-                        --{"interstellar-science-pack",1},
-                    }
-                },
+        name = "greenhouses",
+        research_trigger = {
+            type = "mine-entity",
+            entity = "carbonic-asteroid-chunk"
+        },
         prerequisites = {
-            "space-science-pack"
+            "crusher"
         },
         effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "carbonic-asteroid-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="controlled-combustion"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-electrolysis"
+            },
             {
                 type = "unlock-recipe",
                 recipe="cellulose"
             },
             {
                 type = "unlock-recipe",
-                recipe="heavy-oil-cellulose"
+                recipe="muluna-tree-growth-greenhouse"
             },
+            {
+                type = "unlock-recipe",
+                recipe="wood-processing"
+            },
+
         },
-    }
+    },
+    -- {
+    --     type = "technology",
+    --     name = "wood-liquifaction",
+    --     unit = {
+    --                 count = 100,
+    --                 time = 60,
+    --                 ingredients = {
+    --                     --{"automation-science-pack", 1},
+    --                     --{"logistic-science-pack", 1},
+    --                     --{"chemical-science-pack", 1},
+    --                     --{"production-science-pack", 1},
+    --                     --{"utility-science-pack", 1},
+    --                     {"space-science-pack", 1},
+    --                     --{"agricultural-science-pack", 1},
+    --                     --{"interstellar-science-pack",1},
+    --                 }
+    --             },
+    --     prerequisites = {
+    --         "space-science-pack"
+    --     },
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="wood-crushing"
+    --         },
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="cellulose"
+    --         },
+    --         -- {
+    --         --     type = "unlock-recipe",
+    --         --     recipe="heavy-oil-cellulose"
+    --         -- },
+
+    --     },
+    -- }
+    
+    -- {
+    --     type = "technology",
+    --     name = "advanced-space-platform-foundation",
+    --     unit = {
+    --         count = 500,
+    --         time = 60,
+    --         ingredients = {
+    --             {"automation-science-pack", 1},
+    --             {"logistic-science-pack", 1},
+    --             {"chemical-science-pack", 1},
+    --             {"production-science-pack", 1},
+    --             {"utility-science-pack", 1},
+    --             {"space-science-pack", 1},
+    --             {"agricultural-science-pack", 1},
+    --             {"interstellar-science-pack",1},
+    --         }
+    --     },
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="advanced-space-platform-foundation"
+    --         }
+    --     },
+    --     prerequisites = {
+    --         "interstellar-science-pack"
+    --     },
+    --     icon = data.raw["technology"]["space-platform"].icon,
+    --     icon_size = data.raw["technology"]["space-platform"].icon_size,
+    -- }
 
 }
 
