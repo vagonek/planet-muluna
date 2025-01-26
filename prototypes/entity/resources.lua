@@ -141,7 +141,7 @@ ice_ore.icon = data.raw["item"]["oxide-asteroid-chunk"].icon
 metal_ore.localised_name = {"item-name.metallic-asteroid-chunk"}
 carbon_ore.localised_name = {"item-name.carbonic-asteroid-chunk"}
 ice_ore.localised_name = {"item-name.oxide-asteroid-chunk"}
-helium.localised_name = {"item-name.helium"}
+helium.localised_name = {"fluid-name.helium"}
 
 
 metal_ore.name = "metallic-asteroid-chunk"
