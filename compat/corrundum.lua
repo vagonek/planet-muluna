@@ -10,4 +10,7 @@ if data.raw["technology"]["planet-discovery-corrundum"] then
         }
     end
 end
-table.insert(data.raw["technology"]["platinum-thruster"].prerequisites,"interstellar-science-pack")
+if data.raw["technology"]["platinum-thruster"] then
+    table.insert(data.raw["technology"]["platinum-thruster"].prerequisites,"interstellar-science-pack")
+end
+
