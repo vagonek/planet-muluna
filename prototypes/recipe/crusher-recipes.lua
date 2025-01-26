@@ -90,7 +90,7 @@ local aluminum_plate = table.deepcopy(data.raw["recipe"]["iron-plate"])
 aluminum_plate.ingredients = {{type = "item",name = "alumina",amount = 1}}
 aluminum_plate.results = {{type = "item",name = "aluminum-plate",amount = 1}}
 aluminum_plate.name = "aluminum-plate"
-
+aluminum_plate.enabled = false
 
 local aluminum_cable = table.deepcopy(data.raw["recipe"]["copper-cable"])
 

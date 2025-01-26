@@ -4,6 +4,7 @@ data:extend{
     {
         type = "recipe",
         name = "muluna-tree-growth-greenhouse",
+        enabled = false,
         category = "chemistry",
         icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
@@ -22,6 +23,7 @@ data:extend{
     {
         type = "recipe",
         name = "muluna-electrolysis",
+        enabled = false,
         icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
         icon_size = 64,
         category = "chemistry",
@@ -53,6 +55,7 @@ data:extend{
     { 
         type = "recipe",
         name = "controlled-combustion",
+        enabled = false,
         icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
         icon_size = 64,
         category = "chemistry",
@@ -70,6 +73,7 @@ data:extend{
     { 
         type = "recipe",
         name = "helium-separation",
+        enabled = false,
         icons = {   
                 {
                     icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
@@ -104,6 +108,7 @@ data:extend{
     { 
         type = "recipe",
         name = "kovarex-helium-enrichment",
+        enabled = false,
         icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
         allow_productivity = true,
         --icon_size = 64,
@@ -142,6 +147,7 @@ data:extend{
     {
         type = "recipe",
         category = "chemistry",
+        enabled = false,
         name = "cellulose",
         ingredients = {
             {type = "item",name = "wood-crushed", amount=20},
