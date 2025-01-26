@@ -29,12 +29,16 @@ t_lunar_pack.icon = "__planet-muluna__/graphics/technology/space-science-pack.pn
 t_lunar_pack.prerequisites = {
     "electromagnetic-science-pack",
     "agricultural-science-pack",
-    "metallurgic-science-pack"
+    "metallurgic-science-pack",
+    "kovarex-enrichment-process",
+    "anorthite-processing",
 
 }
 i_lunar_pack.order = "j[interstellar-science-pack]"
+if data.raw["tool"]["hydraulic-science-pack"] then
+    data.raw["tool"]["hydraulic-science-pack"].order = data.raw["tool"]["hydraulic-science-pack"].order .. "a"
+end
 
-data.raw["tool"]["hydraulic-science-pack"].order = data.raw["tool"]["hydraulic-science-pack"].order .. "a"
 
 r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 3}}
 r_lunar_pack.main_product = "interstellar-science-pack"
