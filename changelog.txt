@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.3
+Date: 2025-01-26
+  Bugfixes:
+    - Fix crash when loading save from 1.15 that does not have Muluna surface loaded yet.
+  Locale:
+    - Fixed helium resource locale.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.2
 Date: 2025-01-26
   Balancing:
