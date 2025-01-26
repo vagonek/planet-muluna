@@ -160,6 +160,9 @@ local planets = {
     "arrakis",
     "tiber",
     "nauvis",
+    "char",
+    "aiur",
+    "janus",
 }
 
 for _,planet in pairs(planets) do
