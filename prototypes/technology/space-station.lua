@@ -97,10 +97,7 @@ data:extend{
             },
             
             
-            {
-                type = "unlock-recipe",
-                recipe = "electric-engine-unit-from-carbon"
-            },
+            
             
         },
         prerequisites = {
@@ -211,7 +208,7 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
-                recipe = "low-density-structure-from-carbon",
+                recipe = "low-density-structure-from-aluminum",
             },
             {
                 type = "unlock-recipe",
@@ -346,7 +343,8 @@ data:extend{
             },
         },
         prerequisites = {
-            "interstellar-science-pack"
+            "interstellar-science-pack",
+            "cryogenic-science-pack"
         },
         icons = {
             {
@@ -406,6 +404,11 @@ data:extend{
                 recipe = "advanced-thruster-fuel",
                 change = 0.1,
             },
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-fuel-from-rocket-fuel",
+                change = 0.1,
+            },
         },
     },
     {
@@ -420,7 +423,7 @@ data:extend{
             {
                 icon = data.raw["item"]["asteroid-collector"].icon,
                 icon_size = data.raw["item"]["asteroid-collector"].icon_size,
-                shift = {32,-32},
+                shift = {36,-36},
                 scale = 0.75,
             },
         },
@@ -511,6 +514,10 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "carbonic-asteroid-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electric-engine-unit-from-carbon"
             },
             {
                 type = "unlock-recipe",
