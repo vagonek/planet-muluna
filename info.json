@@ -4,13 +4,14 @@
   "title": "Muluna, Moon of Nauvis",
   "author": "MeteorSwarm",
   "homepage": "https://github.com/nicholasgower/planet-muluna",
-  "description": "Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna. The surface is devoid of life, but who knows what lurks in the planet's many craters?",
+  "description": "Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna, and adds a new science pack that allows you to build better space platforms. The surface is devoid of life, but who knows what lurks in the planet's many craters?",
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.28",
     "space-age",
     "quality",
     "elevated-rails",
+    "Wood_Gasification_updated",
     "alien-biomes-graphics >= 0.7.0",
     "flib",
     "aai-signal-transmission",
@@ -24,14 +25,13 @@
     "? modules-t4",
     "? any-planet-start",
     "? tenebris",
-    "Wood_Gasification_updated",
     "? aai-industry"
   ],
   "quality_required": true,
-  "rail_bridges_required": false,
-  "space_travel_required": false,
-  "spoiling_required": false,
-  "freezing_required": false,
-  "segmented_units_required": false,
-  "expansion_shaders_required": false
+  "rail_bridges_required": true,
+  "space_travel_required": true,
+  "spoiling_required": true,
+  "freezing_required": true,
+  "segmented_units_required": true,
+  "expansion_shaders_required": true
 }
