@@ -12,6 +12,7 @@ rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"spa
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
 rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
 table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"space-boiler")
+table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"greenhouses")
 -- table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
 --     type="unlock-space-location",
 --     space_location="muluna"
