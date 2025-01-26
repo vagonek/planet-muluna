@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.15.18
+Date: 2025-01-22
+  Graphics:
+    - Updated thumbnail, increasing moon sharpness and adding star background while preserving lunar phase.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.17
 Date: 2025-01-22
   Compatibility:
