@@ -396,11 +396,11 @@ space_science_pack_advanced.surface_conditions = {
         min = 0,
         max = 0,
     },
-    {
-        property = "oxygen",
-        min = 0,
-        max = 0,
-    },
+    -- {
+    --     property = "oxygen",
+    --     min = 0,
+    --     max = 0,
+    -- },
 }
 space_science_pack_advanced.name = "space-science-pack-advanced"
 --space_science_pack_advanced.icons = dual_icon("space-science-pack","asteroid-collector")
