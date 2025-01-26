@@ -15,7 +15,7 @@ crusher_2.name = "crusher-2"
 crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
 crusher_2.ingredients = {
     {type = "item",name = "tungsten-plate",amount = 10},
-    {type = "item",name = "uranium-235",amount = 10},
+    {type = "item",name = "uranium-238",amount = 10},
     {type = "item",name = "aluminum-plate",amount = 10},
     {type = "item",name = "crusher",amount = 1}
 }

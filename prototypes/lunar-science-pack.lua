@@ -43,7 +43,7 @@ r_lunar_pack.ingredients = {
     {type = "fluid", name = "helium", amount = 100},
     {type = "item", name = "rocket-fuel", amount = 3},
     {type = "item", name = "aluminum-plate", amount = 3},
-    {type = "item", name = "uranium-235", amount = 3}
+    {type = "item", name = "uranium-235", amount = 1}
 }
 
 
