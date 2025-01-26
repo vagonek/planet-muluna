@@ -159,7 +159,7 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
 }
 
 data.raw["technology"]["space-science-pack"].localised_description={"technology-description.space-science-pack"}
-data.raw["recipe"]["space-science-pack"].energy_required=7
+data.raw["recipe"]["space-science-pack"].energy_required=settings.startup["space-science-pack-energy"].value --7 by default
 
 
 --Moves rocket silo science packs down to prereqs, makes rocket silo into a trigger technology.

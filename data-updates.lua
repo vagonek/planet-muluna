@@ -111,7 +111,7 @@ rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"spac
 rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
 
-data.raw.recipe["space-science-pack"].results[1].amount = 1
+data.raw.recipe["space-science-pack"].results[1].amount = settings.startup["space-science-pack-output"].value --1 by default 
 
 
 for _,pack in pairs(data.raw["tool"]) do
