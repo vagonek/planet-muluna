@@ -263,6 +263,7 @@ table.insert(data.raw["technology"]["space-platform"].effects,{
 })
 
 require("compat.orbital-ion-cannon")
+require("compat.aai-industry")
 
 local one_gravity_condition =
 {
