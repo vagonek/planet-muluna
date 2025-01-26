@@ -204,7 +204,7 @@ if mods["maraxsis"] then
                 type = "change-recipe-productivity",
                 recipe = "maraxsis-rocket-part",
                 change = 0.1,
-                hidden = false
+                hidden = true
             })
         end
     end 
@@ -378,7 +378,6 @@ end
 
 local techs_interstellar = {
     "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
-    "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun"
     "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
     "platinum-thruster"
 }
