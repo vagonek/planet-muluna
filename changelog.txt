@@ -1,4 +1,48 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.0
+Date: 2025-01-26
+  Features:
+    - Added "Advanced space science pack" recipe, allowing the crafting of space science on platforms.
+    - Added "Crusher 2" entity, item, and technology.
+    - Added "Greenhouse" technology
+    - Added "Helium 4" resource.
+    - Added "Interstellar science pack"
+    - Added "Plastic from cellulose" recipe
+    - Added "Thruster fuel productivity" technology.
+    - Added "Wood gasification" as a hard dependency.
+    - Added helium processing recipes.
+    - Added migration script to add Anorthite and Helium to existing worlds.
+    - Added oxygen, hydrogen, carbon dioxide, helium, helium-4, helium-3 fluids.
+    - Added wood to heavy oil recipe chain.
+    - Created custom recipes for Interstellar science pack.
+    - Made helium-3 barrels an ingredient in fusion fuel cells.
+  Balancing:
+    - Added "Helium-3" to Cryolab recipe
+    - Adjusted cryolab recipe to use aluminum plates instead of pipes.
+    - Adjusted ingredients and results of helium enrichment recipe.
+    - Adjusted numbers of helium enrichment recipe to discourage on-site enrichment.
+    - Doubled the module capacity of all rocket silos to double the possible benefit of productivity modules on rocket silos.
+  Compatibility:
+    - Added compatibility patch for AAI Industry
+    - Added wood crushing and cellulose recipes to "Wood gas processing" tech in "Wood gasification" mod
+    - Adjusted order of "Hydraulic science pack"
+    - Adjusted order of Hydraulic science pack if Maraxsis is installed.
+    - Changed prerequisite for Char, Aiur, and Janus to "asteroid collector"
+    - Made "Platinum thruster" technology from Corrundum require Interstellar science pack.
+    - Modified "Wood gasification" recipes to fix bugs within the mod.
+  Bugfixes:
+    - Disabled all previously enabled recipes so that they only unlock upon researching their specified technology.
+    - Made "Maraxsis rocket part productivity bonus" hidden in technology descriptions.
+  Graphics:
+    - Adjusted icons for helium recipes.
+    - Reverted icon of space science pack.
+  Changes:
+    - Added "interstellar science pack" to requirements of Cryolab.
+    - Changed alternative low density structure recipe to use aluminum instead of carbon.
+    - Changed helium resource to produce helium instead of helium-4.
+    - Made "Greenhouses" a prerequisite of "Space science pack."
+    - Made several vanilla and modded late-game technologies require interstellar science packs.
+---------------------------------------------------------------------------------------------------
 Version: 1.15.18
 Date: 2025-01-22
   Graphics:
