@@ -193,9 +193,8 @@ if mods["Tiered-Solar-System"] then
 --     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
-for _,silo in pairs(data.raw["rocket-silo"]) do
-    silo.crafting_speed = silo.crafting_speed/2
-end
+
+
 
 if mods["maraxsis"] then
     for _,tech in pairs(data.raw["technology"]) do
