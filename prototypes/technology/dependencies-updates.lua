@@ -234,6 +234,14 @@ table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
     type = "unlock-recipe",
     recipe="plastic-from-wood"
 })
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="wood-crushing"
+})
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="cellulose"
+})
 -- table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
 --     type = "unlock-recipe",
 --     recipe="cellulose"
