@@ -7,7 +7,9 @@ local new_prereqs={}
 
 for _,silo in pairs(data.raw["rocket-silo"]) do
     silo.crafting_speed = silo.crafting_speed/2
-    silo.module_slots = silo.module_slots * 2
+    if silo.module_slots then 
+        silo.module_slots = silo.module_slots * 2
+    end
 end
 
 for _,effect in pairs(data.raw["technology"]["rocket-part-productivity-aquilo"].effects) do 
