@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.5
+Date: 2025-01-26
+  Balancing:
+    - Adjusted cost of Interstellar science pack.
+  Locale:
+    - Changed locale of "Advanced space research" technology
+---------------------------------------------------------------------------------------------------
 Version: 1.16.4
 Date: 2025-01-26
   Bugfixes:
