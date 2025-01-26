@@ -1,4 +1,4 @@
-Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna. The surface is devoid of life, but who knows what lurks in the planet's many craters?
+Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna, and adds a second science pack called the Interstellar science pack. The surface is devoid of life, but who knows what lurks in the planet's many craters?
 
 Muluna's low gravity makes it easier to launch rockets from than from Nauvis or other planets, making it an ideal location for constructing space platforms and shipping materials to other planets. However, the low pressure makes it impossible to craft any science other than Space Science.
 
@@ -17,6 +17,8 @@ This mod currently relies on vanilla prototypes for many world features. While t
 - Oxide asteroid chunk
 
 - Anorthite chunk
+
+- Helium
 
 - Stone
 
@@ -40,13 +42,23 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
 ## New Buildings
 
-- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs.
+- Crusher 2: A faster crusher with 4 module slots. Requires interstellar science packs to unlock.
 
+- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs. Has a speed of 6 and a science pack drain of 35%, and has 6 module slots. Crafting this is an endgame-level challenge that stretches the vanilla game mechanics to their absolute limit.
 
+## Notable technologies
+
+- Interstellar science pack: Technologies for venturing deeper into space. Requires science packs from Vulcanus, Gleba, and Fulgora. All Aquilo-tier planets require interstellar science packs to discover.
+
+- Thruster fuel productivity: Infinite technology that unlocks with the interstellar science pack.
+
+-
 
 ## Known to be compatible with:
 
 - Alien Biomes
+
+- AAI Industries
 
 ## Author-maintained locales:
 

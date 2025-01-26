@@ -1,4 +1,5 @@
 local rro = require("lib.remove-replace-object")
+local all = {}
 
 local space_boiler = table.deepcopy(data.raw["item"]["boiler"])
 
@@ -7,12 +8,13 @@ space_boiler.place_result = "space-boiler"
 space_boiler.localised_name = {"entity-name.space-boiler"}
 
 
--- local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
+ local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
 
--- crusher_2.name = "crusher-2"
--- crusher_2.place_result = "crusher-2"
--- --crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
-local crusher_2=nil
+crusher_2.name = "crusher-2"
+crusher_2.place_result = "crusher-2"
+crusher_2.icon = "__planet-muluna__/graphics/icons/crusher-2.png"
+crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
+--local crusher_2=nil
 
 local cryolab=table.deepcopy(data.raw["item"]["biolab"])
 
@@ -29,4 +31,9 @@ cryolab.icons = {
     
 }
 
-data:extend{space_boiler,cryolab}
+local space_platform_advanced = table.deepcopy(data.raw["item"]["space-platform-foundation"])
+space_platform_advanced.place_as_tile.result = "advanced-space-platform-foundation"
+space_platform_advanced.name = "advanced-space-platform-foundation"
+space_platform_advanced.weight = space_platform_advanced.weight / 2
+
+data:extend{space_boiler,crusher_2,cryolab}

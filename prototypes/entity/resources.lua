@@ -101,6 +101,14 @@ data:extend {{
   order = data.raw["autoplace-control"]["uranium-ore"].order.."3",
   richness = true
 }}
+data:extend {{
+  type = "autoplace-control",
+  category = "resource",
+  name = "helium",
+  localised_name = {"", "[fluid=helium]"," ", {"fluid-name.helium"}},
+  order = data.raw["autoplace-control"]["uranium-ore"].order.."4",
+  richness = true
+}}
 
 -- local coral_variants = {}
 -- for i = 1, 3 do
@@ -116,25 +124,34 @@ data:extend {{
 local metal_ore = table.deepcopy(data.raw["resource"]["iron-ore"])
 local carbon_ore = table.deepcopy(data.raw["resource"]["coal"])
 local ice_ore = table.deepcopy(data.raw["resource"]["copper-ore"])
+local helium = table.deepcopy(data.raw["resource"]["crude-oil"])
 
 metal_ore.name = "metallic-asteroid-chunk"
 carbon_ore.name = "carbonic-asteroid-chunk"
 ice_ore.name = "oxide-asteroid-chunk"
+helium.name = "helium"
 
 metal_ore.icon = data.raw["item"]["metallic-asteroid-chunk"].icon
 carbon_ore.icon = data.raw["item"]["carbonic-asteroid-chunk"].icon
 ice_ore.icon = data.raw["item"]["oxide-asteroid-chunk"].icon
+--helium.icon =  data.raw["fluid"]["helium-4"].icon
+
+
 
 metal_ore.localised_name = {"item-name.metallic-asteroid-chunk"}
 carbon_ore.localised_name = {"item-name.carbonic-asteroid-chunk"}
 ice_ore.localised_name = {"item-name.oxide-asteroid-chunk"}
+helium.localised_name = {"item-name.helium"}
 
 
 metal_ore.name = "metallic-asteroid-chunk"
 carbon_ore.name = "carbonic-asteroid-chunk"
 ice_ore.name = "oxide-asteroid-chunk"
+helium.name = "helium"
+
 
 ice_ore.map_color = {0.50, 0.50, 1}
+helium.map_color = {r=0.2, g=0.6, b=0.2}
 
 ice_ore.stages =
 {
@@ -208,6 +225,7 @@ ice_ore_particle.pictures = {
 metal_ore.minable.result = "metallic-asteroid-chunk"
 carbon_ore.minable.result = "carbonic-asteroid-chunk"
 ice_ore.minable.result = "oxide-asteroid-chunk"
+helium.minable.results[1].name = "helium"
 
 metal_ore.minable.mining_time = 20
 carbon_ore.minable.mining_time = 20
@@ -216,6 +234,7 @@ ice_ore.minable.mining_time = 20
 metal_ore.autoplace.control = "metallic-asteroid-chunk"
 carbon_ore.autoplace.control = "carbonic-asteroid-chunk"
 ice_ore.autoplace.control = "oxide-asteroid-chunk"
+helium.autoplace.control = "helium"
 
 local anorthite=table.deepcopy(data.raw["resource"]["calcite"])
 
@@ -254,4 +273,4 @@ anorthite.icon="__planet-muluna__/graphics/icons/anorthite-chunk.png"
 --     richness_expression = [[var("control:maraxsis-coral:richness") * random_penalty(x, y, 9232 + (sqrt(x*x + y*y) / 10), 99, 1000)]],
 -- }
 
-data:extend{metal_ore,carbon_ore,ice_ore,ice_ore_particle,anorthite,anorthite_chunk_particle}
+data:extend{metal_ore,carbon_ore,ice_ore,ice_ore_particle,anorthite,anorthite_chunk_particle,helium}

@@ -12,6 +12,7 @@ rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"spa
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
 rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
 table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"space-boiler")
+table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"greenhouses")
 -- table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
 --     type="unlock-space-location",
 --     space_location="muluna"
@@ -156,7 +157,7 @@ data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
 }
-data.raw["technology"]["space-science-pack"].icon = "__planet-muluna__/graphics/technology/space-science-pack.png"
+
 data.raw["technology"]["space-science-pack"].localised_description={"technology-description.space-science-pack"}
 data.raw["recipe"]["space-science-pack"].energy_required=7
 
@@ -193,3 +194,66 @@ table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"p
 
 table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
 table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
+
+table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
+rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 20})
+rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 40})
+data.raw["technology"]["wood-gas-processing"].unit = nil
+data.raw["technology"]["wood-gas-processing"].research_trigger = {
+    type="craft-item",
+    item="wood"
+}
+data.raw["technology"]["advanced-wood-gas-processing"].unit = {
+    count = 500,
+    time = 60,
+    ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        --{"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"interstellar-science-pack",1},
+    }
+}
+data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
+    count = 500,
+    time = 60,
+    ingredients = {
+        {"automation-science-pack", 1},
+        {"logistic-science-pack", 1},
+        {"chemical-science-pack", 1},
+        {"production-science-pack", 1},
+        --{"utility-science-pack", 1},
+        {"space-science-pack", 1},
+        {"interstellar-science-pack",1},
+    }
+}
+
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="plastic-from-wood"
+})
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="wood-crushing"
+})
+table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+    type = "unlock-recipe",
+    recipe="cellulose"
+})
+-- table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
+--     type = "unlock-recipe",
+--     recipe="cellulose"
+-- })
+
+table.insert(data.raw["technology"]["advanced-wood-gas-processing"].prerequisites,"interstellar-science-pack")
+table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
+
+--data.raw["item"]["E-greenhouse"]=nil
+-- data.raw["recipe"]["greenhouse"].enabled = false
+
+-- table.insert(data.raw["technology"]["tree-seeding"].effects, {
+--     type = "unlock-recipe",
+--     recipe="greenhouse"
+-- })

@@ -19,10 +19,13 @@
     "hurricane-graphics",
     "? maraxsis",
     "! external-rocket-parts",
-    "? Tiered-Solar-System >= 1.1.3",
+    "(?) Tiered-Solar-System >= 1.1.3",
     "! MT-lib",
     "? modules-t4",
-    "? any-planet-start"
+    "? any-planet-start",
+    "? tenebris",
+    "Wood_Gasification_updated",
+    "? aai-industry"
   ],
   "quality_required": true,
   "rail_bridges_required": false,

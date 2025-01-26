@@ -96,14 +96,8 @@ data:extend{
                 recipe = "metallic-asteroid-crushing"
             },
             
-            {
-                type = "unlock-recipe",
-                recipe = "carbonic-asteroid-crushing"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "electric-engine-unit-from-carbon"
-            },
+            
+            
             
         },
         prerequisites = {
@@ -214,7 +208,7 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
-                recipe = "low-density-structure-from-carbon",
+                recipe = "low-density-structure-from-aluminum",
             },
             {
                 type = "unlock-recipe",
@@ -288,7 +282,8 @@ data:extend{
                     {"metallurgic-science-pack", 1},
                     {"agricultural-science-pack", 1},
                     {"electromagnetic-science-pack", 1},
-                    {"cryogenic-science-pack", 1}
+                    {"cryogenic-science-pack", 1},
+                    {"interstellar-science-pack",1}
               },
         },
         effects = {
@@ -298,7 +293,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "biolab","quantum-processor"
+            "biolab","quantum-processor","helium-enrichment"
         },
         icons = {
             {
@@ -310,46 +305,308 @@ data:extend{
         --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
         --icon_size=256,
     },
+    {
+        type = "technology",
+        name = "helium-enrichment",
+        --localised_name = {"entity-name.cryolab"},
+        --localised_description = {"entity-description.asteroid-collector"},
+        unit= {
+            count = 500,
+            time = 60,
+            ingredients = --Normally, I would base these costs on vanilla technologies to increase tolerance of other mods, but since this tech is intended to 
+                {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    {"utility-science-pack", 1},
+                    {"space-science-pack", 1},
+                    {"metallurgic-science-pack", 1},
+                    {"agricultural-science-pack", 1},
+                    {"electromagnetic-science-pack", 1},
+                    {"cryogenic-science-pack", 1},
+                    {"interstellar-science-pack",1}
+              },
+        },
+        effects = {
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "interstellar-science-pack-helium-4"
+            -- },
+            {
+                type = "unlock-recipe",
+                recipe = "helium-separation"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "kovarex-helium-enrichment"
+            },
+        },
+        prerequisites = {
+            "interstellar-science-pack",
+            "cryogenic-science-pack"
+        },
+        icons = {
+            {
+                icon="__planet-muluna__/graphics/technology/molecule-noble-gas.png",
+                icon_size=644,
+                tint = {r=0.7,g=0.7,b=1}
+            },
+        }
+        --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        --icon_size=256,
+    },
+    {
+        type = "technology",
+        name = "thruster-fuel-productivity",
+        icons = util.technology_icon_constant_recipe_productivity(data.raw["technology"]["space-platform-thruster"].icon),
+        --icons = {
+            --{
+                --icon= data.raw["technology"]["space-platform-thruster"].icon,
+                --icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
+            --},
+        --},
+        max_level = "infinite",
+        prerequisites = {"interstellar-science-pack"},
+        upgrade = true,
+        unit = {
+            count_formula = "2000*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                --{"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-oxidizer",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-fuel",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-thruster-oxidizer",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-thruster-fuel",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "thruster-fuel-from-rocket-fuel",
+                change = 0.1,
+            },
+        },
+    },
+    {
+        type = "technology",
+        name = "advanced-space-science-pack",
+        prerequisites = {"interstellar-science-pack"},
+        icons = {
+            {
+                icon = data.raw["technology"]["space-science-pack"].icon,
+                icon_size = data.raw["technology"]["space-science-pack"].icon_size,
+            },
+            {
+                icon = data.raw["item"]["asteroid-collector"].icon,
+                icon_size = data.raw["item"]["asteroid-collector"].icon_size,
+                shift = {36,-36},
+                scale = 0.75,
+            },
+        },
+        unit = {
+            count = 300,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                --{"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "space-science-pack-advanced"
+            }
+        }
+    },
+
+    {
+        type = "technology",
+        name = "crusher-2",
+        unit = {
+            count = 500,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="crusher-2"
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack", "crusher"
+        },
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon_size = 968,
+            },  
+            {
+                icon = data.raw["item"]["uranium-ore"].icon,
+                icon_size=data.raw["item"]["uranium-ore"].icon_size,
+                --scale=0.3,
+                shift = {45,45},
+                scale=0.75,
+            },
+            
+        },
+        localised_name={"",{"item-name.crusher"}," 2"},
+        --localised_description={"space-location-description.muluna"},
+        -- icons = {
+        --     {
+        --         icon = data.raw["planet"]["muluna"].icon,
+        --         icon_size = data.raw["planet"]["muluna"].icon_size,
+        --     }
+        -- }
+        
+    },
+    {
+        type = "technology",
+        name = "greenhouses",
+        icon = data.raw["technology"]["tree-seeding"].icon,
+        icon_size = data.raw["technology"]["tree-seeding"].icon_size,
+        research_trigger = {
+            type = "mine-entity",
+            entity = "carbonic-asteroid-chunk"
+        },
+        prerequisites = {
+            "crusher"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "carbonic-asteroid-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "electric-engine-unit-from-carbon"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="controlled-combustion"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-electrolysis"
+            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe="cellulose"
+            -- },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="wood-processing"
+            },
+
+        },
+    },
     -- {
     --     type = "technology",
-    --     name = "crusher-2",
-    --     unit= {
-    --         count = 10000,
-    --         time = 60,
-    --         ingredients = data.raw["technology"]["promethium-science-pack"].unit.ingredients
+    --     name = "wood-liquifaction",
+    --     unit = {
+    --                 count = 100,
+    --                 time = 60,
+    --                 ingredients = {
+    --                     --{"automation-science-pack", 1},
+    --                     --{"logistic-science-pack", 1},
+    --                     --{"chemical-science-pack", 1},
+    --                     --{"production-science-pack", 1},
+    --                     --{"utility-science-pack", 1},
+    --                     {"space-science-pack", 1},
+    --                     --{"agricultural-science-pack", 1},
+    --                     --{"interstellar-science-pack",1},
+    --                 }
+    --             },
+    --     prerequisites = {
+    --         "space-science-pack"
     --     },
     --     effects = {
     --         {
     --             type = "unlock-recipe",
-    --             recipe="crusher-2"
+    --             recipe="wood-crushing"
+    --         },
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="cellulose"
+    --         },
+    --         -- {
+    --         --     type = "unlock-recipe",
+    --         --     recipe="heavy-oil-cellulose"
+    --         -- },
+
+    --     },
+    -- }
+    
+    -- {
+    --     type = "technology",
+    --     name = "advanced-space-platform-foundation",
+    --     unit = {
+    --         count = 500,
+    --         time = 60,
+    --         ingredients = {
+    --             {"automation-science-pack", 1},
+    --             {"logistic-science-pack", 1},
+    --             {"chemical-science-pack", 1},
+    --             {"production-science-pack", 1},
+    --             {"utility-science-pack", 1},
+    --             {"space-science-pack", 1},
+    --             {"agricultural-science-pack", 1},
+    --             {"interstellar-science-pack",1},
+    --         }
+    --     },
+    --     effects = {
+    --         {
+    --             type = "unlock-recipe",
+    --             recipe="advanced-space-platform-foundation"
     --         }
     --     },
     --     prerequisites = {
-    --         "promethium-science-pack"
+    --         "interstellar-science-pack"
     --     },
-    --     icons = {
-    --         {
-    --             icon = "__planet-muluna__/graphics/technology/comminution.png",
-    --             icon_size = 968,
-    --         },  
-    --         {
-    --             icon = data.raw["item"]["uranium-ore"].icon,
-    --             icon_size=data.raw["item"]["uranium-ore"].icon_size,
-    --             --scale=0.3,
-    --             shift = {45,45},
-    --             scale=0.75,
-    --         },
-            
-    --     },
-    --     localised_name={"",{"item-name.crusher"}," 2"},
-    --     --localised_description={"space-location-description.muluna"},
-    --     -- icons = {
-    --     --     {
-    --     --         icon = data.raw["planet"]["muluna"].icon,
-    --     --         icon_size = data.raw["planet"]["muluna"].icon_size,
-    --     --     }
-    --     -- }
-        
+    --     icon = data.raw["technology"]["space-platform"].icon,
+    --     icon_size = data.raw["technology"]["space-platform"].icon_size,
     -- }
 
 }

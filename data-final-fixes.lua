@@ -3,6 +3,17 @@ local rro = require("lib.remove-replace-object")
 --Overrides any mods which add their own techs to space platform thruster as a prereq.
 --Moves prereq to asteroid collector, which is roughly equivalent to space platform thruster's place in the vanilla tech tree.
 local new_prereqs={}
+
+
+for _,silo in pairs(data.raw["rocket-silo"]) do
+    silo.crafting_speed = silo.crafting_speed/2
+    silo.module_slots = silo.module_slots * 2
+end
+
+for _,effect in pairs(data.raw["technology"]["rocket-part-productivity-aquilo"].effects) do 
+    effect.change = effect.change * 2
+end
+
 for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
     
     if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then

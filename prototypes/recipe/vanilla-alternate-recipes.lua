@@ -9,9 +9,16 @@ local motor_carbon = table.deepcopy(data.raw["recipe"]["electric-engine-unit"])
 
 motor_carbon.name="electric-engine-unit-from-carbon"
 
+local lubricant_amount = 15
+local carbon_amount = 1
+if mods["aai-industry"] then
+    lubricant_amount = 40
+    carbon_amount = 3
+end
+
 rro.replace(motor_carbon.ingredients,
-{type = "fluid", name = "lubricant", amount = 15},
-{type = "item", name = "carbon", amount = 1}
+{type = "fluid", name = "lubricant", amount = lubricant_amount},
+{type = "item", name = "carbon", amount = carbon_amount}
 )
 motor_carbon.icons=dual_icon("electric-engine-unit","carbon")
 -- motor_carbon.icons= {
@@ -42,11 +49,11 @@ aluminum_rocket_fuel.icons= dual_icon("rocket-fuel","alumina")
 
 local carbon_nanotubes_lds = table.deepcopy(data.raw["recipe"]["low-density-structure"])
 
-carbon_nanotubes_lds.name = "low-density-structure-from-carbon"
+carbon_nanotubes_lds.name = "low-density-structure-from-aluminum"
 
-carbon_nanotubes_lds.ingredients = {{type = "item", name = "iron-plate", amount = 5}, {type = "item", name = "alumina-crushed", amount = 5}, {type = "item", name = "carbon", amount = 20}}
+carbon_nanotubes_lds.ingredients = {{type = "item", name = "iron-plate", amount = 5}, {type = "item", name = "plastic-bar", amount = 5}, {type = "item", name = "aluminum-plate", amount = 20}}
 carbon_nanotubes_lds.energy_required=30
-carbon_nanotubes_lds.icons = dual_icon("low-density-structure","carbon")
+carbon_nanotubes_lds.icons = dual_icon("low-density-structure","aluminum-plate")
 
 carbon_nanotubes_lds.surface_conditions = {{
     property = "oxygen",
@@ -85,6 +92,15 @@ aluminum_red_circuit.name="advanced-circuit-aluminum"
 aluminum_green_circuit.icons = dual_icon("electronic-circuit","aluminum-cable")
 aluminum_red_circuit.icons = dual_icon("advanced-circuit","aluminum-cable")
 
-data:extend{motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit}
+local bio_plastic = table.deepcopy(data.raw["recipe"]["plastic-bar"])
+bio_plastic.name = "plastic-from-wood"
+bio_plastic.icons = dual_icon("plastic-bar","wood")
+rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{type = "item",name = "cellulose",amount = 4})
+
+data:extend{motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
+
+
+
+
 
 

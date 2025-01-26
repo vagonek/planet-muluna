@@ -1,9 +1,26 @@
+local function crushing_icon(icon_dir,icon_size)
+return {
+    {
+        icon = icon_dir,
+        icon_size=64,
+        --scale=0.3,
+        shift = {0,-3},
+        scale=50/128,
+    },
+    {
+        icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
+        icon_size=64,
+        scale=0.5,
+    },
+}
 
+end
 
 
 
 local anorthite_crushing = table.deepcopy(data.raw["recipe"]["oxide-asteroid-crushing"])
 anorthite_crushing.name = "anorthite-crushing"
+
 
 anorthite_crushing.icons = {
 {
@@ -73,7 +90,7 @@ local aluminum_plate = table.deepcopy(data.raw["recipe"]["iron-plate"])
 aluminum_plate.ingredients = {{type = "item",name = "alumina",amount = 1}}
 aluminum_plate.results = {{type = "item",name = "aluminum-plate",amount = 1}}
 aluminum_plate.name = "aluminum-plate"
-
+aluminum_plate.enabled = false
 
 local aluminum_cable = table.deepcopy(data.raw["recipe"]["copper-cable"])
 
@@ -86,4 +103,11 @@ aluminum_cable.results = {{type = "item",name = "aluminum-cable",amount = 2}}
 --     recipe = ""
 -- })
 
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable}
+
+local wood_crushing = table.deepcopy(anorthite_crushing)
+wood_crushing.name = "wood-crushing"
+wood_crushing.ingredients = {{type = "item",name = "wood",amount = 6}}
+wood_crushing.results = {{type = "item",name = "wood-crushed",amount = 10},{type = "item", name = "wood", amount = 1,ignored_by_productivity=1}}
+wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
+
+data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}

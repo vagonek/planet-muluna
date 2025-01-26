@@ -1,4 +1,6 @@
 local rro = require("lib.remove-replace-object")
+local dual_icon = require("lib.dual-item-icon").dual_icon
+
 for k, type in ipairs({"furnace"}) do
     for i,entity in ipairs(data.raw[type]) do
         if entity.surface_conditions then
@@ -92,7 +94,6 @@ for _, silo in pairs(data.raw["rocket-silo"]) do
         silo.disabled_when_recipe_not_researched = true
     end
 end
-
 data.raw.recipe["space-science-pack"].surface_conditions = {
     {property = "gravity",
     min = 0.1,
@@ -103,6 +104,7 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     max = 0,
     },
 }
+data.raw.recipe["interstellar-science-pack"].surface_conditions = data.raw.recipe["space-science-pack"].surface_conditions
 
 rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
 rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
@@ -158,6 +160,9 @@ local planets = {
     "arrakis",
     "tiber",
     "nauvis",
+    "char",
+    "aiur",
+    "janus",
 }
 
 for _,planet in pairs(planets) do
@@ -168,12 +173,13 @@ for _,planet in pairs(planets) do
     
 end
 
---data.raw["tool"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
+table.insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
+--table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
+--data.raw["tool"]["space-science-pack"].localised_name = {"item-name."}
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
 --data.raw["technology"]["space-science-pack"].localised_description = {"technology-description.lunar-science-pack"}
 
-data.raw["tool"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
-data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+
 data.raw["tool"]["space-science-pack"].icons = nil
 
 
@@ -187,9 +193,8 @@ if mods["Tiered-Solar-System"] then
 --     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
-for _,silo in pairs(data.raw["rocket-silo"]) do
-    silo.crafting_speed = silo.crafting_speed/2
-end
+
+
 
 if mods["maraxsis"] then
     for _,tech in pairs(data.raw["technology"]) do
@@ -198,7 +203,7 @@ if mods["maraxsis"] then
                 type = "change-recipe-productivity",
                 recipe = "maraxsis-rocket-part",
                 change = 0.1,
-                hidden = false
+                hidden = true
             })
         end
     end 
@@ -257,6 +262,7 @@ table.insert(data.raw["technology"]["space-platform"].effects,{
 })
 
 require("compat.orbital-ion-cannon")
+require("compat.aai-industry")
 
 local one_gravity_condition =
 {
@@ -303,6 +309,13 @@ end
 
 require("prototypes.entity.cryolab")
 
+for _,lab in pairs(data.raw["lab"]) do
+    if lab.name ~= "cerys-lab" then
+        table.insert(lab.inputs,"interstellar-science-pack")
+    end
+end
+
+
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
 if mods["maraxsis"] then
     data.raw["recipe"]["maraxsis-water"].ingredients = {
@@ -337,7 +350,8 @@ end
 
 require("compat.modules-t4")
 require("compat.corrundum")
-
+require("compat.maraxsis")
+require("compat.tenebris")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 
@@ -351,3 +365,48 @@ PlanetsLib:update
         asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
         
     }
+
+if data.raw["technology"]["planet-discovery-maraxsis"] then
+    table.insert(data.raw["technology"]["planet-discovery-maraxsis"].prerequisites,"interstellar-science-pack")
+end
+
+
+--table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
+
+--table.insert(data.raw["technology"]["fusion-reactor"].prerequisites, "helium-enrichment")
+
+local techs_interstellar = {
+    "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
+    "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
+    "platinum-thruster"
+}
+
+for _,tech in pairs(techs_interstellar) do
+    if data.raw["technology"][tech] then
+        table.insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1})
+    end
+    
+end
+
+local space_science_pack_advanced = table.deepcopy(data.raw["recipe"]["space-science-pack"])
+
+space_science_pack_advanced.surface_conditions = {
+    {
+        property = "gravity",
+        min = 0,
+        max = 0,
+    },
+    {
+        property = "oxygen",
+        min = 0,
+        max = 0,
+    },
+}
+space_science_pack_advanced.name = "space-science-pack-advanced"
+--space_science_pack_advanced.icons = dual_icon("space-science-pack","asteroid-collector")
+data:extend{space_science_pack_advanced}
+
+--data.raw["recipe"]["interstellar-science-pack-helium-4"].icons = dual_icon("interstellar-science-pack","asteroid-collector")
+
+data.raw["recipe"]["wood-greenhouse"].enabled = false
+
