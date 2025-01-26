@@ -225,7 +225,7 @@ data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
         {"production-science-pack", 1},
         --{"utility-science-pack", 1},
         {"space-science-pack", 1},
-        --{"interstellar-science-pack",1},
+        {"interstellar-science-pack",1},
     }
 }
 
