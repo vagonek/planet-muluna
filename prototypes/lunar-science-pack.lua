@@ -72,22 +72,22 @@ t_lunar_pack.effects = {
     {type = "unlock-recipe", recipe = "interstellar-science-pack"}
 }
 
-local r_lunar_pack_4 = table.deepcopy(r_lunar_pack)
-r_lunar_pack_4.name = "interstellar-science-pack-helium-4"
+-- local r_lunar_pack_4 = table.deepcopy(r_lunar_pack)
+--r_lunar_pack_4.name = "interstellar-science-pack-helium-4"
 r_lunar_pack.main_product = "interstellar-science-pack"
-data:extend(all)
+ data:extend(all)
 
-r_lunar_pack_4.ingredients = {
-    {type = "fluid", name = "helium-4", amount = 100},
-    {type = "item", name = "rocket-fuel", amount = 2},
-    {type = "item", name = "aluminum-plate", amount = 2},
-    {type = "item", name = "uranium-235", amount = 2}
-}
+-- r_lunar_pack_4.ingredients = {
+--     {type = "fluid", name = "helium-4", amount = 100},
+--     {type = "item", name = "rocket-fuel", amount = 2},
+--     {type = "item", name = "aluminum-plate", amount = 2},
+--     {type = "item", name = "uranium-235", amount = 2}
+-- }
 
-r_lunar_pack_4.localised_name = nil
-
-
+-- r_lunar_pack_4.localised_name = nil
 
 
-data:extend{r_lunar_pack_4}
+
+
+--data:extend{r_lunar_pack_4}
 
