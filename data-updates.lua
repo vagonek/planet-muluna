@@ -374,11 +374,13 @@ end
 
 --table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
 
-table.insert(data.raw["technology"]["fusion-reactor"].prerequisites, "helium-enrichment")
+--table.insert(data.raw["technology"]["fusion-reactor"].prerequisites, "helium-enrichment")
 
 local techs_interstellar = {
     "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
     "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun"
+    "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
+    "platinum-thruster"
 }
 
 for _,tech in pairs(techs_interstellar) do
