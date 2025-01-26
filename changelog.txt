@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.2
+Date: 2025-01-26
+  Balancing:
+    - Adjusted advanced thruster and oxidizer recipes to produce 1000 fluid, down from 1500, to increase the importance of thruster fuel productivity technology.
+  Bugfixes:
+    - Fixed crash when Corrundum not loaded.
+    - Fixed crash when rocket silos have no module slots.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.1
 Date: 2025-01-26
   Bugfixes:
