@@ -45,8 +45,8 @@ r_lunar_pack.main_product = "interstellar-science-pack"
 r_lunar_pack.category = "crafting-with-fluid"
 r_lunar_pack.ingredients = {
     {type = "fluid", name = "helium", amount = 100},
-    {type = "item", name = "rocket-fuel", amount = 3},
-    {type = "item", name = "aluminum-plate", amount = 3},
+    {type = "item", name = "rocket-fuel", amount = 2},
+    {type = "item", name = "aluminum-plate", amount = 10},
     {type = "item", name = "uranium-235", amount = 1}
 }
 
