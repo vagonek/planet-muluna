@@ -409,3 +409,6 @@ space_science_pack_advanced.name = "space-science-pack-advanced"
 data:extend{space_science_pack_advanced}
 
 --data.raw["recipe"]["interstellar-science-pack-helium-4"].icons = dual_icon("interstellar-science-pack","asteroid-collector")
+
+data.raw["recipe"]["wood-greenhouse"].enabled = false
+
