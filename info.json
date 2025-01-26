@@ -24,7 +24,8 @@
     "? modules-t4",
     "? any-planet-start",
     "? tenebris",
-    "Wood_Gasification_updated"
+    "Wood_Gasification_updated",
+    "? aai-industry"
   ],
   "quality_required": true,
   "rail_bridges_required": false,
