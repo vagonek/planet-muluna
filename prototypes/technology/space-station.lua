@@ -293,7 +293,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "biolab","quantum-processor"
+            "biolab","quantum-processor","helium-enrichment"
         },
         icons = {
             {
@@ -329,10 +329,10 @@ data:extend{
               },
         },
         effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "interstellar-science-pack-helium-4"
-            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "interstellar-science-pack-helium-4"
+            -- },
             {
                 type = "unlock-recipe",
                 recipe = "helium-separation"
