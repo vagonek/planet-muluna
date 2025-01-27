@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.10
+Date: 2025-01-27
+  Bugfixes:
+    - Fixed "wood processing" recipe surface condition to make tree seeds craftable anywhere. https://github.com/nicholasgower/planet-muluna/issues/51
+---------------------------------------------------------------------------------------------------
 Version: 1.16.9
 Date: 2025-01-27
   Locale:
