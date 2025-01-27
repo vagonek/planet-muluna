@@ -402,4 +402,4 @@ data.raw["recipe"]["wood-greenhouse"].enabled = false
 data.raw["recipe"]["advanced-thruster-fuel"].results[1].amount = 1000
 data.raw["recipe"]["advanced-thruster-oxidizer"].results[1].amount = 1000
 
-
+data.raw["recipe"]["wood-processing"].surface_conditions = nil
