@@ -8,13 +8,13 @@ data:extend{
         category = "chemistry",
         icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
-            {type = "item",name = "tree-seed", amount=1}, --Reminder: 1 tree seed = 2 wood
-            {type = "fluid",name = "carbon-dioxide", amount=1000},
-            {type = "fluid",name = "water", amount=1000},
+            {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
+            {type = "fluid",name = "carbon-dioxide", amount=10000},
+            {type = "fluid",name = "water", amount=10000},
         },
         results = {
-            {type = "item",name = "wood", amount=4},
-            {type = "fluid",name = "maraxsis-oxygen", amount=1000}
+            {type = "item",name = "wood", amount=40},
+            {type = "fluid",name = "maraxsis-oxygen", amount=10000}
         },
         energy_required=5*60,
         subgroup="muluna-products"
