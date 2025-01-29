@@ -12,6 +12,23 @@ for _,silo in pairs(data.raw["rocket-silo"]) do
     end
 end
 
+
+for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
+    
+    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then
+        --rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisistes,technology)
+        table.insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
+    else
+        table.insert(new_prereqs,technology)
+    end
+
+end
+data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
+
+
+
+--Doubles the change associated with infinite rocket part productivity technology.
+--Also adds support in case Hardcore is installed.
 if data.raw["technology"]["rocket-part-productivity-aquilo"] then
     for _,effect in pairs(data.raw["technology"]["rocket-part-productivity-aquilo"].effects) do 
         effect.change = effect.change * 2
@@ -30,18 +47,6 @@ end
 
 
 
-
-for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
-    
-    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then
-        --rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisistes,technology)
-        table.insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
-    else
-        table.insert(new_prereqs,technology)
-    end
-
-end
-data.raw["technology"]["space-platform-thruster"].prerequisites = new_prereqs
 
 
 if data.raw["technology"]["planet-discovery-nauvis"] then
