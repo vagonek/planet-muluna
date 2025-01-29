@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.15
+Date: 2025-01-29
+  Bugfixes:
+    - Hard-locks Muluna space science recipe to Muluna, regardless of other planets' surface conditions.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.14
 Date: 2025-01-29
   Balancing:
