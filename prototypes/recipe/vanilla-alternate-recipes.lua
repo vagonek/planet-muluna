@@ -8,7 +8,7 @@ local dual_icon = require("lib.dual-item-icon").dual_icon
 local motor_carbon = table.deepcopy(data.raw["recipe"]["electric-engine-unit"])
 
 motor_carbon.name="electric-engine-unit-from-carbon"
-
+motor_carbon.auto_recycle=false
 local lubricant_amount = 15
 local carbon_amount = 1
 if mods["aai-industry"] then
