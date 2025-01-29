@@ -16,7 +16,7 @@ data:extend{
             {type = "item",name = "wood", amount=40},
             {type = "fluid",name = "maraxsis-oxygen", amount=10000}
         },
-        energy_required=5*60,
+        energy_required=10*60,
         subgroup="muluna-products"
 
     },
