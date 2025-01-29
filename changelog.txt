@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.13
+Date: 2025-01-29
+  Balancing:
+    - Increased time requirement of wood recipe to 10 minutes.
+  Bugfixes:
+    - Made carbon motor recipe irreversible.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.12
 Date: 2025-01-29
   Balancing:
