@@ -103,6 +103,7 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     min = 0,
     max = 0,
     },
+    PlanetsLib.surface_conditions.restrict_to_surface("muluna")
 }
 data.raw.recipe["interstellar-science-pack"].surface_conditions = data.raw.recipe["space-science-pack"].surface_conditions
 
