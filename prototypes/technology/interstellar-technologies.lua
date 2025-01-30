@@ -8,12 +8,13 @@ local rro = require("lib.remove-replace-object")
 local techs_interstellar = {
     "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
     "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
-    "platinum-thruster"
+    "platinum-thruster", "space-steam-production", "maraxsis-abyssal-diving-gear", "railgun-damage-1", "railgun-shooting-speed-1"
 }
 
 for _,tech in pairs(techs_interstellar) do
     if data.raw["technology"][tech] then
         rro.soft_insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1}) --Add science pack if it doesn't already exist.
+        --rro.soft_insert(data.raw["technology"][tech].prerequisites,"interstellar-science-pack") --Add science pack if it doesn't already exist.
     end
     
 end
