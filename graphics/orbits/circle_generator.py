@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 import os
 import math
 
-def generate_circle(distance=1.0, thickness=0.1, width=1, resolution=1000, output_file="circle.png"):
+def generate_orbit(distance, output_file, mod_name):
+    width=1
+    resolution=512*distance/2
+    thickness = 3
     radius=distance*64
+    resolution_old=resolution
     resolution=resolution/3.696
     if thickness <= 0 or radius <= 0:
         raise ValueError("Radius and thickness must be positive.")
@@ -30,7 +34,7 @@ def generate_circle(distance=1.0, thickness=0.1, width=1, resolution=1000, outpu
 
     # Adjust plot limits and remove axes
     padding = 1
-    ax.set_xlim(-(radius + thickness  + padding), radius + thickness  + padding)
+    ax.set_xlim(-1*width*(radius + thickness  + padding), 1*width*(radius + thickness  + padding))
     ax.set_ylim(-(radius + thickness  + padding), radius + thickness  + padding)
     ax.axis('off')
 
@@ -38,6 +42,13 @@ def generate_circle(distance=1.0, thickness=0.1, width=1, resolution=1000, outpu
     plt.savefig(output_file, bbox_inches="tight",pad_inches=0, dpi=resolution,transparent=True)
     plt.close()
 
-    print(f"Circle saved to {os.path.abspath(output_file)}")
+    print(f"Orbit sprite saved to {os.path.abspath(output_file)}")
+    print(f"Add sprite to planet with following code:")
+    print("""sprite = {{
+        type = "sprite",
+        filename = "__{}__/graphics/orbits/{}}}",
+        size = {},
+        scale = 0.25,
+      }}""".format(mod_name,output_file,math.floor(resolution_old*(1+width)/2)))
 
 

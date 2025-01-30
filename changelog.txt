@@ -1,4 +1,436 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.19
+Date: 2025-01-30
+  Balancing:
+    - Increased default output of space science pack recipe to 2
+---------------------------------------------------------------------------------------------------
+Version: 1.16.18
+Date: 2025-01-30
+  Balancing:
+    - Adjusted sulfuric acid in Cellulose recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.17
+Date: 2025-01-30
+  Balancing:
+    - Adjusted water requirement of Muluna wood recipe.
+    - Greatly increased recipe times in greenhouses to better match vanilla values for their representative plants.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.16
+Date: 2025-01-30
+  Compatibility:
+    - Added a interstellar space science to more technologies: "Space steam production(Corrundum)", "Abyssal diving gear"(Maraxsis), and both railgun infinite technologies.)"
+---------------------------------------------------------------------------------------------------
+Version: 1.16.15
+Date: 2025-01-29
+  Bugfixes:
+    - Hard-locks Muluna space science recipe to Muluna, regardless of other planets' surface conditions.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.14
+Date: 2025-01-29
+  Balancing:
+    - Reduced uranium requirement of Interstellar science pack by half.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.13
+Date: 2025-01-29
+  Balancing:
+    - Increased time requirement of wood recipe to 10 minutes.
+  Bugfixes:
+    - Made carbon motor recipe irreversible.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.12
+Date: 2025-01-29
+  Balancing:
+    - Adjusted output of artificial tree growth recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.11
+Date: 2025-01-29
+  Balancing:
+    - Adjusted sulfuric acid cost of Cellulose recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.10
+Date: 2025-01-27
+  Bugfixes:
+    - Fixed "wood processing" recipe surface condition to make tree seeds craftable anywhere. https://github.com/nicholasgower/planet-muluna/issues/51
+---------------------------------------------------------------------------------------------------
+Version: 1.16.9
+Date: 2025-01-27
+  Locale:
+    - Updated Chinese locale
+---------------------------------------------------------------------------------------------------
+Version: 1.16.8
+Date: 2025-01-27
+  Bugfixes:
+    - Fixed crash when rocket-part-productivity-aquilo is deleted by Roc's Hardcore mode.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.7
+Date: 2025-01-26
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.16.6
+Date: 2025-01-26
+  Control:
+    - Added startup settings to configure the output and time of the space science pack recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.5
+Date: 2025-01-26
+  Balancing:
+    - Adjusted cost of Interstellar science pack.
+  Locale:
+    - Changed locale of "Advanced space research" technology
+---------------------------------------------------------------------------------------------------
+Version: 1.16.4
+Date: 2025-01-26
+  Bugfixes:
+    - Fixed space science being uncraftable on preexisting space platforms issue.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.3
+Date: 2025-01-26
+  Bugfixes:
+    - Fix crash when loading save from 1.15 that does not have Muluna surface loaded yet.
+  Locale:
+    - Fixed helium resource locale.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.2
+Date: 2025-01-26
+  Balancing:
+    - Adjusted advanced thruster and oxidizer recipes to produce 1000 fluid, down from 1500, to increase the importance of thruster fuel productivity technology.
+  Bugfixes:
+    - Fixed crash when Corrundum not loaded.
+    - Fixed crash when rocket silos have no module slots.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.1
+Date: 2025-01-26
+  Bugfixes:
+    - Changed default import location of Interstellar science pack to Muluna
+---------------------------------------------------------------------------------------------------
+Version: 1.16.0
+Date: 2025-01-26
+  Features:
+    - Added "Advanced space science pack" recipe, allowing the crafting of space science on platforms.
+    - Added "Crusher 2" entity, item, and technology.
+    - Added "Greenhouse" technology
+    - Added "Helium 4" resource.
+    - Added "Interstellar science pack"
+    - Added "Plastic from cellulose" recipe
+    - Added "Thruster fuel productivity" technology.
+    - Added "Wood gasification" as a hard dependency.
+    - Added helium processing recipes.
+    - Added migration script to add Anorthite and Helium to existing worlds.
+    - Added oxygen, hydrogen, carbon dioxide, helium, helium-4, helium-3 fluids.
+    - Added wood to heavy oil recipe chain.
+    - Created custom recipes for Interstellar science pack.
+    - Made helium-3 barrels an ingredient in fusion fuel cells.
+  Balancing:
+    - Added "Helium-3" to Cryolab recipe
+    - Adjusted cryolab recipe to use aluminum plates instead of pipes.
+    - Adjusted ingredients and results of helium enrichment recipe.
+    - Adjusted numbers of helium enrichment recipe to discourage on-site enrichment.
+    - Doubled the module capacity of all rocket silos to double the possible benefit of productivity modules on rocket silos.
+  Compatibility:
+    - Added compatibility patch for AAI Industry
+    - Added wood crushing and cellulose recipes to "Wood gas processing" tech in "Wood gasification" mod
+    - Adjusted order of "Hydraulic science pack"
+    - Adjusted order of Hydraulic science pack if Maraxsis is installed.
+    - Changed prerequisite for Char, Aiur, and Janus to "asteroid collector"
+    - Made "Platinum thruster" technology from Corrundum require Interstellar science pack.
+    - Modified "Wood gasification" recipes to fix bugs within the mod.
+  Bugfixes:
+    - Disabled all previously enabled recipes so that they only unlock upon researching their specified technology.
+    - Made "Maraxsis rocket part productivity bonus" hidden in technology descriptions.
+  Graphics:
+    - Adjusted icons for helium recipes.
+    - Reverted icon of space science pack.
+  Changes:
+    - Added "interstellar science pack" to requirements of Cryolab.
+    - Changed alternative low density structure recipe to use aluminum instead of carbon.
+    - Changed helium resource to produce helium instead of helium-4.
+    - Made "Greenhouses" a prerequisite of "Space science pack."
+    - Made several vanilla and modded late-game technologies require interstellar science packs.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.18
+Date: 2025-01-22
+  Graphics:
+    - Updated thumbnail, increasing moon sharpness and adding star background while preserving lunar phase.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.17
+Date: 2025-01-22
+  Compatibility:
+    - Exposed mod's storage to gvv.
+  Graphics:
+    - Added background glow to all double-item icons.
+    - Slightly increased size of Muluna orbit sprite.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.16
+Date: 2025-01-22
+  Bugfixes:
+    - Added corrundum compat file
+  Graphics:
+    - Adjusted contrast and shading of Muluna icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.15
+Date: 2025-01-21
+  Compatibility:
+    - Added support for "Any Planet Start."
+---------------------------------------------------------------------------------------------------
+Version: 1.15.14
+Date: 2025-01-20
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.15.13
+Date: 2025-01-20
+  Locale:
+    - Updated ZH locale.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.12
+Date: 2025-01-20
+  Compatibility:
+    - Issued fix to ensure compatibility with "Hardcore delayed tech tree."
+---------------------------------------------------------------------------------------------------
+Version: 1.15.11
+Date: 2025-01-20
+  Bugfixes:
+    - Disables addition of ALICE propellent to rocket fuel productivity tech when said tech can't be found.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.10
+Date: 2025-01-20
+  Changes:
+    - test update
+---------------------------------------------------------------------------------------------------
+Version: 1.15.9
+Date: 2025-01-20
+  Changes:
+    - test update
+---------------------------------------------------------------------------------------------------
+Version: 1.15.8
+Date: 2025-01-20
+  Compatibility:
+    - Added compatibility with modules-t4, replacing recipe for productivity module 4 with one that requires Muluna resources.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.7
+Date: 2025-01-20
+  Locale:
+    - Updated locale
+---------------------------------------------------------------------------------------------------
+Version: 1.15.6
+Date: 2025-01-20
+  Bugfixes:
+    - Added "ALICE Propellant" recipe to rocket fuel productivity technology.
+    - Added "Anorthite crushing" recipe to "asteroid productivity" technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.5
+Date: 2025-01-20
+  Graphics:
+    - Deleted unused sprite.
+  Locale:
+    - Added locale values for upcoming fluids.
+  Changes:
+    - Minor refactoring
+    - Moved order of Muluna resource settings to be after Nauvis resources
+---------------------------------------------------------------------------------------------------
+Version: 1.15.4
+Date: 2025-01-20
+  Bugfixes:
+    - Moved Astroponics circular technology dependency fix from data-updates to data-final-fixes.
+  Graphics:
+    - Imported mipmap generator from https://github.com/StephenBarnes/FactorioModScripts
+---------------------------------------------------------------------------------------------------
+Version: 1.15.3
+Date: 2025-01-19
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.15.2
+Date: 2025-01-18
+  Balancing:
+    - Removed science pack drain reduction from cryolab.
+  Graphics:
+    - Updated "Anorthite chunk" autoplace icon to use newly designed Anorthite chunk sprite instead of calcite.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.1
+Date: 2025-01-16
+  Bugfixes:
+    - Set alternate recipe auto_recycle=false.
+---------------------------------------------------------------------------------------------------
+Version: 1.15.0
+Date: 2025-01-16
+  Features:
+    - Added alternative recipes for low density structures, electronic circuits, and advanced circuits using a greater proportion of materials local to Muluna. Also adds intermediate items to facilitate these recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.7
+Date: 2025-01-16
+  Bugfixes:
+    - Another attempt to fix crash that seems to only occur on Windows.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.6
+Date: 2025-01-16
+  Bugfixes:
+    - Fixed graphics-related crash on zipped copies of mod
+  Graphics:
+    - Cleaned up generic crushing icon
+---------------------------------------------------------------------------------------------------
+Version: 1.14.5
+Date: 2025-01-16
+  Locale:
+    - Updated RU locale(By Astorin)
+---------------------------------------------------------------------------------------------------
+Version: 1.14.4
+Date: 2025-01-15
+  Graphics:
+    - Cropped Muluna icon to make its in-game size better match other planet sprites.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.3
+Date: 2025-01-15
+  Bugfixes:
+    - Changed prerequisite of "Cryolab" from "cryogenic-science-pack" to "quantum-processor"
+---------------------------------------------------------------------------------------------------
+Version: 1.14.2
+Date: 2025-01-15
+  Balancing:
+    - Increased speed and module slots of cryolab, while reducing its science pack drain.
+---------------------------------------------------------------------------------------------------
+Version: 1.14.1
+Date: 2025-01-15
+  Bugfixes:
+    - Fixed crash on startup
+---------------------------------------------------------------------------------------------------
+Version: 1.14.0
+Date: 2025-01-15
+  Features:
+    - Added "Cryolab" building and technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.13.2
+Date: 2025-01-15
+  Sounds:
+    - Added persistent wind sound from space platforms to Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.13.1
+Date: 2025-01-15
+  Balancing:
+    - Adjusted "Alumina crushing" recipe output.
+  Compatibility:
+    - Raised PlanetsLib requirement to 1.1.24 to address locale bug.
+---------------------------------------------------------------------------------------------------
+Version: 1.13.0
+Date: 2025-01-14
+  Features:
+    - Added "Advanced stone processing" technology.
+    - Added "Crushed stone" item, made by crushing stone in crushers.
+    - Added "Landfill from crushed stone" and "Brick from crushed stone" recipes."
+    - Added "Stone crushing" recipe.
+  Balancing:
+    - Added "Advanced stone processing" to prerequisite lists of "Advanced asteroid processing" and "Asteroid reprocessing."
+    - Adjusted stack sizes and recipes for stone crushing to reduce frustrations with belt ratios.
+  Compatibility:
+    - Raised required PlanetsLib version to 1.1.22
+  Graphics:
+    - Changed parked platforms orientation of Muluna.
+  Locale:
+    - Changed localised description of Muluna and Nauvis to include PlanetsLib planet description templates. With support for Lignumis.
+---------------------------------------------------------------------------------------------------
+Version: 1.12.3
+Date: 2025-01-12
+  Locale:
+    - update zh-CN locale
+---------------------------------------------------------------------------------------------------
+Version: 1.12.2
+Date: 2025-01-12
+  Compatibility:
+    - Removed compatibility with MT-Lib, as it has been superceded by PlanetsLib.
+  Graphics:
+    - Added shading to Muluna icon
+---------------------------------------------------------------------------------------------------
+Version: 1.12.1
+Date: 2025-01-12
+  Graphics:
+    - Replaced "Asteroid Collector" technology icon with AI-upscaled version of item icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.12.0
+Date: 2025-01-12
+  Features:
+    - Added "ALICE propellant" recipe, turning crushed alumina, water, and ice into rocket fuel.
+    - Added "Alumina crushing" recipe.
+    - Added "alumina" and "crushed alumina" items
+    - Added fully-featured "Anorthite chunk crushing" recipe.
+  Compatibility:
+    - When schall-alien-loot is installed, "Alien Science Pack" order will be moved to be before the Space Science Pack.
+  Bugfixes:
+    - "Production Science Pack" prerequisite added to "Rocket Part Productivity" technology.
+  Graphics:
+    - Changed icon of "Crusher" technology to unused-render's "comminution" icon.
+    - Resized "Anorthite crushing" icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.3
+Date: 2025-01-12
+  Graphics:
+    - Updated space-science-pack technology sprite to use recolored metallic-science-pack sprite.
+  Locale:
+    - Fixed item references in locale to create Factoriopedia links in descriptions.
+    - Updated space-science-pack technology description to reflect Muluna's changes.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.2
+Date: 2025-01-12
+  Bugfixes:
+    - Made general fix for circular dependency issues ressembling issue with Astroponics. https://mods.factorio.com/mod/astroponics/discussion/67830f2195f9d2a303fbf1b0
+---------------------------------------------------------------------------------------------------
+Version: 1.11.1
+Date: 2025-01-11
+  Bugfixes:
+    - Gave Muluna tiles a radiation absorption rate.
+---------------------------------------------------------------------------------------------------
+Version: 1.11.0
+Date: 2025-01-11
+  Features:
+    - Added "Anorthite chunk" resource to Muluna surface.
+    - Added placeholder recipe "Anorthite chunk crushing," unlocked with "Space boilers."
+  Balancing:
+    - Removed all surface restrictions from crushers.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.4
+Date: 2025-01-07
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.10.3
+Date: 2025-01-06
+  Bugfixes:
+    - Fixed asteroid autoplace localisation broken by addition of whitespace around equals signs.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.2
+Date: 2025-01-06
+  Bugfixes:
+    - Rails, locomotives, and wagons now function on Muluna.
+  Changes:
+    - Cleanup of unused graphics.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.1
+Date: 2025-01-06
+  Graphics:
+    - Replaced sa-science-packs Space science pack icon with custom icon based on metallurgic science pack icon.
+---------------------------------------------------------------------------------------------------
+Version: 1.10.0
+Date: 2025-01-05
+  Features:
+    - Added "Carbon-lubricated electric engine unit" recipe, unlocking with Crushers.
+  Balancing:
+    - Changed cost of "Asteroid Collector" technology from 100 to 300
+    - Moved Requester Chest recipe unlock from "Logistic System" to "Logistic Robotics."
+  Graphics:
+    - Adjusted icon for "Thruster fuel from rocket fuel" recipe.
+    - Imported icons from "Unused Renders" of aluminum ingots, crushed ores, and scrap aluminum metal.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.30
+Date: 2025-01-05
+  Balancing:
+    - Increased cost of five Rocket Silo prerequisites by 200.
+    - Replaced Rocket silo technology unit cost with a trigger technology, requiring the crafting of 100 logistic robots.
+---------------------------------------------------------------------------------------------------
+Version: 1.9.29
+Date: 2025-01-04
+  Bugfixes:
+    - Reverted accidental rollback of Crusher surface conditions that made it unbuildable on Muluna.  https://github.com/nicholasgower/planet-muluna/issues/30
+---------------------------------------------------------------------------------------------------
 Version: 1.9.28
 Date: 2025-01-03
   Bugfixes:

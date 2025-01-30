@@ -36,6 +36,46 @@ function rro.replace(list, objectToRemove, replacementObject) --Replaces object 
     end
 end
 
+function rro.contains(list,object) --Check if object exists in list.
+    local contains = false
+    for i = 1, #list, 1 do -- Iterate forward
+        if rro.deep_equals(list[i] , object) then
+            contains = true
+            break
+            end
+            
+    end
+    return contains
+end
+
+function rro.soft_insert(list,objectToAdd) --Adds object to list if it doesn't already exist. 
+    if rro.contains(list,objectToAdd) == false then
+        table.insert(list,objectToAdd)
+    end
+
+end
+
+function rro.merge(old, new)
+    old = util.table.deepcopy(old)
+
+    for k, v in pairs(new) do
+        if v == "nil" then
+            old[k] = nil
+        else
+            old[k] = v
+        end
+    end
+
+    return old
+end
+
+function rro.ammend(old, new)
+    old = rro.merge(old, new)
+end
+
+
+
+
 
 
 return rro
