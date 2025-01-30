@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.0
+Date: 2025-01-30
+  Features:
+    - Added new space boiler entity
+  Compatibility:
+    - Old space boiler entities migrated to "space-boiler-legacy." Will mine to new space boilers.
+  Graphics:
+    - Updated space boiler item icon
+  Locale:
+    - Entity description for legacy space boiler added.
+  Changes:
+    - Moved project-seadragon script to "control" folder.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.19
 Date: 2025-01-30
   Balancing:
