@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.17
+Date: 2025-01-30
+  Balancing:
+    - Adjusted water requirement of Muluna wood recipe.
+    - Greatly increased recipe times in greenhouses to better match vanilla values for their representative plants.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.16
 Date: 2025-01-30
   Compatibility:
