@@ -151,7 +151,7 @@ data:extend{
         name = "cellulose",
         ingredients = {
             {type = "item",name = "wood-crushed", amount=20},
-            {type = "fluid",name = "sulfuric-acid", amount=2}
+            {type = "fluid",name = "sulfuric-acid", amount=5}
         },
         energy_required = 8,
         results = {
