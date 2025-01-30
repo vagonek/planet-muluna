@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.16.16
+Date: 2025-01-30
+  Compatibility:
+    - Added a interstellar space science to more technologies: "Space steam production(Corrundum)", "Abyssal diving gear"(Maraxsis), and both railgun infinite technologies.)"
+---------------------------------------------------------------------------------------------------
 Version: 1.16.15
 Date: 2025-01-29
   Bugfixes:
