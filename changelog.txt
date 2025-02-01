@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.2
+Date: 2025-02-01
+  Compatibility:
+    - Added more tolerant modification of rocket-part recipes to fix compatibility with RCU restored (https://github.com/nicholasgower/planet-muluna/issues/59)
+---------------------------------------------------------------------------------------------------
 Version: 1.17.1
 Date: 2025-02-01
   Bugfixes:
