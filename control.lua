@@ -1,7 +1,7 @@
 --_G.maraxsis = require "scripts.constants"
 --muluna={}
 --require("lib.control-stage")
-require("control.project-seadragon")
+require("scripts.project-seadragon")
 
 --muluna.finalize_events()
 
