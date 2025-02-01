@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.1
+Date: 2025-02-01
+  Bugfixes:
+    - Addressed incompatibility with Corrundum. https://github.com/ZacharyDK/Corrundum/issues/14[#issuecomment](https://github.com/nicholasgower/planet-muluna/issues/issuecomment)-2629103251
+---------------------------------------------------------------------------------------------------
 Version: 1.16.19
 Date: 2025-01-30
   Balancing:
