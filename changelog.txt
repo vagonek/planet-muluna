@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.3
+Date: 2025-02-02
+  Compatibility:
+    - Added "orbital ion cannon" technologies to list of techs that require Interstellar science.
+  Graphics:
+    - Adjusted appearance of "ALICE propellant" icon to make it less phallic
+  Locale:
+    - Adjusted description of "Anorthite Processing" technology
+---------------------------------------------------------------------------------------------------
 Version: 1.17.2
 Date: 2025-02-01
   Compatibility:
