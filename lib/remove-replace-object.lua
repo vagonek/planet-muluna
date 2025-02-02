@@ -37,15 +37,15 @@ function rro.replace(list, objectToRemove, replacementObject) --Replaces object 
 end
 
 function rro.contains(list,object) --Check if object exists in list.
-    local contains = false
-    for i = 1, #list, 1 do -- Iterate forward
-        if rro.deep_equals(list[i] , object) then
-            contains = true
-            break
+    --local contains = false
+    for _,item in pairs(list) do -- Iterate forward
+        if rro.deep_equals(item , object) then
+            return true
+            
             end
             
     end
-    return contains
+    return false
 end
 
 function rro.soft_insert(list,objectToAdd) --Adds object to list if it doesn't already exist. 

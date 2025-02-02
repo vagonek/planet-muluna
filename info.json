@@ -1,6 +1,6 @@
 {
   "name": "planet-muluna",
-  "version": "1.16.19",
+  "version": "1.17.5",
   "title": "Muluna, Moon of Nauvis",
   "author": "MeteorSwarm",
   "homepage": "https://github.com/nicholasgower/planet-muluna",
@@ -25,7 +25,8 @@
     "? modules-t4",
     "? any-planet-start",
     "? tenebris",
-    "? aai-industry"
+    "? aai-industry",
+    "? any-planet-start"
   ],
   "quality_required": true,
   "rail_bridges_required": true,

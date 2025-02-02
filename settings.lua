@@ -32,3 +32,6 @@ data:extend{
         order = "ad",
       },
 }
+if mods["any-planet-start"] then
+  APS.add_choice("muluna")
+end

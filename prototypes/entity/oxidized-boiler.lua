@@ -59,7 +59,7 @@ end
 
 -- Deep copy the table so we don't mutate the original
 local space_boiler = table.deepcopy(base_boiler)
-space_boiler.name = "space-boiler-legacy"
+space_boiler.name = "space-boiler"
 space_boiler.surface_conditions = nil  -- Remove any surface restrictions
 space_boiler.energy_consumption = "1.8MW"
 space_boiler.minable.result = "advanced-boiler"

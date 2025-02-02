@@ -1,4 +1,33 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.5
+Date: 2025-02-02
+  Bugfixes:
+    - Fixed crash on loading Tenebris
+---------------------------------------------------------------------------------------------------
+Version: 1.17.4
+Date: 2025-02-02
+  Compatibility:
+    - Added integration with "More Asteroid Resources"
+---------------------------------------------------------------------------------------------------
+Version: 1.17.3
+Date: 2025-02-02
+  Compatibility:
+    - Added "orbital ion cannon" technologies to list of techs that require Interstellar science.
+  Graphics:
+    - Adjusted appearance of "ALICE propellant" icon to make it less phallic
+  Locale:
+    - Adjusted description of "Anorthite Processing" technology
+---------------------------------------------------------------------------------------------------
+Version: 1.17.2
+Date: 2025-02-01
+  Compatibility:
+    - Added more tolerant modification of rocket-part recipes to fix compatibility with RCU restored (https://github.com/nicholasgower/planet-muluna/issues/59)
+---------------------------------------------------------------------------------------------------
+Version: 1.17.1
+Date: 2025-02-01
+  Bugfixes:
+    - Addressed incompatibility with Corrundum. https://github.com/ZacharyDK/Corrundum/issues/14[#issuecomment](https://github.com/nicholasgower/planet-muluna/issues/issuecomment)-2629103251
+---------------------------------------------------------------------------------------------------
 Version: 1.16.19
 Date: 2025-01-30
   Balancing:

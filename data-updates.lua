@@ -67,21 +67,30 @@ rocket_part_muluna.localised_name = {"item-name.rocket-part"}
 --     min = 5.01,
 --     }
 -- }
-
-data.raw.recipe["rocket-part"].ingredients =
-{
-  {type = "item", name = "processing-unit", amount = 2},
-  {type = "item", name = "low-density-structure", amount = 2},
-  {type = "item", name = "rocket-fuel", amount = 2}
-}
-if mods["maraxsis"] then
-    data.raw.recipe["rocket-part"].ingredients =
-    {
-    {type = "item", name = "processing-unit", amount = 2},
-    {type = "item", name = "low-density-structure", amount = 2},
-    {type = "item", name = "rocket-fuel", amount = 2}
-    }
+local function scalar_recipe_multiply(list,factor)
+    for _,item in pairs(list) do
+        item.amount=item.amount*factor
+    end
 end
+
+scalar_recipe_multiply(data.raw.recipe["rocket-part"].ingredients,2)
+if mods["maraxsis"] then
+    scalar_recipe_multiply(data.raw.recipe["maraxsis-rocket-part"].ingredients,2)
+end
+-- data.raw.recipe["rocket-part"].ingredients =
+-- {
+--   {type = "item", name = "processing-unit", amount = 2},
+--   {type = "item", name = "low-density-structure", amount = 2},
+--   {type = "item", name = "rocket-fuel", amount = 2}
+-- }
+-- if mods["maraxsis"] then
+--     data.raw.recipe["rocket-part"].ingredients =
+--     {
+--     {type = "item", name = "processing-unit", amount = 2},
+--     {type = "item", name = "low-density-structure", amount = 2},
+--     {type = "item", name = "rocket-fuel", amount = 2}
+--     }
+-- end
 
 
 
@@ -174,7 +183,7 @@ for _,planet in pairs(planets) do
     
 end
 
-table.insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
+rro.soft_insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
 --table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
 --data.raw["tool"]["space-science-pack"].localised_name = {"item-name."}
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
@@ -209,9 +218,9 @@ if mods["maraxsis"] then
         end
     end 
     
-    for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
-        ingredient.amount = ingredient.amount*2
-    end
+    -- for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
+    --     ingredient.amount = ingredient.amount*2
+    -- end
     
 end
 
@@ -383,9 +392,7 @@ PlanetsLib:update
         
     }
 
-if data.raw["technology"]["planet-discovery-maraxsis"] then
-    table.insert(data.raw["technology"]["planet-discovery-maraxsis"].prerequisites,"interstellar-science-pack")
-end
+
 
 
 --table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
