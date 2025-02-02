@@ -52,3 +52,5 @@ end
 if data.raw["technology"]["planet-discovery-nauvis"] then
     rro.replace(data.raw["technology"]["planet-discovery-nauvis"].prerequisites,"space-platform-thruster","asteroid-collector")
 end
+
+data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
