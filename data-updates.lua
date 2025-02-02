@@ -316,6 +316,7 @@ for _,lab in pairs(data.raw["lab"]) do
     end
 end
 
+local gases = {"maraxsis-oxygen","maraxsis-hydrogen","carbon-dioxide","helium","helium-4","helium-3",}
 
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
 if mods["maraxsis"] then
@@ -345,9 +346,24 @@ if mods["maraxsis"] then
     {type="fluid",name="maraxsis-hydrogen",amount=2000}
     )
     data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
-    data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
+    --data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
     
 end
+
+for _,gas in pairs(gases) do
+    if data.raw["recipe"][gas.."-barrel"] then
+        data.raw["recipe"][gas.."-barrel"].ingredients[1].amount=data.raw["recipe"][gas.."-barrel"].ingredients[1].amount*10
+    end
+
+    if data.raw["recipe"]["empty".. gas .."-barrel"] then
+        data.raw["recipe"]["empty".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty".. gas .."-barrel"].ingredients[1].amount*10
+    end
+
+    if data.raw["recipe"]["maraxsis-fluid-void-".. gas] then
+        data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount=data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount*10
+    end
+end
+
 
 require("compat.modules-t4")
 require("compat.corrundum")
