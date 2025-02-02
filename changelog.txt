@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.6
+Date: 2025-02-02
+  Compatibility:
+    - Fixed compatibility issues with fluid-nutrients (https://github.com/nicholasgower/planet-muluna/issues/64)
+---------------------------------------------------------------------------------------------------
 Version: 1.17.5
 Date: 2025-02-02
   Bugfixes:
