@@ -10,7 +10,7 @@ if data.raw["technology"]["planet-discovery-corrundum"] then
         }
     end
 end
-if data.raw["technology"]["platinum-thruster"] then
-    table.insert(data.raw["technology"]["platinum-thruster"].prerequisites,"interstellar-science-pack")
-end
+-- if data.raw["technology"]["platinum-thruster"] then
+--     rro.soft_insert(data.raw["technology"]["platinum-thruster"].prerequisites,"interstellar-science-pack")
+-- end
 

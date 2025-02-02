@@ -183,7 +183,7 @@ for _,planet in pairs(planets) do
     
 end
 
-table.insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
+rro.soft_insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
 --table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
 --data.raw["tool"]["space-science-pack"].localised_name = {"item-name."}
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
@@ -376,9 +376,7 @@ PlanetsLib:update
         
     }
 
-if data.raw["technology"]["planet-discovery-maraxsis"] then
-    table.insert(data.raw["technology"]["planet-discovery-maraxsis"].prerequisites,"interstellar-science-pack")
-end
+
 
 
 --table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
