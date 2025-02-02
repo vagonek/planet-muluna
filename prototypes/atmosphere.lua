@@ -38,6 +38,29 @@ if not(mods["maraxsis"]) then
     }}
 end
 
+data.raw["recipe"]["maraxsis-atmosphere"].results[1].amount=1000
+data.raw["recipe"]["maraxsis-atmosphere"].energy_required=1
+
+data:extend {{
+    type = "recipe",
+    name = "atmosphere-oxygen-separation",
+    localised_name={"fluid.maraxsis-oxygen"},
+    category = "chemistry",
+    energy_required = 10,
+    ingredients = {
+        {type = "fluid", name = "maraxsis-atmosphere", amount = 1000, temperature = 25}
+    },
+    results = {
+        {type = "fluid", name = "maraxsis-oxygen", amount = 200, temperature = 25}
+    },
+    enabled = false,
+    --main_product = "maraxsis-atmosphere",
+    subgroup="fluid-recipes",
+    order=data.raw["recipe"]["ice-melting"].order .."a",
+}}
+
+
+
 -- data:extend {{
 --     type = "technology",
 --     name = "maraxsis-liquid-atmosphere",
