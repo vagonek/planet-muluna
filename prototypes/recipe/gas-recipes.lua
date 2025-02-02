@@ -58,15 +58,15 @@ data:extend{
         enabled = false,
         icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
         icon_size = 64,
-        category = "chemistry",
+        category = "double-boiler",
         ingredients = {
-            {type = "item",name = "carbon", amount=1},
-            {type = "fluid",name = "maraxsis-oxygen", amount=1000}
+            --{type = "item",name = "carbon", amount=1},
+            {type = "fluid",name = "maraxsis-oxygen", amount=10}
         },
         results = {
-            {type = "fluid",name = "carbon-dioxide", amount=1000}
+            {type = "fluid",name = "carbon-dioxide", amount=10}
         },
-        energy_required=5,
+        energy_required=1/6,
         subgroup="muluna-products"
 
     },
