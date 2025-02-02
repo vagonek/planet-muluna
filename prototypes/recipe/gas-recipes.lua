@@ -59,7 +59,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "carbon-dioxide", amount=60},
+            {type = "fluid",name = "carbon-dioxide", amount=540},
         },
         results = {},
         surface_conditions = {
@@ -79,7 +79,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "maraxsis-hydrogen", amount=1000},
+            {type = "fluid",name = "maraxsis-hydrogen", amount=540},
         },
         results = {},
         surface_conditions = {
