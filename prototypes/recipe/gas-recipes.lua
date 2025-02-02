@@ -1,5 +1,19 @@
 local dual_icon = require("lib.dual-item-icon").dual_icon
 local dual_icon = require("lib.dual-item-icon").dual_icon
+
+local function generate_void_icons(fluid_icons)
+    local icons = fluid_icons
+    if not icons then return end
+
+    icons = table.deepcopy(icons)
+    table.insert(icons, 1, {
+        icon = "__core__/graphics/filter-blacklist.png",
+        icon_size = 101,
+    })
+    return icons
+end
+
+
 data:extend{
     {
         type = "recipe",
@@ -42,8 +56,7 @@ data:extend{
         name = "carbon-dioxide-venting",
         enabled = true,
         hidden_in_factoriopedia = true,
-        icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
-        icon_size = 64,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "carbon-dioxide", amount=60},
@@ -52,10 +65,30 @@ data:extend{
         surface_conditions = {
             {
                 property = "pressure",
-                max = 5000,
+                max = 50,
             }
         },
-        energy_required=15,
+        energy_required=1,
+        subgroup="muluna-products"
+    },
+    {
+        type = "recipe",
+        name = "hydrogen-venting",
+        enabled = true,
+        hidden_in_factoriopedia = true,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "maraxsis-hydrogen", amount=1000},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 50,
+            }
+        },
+        energy_required=1,
         subgroup="muluna-products"
     },
     -- {

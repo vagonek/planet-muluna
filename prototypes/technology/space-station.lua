@@ -187,6 +187,14 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "advanced-water-boiling-atmosphere"
             },
+            {
+                type = "unlock-recipe",
+                recipe = "carbon-dioxide-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "hydrogen-venting"
+            },
         },
         prerequisites = {
             "crusher"
