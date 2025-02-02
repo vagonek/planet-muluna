@@ -152,16 +152,16 @@ data:extend{
     },
     {
         type = "technology",
-        name = "space-boiler",
+        name = "advanced-boiler",
         research_trigger = {
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
         },
-        localised_name = {"entity-name.space-boiler"},
+        localised_name = {"entity-name.advanced-boiler"},
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "space-boiler"
+                recipe = "advanced-boiler"
             },
             {
                 type = "unlock-recipe",
@@ -170,6 +170,22 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "ice-melting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "maraxsis-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "atmosphere-oxygen-separation"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling-atmosphere"
             },
         },
         prerequisites = {
