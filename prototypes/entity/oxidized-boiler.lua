@@ -3,7 +3,7 @@
   This script adjusts fluid properties for "thruster-oxidizer" based on water's heat capacity
   and creates a custom "space-boiler" prototype based on the default boiler.
 ]]
-
+local dual_icon = require("lib.dual-item-icon").dual_icon
 local data_util = require("__flib__.data-util")
 
 --------------------------------------------------------------------------------
@@ -89,8 +89,9 @@ local space_boiling = {
   type = "recipe",
   category = "double-boiler",
   name = "advanced-water-boiling",
-  icon = data.raw["fluid"]["steam"].icon,
-  icon_size= data.raw["fluid"]["steam"].icon_size,
+  icons = dual_icon("steam","maraxsis-oxygen"),
+  --icon = data.raw["fluid"]["steam"].icon,
+  --icon_size= data.raw["fluid"]["steam"].icon_size,
   subgroup="muluna-products",
   energy_required=1/6,
   enabled=false,
@@ -100,7 +101,7 @@ local space_boiling = {
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/6,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/6},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/6,temperature=165},
   }
 }
 
@@ -108,8 +109,9 @@ local space_boiling_atmosphere = {
   type = "recipe",
   category = "double-boiler",
   name = "advanced-water-boiling-atmosphere",
-  icon = data.raw["fluid"]["steam"].icon,
-  icon_size= data.raw["fluid"]["steam"].icon_size,
+  icons = dual_icon("steam","maraxsis-atmosphere"),
+  --icon = data.raw["fluid"]["steam"].icon,
+  --icon_size= data.raw["fluid"]["steam"].icon_size,
   energy_required=1/6,
   enabled=false,
   subgroup="muluna-products",
@@ -119,7 +121,7 @@ local space_boiling_atmosphere = {
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/6,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/6},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/6,temperature=165},
   }
 }
 
@@ -139,7 +141,7 @@ local space_boiler_new = {
   working_sound = base_boiler.working_sound,
   open_sound = base_boiler.open_sound,
   close_sound = base_boiler.close_sound,
-  energy_source=base_boiler.energy_source,
+  energy_source=util.merge{base_boiler.energy_source,{emissions_per_minute = {pollution = 0}}},
   collision_box = {{-1.2, -1.2}, {1.2, 1.2}},
   selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
   burning_cooldown = 20,
