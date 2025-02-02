@@ -4,7 +4,15 @@ local space_boiler = table.deepcopy(data.raw["recipe"]["boiler"])
 space_boiler.icon = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png"
 space_boiler.name = "advanced-boiler"
 space_boiler.place_result = "advanced-boiler"
-space_boiler.localised_name = {"entity-name.space-boiler"}
+
+space_boiler.ingredients = {
+    {type = "item", name = "boiler", amount = 1},
+    {type = "item", name = "pipe", amount = 4},
+    {type = "item", name = "steel-plate", amount = 8},
+}
+space_boiler.energy_required = 10
+
+
 space_boiler.results = {{type = "item",name = "advanced-boiler",amount = 1}}
 
 local crusher_2 = table.deepcopy(data.raw["recipe"]["crusher"])
