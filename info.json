@@ -26,7 +26,8 @@
     "? any-planet-start",
     "? tenebris",
     "? aai-industry",
-    "? any-planet-start"
+    "? any-planet-start",
+    "? fluid-nutrients"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
