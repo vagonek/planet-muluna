@@ -37,4 +37,25 @@ space_platform_advanced.place_as_tile.result = "advanced-space-platform-foundati
 space_platform_advanced.name = "advanced-space-platform-foundation"
 space_platform_advanced.weight = space_platform_advanced.weight / 2
 
-data:extend{space_boiler,crusher_2,cryolab}
+local space_chest = table.deepcopy(data.raw["item"]["steel-chest"])
+
+space_chest=util.merge{space_chest,
+    {
+        name="space-chest",
+        place_result="space-chest",
+        icons = {
+            {
+            icon=space_chest.icon,
+            icon_size=space_chest.icon_size,
+            tint = {0.7,0.7,0.7},
+            
+            },
+            
+        },
+        subgroup = "space-platform",
+        order = "ca[space-chest]"
+    }
+
+}
+
+data:extend{space_boiler,crusher_2,cryolab,space_chest}

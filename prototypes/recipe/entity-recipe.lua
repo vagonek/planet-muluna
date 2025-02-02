@@ -63,4 +63,17 @@ space_platform_advanced.results = {
     {type = "item", name = "advanced-space-platform-foundation", amount = 1}
 }
 
-data:extend{space_boiler,crusher_2,cryolab}
+local space_chest = table.deepcopy(data.raw["recipe"]["steel-chest"])
+
+space_chest = util.merge{space_chest,
+    {   
+        name = "space-chest",
+        results = {{type = "item", name = "space-chest", amount = 1}},
+        ingredients = {{type = "item", name = "aluminum-plate", amount = 8}},
+        subgroup = "space-platform",
+        order = "ca[space-chest]"
+        --auto_recycle = false
+    }
+}
+
+data:extend{space_boiler,crusher_2,cryolab,space_chest}
