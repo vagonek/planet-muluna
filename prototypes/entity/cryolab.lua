@@ -4,7 +4,7 @@ local cryolab=table.deepcopy(data.raw["lab"]["biolab"])
 cryolab.name="cryolab"
 cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
 cryolab.collision_box=flib_bounding_box.resize(cryolab.collision_box,1)
-if cryolab.energy_source then
+if mods["fluid-nutrients"] then
   cryolab.energy_source = { --Copied and modified from fluid-nutrients to make this mod compatible with its changes to biolabs..
     type = "fluid",
     fluid_box = {
