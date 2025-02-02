@@ -37,6 +37,27 @@ data:extend{
         energy_required=50,
         subgroup="muluna-products"
     },
+    {
+        type = "recipe",
+        name = "carbon-dioxide-venting",
+        enabled = true,
+        hidden_in_factoriopedia = true,
+        icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
+        icon_size = 64,
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "carbon-dioxide", amount=60},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 5000,
+            }
+        },
+        energy_required=15,
+        subgroup="muluna-products"
+    },
     -- {
     --     type = "recipe",
     --     name = "muluna-atmosphere-separation",
