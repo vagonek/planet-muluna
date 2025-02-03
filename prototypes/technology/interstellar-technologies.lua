@@ -10,8 +10,11 @@ local techs_interstellar = {
     "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
     "platinum-thruster", "space-steam-production", "maraxsis-abyssal-diving-gear", "railgun-damage-1", "railgun-shooting-speed-1",
     "orbital-ion-cannon-mk2","orbital-ion-cannon-mk2-upgrade",
+    "planet-discovery-secretas", "spaceship-scrap-recycling-productivity",
+    "shield-projector",
     "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3"
     
+
 }
 
 local techs_asteroid = {"trace-oxide-processing","trace-carbonic-processing","trace-metallic-processing",

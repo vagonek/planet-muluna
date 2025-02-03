@@ -3,12 +3,13 @@ local all = {}
 
 local space_boiler = table.deepcopy(data.raw["item"]["boiler"])
 
-space_boiler.name = "space-boiler"
-space_boiler.place_result = "space-boiler"
-space_boiler.localised_name = {"entity-name.space-boiler"}
+space_boiler.name = "advanced-boiler"
+space_boiler.place_result = "advanced-boiler"
+space_boiler.icon="__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png"
+space_boiler.localised_name = {"entity-name.advanced-boiler"}
 
 
- local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
+local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
 
 crusher_2.name = "crusher-2"
 crusher_2.place_result = "crusher-2"
@@ -36,4 +37,25 @@ space_platform_advanced.place_as_tile.result = "advanced-space-platform-foundati
 space_platform_advanced.name = "advanced-space-platform-foundation"
 space_platform_advanced.weight = space_platform_advanced.weight / 2
 
-data:extend{space_boiler,crusher_2,cryolab}
+local space_chest = table.deepcopy(data.raw["item"]["steel-chest"])
+
+space_chest=util.merge{space_chest,
+    {
+        name="space-chest",
+        place_result="space-chest",
+        icons = {
+            {
+            icon=space_chest.icon,
+            icon_size=space_chest.icon_size,
+            tint = {0.7,0.7,0.7},
+            
+            },
+            
+        },
+        subgroup = "space-platform",
+        order = "ca[space-chest]"
+    }
+
+}
+
+data:extend{space_boiler,crusher_2,cryolab,space_chest}
