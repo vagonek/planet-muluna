@@ -1,5 +1,5 @@
 local dual_icon = require("lib.dual-item-icon").dual_icon
-local dual_icon = require("lib.dual-item-icon").dual_icon
+
 
 local function generate_void_icons(fluid_icons)
     local icons = fluid_icons
@@ -38,8 +38,9 @@ data:extend{
         type = "recipe",
         name = "muluna-electrolysis",
         enabled = false,
-        icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
-        icon_size = 64,
+        icons = dual_icon("maraxsis-oxygen","maraxsis-hydrogen"),
+        --icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
+        --icon_size = 64,
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "water", amount=300},
