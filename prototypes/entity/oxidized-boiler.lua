@@ -84,7 +84,7 @@ local space_boiler_category = {
   type="recipe-category",
   name="double-boiler",
 }
-
+local recipe_time = 6
 local space_boiling = {
   type = "recipe",
   category = "double-boiler",
@@ -93,15 +93,15 @@ local space_boiling = {
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
   subgroup="muluna-products",
-  energy_required=1/6,
+  energy_required=1/recipe_time,
   enabled=false,
   ingredients = {
-    {type = "fluid",name = "water", amount = 6/6,temperature=15},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 60/6},
+    {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
+    {type = "fluid",name = "maraxsis-oxygen", amount = 60/recipe_time},
   },
   results = {
-    {type = "fluid",name = "steam", amount = 60/6,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/6,temperature=165},
+    {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
   }
 }
 
@@ -112,16 +112,16 @@ local space_boiling_atmosphere = {
   icons = dual_icon("steam","maraxsis-atmosphere"),
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
-  energy_required=1/6,
+  energy_required=1/recipe_time,
   enabled=false,
   subgroup="muluna-products",
   ingredients = {
-    {type = "fluid",name = "water", amount = 6/6,temperature=15},
-    {type = "fluid",name = "maraxsis-atmosphere", amount = 5*60/6},
+    {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
+    {type = "fluid",name = "maraxsis-atmosphere", amount = 5*60/recipe_time},
   },
   results = {
-    {type = "fluid",name = "steam", amount = 60/6,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/6,temperature=165},
+    {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
   }
 }
 
