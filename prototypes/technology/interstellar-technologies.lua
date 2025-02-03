@@ -12,7 +12,8 @@ local techs_interstellar = {
     "orbital-ion-cannon-mk2","orbital-ion-cannon-mk2-upgrade",
     "planet-discovery-secretas", "spaceship-scrap-recycling-productivity",
     "shield-projector",
-    "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3"
+    "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3",
+    "orbital-transfer",
     
 
 }
