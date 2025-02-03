@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.18.2
+Date: 2025-02-03
+  Compatibility:
+    - Added optional integration of orbital-transfer mod into Muluna's tech tree, changing the recipes to use space chests.
+---------------------------------------------------------------------------------------------------
 Version: 1.18.1
 Date: 2025-02-03
   Changes:
