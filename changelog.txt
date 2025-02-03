@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.19.0
+Date: 2025-02-03
+  Features:
+    - Gave advanced boilers the ability to melt ice, using either oxygen or atmosphere as an oxidizer.
+  Balancing:
+    - Reduced CO2 and water consumption of Muluna wood recipe.
+---------------------------------------------------------------------------------------------------
 Version: 1.18.4
 Date: 2025-02-03
   Locale:
