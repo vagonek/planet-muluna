@@ -1,5 +1,5 @@
 --Adds atmosphere fluid from Maraxsis, with intention to be cross-compatible when both mods are installed.
-if not(mods["maraxsis"]) then
+if data.raw["fluid"]["maraxsis-atmosphere"] == nil then
     
     data:extend {{
         type = "fluid",
@@ -44,7 +44,7 @@ data.raw["recipe"]["maraxsis-atmosphere"].energy_required=1
 data:extend {{
     type = "recipe",
     name = "atmosphere-oxygen-separation",
-    localised_name={"fluid.maraxsis-oxygen"},
+    localised_name={"fluid-name.oxygen"},
     category = "chemistry",
     energy_required = 10,
     ingredients = {

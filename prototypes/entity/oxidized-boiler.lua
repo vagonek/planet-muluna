@@ -60,6 +60,8 @@ end
 -- Deep copy the table so we don't mutate the original
 local space_boiler = table.deepcopy(base_boiler)
 space_boiler.name = "space-boiler"
+space_boiler.localised_name = {"entity-name.space-boiler-legacy"}
+space_boiler.localised_description = {"entity-description.space-boiler-legacy"}
 space_boiler.surface_conditions = nil  -- Remove any surface restrictions
 space_boiler.energy_consumption = "1.8MW"
 space_boiler.minable.result = "advanced-boiler"
@@ -222,7 +224,7 @@ local space_boiler_new = {
   crafting_categories = {"double-boiler"},
   crafting_speed=3, --Convention: assembler prototype boiler crafting speed is defined as 1 when steam production rate equals vanilla boiler.
   energy_usage = "3.6MW", --Double the vanilla boiler.
-  graphics_set = data.raw["assembling-machine"]["chemical-plant"].graphics_set,
+  graphics_set = table.deepcopy(data.raw["assembling-machine"]["chemical-plant"].graphics_set),
   pictures = {
     north =
       {
@@ -295,6 +297,80 @@ space_boiler_new.energy_source.light_flicker =
     minimum_intensity = 0.6*3,
     maximum_intensity = 0.95*3
   }
+space_boiler_new.graphics_set.animation = { north = {
+  layers =
+          {
+            {
+              filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-animation-1.png",
+              priority = "extra-high",
+              width = 1300,
+              height = 1000,
+              frame_count = 64,
+              line_length = 8,
+              width = 330,
+              height = 410,
+              animation_speed = 0.5,
+              shift = util.by_pixel(0, -20),
+              scale = 0.35,
+              run_mode="forward-then-backward",
+            },
+            
+            -- {
+            --   filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
+            --   priority = "extra-high",
+            --   width = 900,
+            --   height = 500,
+            --   scale = 0.125,
+            --   shift = util.by_pixel(20.5, 9),
+            --   draw_as_shadow = true
+            -- }
+          }
+        }
+}
+
+space_boiler_new.graphics_set.working_visualisations = {
+
+  {
+    fadeout = true,
+    effect = "flicker",
+    animation = { layers = {
+      {
+        filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+        draw_as_glow = true,
+        priority = "extra-high",
+        frame_count = 64,
+        line_length = 8,
+        width = 330,
+        height = 410,
+        animation_speed = 0.5,
+        shift = util.by_pixel(0, -20),
+        scale = 0.35,
+        blend_mode="additive",
+        draw_as_glow = true,
+        run_mode="forward-then-backward",
+      },
+      {
+        filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+        draw_as_glow = true,
+        priority = "extra-high",
+        frame_count = 64,
+        line_length = 8,
+        width = 330,
+        height = 410,
+        animation_speed = 0.5,
+        shift = util.by_pixel(0, -20),
+        scale = 0.35,
+        blend_mode="additive",
+        draw_as_light = true,
+        run_mode="forward-then-backward",
+      }
+    }
+    }
+    
+  }
+}
+  
+
 
 
 data:extend{space_boiler_category,space_boiler_new,space_boiling,space_boiling_atmosphere}
