@@ -1,4 +1,19 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.17.8
+Date: 2025-02-02
+  Compatibility:
+    - Added "Interstellar science pack" to Dyson sphere technologies.
+---------------------------------------------------------------------------------------------------
+Version: 1.17.7
+Date: 2025-02-02
+  Bugfixes:
+    - Fixed crash when fluid-nutrients not loaded.
+---------------------------------------------------------------------------------------------------
+Version: 1.17.6
+Date: 2025-02-02
+  Compatibility:
+    - Fixed compatibility issues with fluid-nutrients (https://github.com/nicholasgower/planet-muluna/issues/64)
+---------------------------------------------------------------------------------------------------
 Version: 1.17.5
 Date: 2025-02-02
   Bugfixes:
