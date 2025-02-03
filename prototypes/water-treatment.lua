@@ -5,6 +5,7 @@ if not mods["maraxsis"] then
         type = "fluid",
         name = "maraxsis-oxygen",
         icon = "__planet-muluna__/graphics/icons/oxygen.png",
+        localised_name = {"fluid-name.oxygen"},
         --group = "fluids",
         subgroup="fluid",
         icon_size = 64,
@@ -16,7 +17,7 @@ if not mods["maraxsis"] then
         max_temperature = data.raw.fluid["water"].max_temperature,
         pressure_to_speed_ratio = data.raw.fluid["water"].pressure_to_speed_ratio,
         flow_to_energy_ratio = data.raw.fluid["water"].flow_to_energy_ratio,
-        localised_name={"fluid-name.oxygen"}
+        
     }}
     
 
