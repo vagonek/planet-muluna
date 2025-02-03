@@ -15,4 +15,6 @@ end
 
 if data.raw["technology"]["orbital-transfer"] then
     rro.soft_insert(data.raw["technology"]["orbital-transfer"].prerequisites,"space-chest")
+    rro.soft_insert(data.raw["technology"]["orbital-transfer"].unit.ingredients, {"production-science-pack" , 1})
+    rro.soft_insert(data.raw["technology"]["orbital-transfer"].unit.ingredients, {"utility-science-pack" , 1})
 end
