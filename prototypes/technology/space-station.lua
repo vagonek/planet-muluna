@@ -199,6 +199,14 @@ data:extend{
                 type = "unlock-recipe",
                 recipe="muluna-electrolysis"
             },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-oxygen"
+            },
         },
         prerequisites = {
             "crusher"

@@ -82,6 +82,19 @@ data:extend({
 -- New Space Boiler
 -- Based on Hurricane's Thermal Plant
 
+local function ingredient_multiply(ingredients,name,factor,new_name)
+  if new_name == nil then new_name = name end
+  
+  for _,ingredient in pairs(ingredients) do
+    if ingredient.name == name then
+      ingredient.name = new_name
+      ingredient.amount = ingredient.amount * factor
+    end
+  end
+
+end
+
+
 local space_boiler_category = {
   type="recipe-category",
   name="double-boiler",
@@ -126,6 +139,37 @@ local space_boiling_atmosphere = {
     {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
   }
 }
+
+local space_melting = {
+  type = "recipe",
+  category = "double-boiler",
+  name = "advanced-water-melting-oxygen",
+  icons = {
+    {
+      icon = data.raw["recipe"]["ice-melting"].icon,
+      icon_size = data.raw["recipe"]["ice-melting"].icon_size,
+    }
+  }, 
+  --icon = data.raw["fluid"]["steam"].icon,
+  --icon_size= data.raw["fluid"]["steam"].icon_size,
+  energy_required=1/10,
+  enabled=false,
+  --localised_name = {"recipe-name.water-melting"},
+  subgroup="muluna-products",
+  ingredients = {
+    {type = "item",name = "ice", amount = 1},
+    {type = "fluid",name = "maraxsis-oxygen", amount = 60/15},
+  },
+  results = {
+    {type = "fluid",name = "water", amount = 20,temperature=15},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/15,temperature=165},
+  }
+}
+
+local space_melting_oxygen = table.deepcopy(space_melting)
+ingredient_multiply(space_melting_oxygen.ingredients,"maraxsis-oxygen",5,"maraxsis-atmosphere")
+space_melting_oxygen.name="advanced-water-melting-atmosphere"
+data:extend{space_melting,space_melting_oxygen}
 
 
 local space_boiler_new = {
