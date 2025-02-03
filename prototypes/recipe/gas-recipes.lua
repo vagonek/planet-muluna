@@ -1,5 +1,19 @@
 local dual_icon = require("lib.dual-item-icon").dual_icon
-local dual_icon = require("lib.dual-item-icon").dual_icon
+
+
+local function generate_void_icons(fluid_icons)
+    local icons = fluid_icons
+    if not icons then return end
+
+    icons = table.deepcopy(icons)
+    table.insert(icons, 1, {
+        icon = "__core__/graphics/filter-blacklist.png",
+        icon_size = 101,
+    })
+    return icons
+end
+
+
 data:extend{
     {
         type = "recipe",
@@ -24,8 +38,9 @@ data:extend{
         type = "recipe",
         name = "muluna-electrolysis",
         enabled = false,
-        icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
-        icon_size = 64,
+        icons = dual_icon("maraxsis-oxygen","maraxsis-hydrogen"),
+        --icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
+        --icon_size = 64,
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "water", amount=300},
@@ -35,6 +50,46 @@ data:extend{
             {type = "fluid",name = "maraxsis-hydrogen", amount=2000}
         },
         energy_required=50,
+        subgroup="muluna-products"
+    },
+    {
+        type = "recipe",
+        name = "carbon-dioxide-venting",
+        enabled = true,
+        hidden_in_factoriopedia = true,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "carbon-dioxide", amount=540},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 50,
+            }
+        },
+        energy_required=1,
+        subgroup="muluna-products"
+    },
+    {
+        type = "recipe",
+        name = "hydrogen-venting",
+        enabled = true,
+        hidden_in_factoriopedia = true,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "maraxsis-hydrogen", amount=540},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 50,
+            }
+        },
+        energy_required=1,
         subgroup="muluna-products"
     },
     -- {
@@ -58,15 +113,15 @@ data:extend{
         enabled = false,
         icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
         icon_size = 64,
-        category = "chemistry",
+        category = "double-boiler",
         ingredients = {
-            {type = "item",name = "carbon", amount=1},
-            {type = "fluid",name = "maraxsis-oxygen", amount=1000}
+            --{type = "item",name = "carbon", amount=1},
+            {type = "fluid",name = "maraxsis-oxygen", amount=10}
         },
         results = {
-            {type = "fluid",name = "carbon-dioxide", amount=1000}
+            {type = "fluid",name = "carbon-dioxide", amount=10}
         },
-        energy_required=5,
+        energy_required=1/6,
         subgroup="muluna-products"
 
     },

@@ -152,16 +152,16 @@ data:extend{
     },
     {
         type = "technology",
-        name = "space-boiler",
+        name = "advanced-boiler",
         research_trigger = {
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
         },
-        localised_name = {"entity-name.space-boiler"},
+        localised_name = {"entity-name.advanced-boiler"},
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "space-boiler"
+                recipe = "advanced-boiler"
             },
             {
                 type = "unlock-recipe",
@@ -170,6 +170,34 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "ice-melting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "maraxsis-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "atmosphere-oxygen-separation"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "carbon-dioxide-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "hydrogen-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-electrolysis"
             },
         },
         prerequisites = {
@@ -436,7 +464,7 @@ data:extend{
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
                 --{"utility-science-pack", 1},
-                {"space-science-pack", 1},
+                --{"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }
         },
@@ -541,6 +569,36 @@ data:extend{
             },
 
         },
+        
+    },
+    {
+        type = "technology",
+        name = "space-chest",
+        localised_name = {"entity-name.space-chest"},
+        icon = "__planet-muluna__/graphics/technology/packaging.png",
+        icon_size = 1024,
+        unit = {
+            count = 500,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack",
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="space-chest"
+            },
+        }
     },
     
     -- {

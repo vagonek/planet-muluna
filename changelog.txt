@@ -1,4 +1,28 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.18.0
+Date: 2025-02-03
+  Features:
+    - Added "Carbon dioxide venting" recipe to remove unwanted CO2 from pipes.
+    - Added "Space chest" item and technology.
+    - Added hydrogen venting recipe
+    - Changed "forced combustion" recipe to require advanced boiler.
+    - Changed advanced boiler to an assembling-machine prototype.
+  Balancing:
+    - Adjusted amount of fluid per barrel in fluids designated as gases.
+    - Eliminated space science requirement for "Advanced space research" technology.
+  Compatibility:
+    - Added some technologies from "Secretas and Frozeta" to interstellar technologies list.
+    - Adjusted heat capacity of CO2 to make Corrundum Thermoelectric generators more realistically usable with CO2 produced by advanced boilers.
+    - Adjusted pollution rate of red steam engines to make using them as a pollution release more balanced when using them with advanced boilers.
+    - Made "Shield projector" require Interstellar science pack.
+  Bugfixes:
+    - Fixed cryolab science inputs
+  Graphics:
+    - Gave Advanced boiler building graphics from Hurricane's Thermal plant.
+    - Gave fresh water electrolysis a new icon not based on Maraxsis' electrolysis icon.
+  Changes:
+    - Adjusted Maraxsis atmosphere recipe to increase amount per craft, and added a recipe to extract oxygen from atmosphere.
+---------------------------------------------------------------------------------------------------
 Version: 1.17.8
 Date: 2025-02-02
   Compatibility:

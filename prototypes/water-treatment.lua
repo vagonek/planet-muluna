@@ -1,9 +1,11 @@
+local multiply_energy = require("lib.energy-multiply").multiply_energy
 --Forked from Maraxsis to ensure cross-compatibility between both mods' molecule fluids.
 if not mods["maraxsis"] then
     data:extend {{
         type = "fluid",
         name = "maraxsis-oxygen",
         icon = "__planet-muluna__/graphics/icons/oxygen.png",
+        localised_name = {"fluid-name.oxygen"},
         --group = "fluids",
         subgroup="fluid",
         icon_size = 64,
@@ -15,7 +17,7 @@ if not mods["maraxsis"] then
         max_temperature = data.raw.fluid["water"].max_temperature,
         pressure_to_speed_ratio = data.raw.fluid["water"].pressure_to_speed_ratio,
         flow_to_energy_ratio = data.raw.fluid["water"].flow_to_energy_ratio,
-        localised_name={"fluid-name.oxygen"}
+        
     }}
     
 
@@ -39,6 +41,8 @@ if not mods["maraxsis"] then
 
 
 end
+
+--Cross-compatibility also desired with Corrundum.
 if data.raw["fluid"]["carbon-dioxide"] == nil then
     data:extend {{
         type = "fluid",
@@ -58,7 +62,7 @@ if data.raw["fluid"]["carbon-dioxide"] == nil then
     }}  
 end
 data.raw["fluid"]["carbon-dioxide"].icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png"
-
+data.raw["fluid"]["carbon-dioxide"].heat_capacity=multiply_energy(data.raw["fluid"]["carbon-dioxide"].heat_capacity,1/10)
 
 
 data:extend {{

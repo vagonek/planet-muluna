@@ -1,11 +1,19 @@
 local rro = require("lib.remove-replace-object")
 
 local space_boiler = table.deepcopy(data.raw["recipe"]["boiler"])
+space_boiler.icon = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png"
+space_boiler.name = "advanced-boiler"
+space_boiler.place_result = "advanced-boiler"
 
-space_boiler.name = "space-boiler"
-space_boiler.place_result = "space-boiler"
-space_boiler.localised_name = {"entity-name.space-boiler"}
-space_boiler.results = {{type = "item",name = "space-boiler",amount = 1}}
+space_boiler.ingredients = {
+    {type = "item", name = "boiler", amount = 1},
+    {type = "item", name = "pipe", amount = 4},
+    {type = "item", name = "steel-plate", amount = 8},
+}
+space_boiler.energy_required = 10
+
+
+space_boiler.results = {{type = "item",name = "advanced-boiler",amount = 1}}
 
 local crusher_2 = table.deepcopy(data.raw["recipe"]["crusher"])
 
@@ -63,4 +71,21 @@ space_platform_advanced.results = {
     {type = "item", name = "advanced-space-platform-foundation", amount = 1}
 }
 
-data:extend{space_boiler,crusher_2,cryolab}
+local space_chest = table.deepcopy(data.raw["recipe"]["steel-chest"])
+
+space_chest = util.merge{space_chest,
+    {   
+        name = "space-chest",
+        results = {{type = "item", name = "space-chest", amount = 1}},
+        ingredients = {
+            {type = "item", name = "aluminum-plate", amount = 8},
+            {type = "item", name = "low-density-structure", amount = 1},
+            {type = "item", name = "processing-unit", amount = 1},
+            },
+        subgroup = "space-platform",
+        order = "ca[space-chest]"
+        --auto_recycle = false
+    }
+}
+
+data:extend{space_boiler,crusher_2,cryolab,space_chest}
