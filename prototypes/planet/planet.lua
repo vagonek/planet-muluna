@@ -78,7 +78,7 @@ local parent_planet = "nauvis"
 
 if mods["any-planet-start"] then
   parent_planet = settings.startup["aps-planet"].value
-  if parent_planet == "none" then
+  if parent_planet == "none" or parent_planet =="muluna" then
     parent_planet = "nauvis"
   end
 end
