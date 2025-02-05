@@ -84,7 +84,7 @@ if mods["any-planet-start"] then
 end
 
 
-
+local o_parent_planet = data.raw["planet"][parent_planet]
 
 local muluna= 
 {
@@ -113,7 +113,7 @@ local muluna=
     starmap_icon = "__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1482,
     subgroup = "satellites",
-    magnitude = nauvis.magnitude*3/5,
+    magnitude = o_parent_planet.magnitude*3/5,
     pollutant_type = "radiation",
     persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
     localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet=nauvis]"},
@@ -128,7 +128,7 @@ local muluna=
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
       --polar = {2,0.005*tau},
       orientation = 0.75, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
-      distance = 1.6,
+      distance = 1.6*o_parent_planet.magnitude/(nauvis.magnitude),
       parent = {
         type = "planet",
         name = parent_planet,
@@ -138,7 +138,7 @@ local muluna=
           type = "sprite",
           filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
           size = 412,
-          scale = 0.25,
+          scale = 0.25*o_parent_planet.magnitude/(nauvis.magnitude),
         }
     },
     --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
