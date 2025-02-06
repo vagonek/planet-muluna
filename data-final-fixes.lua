@@ -54,3 +54,4 @@ if data.raw["technology"]["planet-discovery-nauvis"] then
 end
 
 data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
+
