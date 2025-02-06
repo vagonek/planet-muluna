@@ -49,7 +49,7 @@ data:extend{
             {type = "fluid",name = "maraxsis-oxygen", amount=1000},
             {type = "fluid",name = "maraxsis-hydrogen", amount=2000}
         },
-        energy_required=50,
+        energy_required=20,
         subgroup="muluna-products"
     },
     {
