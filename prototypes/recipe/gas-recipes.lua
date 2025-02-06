@@ -23,12 +23,12 @@ data:extend{
         icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
-            {type = "fluid",name = "carbon-dioxide", amount=5000},
+            {type = "fluid",name = "carbon-dioxide", amount=10000},
             {type = "fluid",name = "water", amount=500},
         },
         results = {
             {type = "item",name = "wood", amount=40},
-            {type = "fluid",name = "maraxsis-oxygen", amount=5000,ignored_by_productivity=5000}
+            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=5000}
         },
         energy_required=10*60,
         subgroup="muluna-products",
