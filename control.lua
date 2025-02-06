@@ -1,7 +1,10 @@
+
+
 --_G.maraxsis = require "scripts.constants"
 --muluna={}
 --require("lib.control-stage")
-require("scripts.project-seadragon")
+local sd = require("scripts.project-seadragon")
+
 
 --muluna.finalize_events()
 
@@ -16,7 +19,9 @@ require("scripts.project-seadragon")
 --     end
 -- end) 
 
-
+script.on_event(defines.events.on_built_entity, function(event)
+    sd.on_built_rocket_silo(event)
+end)
 
 
 
