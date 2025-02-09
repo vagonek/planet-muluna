@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.20.0
+Date: 2025-02-09
+  Features:
+    - Added Lunar rocks, which drop sulfur and stone, making it possible to jumpstart sulfuric acid production without needing to import sulfur. https://github.com/nicholasgower/planet-muluna/issues/68
+---------------------------------------------------------------------------------------------------
 Version: 1.19.7
 Date: 2025-02-09
   Compatibility:
