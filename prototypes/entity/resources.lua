@@ -110,6 +110,15 @@ data:extend {{
   richness = true
 }}
 
+data:extend {{
+  type = "autoplace-control",
+  category = "terrain",
+  name = "lunar_rocks",
+  --localised_name = {"", "[fluid=helium]"," ", {"fluid-name.helium"}},
+  order = data.raw["autoplace-control"]["uranium-ore"].order.."5",
+  richness = true
+}}
+
 -- local coral_variants = {}
 -- for i = 1, 3 do
 --     coral_variants[i] = {

@@ -4,6 +4,10 @@ local nauvis = data.raw["planet"]["nauvis"]
 local nauvis_gen = nauvis.map_gen_settings
 local asteroid_util = require "__space-age__.prototypes.planet.asteroid-spawn-definitions"
 local tau = 2*math.pi
+
+
+
+
 local map_gen = {
     cliff_settings = 
     {
@@ -17,7 +21,7 @@ local map_gen = {
     autoplace_controls = 
     {
         ["stone"] = {},
-        ["rocks"] = {},
+        ["lunar_rocks"] = {},
         ["nauvis_cliff"] = {},
         ["oxide-asteroid-chunk"] = {},
         ["metallic-asteroid-chunk"] = {},
@@ -54,12 +58,13 @@ local map_gen = {
         settings =
         {
           ["stone"] = {},
-          ["big-sand-rock"] = {},
+          ["lunar-rock"] = {},
+          --["big-sand-rock"] = {},
           ["huge-rock"] = {},
           ["big-rock"] = {},
           ["oxide-asteroid-chunk"] = {},
-            ["metallic-asteroid-chunk"] = {},
-            ["carbonic-asteroid-chunk"] = {},
+          ["metallic-asteroid-chunk"] = {},
+          ["carbonic-asteroid-chunk"] = {},
         }
       }
     }
