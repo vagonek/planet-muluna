@@ -24,10 +24,10 @@ cryolab.place_result= "cryolab"
 
 cryolab.icons = {
     {
-        icon=cryolab.icon,
-        icon_size=cryolab.icon_size,
+        icon="__planet-muluna__/graphics/photometric-lab/photometric-lab-icon.png",
+        icon_size=64,
         scale=0.25,
-        tint = {r=0.7,g=0.7,b=1}
+        --tint = {r=0.7,g=0.7,b=1}
     },
     
 }

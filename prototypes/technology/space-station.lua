@@ -333,9 +333,11 @@ data:extend{
         },
         icons = {
             {
-                icon=data.raw["technology"]["biolab"].icon,
-                icon_size=data.raw["technology"]["biolab"].icon_size,
-                tint = {r=0.7,g=0.7,b=1}
+                icon = "__planet-muluna__/graphics/photometric-lab/photometric-lab-icon-big.png",
+                icon_size = 640
+                --icon=data.raw["technology"]["biolab"].icon,
+                --icon_size=data.raw["technology"]["biolab"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
             },
         }
         --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",

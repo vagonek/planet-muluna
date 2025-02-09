@@ -48,45 +48,76 @@ cryolab.module_slots=6
 cryolab.energy_source.emissions_per_minute.pollution=cryolab.energy_source.emissions_per_minute.pollution*2
 cryolab.on_animation = {
     layers = {
-      util.sprite_load("__space-age__/graphics/entity/biolab/biolab-anim",{
-        frame_count = 32,
+      {
+        filename = "__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
+        priority = "extra-high",
+        --width = 1300,
+        --height = 700,
+        --frame_count = 64,
+        --line_length = 8,
+        width = 1200,
+        height = 700,
+        --animation_speed = 0.2,
+        --shift = util.by_pixel(0, -20),
         scale = 0.7,
-        animation_speed = 0.2,
-        tint = {r=0.7,g=0.7,b=1}
+        repeat_count = 126,
+        shift = {0,-1},
+      },
+      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
+        frame_count = 64,
+        scale = 0.7,
+        animation_speed = 0.05,
+        run_mode="forward-then-backward",
+        --tint = {r=0.7,g=0.7,b=1}
       }),
-      util.sprite_load("__space-age__/graphics/entity/biolab/biolab-lights",{
-        frame_count = 32,
+      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
+        frame_count = 64,
         draw_as_glow = true,
         blend_mode = "additive",
         scale = 0.7,
-        animation_speed = 0.2,
+        animation_speed = 0.05,
+        run_mode="forward-then-backward",
         --tint = {r=0,g=0,b=0.2}
       }),
-      util.sprite_load("__space-age__/graphics/entity/biolab/biolab-shadow",{
-        frame_count = 32,
-        scale = 0.7,
-        animation_speed = 0.2,
-        draw_as_shadow = true,
-        --tint = {r=0,g=0,b=0.2}
-      })
+      
     }
   }
 cryolab.off_animation = {
     layers = {
-      util.sprite_load("__space-age__/graphics/entity/biolab/biolab-anim",{
-        frame_count = 32,
+      {
+        filename = "__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
+        priority = "extra-high",
+        --width = 1300,
+        --height = 700,
+        --frame_count = 64,
+        --line_length = 8,
+        width = 1200,
+        height = 700,
+        --animation_speed = 0.2,
+        --shift = util.by_pixel(0, -20),
         scale = 0.7,
-        animation_speed = 0.2,
-        tint = {r=0.7,g=0.7,b=1}
+        repeat_count = 126,
+        shift = {0,-1},
+      },
+      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
+        frame_count = 64,
+        scale = 0.7,
+        animation_speed = 0.1,
+        run_mode="forward-then-backward",
+        --tint = {r=0.7,g=0.7,b=1}
       }),
-      util.sprite_load("__space-age__/graphics/entity/biolab/biolab-shadow",{
-        frame_count = 32,
+      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
+        frame_count = 64,
+        draw_as_glow = true,
+        blend_mode = "additive",
         scale = 0.7,
-        animation_speed = 0.2,
-        draw_as_shadow = true,
-        --tint = {r=0,g=0,b=0.05}
-      })
+        animation_speed = 0.1,
+        run_mode="forward-then-backward",
+        --tint = {r=0,g=0,b=0.2}
+      }),
+      
     }
   }
+cryolab.working_sound = data.raw["assembling-machine"]["cryogenic-plant"].working_sound
 
 data:extend{cryolab}
