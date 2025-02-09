@@ -211,9 +211,9 @@ data.raw["technology"]["advanced-wood-gas-processing"].unit = {
         {"logistic-science-pack", 1},
         {"chemical-science-pack", 1},
         {"production-science-pack", 1},
-        --{"utility-science-pack", 1},
+        {"utility-science-pack", 1},
         {"space-science-pack", 1},
-        {"interstellar-science-pack",1},
+        --{"interstellar-science-pack",1},
     }
 }
 data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
@@ -226,7 +226,7 @@ data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit = {
         {"production-science-pack", 1},
         --{"utility-science-pack", 1},
         {"space-science-pack", 1},
-        {"interstellar-science-pack",1},
+        --{"interstellar-science-pack",1},
     }
 }
 
@@ -247,8 +247,8 @@ table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
 --     recipe="cellulose"
 -- })
 
-table.insert(data.raw["technology"]["advanced-wood-gas-processing"].prerequisites,"interstellar-science-pack")
-table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
+--table.insert(data.raw["technology"]["advanced-wood-gas-processing"].prerequisites,"interstellar-science-pack")
+--table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
 
 data.raw["recipe"]["wood-greenhouse"].energy_required=10*60
 data.raw["recipe"]["wood-greenhouse"].surface_conditions={{property = "oxygen",min=1}}
