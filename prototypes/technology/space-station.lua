@@ -114,7 +114,7 @@ data:extend{
         type = "technology",
         name = "advanced-stone-processing",
         unit= {
-            count = 200,
+            count = 500,
             time = 30,
             ingredients = data.raw["technology"]["productivity-module-2"].unit.ingredients
         },
