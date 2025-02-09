@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.19.5
+Date: 2025-02-09
+  Balancing:
+    - Adjusted costs of advanced wood gasification technologies to not require interstellar science.
+    - Increased cost of "Advanced stone processing" from 200 to 500 science packs.
+  Bugfixes:
+    - Made hydrogen and carbon dioxide venting recipes disabled by default
+---------------------------------------------------------------------------------------------------
 Version: 1.19.4
 Date: 2025-02-06
   Compatibility:
