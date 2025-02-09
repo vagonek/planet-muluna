@@ -378,6 +378,7 @@ require("compat.modules-t4")
 require("compat.corrundum")
 require("compat.maraxsis")
 require("compat.tenebris")
+require("compat.space-age-galore")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 
