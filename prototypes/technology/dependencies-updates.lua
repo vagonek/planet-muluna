@@ -193,7 +193,7 @@ data.raw["technology"]["logistic-system"].unit.count=300
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
 
 table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
-table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
+--table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
 
 table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
 rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 20})
