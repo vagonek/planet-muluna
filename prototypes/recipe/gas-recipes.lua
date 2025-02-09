@@ -55,7 +55,7 @@ data:extend{
     {
         type = "recipe",
         name = "carbon-dioxide-venting",
-        enabled = true,
+        enabled = false,
         hidden_in_factoriopedia = true,
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
         category = "chemistry",
@@ -75,7 +75,7 @@ data:extend{
     {
         type = "recipe",
         name = "hydrogen-venting",
-        enabled = true,
+        enabled = false,
         hidden_in_factoriopedia = true,
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
         category = "chemistry",
