@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.19.7
+Date: 2025-02-09
+  Compatibility:
+    - Adjusted surface requirements and output of Space Age galore's space science pack recipe to better fit in with Muluna's recipes.
+  Locale:
+    - Changed Muluna description to adjust "orbited by" description to match parent planet.
+---------------------------------------------------------------------------------------------------
 Version: 1.19.6
 Date: 2025-02-09
   Graphics:
