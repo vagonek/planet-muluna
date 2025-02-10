@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.20.1
+Date: 2025-02-10
+  Compatibility:
+    - Added generalized code to add "asteroid-collector" as prerequisite to all planets(Untested on Lignumis, as it crashes on the latest experimental(2.0.34)).
+---------------------------------------------------------------------------------------------------
 Version: 1.20.0
 Date: 2025-02-09
   Features:
