@@ -199,7 +199,7 @@ for _,planet in pairs(data.raw["planet"]) do
     end
     
     
-end
+
 
 rro.soft_insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
 --table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
