@@ -186,7 +186,13 @@ end
 for _,planet in pairs(data.raw["planet"]) do
     if planet.name ~= "muluna" and planet.name ~= "castra" and planet.name ~= "nauvis" then
         if data.raw["technology"]["planet-discovery-"..planet.name] then
-            rro.soft_insert(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"asteroid-collector")
+            if data.raw["technology"]["planet-discovery-"..planet.name] then
+                rro.soft_insert(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"asteroid-collector")
+                
+            end
+        end
+
+            
             --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-science-pack","asteroid-collector")
             --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-platform-thruster","asteroid-collector")
         end
