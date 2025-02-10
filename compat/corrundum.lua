@@ -1,6 +1,6 @@
 local rro = require("lib.remove-replace-object")
 if data.raw["technology"]["planet-discovery-corrundum"] then
-    rro.replace(data.raw["technology"]["planet-discovery-corrundum"].prerequisites,"space-science-pack","asteroid-collector")
+    --rro.replace(data.raw["technology"]["planet-discovery-corrundum"].prerequisites,"space-science-pack","asteroid-collector")
     if data.raw["boiler"]["red-boiler"] then
         data.raw["boiler"]["red-boiler"].surface_conditions = {
             {

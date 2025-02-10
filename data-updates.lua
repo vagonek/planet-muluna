@@ -116,9 +116,9 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
 }
 data.raw.recipe["interstellar-science-pack"].surface_conditions = data.raw.recipe["space-science-pack"].surface_conditions
 
-rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
-rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
-rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
 
 data.raw.recipe["space-science-pack"].results[1].amount = settings.startup["space-science-pack-output"].value --1 by default 
@@ -166,20 +166,32 @@ if not(mods["maraxsis"]) then
     
 end
 
-local planets = {
-    "arrakis",
-    "tiber",
-    "nauvis",
-    "char",
-    "aiur",
-    "janus",
-}
+-- local planets = {
+--     "arrakis",
+--     "tiber",
+--     "nauvis",
+--     "char",
+--     "aiur",
+--     "janus",
+-- }
 
-for _,planet in pairs(planets) do
-    if data.raw["technology"]["planet-discovery-"..planet] then
-        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
-        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-platform-thruster","asteroid-collector")
+-- for _,planet in pairs(planets) do
+--     if data.raw["technology"]["planet-discovery-"..planet] then
+--         rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
+--         rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-platform-thruster","asteroid-collector")
+--     end
+    
+-- end
+
+for _,planet in pairs(data.raw["planet"]) do
+    if planet.name ~= "muluna" then
+        if data.raw["technology"]["planet-discovery-"..planet.name] then
+            rro.soft_insert(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"asteroid-collector")
+            --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-science-pack","asteroid-collector")
+            --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-platform-thruster","asteroid-collector")
+        end
     end
+    
     
 end
 
