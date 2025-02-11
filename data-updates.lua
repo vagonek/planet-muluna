@@ -184,7 +184,7 @@ end
 -- end
 
 for _,planet in pairs(data.raw["planet"]) do
-    if planet.name ~= "muluna" and planet.name ~= "castra" and planet.name ~= "nauvis" then
+    if planet.name ~= "muluna" and planet.name ~= "nauvis" then
         if data.raw["technology"]["planet-discovery-"..planet.name] then
             if data.raw["technology"]["planet-discovery-"..planet.name] then
                 if data.raw["technology"]["planet-discovery-"..planet.name]["prerequisites"] then
