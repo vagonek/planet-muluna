@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.1
+Date: 2025-02-11
+  Balancing:
+    - Adjusted mining time of carbonic asteroid patches and oxide asteroid patches to better reflect the typical resource consumption of a Muluna base.
+---------------------------------------------------------------------------------------------------
 Version: 1.21.0
 Date: 2025-02-11
   Features:
