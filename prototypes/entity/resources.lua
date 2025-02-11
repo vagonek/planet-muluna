@@ -237,8 +237,8 @@ ice_ore.minable.result = "oxide-asteroid-chunk"
 helium.minable.results[1].name = "helium"
 
 metal_ore.minable.mining_time = 20
-carbon_ore.minable.mining_time = 20
-ice_ore.minable.mining_time = 20
+carbon_ore.minable.mining_time = 10
+ice_ore.minable.mining_time = 5
 
 metal_ore.autoplace.control = "metallic-asteroid-chunk"
 carbon_ore.autoplace.control = "carbonic-asteroid-chunk"
