@@ -575,6 +575,14 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-water-saving"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-quick"
+            },
+            {
+                type = "unlock-recipe",
                 recipe="wood-processing"
             },
 
