@@ -55,3 +55,7 @@ end
 
 data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 
+-- if mods["metal-and-stars"] then
+--     data.raw["technology"]["space-chest"] = nil
+-- end
+
