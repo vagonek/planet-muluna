@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.2
+Date: 2025-02-12
+  Bugfixes:
+    - Fixed the inability to autocraft LDS, red circuits, and green circuits using default ingredients.
+---------------------------------------------------------------------------------------------------
 Version: 1.21.1
 Date: 2025-02-11
   Balancing:
