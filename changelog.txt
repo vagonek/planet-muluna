@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.3
+Date: 2025-02-12
+  Compatibility:
+    - Added incompatibility flag for Resource Spawner Overhaul
+  Locale:
+    - Fixed locale for Lunar rock autoplace
+---------------------------------------------------------------------------------------------------
 Version: 1.21.2
 Date: 2025-02-12
   Bugfixes:
