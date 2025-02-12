@@ -114,7 +114,7 @@ data:extend {{
   type = "autoplace-control",
   category = "terrain",
   name = "lunar_rocks",
-  --localised_name = {"", "[fluid=helium]"," ", {"fluid-name.helium"}},
+  localised_name = {"entity-name.lunar-rock"},
   order = data.raw["autoplace-control"]["uranium-ore"].order.."5",
   richness = true
 }}
