@@ -28,7 +28,8 @@
     "? any-planet-start",
     "? orbital-transfer",
     "? fluid-nutrients",
-    "! external-rocket-parts"
+    "! external-rocket-parts",
+    "! rso-mod"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
