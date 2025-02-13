@@ -1,5 +1,6 @@
 local flib_bounding_box = require("__flib__/bounding-box")
-local cryolab=table.deepcopy(data.raw["lab"]["biolab"])
+if data.raw["lab"]["biolab"] then
+  local cryolab=table.deepcopy(data.raw["lab"]["biolab"])
 
 cryolab.name="cryolab"
 cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
@@ -121,3 +122,6 @@ cryolab.off_animation = {
 cryolab.working_sound = data.raw["assembling-machine"]["cryogenic-plant"].working_sound
 
 data:extend{cryolab}
+end
+
+

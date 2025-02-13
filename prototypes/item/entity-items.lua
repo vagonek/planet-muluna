@@ -16,21 +16,24 @@ crusher_2.place_result = "crusher-2"
 crusher_2.icon = "__planet-muluna__/graphics/icons/crusher-2.png"
 crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
 --local crusher_2=nil
+if data.raw["item"]["biolab"] then
+    local cryolab=table.deepcopy(data.raw["item"]["biolab"])
 
-local cryolab=table.deepcopy(data.raw["item"]["biolab"])
+    cryolab.name="cryolab"
+    cryolab.place_result= "cryolab"
 
-cryolab.name="cryolab"
-cryolab.place_result= "cryolab"
-
-cryolab.icons = {
-    {
-        icon="__planet-muluna__/graphics/photometric-lab/photometric-lab-icon.png",
-        icon_size=64,
-        scale=0.25,
-        --tint = {r=0.7,g=0.7,b=1}
-    },
+    cryolab.icons = {
+        {
+            icon="__planet-muluna__/graphics/photometric-lab/photometric-lab-icon.png",
+            icon_size=64,
+            scale=0.25,
+            --tint = {r=0.7,g=0.7,b=1}
+        },
+        
+    }
+    data:extend{cryolab}
+end
     
-}
 
 local space_platform_advanced = table.deepcopy(data.raw["item"]["space-platform-foundation"])
 space_platform_advanced.place_as_tile.result = "advanced-space-platform-foundation"
@@ -58,4 +61,4 @@ space_chest=util.merge{space_chest,
 
 }
 
-data:extend{space_boiler,crusher_2,cryolab,space_chest}
+data:extend{space_boiler,crusher_2,space_chest}

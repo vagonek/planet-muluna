@@ -30,33 +30,36 @@ crusher_2.ingredients = {
 crusher_2.results = {{type = "item",name = "crusher-2",amount = 1}}
 
 
+if data.raw["recipe"]["biolab"] then
+    local cryolab = table.deepcopy(data.raw["recipe"]["biolab"])
 
-local cryolab = table.deepcopy(data.raw["recipe"]["biolab"])
+    cryolab.name="cryolab"
+    cryolab.category="cryogenics"
+    --cryolab.recipe_group="production"
+    --cryolab.subgroup="production-machine"
 
-cryolab.name="cryolab"
-cryolab.category="cryogenics"
---cryolab.recipe_group="production"
---cryolab.subgroup="production-machine"
-
---cryolab.enabled=true
-cryolab.icons=data.raw["item"]["cryolab"].icons
-cryolab.localised_name={"entity-name.cryolab"}
-cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
-cryolab.ingredients = {
-    {type = "item", name = "quantum-processor", amount = 10},
-    {type = "item", name = "biolab", amount = 1},
-    {type = "item", name = "aluminum-plate", amount = 20},
-    {type = "fluid", name = "fluoroketone-cold", amount = 100},
-    {type = "fluid", name = "helium-3", amount = 100},
-    {type = "item", name = "biter-egg", amount = 5},
-    {type = "item", name = "pentapod-egg", amount = 5},
-}
-cryolab.surface_conditions = {
-    {
-        property = "temperature",
-        max = 265,
+    --cryolab.enabled=true
+    cryolab.icons=data.raw["item"]["cryolab"].icons
+    cryolab.localised_name={"entity-name.cryolab"}
+    cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
+    cryolab.ingredients = {
+        {type = "item", name = "quantum-processor", amount = 10},
+        {type = "item", name = "biolab", amount = 1},
+        {type = "item", name = "aluminum-plate", amount = 20},
+        {type = "fluid", name = "fluoroketone-cold", amount = 100},
+        {type = "fluid", name = "helium-3", amount = 100},
+        {type = "item", name = "biter-egg", amount = 5},
+        {type = "item", name = "pentapod-egg", amount = 5},
     }
-}
+    cryolab.surface_conditions = {
+        {
+            property = "temperature",
+            max = 265,
+        }
+    }
+    data:extend{cryolab}
+end
+    
 
 local space_platform_advanced = table.deepcopy(data.raw["recipe"]["space-platform-foundation"])
 space_platform_advanced.name = "advanced-space-platform-foundation"
@@ -88,4 +91,4 @@ space_chest = util.merge{space_chest,
     }
 }
 
-data:extend{space_boiler,crusher_2,cryolab,space_chest}
+data:extend{space_boiler,crusher_2,space_chest}
