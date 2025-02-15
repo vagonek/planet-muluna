@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.5
+Date: 2025-02-15
+  Bugfixes:
+    - Added default_import_location values for several Muluna-exclusive items. https://github.com/nicholasgower/planet-muluna/issues/75
+---------------------------------------------------------------------------------------------------
 Version: 1.21.4
 Date: 2025-02-13
   Bugfixes:
