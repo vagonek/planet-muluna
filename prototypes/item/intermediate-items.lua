@@ -39,6 +39,7 @@ data:extend{{
     subgroup="muluna-products",
     --recipe_group="intermediate-products",
     weight=iron_ore.weight*2/3,
+    default_import_location = "muluna",
 },
 {
     type="item", --Intended to be compatible with Bio-industries, whenever it gets updated to 2.0
@@ -75,6 +76,7 @@ data:extend{{
     subgroup="muluna-products",
     group=data.raw.item["iron-plate"].group,
     weight=data.raw.item["iron-plate"].weight,
+    default_import_location = "muluna",
 },
 {
     type="item",
@@ -93,6 +95,7 @@ data:extend{{
     subgroup="muluna-products",
     group=data.raw.item["copper-cable"].group,
     weight=data.raw.item["copper-cable"].weight,
+    default_import_location = "muluna",
 },
 {
     type="item",

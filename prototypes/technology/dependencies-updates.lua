@@ -269,3 +269,5 @@ end
 --     type = "unlock-recipe",
 --     recipe="greenhouse"
 -- })
+
+data.raw["tool"]["space-science-pack"].default_import_location = "muluna"
