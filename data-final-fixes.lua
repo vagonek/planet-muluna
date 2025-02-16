@@ -1,3 +1,9 @@
+if mods["bztitanium"] or mods["bzcarbon"] or mods["bztin"] or mods["bzlead"] or mods["bzzirconium"] or mods["bzsilicon"] then
+    require("prototypes.recipe.vanilla-alternate-recipes")
+end
+
+
+
 local rro = require("lib.remove-replace-object")
 
 --Overrides any mods which add their own techs to space platform thruster as a prereq.

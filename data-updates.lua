@@ -1,3 +1,4 @@
+require("__planet-muluna__.prototypes.recipe.vanilla-alternate-recipes")
 local rro = require("lib.remove-replace-object")
 local dual_icon = require("lib.dual-item-icon").dual_icon
 
@@ -451,3 +452,4 @@ data.raw["recipe"]["wood-processing"].surface_conditions = nil
 require("compat.orbital-transfer")
 require("compat.visible-planets")
 require("compat.dyson-sphere")
+require("compat.bzsilicon")

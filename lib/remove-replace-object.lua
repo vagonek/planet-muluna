@@ -36,6 +36,15 @@ function rro.replace(list, objectToRemove, replacementObject) --Replaces object 
     end
 end
 
+function rro.replace_name(list,name,new_name) 
+    for i = #list, 1, -1 do -- Iterate backward to avoid index shifting
+        if list[i].name == name then
+                list[i].name = new_name -- Replace the object
+                break
+        end
+    end
+end
+
 function rro.contains(list,object) --Check if object exists in list.
     --local contains = false
     for _,item in pairs(list) do -- Iterate forward
