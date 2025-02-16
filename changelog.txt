@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.8
+Date: 2025-02-16
+  Bugfixes:
+    - Added workaround for when ice-melting recipe is deleted to prevent crash. https://github.com/nicholasgower/planet-muluna/issues/78
+---------------------------------------------------------------------------------------------------
 Version: 1.21.7
 Date: 2025-02-16
   Bugfixes:
