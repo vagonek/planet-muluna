@@ -175,7 +175,7 @@ data:extend{space_melting,space_melting_oxygen}
 local space_boiler_new = {
   type="assembling-machine",
   name= "advanced-boiler",
-  icon = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-icon.png",
+  icon = "__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png",
   flags = {"placeable-neutral", "player-creation"},
   minable = {mining_time = 0.5, result = "advanced-boiler"},
   fast_replaceable_group = "boiler",
@@ -277,7 +277,7 @@ local space_boiler_new = {
           layers =
           {
             {
-              filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-animation-1.png",
+              filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-animation-1.png",
               priority = "extra-high",
               width = 1300,
               height = 1000,
@@ -290,7 +290,7 @@ local space_boiler_new = {
               scale = 0.35,
             },
             -- {
-            --   filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
+            --   filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
             --   priority = "extra-high",
             --   width = 900,
             --   height = 500,
@@ -302,7 +302,7 @@ local space_boiler_new = {
         },
         fire_glow =
         {
-          filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+          filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
           draw_as_glow = true,
           priority = "extra-high",
           frame_count = 64,
@@ -316,7 +316,7 @@ local space_boiler_new = {
         },
         fire =
         {
-          filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+          filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
           draw_as_glow = true,
           priority = "extra-high",
           frame_count = 64,
@@ -345,7 +345,7 @@ space_boiler_new.graphics_set.animation = { north = {
   layers =
           {
             {
-              filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-animation-1.png",
+              filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-animation-1.png",
               priority = "extra-high",
               width = 1300,
               height = 1000,
@@ -360,7 +360,7 @@ space_boiler_new.graphics_set.animation = { north = {
             },
             
             -- {
-            --   filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
+            --   filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
             --   priority = "extra-high",
             --   width = 900,
             --   height = 500,
@@ -379,7 +379,7 @@ space_boiler_new.graphics_set.working_visualisations = {
     effect = "flicker",
     animation = { layers = {
       {
-        filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+        filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
         draw_as_glow = true,
         priority = "extra-high",
         frame_count = 64,
@@ -394,7 +394,7 @@ space_boiler_new.graphics_set.working_visualisations = {
         run_mode="forward-then-backward",
       },
       {
-        filename = "__hurricane-graphics__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
+        filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-emission-1.png",
         draw_as_glow = true,
         priority = "extra-high",
         frame_count = 64,

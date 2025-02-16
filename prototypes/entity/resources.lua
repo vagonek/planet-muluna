@@ -67,14 +67,14 @@ end
 
 
 
-
+local u_ore_order = table.deepcopy(data.raw["autoplace-control"]["uranium-ore"].order)
 
 data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "oxide-asteroid-chunk",
     localised_name = {"", "[item=oxide-asteroid-chunk]", " ",{"item-name.oxide-asteroid-chunk"}},
-    order = data.raw["autoplace-control"]["uranium-ore"].order.."0",
+    order = u_ore_order.."0",
     richness = true
 }}
 data:extend {{
@@ -82,7 +82,7 @@ data:extend {{
     category = "resource",
     name = "metallic-asteroid-chunk",
     localised_name = {"","[item=metallic-asteroid-chunk]" ," ",{"item-name.metallic-asteroid-chunk"}},
-    order = data.raw["autoplace-control"]["uranium-ore"].order.."1",
+    order = u_ore_order.."1",
     richness = true
 }}
 data:extend {{
@@ -90,7 +90,7 @@ data:extend {{
     category = "resource",
     name = "carbonic-asteroid-chunk",
     localised_name = {"", "[item=carbonic-asteroid-chunk]"," ", {"item-name.carbonic-asteroid-chunk"}},
-    order = data.raw["autoplace-control"]["uranium-ore"].order.."2",
+    order = u_ore_order.."2",
     richness = true
 }}
 data:extend {{
@@ -98,7 +98,7 @@ data:extend {{
   category = "resource",
   name = "anorthite-chunk",
   localised_name = {"", "[item=anorthite-chunk]"," ", {"item-name.anorthite-chunk"}},
-  order = data.raw["autoplace-control"]["uranium-ore"].order.."3",
+  order = u_ore_order.."3",
   richness = true
 }}
 data:extend {{
@@ -106,7 +106,7 @@ data:extend {{
   category = "resource",
   name = "helium",
   localised_name = {"", "[fluid=helium]"," ", {"fluid-name.helium"}},
-  order = data.raw["autoplace-control"]["uranium-ore"].order.."4",
+  order = u_ore_order.."4",
   richness = true
 }}
 
@@ -115,7 +115,7 @@ data:extend {{
   category = "terrain",
   name = "lunar_rocks",
   localised_name = {"entity-name.lunar-rock"},
-  order = data.raw["autoplace-control"]["uranium-ore"].order.."5",
+  order = u_ore_order.."5",
   richness = true
 }}
 

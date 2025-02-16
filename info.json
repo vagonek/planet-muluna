@@ -16,7 +16,6 @@
     "flib",
     "aai-signal-transmission",
     "PlanetsLib >= 1.1.24",
-    "hurricane-graphics",
     "? alien-biomes",
     "? maraxsis",
     "(?) Tiered-Solar-System >= 1.1.3",
