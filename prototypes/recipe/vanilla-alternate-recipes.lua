@@ -53,7 +53,9 @@ local carbon_nanotubes_lds = table.deepcopy(data.raw["recipe"]["low-density-stru
 
 carbon_nanotubes_lds.name = "low-density-structure-from-aluminum"
 
-carbon_nanotubes_lds.ingredients = {{type = "item", name = "iron-plate", amount = 5}, {type = "item", name = "plastic-bar", amount = 5}, {type = "item", name = "aluminum-plate", amount = 20}}
+--carbon_nanotubes_lds.ingredients = {{type = "item", name = "iron-plate", amount = 5}, {type = "item", name = "plastic-bar", amount = 5}, {type = "item", name = "aluminum-plate", amount = 20}}
+--rro.replace(carbon_nanotubes_lds.ingredients, {type = "item", name = "copper-plate", amount = 20},{type = "item", name = "aluminum-plate", amount = 20})
+rro.replace_name(carbon_nanotubes_lds.ingredients,"copper-plate","aluminum-plate")
 carbon_nanotubes_lds.energy_required=30
 carbon_nanotubes_lds.icons = dual_icon("low-density-structure","aluminum-plate")
 carbon_nanotubes_lds.allow_decomposition = false
@@ -89,9 +91,11 @@ aluminum_red_circuit.allow_decomposition = false
 aluminum_green_circuit.allow_decomposition = false
 aluminum_red_circuit.allow_as_intermediate = false
 aluminum_green_circuit.allow_as_intermediate = false
-rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
-rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
-
+--rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
+--rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
+--rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
+rro.replace_name(aluminum_green_circuit.ingredients,"copper-cable","aluminum-cable")
+rro.replace_name(aluminum_red_circuit.ingredients,"copper-cable","aluminum-cable")
 aluminum_green_circuit.name="electronic-circuit-aluminum"
 aluminum_red_circuit.name="advanced-circuit-aluminum"
 
