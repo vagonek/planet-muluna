@@ -43,3 +43,19 @@ if mods["bzzirconium"] then
     data.raw["planet"]["muluna"].map_gen_settings.autoplace_controls["zircon"] = {}
     data.raw["planet"]["muluna"].map_gen_settings.autoplace_settings["entity"]["settings"]["zircon"] = {}
 end
+
+local function move_recipe(recipe,tech,tech_new) 
+    rro.remove(data.raw.technology[tech].effects,{type = "unlock-recipe", recipe = recipe})
+    table.insert(data.raw.technology[tech_new].effects,{type = "unlock-recipe", recipe = recipe})
+end
+
+if data.raw["recipe"]["alternative-metallic-asteroid-crushing"] then
+    move_recipe("alternative-metallic-asteroid-crushing","space-platform-thruster","crusher")
+end
+if data.raw["recipe"]["alternative-carbonic-asteroid-crushing"] then
+    move_recipe("alternative-carbonic-asteroid-crushing","space-platform-thruster","greenhouses")
+end
+if data.raw["recipe"]["metallic-asteroid-crushing-tin"] then
+    move_recipe("metallic-asteroid-crushing-tin","space-platform-thruster","crusher")
+end
+
