@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.7
+Date: 2025-02-16
+  Bugfixes:
+    - Made additional check if cryolab has selection and collision boxes to prevent a crash.
+---------------------------------------------------------------------------------------------------
 Version: 1.21.6
 Date: 2025-02-16
   Compatibility:
