@@ -29,7 +29,13 @@
     "? orbital-transfer",
     "? fluid-nutrients",
     "! external-rocket-parts",
-    "! rso-mod"
+    "! rso-mod",
+    "? bztitanium",
+    "? bzcarbon",
+    "? bztin",
+    "? bzlead",
+    "? bzzirconium",
+    "? bzsilicon"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
