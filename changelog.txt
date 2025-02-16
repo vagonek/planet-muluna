@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.6
+Date: 2025-02-16
+  Compatibility:
+    - Added optional compatibility with bz's material mods
+    - Changed vanilla alternate recipes to better adjust to other mods' changes to vanilla recipes, including bz mods.
+    - Moved bz's new asteroid crushing recipes to Muluna's appropriate technology for that asteroid type.
+    - Places BZ's titanium and zircon on Muluna when their respective mods are installed.
+    - When bz's Basic Crusher exists, all basic crushing recipes are enabled for the Crusher and and Crusher 2, and the basic crusher's building and recipes are proportionally adjusted such that the crusher is 4 times faster than the basic crusher when it comes to basic crushing recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.21.5
 Date: 2025-02-15
   Bugfixes:
