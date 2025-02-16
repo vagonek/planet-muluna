@@ -29,7 +29,7 @@ if data.raw["fluid"]["maraxsis-atmosphere"] == nil then
         enabled = false,
         main_product = "maraxsis-atmosphere",
         subgroup="fluid-recipes",
-        order=data.raw["recipe"]["ice-melting"].order .."a",
+        order=(data.raw["recipe"]["ice-melting"].order or "") .."a[maraxsis-atmosphere]",
         surface_conditions = {{
             property = "pressure",
             min = 100,
