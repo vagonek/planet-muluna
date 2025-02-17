@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.12
+Date: 2025-02-17
+  Compatibility:
+    - Changed prod module 4 code to improve compatibility with other mods that change prod module 4 recipe. https://github.com/nicholasgower/planet-muluna/issues/81
+---------------------------------------------------------------------------------------------------
 Version: 1.21.11
 Date: 2025-02-17
   Bugfixes:
