@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.22.1
+Date: 2025-02-18
+  Bugfixes:
+    - Added additional check in case ice melting lacks order. https://github.com/nicholasgower/planet-muluna/issues/85
+---------------------------------------------------------------------------------------------------
 Version: 1.22.0
 Date: 2025-02-18
   Features:
