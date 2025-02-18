@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.13
+Date: 2025-02-18
+  Balancing:
+    - Replaced "Interstellar science pack" technology unit cost with a negligible trigger technology to reduce its gatekeeping effect.
+  Compatibility:
+    - Added interstellar science pack to requirements for Planet and Stars system, Nexuz system, and some planets in the Dea Dia system.
+---------------------------------------------------------------------------------------------------
 Version: 1.21.12
 Date: 2025-02-17
   Compatibility:
