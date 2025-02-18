@@ -15,8 +15,10 @@ return {
 }
 
 end
+table.insert(data.raw["character"]["character"].crafting_categories,
+"crushing"    
 
-
+)
 
 local anorthite_crushing = table.deepcopy(data.raw["recipe"]["oxide-asteroid-crushing"])
 anorthite_crushing.name = "anorthite-crushing"

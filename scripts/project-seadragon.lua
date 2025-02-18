@@ -1,6 +1,5 @@
-
---Shamelessly taken from Maraxsis 
-script.on_event(defines.events.on_built_entity, function(event)
+local Public = {}
+function Public.on_built_rocket_silo(event)
     local entity = event.entity
     if not entity.valid then return end
     
@@ -21,4 +20,11 @@ script.on_event(defines.events.on_built_entity, function(event)
         entity.set_recipe("rocket-part")
         entity.recipe_locked = true
     end
-end)
+
+end
+
+
+--Shamelessly taken from Maraxsis 
+
+return Public
+

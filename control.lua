@@ -20,13 +20,14 @@
 -- end)
 
 
-
-
 --_G.maraxsis = require "scripts.constants"
 --muluna={}
 --require("lib.control-stage")
-require("scripts.project-seadragon")
+
+
 require("scripts.nav-beacon")
+local sd = require("scripts.project-seadragon")
+
 --muluna.finalize_events()
 
 -- script.on_nth_tick(60,function(event)
@@ -40,7 +41,9 @@ require("scripts.nav-beacon")
 --     end
 -- end) 
 
-
+script.on_event(defines.events.on_built_entity, function(event)
+    sd.on_built_rocket_silo(event)
+end)
 
 
 

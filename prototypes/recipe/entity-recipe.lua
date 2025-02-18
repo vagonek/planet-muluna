@@ -1,11 +1,19 @@
 local rro = require("lib.remove-replace-object")
 
 local space_boiler = table.deepcopy(data.raw["recipe"]["boiler"])
+space_boiler.icon = "__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png"
+space_boiler.name = "advanced-boiler"
+space_boiler.place_result = "advanced-boiler"
 
-space_boiler.name = "space-boiler"
-space_boiler.place_result = "space-boiler"
-space_boiler.localised_name = {"entity-name.space-boiler"}
-space_boiler.results = {{type = "item",name = "space-boiler",amount = 1}}
+space_boiler.ingredients = {
+    {type = "item", name = "boiler", amount = 1},
+    {type = "item", name = "pipe", amount = 4},
+    {type = "item", name = "steel-plate", amount = 8},
+}
+space_boiler.energy_required = 10
+
+
+space_boiler.results = {{type = "item",name = "advanced-boiler",amount = 1}}
 
 local crusher_2 = table.deepcopy(data.raw["recipe"]["crusher"])
 
@@ -22,33 +30,36 @@ crusher_2.ingredients = {
 crusher_2.results = {{type = "item",name = "crusher-2",amount = 1}}
 
 
+if data.raw["recipe"]["biolab"] then
+    local cryolab = table.deepcopy(data.raw["recipe"]["biolab"])
 
-local cryolab = table.deepcopy(data.raw["recipe"]["biolab"])
+    cryolab.name="cryolab"
+    cryolab.category="cryogenics"
+    --cryolab.recipe_group="production"
+    --cryolab.subgroup="production-machine"
 
-cryolab.name="cryolab"
-cryolab.category="cryogenics"
---cryolab.recipe_group="production"
---cryolab.subgroup="production-machine"
-
---cryolab.enabled=true
-cryolab.icons=data.raw["item"]["cryolab"].icons
-cryolab.localised_name={"entity-name.cryolab"}
-cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
-cryolab.ingredients = {
-    {type = "item", name = "quantum-processor", amount = 10},
-    {type = "item", name = "biolab", amount = 1},
-    {type = "item", name = "aluminum-plate", amount = 20},
-    {type = "fluid", name = "fluoroketone-cold", amount = 100},
-    {type = "fluid", name = "helium-3", amount = 100},
-    {type = "item", name = "biter-egg", amount = 5},
-    {type = "item", name = "pentapod-egg", amount = 5},
-}
-cryolab.surface_conditions = {
-    {
-        property = "temperature",
-        max = 265,
+    --cryolab.enabled=true
+    cryolab.icons=data.raw["item"]["cryolab"].icons
+    cryolab.localised_name={"entity-name.cryolab"}
+    cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
+    cryolab.ingredients = {
+        {type = "item", name = "quantum-processor", amount = 10},
+        {type = "item", name = "biolab", amount = 1},
+        {type = "item", name = "aluminum-plate", amount = 20},
+        {type = "fluid", name = "fluoroketone-cold", amount = 100},
+        {type = "fluid", name = "helium-3", amount = 100},
+        {type = "item", name = "biter-egg", amount = 5},
+        {type = "item", name = "pentapod-egg", amount = 5},
     }
-}
+    cryolab.surface_conditions = {
+        {
+            property = "temperature",
+            max = 265,
+        }
+    }
+    data:extend{cryolab}
+end
+    
 
 local space_platform_advanced = table.deepcopy(data.raw["recipe"]["space-platform-foundation"])
 space_platform_advanced.name = "advanced-space-platform-foundation"
@@ -63,4 +74,21 @@ space_platform_advanced.results = {
     {type = "item", name = "advanced-space-platform-foundation", amount = 1}
 }
 
-data:extend{space_boiler,crusher_2,cryolab}
+local space_chest = table.deepcopy(data.raw["recipe"]["steel-chest"])
+
+space_chest = util.merge{space_chest,
+    {   
+        name = "space-chest",
+        results = {{type = "item", name = "space-chest", amount = 1}},
+        ingredients = {
+            {type = "item", name = "aluminum-plate", amount = 8},
+            {type = "item", name = "low-density-structure", amount = 1},
+            {type = "item", name = "processing-unit", amount = 1},
+            },
+        subgroup = "space-platform",
+        order = "ca[space-chest]"
+        --auto_recycle = false
+    }
+}
+
+data:extend{space_boiler,crusher_2,space_chest}

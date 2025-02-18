@@ -1,3 +1,4 @@
+require("__planet-muluna__.prototypes.recipe.vanilla-alternate-recipes")
 local rro = require("lib.remove-replace-object")
 local dual_icon = require("lib.dual-item-icon").dual_icon
 
@@ -67,21 +68,30 @@ rocket_part_muluna.localised_name = {"item-name.rocket-part"}
 --     min = 5.01,
 --     }
 -- }
-
-data.raw.recipe["rocket-part"].ingredients =
-{
-  {type = "item", name = "processing-unit", amount = 2},
-  {type = "item", name = "low-density-structure", amount = 2},
-  {type = "item", name = "rocket-fuel", amount = 2}
-}
-if mods["maraxsis"] then
-    data.raw.recipe["rocket-part"].ingredients =
-    {
-    {type = "item", name = "processing-unit", amount = 2},
-    {type = "item", name = "low-density-structure", amount = 2},
-    {type = "item", name = "rocket-fuel", amount = 2}
-    }
+local function scalar_recipe_multiply(list,factor)
+    for _,item in pairs(list) do
+        item.amount=item.amount*factor
+    end
 end
+
+scalar_recipe_multiply(data.raw.recipe["rocket-part"].ingredients,2)
+if mods["maraxsis"] then
+    scalar_recipe_multiply(data.raw.recipe["maraxsis-rocket-part"].ingredients,2)
+end
+-- data.raw.recipe["rocket-part"].ingredients =
+-- {
+--   {type = "item", name = "processing-unit", amount = 2},
+--   {type = "item", name = "low-density-structure", amount = 2},
+--   {type = "item", name = "rocket-fuel", amount = 2}
+-- }
+-- if mods["maraxsis"] then
+--     data.raw.recipe["rocket-part"].ingredients =
+--     {
+--     {type = "item", name = "processing-unit", amount = 2},
+--     {type = "item", name = "low-density-structure", amount = 2},
+--     {type = "item", name = "rocket-fuel", amount = 2}
+--     }
+-- end
 
 
 
@@ -103,12 +113,13 @@ data.raw.recipe["space-science-pack"].surface_conditions = {
     min = 0,
     max = 0,
     },
+    PlanetsLib.surface_conditions.restrict_to_surface("muluna")
 }
 data.raw.recipe["interstellar-science-pack"].surface_conditions = data.raw.recipe["space-science-pack"].surface_conditions
 
-rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
-rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
-rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-vulcanus"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-gleba"].prerequisites,"space-science-pack","asteroid-collector")
+-- rro.replace(data.raw["technology"]["planet-discovery-fulgora"].prerequisites,"space-science-pack","asteroid-collector")
 
 
 data.raw.recipe["space-science-pack"].results[1].amount = settings.startup["space-science-pack-output"].value --1 by default 
@@ -156,24 +167,43 @@ if not(mods["maraxsis"]) then
     
 end
 
-local planets = {
-    "arrakis",
-    "tiber",
-    "nauvis",
-    "char",
-    "aiur",
-    "janus",
-}
+-- local planets = {
+--     "arrakis",
+--     "tiber",
+--     "nauvis",
+--     "char",
+--     "aiur",
+--     "janus",
+-- }
 
-for _,planet in pairs(planets) do
-    if data.raw["technology"]["planet-discovery-"..planet] then
-        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
-        rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-platform-thruster","asteroid-collector")
+-- for _,planet in pairs(planets) do
+--     if data.raw["technology"]["planet-discovery-"..planet] then
+--         rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-science-pack","asteroid-collector")
+--         rro.replace(data.raw["technology"]["planet-discovery-"..planet].prerequisites,"space-platform-thruster","asteroid-collector")
+--     end
+    
+-- end
+
+for _,planet in pairs(data.raw["planet"]) do
+    if planet.name ~= "muluna" and planet.name ~= "nauvis" then
+        if data.raw["technology"]["planet-discovery-"..planet.name] then
+            if data.raw["technology"]["planet-discovery-"..planet.name] then
+                if data.raw["technology"]["planet-discovery-"..planet.name]["prerequisites"] then
+                    rro.soft_insert(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"asteroid-collector")
+                end
+            end
+        end
+
+            
+            --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-science-pack","asteroid-collector")
+            --rro.replace(data.raw["technology"]["planet-discovery-"..planet.name].prerequisites,"space-platform-thruster","asteroid-collector")
+        end
     end
     
-end
+    
 
-table.insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
+
+rro.soft_insert(data.raw["technology"]["planet-discovery-aquilo"].prerequisites,"interstellar-science-pack")
 --table.insert(data.raw["technology"]["promethium-science-pack"].prerequisites,"interstellar-science-pack")
 --data.raw["tool"]["space-science-pack"].localised_name = {"item-name."}
 --data.raw["technology"]["space-science-pack"].localised_name = {"item-name.lunar-science-pack"}
@@ -208,9 +238,9 @@ if mods["maraxsis"] then
         end
     end 
     
-    for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
-        ingredient.amount = ingredient.amount*2
-    end
+    -- for _,ingredient in pairs(data.raw["recipe"]["maraxsis-rocket-part"].ingredients) do
+    --     ingredient.amount = ingredient.amount*2
+    -- end
     
 end
 
@@ -315,6 +345,7 @@ for _,lab in pairs(data.raw["lab"]) do
     end
 end
 
+local gases = {"maraxsis-oxygen","maraxsis-hydrogen","carbon-dioxide","helium","helium-4","helium-3",}
 
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
 if mods["maraxsis"] then
@@ -344,14 +375,30 @@ if mods["maraxsis"] then
     {type="fluid",name="maraxsis-hydrogen",amount=2000}
     )
     data.raw["fluid"]["maraxsis-hydrogen"].fuel_value="225kJ"
-    data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
+    --data.raw["item"]["maraxsis-hydrogen-barrel"].fuel_value="11.3MJ"
     
 end
+
+for _,gas in pairs(gases) do
+    if data.raw["recipe"][gas.."-barrel"] then
+        data.raw["recipe"][gas.."-barrel"].ingredients[1].amount=data.raw["recipe"][gas.."-barrel"].ingredients[1].amount*10
+    end
+
+    if data.raw["recipe"]["empty".. gas .."-barrel"] then
+        data.raw["recipe"]["empty".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty".. gas .."-barrel"].ingredients[1].amount*10
+    end
+
+    if data.raw["recipe"]["maraxsis-fluid-void-".. gas] then
+        data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount=data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount*10
+    end
+end
+
 
 require("compat.modules-t4")
 require("compat.corrundum")
 require("compat.maraxsis")
 require("compat.tenebris")
+require("compat.space-age-galore")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 
@@ -366,9 +413,7 @@ PlanetsLib:update
         
     }
 
-if data.raw["technology"]["planet-discovery-maraxsis"] then
-    table.insert(data.raw["technology"]["planet-discovery-maraxsis"].prerequisites,"interstellar-science-pack")
-end
+
 
 
 --table.insert(data.raw["recipe"]["fusion-power-cell"].ingredients, {type = "item", name = "helium-3-barrel", amount = 1})
@@ -402,4 +447,9 @@ data.raw["recipe"]["wood-greenhouse"].enabled = false
 data.raw["recipe"]["advanced-thruster-fuel"].results[1].amount = 1000
 data.raw["recipe"]["advanced-thruster-oxidizer"].results[1].amount = 1000
 
+data.raw["recipe"]["wood-processing"].surface_conditions = nil
 
+require("compat.orbital-transfer")
+require("compat.visible-planets")
+require("compat.dyson-sphere")
+require("compat.bzsilicon")

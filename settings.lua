@@ -17,7 +17,7 @@ data:extend{
         type = "int-setting",
         name = "space-science-pack-output",
         setting_type = "startup",
-        default_value = 1,
+        default_value = 2,
         min = 1,
         max = 10,
         order = "ac",
@@ -50,3 +50,7 @@ data:extend{
         order = "a"
     }
 }
+}
+if mods["any-planet-start"] then
+  APS.add_choice("muluna")
+end

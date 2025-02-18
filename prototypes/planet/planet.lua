@@ -4,6 +4,10 @@ local nauvis = data.raw["planet"]["nauvis"]
 local nauvis_gen = nauvis.map_gen_settings
 local asteroid_util = require "__space-age__.prototypes.planet.asteroid-spawn-definitions"
 local tau = 2*math.pi
+
+
+
+
 local map_gen = {
     cliff_settings = 
     {
@@ -17,7 +21,7 @@ local map_gen = {
     autoplace_controls = 
     {
         ["stone"] = {},
-        ["rocks"] = {},
+        ["lunar_rocks"] = {},
         ["nauvis_cliff"] = {},
         ["oxide-asteroid-chunk"] = {},
         ["metallic-asteroid-chunk"] = {},
@@ -54,12 +58,13 @@ local map_gen = {
         settings =
         {
           ["stone"] = {},
-          ["big-sand-rock"] = {},
+          ["lunar-rock"] = {},
+          --["big-sand-rock"] = {},
           ["huge-rock"] = {},
           ["big-rock"] = {},
           ["oxide-asteroid-chunk"] = {},
-            ["metallic-asteroid-chunk"] = {},
-            ["carbonic-asteroid-chunk"] = {},
+          ["metallic-asteroid-chunk"] = {},
+          ["carbonic-asteroid-chunk"] = {},
         }
       }
     }
@@ -75,9 +80,16 @@ end
 
 local parent_planet = "nauvis"
 
+
 if mods["any-planet-start"] then
   parent_planet = settings.startup["aps-planet"].value
+  if parent_planet == "none" or parent_planet =="muluna" then
+    parent_planet = "nauvis"
+  end
 end
+
+
+local o_parent_planet = data.raw["planet"][parent_planet]
 
 local muluna= 
 {
@@ -106,10 +118,10 @@ local muluna=
     starmap_icon = "__planet-muluna__/graphics/moon-icon.png",
     starmap_icon_size = 1482,
     subgroup = "satellites",
-    magnitude = nauvis.magnitude*3/5,
+    magnitude = o_parent_planet.magnitude*3/5,
     pollutant_type = "radiation",
     persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
-    localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet=nauvis]"},
+    localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet="..parent_planet.."]"},
     surface_properties = {
         ["solar-power"] = 150,
         ["pressure"] = 50,
@@ -121,7 +133,7 @@ local muluna=
     orbit = { --Added in preparation for PlanetsLib to display orbits, hopefully in a less invasive way than MTLib.
       --polar = {2,0.005*tau},
       orientation = 0.75, --When planetsLib orbit is added, orientation and distance are set relative to parent body.
-      distance = 1.6,
+      distance = 1.6*o_parent_planet.magnitude/(nauvis.magnitude),
       parent = {
         type = "planet",
         name = parent_planet,
@@ -131,7 +143,7 @@ local muluna=
           type = "sprite",
           filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
           size = 412,
-          scale = 0.25,
+          scale = 0.25*o_parent_planet.magnitude/(nauvis.magnitude),
         }
     },
     --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
@@ -166,10 +178,25 @@ local muluna_connection = {
   asteroid_spawn_definitions = asteroid_spawn_definitions_connection
 }
 
-if settings.startup["override-space-connection"] == true then
-  data.raw["space-connection"]["nauvis-vulcanus"].from = "muluna"
-  data.raw["space-connection"]["nauvis-gleba"].from = "muluna"
-  data.raw["space-connection"]["nauvis-fulgora"].from = "muluna"
+if settings.startup["override-space-connection"].value == true then
+  local connections = {
+    "nauvis-vulcanus",
+    "nauvis-gleba",
+    "nauvis-fulgora",
+    "nauvis-moshine",
+    "slp-nauvis-sun",
+    "nauvis-corrundum",
+  }
+  --data.raw["space-connection"]["nauvis-vulcanus"].from = "muluna"
+  --data.raw["space-connection"]["nauvis-gleba"].from = "muluna"
+  --data.raw["space-connection"]["nauvis-fulgora"].from = "muluna"
+    for _,connection in pairs(connections) do
+      if data.raw["space-connection"][connection] then
+        data.raw["space-connection"][connection].from = "muluna"
+      end
+    end
+  
+
 end
 
 

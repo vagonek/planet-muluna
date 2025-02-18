@@ -1,4 +1,313 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.21.12
+Date: 2025-02-17
+  Compatibility:
+    - Changed prod module 4 code to improve compatibility with other mods that change prod module 4 recipe. https://github.com/nicholasgower/planet-muluna/issues/81
+---------------------------------------------------------------------------------------------------
+Version: 1.21.11
+Date: 2025-02-17
+  Bugfixes:
+    - Removed duplicate any-planet-start dependency flag.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.10
+Date: 2025-02-16
+  Graphics:
+    - Removed hurricane-graphics dependency
+---------------------------------------------------------------------------------------------------
+Version: 1.21.9
+Date: 2025-02-16
+  Bugfixes:
+    - Fixed and expanded "Override space connections" setting. https://github.com/nicholasgower/planet-muluna/issues/80
+---------------------------------------------------------------------------------------------------
+Version: 1.21.8
+Date: 2025-02-16
+  Bugfixes:
+    - Added workaround for when ice-melting recipe is deleted to prevent crash. https://github.com/nicholasgower/planet-muluna/issues/78
+---------------------------------------------------------------------------------------------------
+Version: 1.21.7
+Date: 2025-02-16
+  Bugfixes:
+    - Made additional check if cryolab has selection and collision boxes to prevent a crash.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.6
+Date: 2025-02-16
+  Compatibility:
+    - Added optional compatibility with bz's material mods
+    - Changed vanilla alternate recipes to better adjust to other mods' changes to vanilla recipes, including bz mods.
+    - Moved bz's new asteroid crushing recipes to Muluna's appropriate technology for that asteroid type.
+    - Places BZ's titanium and zircon on Muluna when their respective mods are installed.
+    - When bz's Basic Crusher exists, all basic crushing recipes are enabled for the Crusher and and Crusher 2, and the basic crusher's building and recipes are proportionally adjusted such that the crusher is 4 times faster than the basic crusher when it comes to basic crushing recipes.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.5
+Date: 2025-02-15
+  Bugfixes:
+    - Added default_import_location values for several Muluna-exclusive items. https://github.com/nicholasgower/planet-muluna/issues/75
+---------------------------------------------------------------------------------------------------
+Version: 1.21.4
+Date: 2025-02-13
+  Bugfixes:
+    - Added fallback code for when biolab doesn't exist.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.3
+Date: 2025-02-12
+  Compatibility:
+    - Added incompatibility flag for Resource Spawner Overhaul
+  Locale:
+    - Fixed locale for Lunar rock autoplace
+---------------------------------------------------------------------------------------------------
+Version: 1.21.2
+Date: 2025-02-12
+  Bugfixes:
+    - Fixed the inability to autocraft LDS, red circuits, and green circuits using default ingredients.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.1
+Date: 2025-02-11
+  Balancing:
+    - Adjusted mining time of carbonic asteroid patches and oxide asteroid patches to better reflect the typical resource consumption of a Muluna base.
+---------------------------------------------------------------------------------------------------
+Version: 1.21.0
+Date: 2025-02-11
+  Features:
+    - Added new variants of Muluna's tree growth recipe that allow the user to balance speed and water consumption.
+---------------------------------------------------------------------------------------------------
+Version: 1.20.7
+Date: 2025-02-11
+  Bugfixes:
+    - Removed exception for Castra from planet discovery prerequisite adder.
+---------------------------------------------------------------------------------------------------
+Version: 1.20.6
+Date: 2025-02-10
+  Bugfixes:
+    - Added one more layer of checks to asteroid collector dynamic prerequisite inserter.
+---------------------------------------------------------------------------------------------------
+Version: 1.20.5
+Date: 2025-02-10
+  Bugfixes:
+    - Fixed crash on start
+---------------------------------------------------------------------------------------------------
+Version: 1.20.4
+Date: 2025-02-10
+  Bugfixes:
+    - Addressed crash that happens when planet not named Nauvis lacks a planet discovery technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.20.3
+Date: 2025-02-10
+  Bugfixes:
+    - Correction to previous fix
+---------------------------------------------------------------------------------------------------
+Version: 1.20.2
+Date: 2025-02-10
+  Bugfixes:
+    - Issued hopefully temporary fix to generalized asteroid collector code
+---------------------------------------------------------------------------------------------------
+Version: 1.20.1
+Date: 2025-02-10
+  Compatibility:
+    - Added generalized code to add "asteroid-collector" as prerequisite to all planets(Untested on Lignumis, as it crashes on the latest experimental(2.0.34)).
+---------------------------------------------------------------------------------------------------
+Version: 1.20.0
+Date: 2025-02-09
+  Features:
+    - Added Lunar rocks, which drop sulfur and stone, making it possible to jumpstart sulfuric acid production without needing to import sulfur. https://github.com/nicholasgower/planet-muluna/issues/68
+---------------------------------------------------------------------------------------------------
+Version: 1.19.7
+Date: 2025-02-09
+  Compatibility:
+    - Adjusted surface requirements and output of Space Age galore's space science pack recipe to better fit in with Muluna's recipes.
+  Locale:
+    - Changed Muluna description to adjust "orbited by" description to match parent planet.
+---------------------------------------------------------------------------------------------------
+Version: 1.19.6
+Date: 2025-02-09
+  Graphics:
+    - Updated graphics of Cryolab to use Hurricane's "photometric-lab" sprites.
+---------------------------------------------------------------------------------------------------
+Version: 1.19.5
+Date: 2025-02-09
+  Balancing:
+    - Adjusted costs of advanced wood gasification technologies to not require interstellar science.
+    - Increased cost of "Advanced stone processing" from 200 to 500 science packs.
+  Bugfixes:
+    - Made hydrogen and carbon dioxide venting recipes disabled by default
+---------------------------------------------------------------------------------------------------
+Version: 1.19.4
+Date: 2025-02-06
+  Compatibility:
+    - Improved synergy with Dyson Sphere mod.
+---------------------------------------------------------------------------------------------------
+Version: 1.19.3
+Date: 2025-02-06
+  Bugfixes:
+    - Fixed "ignored by productivity" value for oxygen produced by Muluna wood recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.19.2
+Date: 2025-02-06
+  Balancing:
+    - Increased amount of oxygen generated by greenhouse wood recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.19.1
+Date: 2025-02-05
+  Bugfixes:
+    - Fixed crash when Muluna selected in any-planet-start
+---------------------------------------------------------------------------------------------------
+Version: 1.19.0
+Date: 2025-02-03
+  Features:
+    - Gave advanced boilers the ability to melt ice, using either oxygen or atmosphere as an oxidizer.
+  Balancing:
+    - Reduced CO2 and water consumption of Muluna wood recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.18.4
+Date: 2025-02-03
+  Locale:
+    - Updated Russian locale
+---------------------------------------------------------------------------------------------------
+Version: 1.18.3
+Date: 2025-02-03
+  Locale:
+    - Updated Chinese locale and fixed locale description key for advanced boiler.
+---------------------------------------------------------------------------------------------------
+Version: 1.18.2
+Date: 2025-02-03
+  Compatibility:
+    - Added optional integration of orbital-transfer mod into Muluna's tech tree, changing the recipes to use space chests.
+---------------------------------------------------------------------------------------------------
+Version: 1.18.1
+Date: 2025-02-03
+  Changes:
+    - Greatly reduced filesize of mod by moving source graphics files to another repo.
+---------------------------------------------------------------------------------------------------
+Version: 1.18.0
+Date: 2025-02-03
+  Features:
+    - Added "Carbon dioxide venting" recipe to remove unwanted CO2 from pipes.
+    - Added "Space chest" item and technology.
+    - Added hydrogen venting recipe
+    - Changed "forced combustion" recipe to require advanced boiler.
+    - Changed advanced boiler to an assembling-machine prototype.
+  Balancing:
+    - Adjusted amount of fluid per barrel in fluids designated as gases.
+    - Eliminated space science requirement for "Advanced space research" technology.
+  Compatibility:
+    - Added some technologies from "Secretas and Frozeta" to interstellar technologies list.
+    - Adjusted heat capacity of CO2 to make Corrundum Thermoelectric generators more realistically usable with CO2 produced by advanced boilers.
+    - Adjusted pollution rate of red steam engines to make using them as a pollution release more balanced when using them with advanced boilers.
+    - Made "Shield projector" require Interstellar science pack.
+  Bugfixes:
+    - Fixed cryolab science inputs
+  Graphics:
+    - Gave Advanced boiler building graphics from Hurricane's Thermal plant.
+    - Gave fresh water electrolysis a new icon not based on Maraxsis' electrolysis icon.
+  Changes:
+    - Adjusted Maraxsis atmosphere recipe to increase amount per craft, and added a recipe to extract oxygen from atmosphere.
+---------------------------------------------------------------------------------------------------
+Version: 1.17.8
+Date: 2025-02-02
+  Compatibility:
+    - Added "Interstellar science pack" to Dyson sphere technologies.
+---------------------------------------------------------------------------------------------------
+Version: 1.17.7
+Date: 2025-02-02
+  Bugfixes:
+    - Fixed crash when fluid-nutrients not loaded.
+---------------------------------------------------------------------------------------------------
+Version: 1.17.6
+Date: 2025-02-02
+  Compatibility:
+    - Fixed compatibility issues with fluid-nutrients (https://github.com/nicholasgower/planet-muluna/issues/64)
+---------------------------------------------------------------------------------------------------
+Version: 1.17.5
+Date: 2025-02-02
+  Bugfixes:
+    - Fixed crash on loading Tenebris
+---------------------------------------------------------------------------------------------------
+Version: 1.17.4
+Date: 2025-02-02
+  Compatibility:
+    - Added integration with "More Asteroid Resources"
+---------------------------------------------------------------------------------------------------
+Version: 1.17.3
+Date: 2025-02-02
+  Compatibility:
+    - Added "orbital ion cannon" technologies to list of techs that require Interstellar science.
+  Graphics:
+    - Adjusted appearance of "ALICE propellant" icon to make it less phallic
+  Locale:
+    - Adjusted description of "Anorthite Processing" technology
+---------------------------------------------------------------------------------------------------
+Version: 1.17.2
+Date: 2025-02-01
+  Compatibility:
+    - Added more tolerant modification of rocket-part recipes to fix compatibility with RCU restored (https://github.com/nicholasgower/planet-muluna/issues/59)
+---------------------------------------------------------------------------------------------------
+Version: 1.17.1
+Date: 2025-02-01
+  Bugfixes:
+    - Addressed incompatibility with Corrundum. https://github.com/ZacharyDK/Corrundum/issues/14[#issuecomment](https://github.com/nicholasgower/planet-muluna/issues/issuecomment)-2629103251
+---------------------------------------------------------------------------------------------------
+Version: 1.16.19
+Date: 2025-01-30
+  Balancing:
+    - Increased default output of space science pack recipe to 2
+---------------------------------------------------------------------------------------------------
+Version: 1.16.18
+Date: 2025-01-30
+  Balancing:
+    - Adjusted sulfuric acid in Cellulose recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.17
+Date: 2025-01-30
+  Balancing:
+    - Adjusted water requirement of Muluna wood recipe.
+    - Greatly increased recipe times in greenhouses to better match vanilla values for their representative plants.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.16
+Date: 2025-01-30
+  Compatibility:
+    - Added a interstellar space science to more technologies: "Space steam production(Corrundum)", "Abyssal diving gear"(Maraxsis), and both railgun infinite technologies.)"
+---------------------------------------------------------------------------------------------------
+Version: 1.16.15
+Date: 2025-01-29
+  Bugfixes:
+    - Hard-locks Muluna space science recipe to Muluna, regardless of other planets' surface conditions.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.14
+Date: 2025-01-29
+  Balancing:
+    - Reduced uranium requirement of Interstellar science pack by half.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.13
+Date: 2025-01-29
+  Balancing:
+    - Increased time requirement of wood recipe to 10 minutes.
+  Bugfixes:
+    - Made carbon motor recipe irreversible.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.12
+Date: 2025-01-29
+  Balancing:
+    - Adjusted output of artificial tree growth recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.11
+Date: 2025-01-29
+  Balancing:
+    - Adjusted sulfuric acid cost of Cellulose recipe.
+---------------------------------------------------------------------------------------------------
+Version: 1.16.10
+Date: 2025-01-27
+  Bugfixes:
+    - Fixed "wood processing" recipe surface condition to make tree seeds craftable anywhere. https://github.com/nicholasgower/planet-muluna/issues/51
+---------------------------------------------------------------------------------------------------
+Version: 1.16.9
+Date: 2025-01-27
+  Locale:
+    - Updated Chinese locale
+---------------------------------------------------------------------------------------------------
+Version: 1.16.8
+Date: 2025-01-27
+  Bugfixes:
+    - Fixed crash when rocket-part-productivity-aquilo is deleted by Roc's Hardcore mode.
+---------------------------------------------------------------------------------------------------
 Version: 1.16.7
 Date: 2025-01-26
   Locale:

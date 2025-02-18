@@ -114,7 +114,7 @@ data:extend{
         type = "technology",
         name = "advanced-stone-processing",
         unit= {
-            count = 200,
+            count = 500,
             time = 30,
             ingredients = data.raw["technology"]["productivity-module-2"].unit.ingredients
         },
@@ -152,16 +152,16 @@ data:extend{
     },
     {
         type = "technology",
-        name = "space-boiler",
+        name = "advanced-boiler",
         research_trigger = {
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
         },
-        localised_name = {"entity-name.space-boiler"},
+        localised_name = {"entity-name.advanced-boiler"},
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "space-boiler"
+                recipe = "advanced-boiler"
             },
             {
                 type = "unlock-recipe",
@@ -170,6 +170,42 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "ice-melting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "maraxsis-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "atmosphere-oxygen-separation"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "carbon-dioxide-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "hydrogen-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-electrolysis"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-oxygen"
             },
         },
         prerequisites = {
@@ -297,9 +333,11 @@ data:extend{
         },
         icons = {
             {
-                icon=data.raw["technology"]["biolab"].icon,
-                icon_size=data.raw["technology"]["biolab"].icon_size,
-                tint = {r=0.7,g=0.7,b=1}
+                icon = "__planet-muluna__/graphics/photometric-lab/photometric-lab-icon-big.png",
+                icon_size = 640
+                --icon=data.raw["technology"]["biolab"].icon,
+                --icon_size=data.raw["technology"]["biolab"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
             },
         }
         --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
@@ -436,7 +474,7 @@ data:extend{
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
                 --{"utility-science-pack", 1},
-                {"space-science-pack", 1},
+                --{"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }
         },
@@ -537,11 +575,50 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-water-saving"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-quick"
+            },
+            {
+                type = "unlock-recipe",
                 recipe="wood-processing"
             },
 
         },
+        
     },
+    {
+        type = "technology",
+        name = "space-chest",
+        localised_name = {"entity-name.space-chest"},
+        icon = "__planet-muluna__/graphics/technology/packaging.png",
+        icon_size = 1024,
+        unit = {
+            count = 500,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                {"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack",
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="space-chest"
+            },
+        }
+    },
+    
     -- {
     --     type = "technology",
     --     name = "wood-liquifaction",
@@ -610,4 +687,9 @@ data:extend{
     -- }
 
 }
+
+if not data.raw["technology"]["biolab"] then
+    data.raw["technology"]["cryolab"] = nil
+  end
+
 
