@@ -14,12 +14,24 @@ local techs_interstellar = {
     "shield-projector",
     "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3",
     "orbital-transfer",
-    
-
+    "planet-discovery-shipyard",
+    "starsystem-discovery-nexuz",
+    --"system-discovery-dea-dia",
+    --"planet-discovery-prosephina",
+    "planet-discovery-dea-dia",
+    "planet-pyroxsis",
+    "planet-discovery-lemures"
 }
 
 local techs_asteroid = {"trace-oxide-processing","trace-carbonic-processing","trace-metallic-processing",
     "promethium-advanced-processing"}
+
+local planets_nexuz = {
+    "planet-discovery-janus",
+    "planet-discovery-corrundum",
+    "planet-discovery-naufulglebunusilo",
+    "planet-discovery-arrakis"
+}
 
 for _,tech in pairs(techs_interstellar) do
     if data.raw["technology"][tech] then
@@ -35,4 +47,14 @@ for _,tech in pairs(techs_asteroid) do
         rro.soft_insert(data.raw["technology"][tech].prerequisites,"crusher-2") --Add science pack if it doesn't already exist.
     end
     
+end
+
+if mods["Starmap_Nexuz"] then
+    for _,tech in pairs(planets_nexuz) do
+        if data.raw["technology"][tech] then
+            rro.soft_insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1}) --Add science pack if it doesn't already exist.
+            rro.soft_insert(data.raw["technology"][tech].prerequisites,"interstellar-science-pack") --Add science pack if it doesn't already exist.
+        end
+        
+    end
 end

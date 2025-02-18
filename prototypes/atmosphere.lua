@@ -56,8 +56,13 @@ data:extend {{
     enabled = false,
     --main_product = "maraxsis-atmosphere",
     subgroup="fluid-recipes",
-    order=data.raw["recipe"]["ice-melting"].order .."a",
 }}
+
+if data.raw["recipe"]["ice-melting"].order then
+    data.raw["recipe"]["atmosphere-oxygen-separation"].order = data.raw["recipe"]["ice-melting"].order .."a"
+else 
+    data.raw["recipe"]["atmosphere-oxygen-separation"].order = "a"
+end
 
 
 
