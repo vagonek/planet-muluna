@@ -2,7 +2,7 @@ if mods["bztitanium"] or mods["bzcarbon"] or mods["bztin"] or mods["bzlead"] or 
     require("prototypes.recipe.vanilla-alternate-recipes")
 end
 
-
+require("prototypes.technology.interstellar-technologies")
 
 local rro = require("lib.remove-replace-object")
 
