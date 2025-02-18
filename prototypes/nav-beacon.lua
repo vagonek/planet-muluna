@@ -1,4 +1,5 @@
 require("__core__/lualib/util.lua")
+local flib_bounding_box = require("__flib__/bounding-box")
 
 local radarEntity = table.deepcopy(data.raw.radar.radar)
 local radarItem = table.deepcopy(data.raw.item.radar)
@@ -14,6 +15,7 @@ local navBeaconItem = util.merge({
         icon = "__planet-muluna__/graphics/icons/nav-beacon-icon.png",
         localised_description = { "item-description.nav-beacon", tostring(settings.startup["planet-power-consumption"].value), tostring(settings.startup["platform-power-consumption"].value) },
         icon_size = 64,
+        stack_size = 10,
     }
 })
 navBeaconItem.order = navBeaconItem.order .. "-z"
@@ -25,6 +27,8 @@ local navBeaconEntity = util.merge({
     radarEntity,
     {
         name = "nav-beacon",
+        selection_box = flib_bounding_box.resize(radarEntity.selection_box,3),
+        collision_box = flib_bounding_box.resize(radarEntity.collision_box,3),
         minable = { mining_time = 2, result = "nav-beacon" },
         fast_replaceable_group = "nav-beacon",
         energy_per_sector = "1TJ",
@@ -36,6 +40,13 @@ local navBeaconEntity = util.merge({
         {
             type = "electric",
             usage_priority = "secondary-input"
+        },
+        surface_conditions = {
+            {
+                property = "gravity",
+                min = 0,
+                max = 0,
+            }
         },
         energy_usage = settings.startup["planet-power-consumption"].value .. "MW",
         icon = "__planet-muluna__/graphics/icons/nav-beacon-icon.png",
@@ -55,10 +66,10 @@ local navBeaconEntity = util.merge({
                     direction_count = 1,
                     line_length = 1,
                     shift = util.by_pixel(1.0, -4.0),
-                    scale = 0.5
+                    scale = 1.5
                 }
             }
-        },    
+        },
 
     }
 })
@@ -86,8 +97,8 @@ local navBeaconRecipe = util.merge({
             { type = "item", name = "processing-unit", amount = 50 },
             { type = "item", name = "radar",           amount = 25 },
             { type = "item", name = "beacon",          amount = 10 },
-            { type = "item", name = "superconductor",          amount = 10 },
-            { type = "item", name = "aluminum-plate",          amount = 10 },
+            { type = "item", name = "superconductor",          amount = 100 },
+            { type = "item", name = "aluminum-plate",          amount = 100 },
         },
         results = { { type = "item", name = "nav-beacon", amount = 1 } },
     }

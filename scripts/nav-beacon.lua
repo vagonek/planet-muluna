@@ -143,34 +143,48 @@ script.on_event(defines.events.on_tick, function(event)
     if event.tick % 20 ~= 0 then return end
 
     for _,player in pairs(game.players) do
-        --chart_zoomed_in doesn't seem to work
-        --if player.render_mode == defines.render_mode.chart or player.render_mode == defines.render_mode.chart_zoomed_in then
-        local navSat = nil
-        for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
-            if nav_surface.name == player.surface.name then
-                local beacon = storage.nav_beacons[beacon_id]
-                if  beacon ~= nil
-                    and beacon.force == player.force
-                    and beacon.energy >= (util.parse_energy(settings.startup["platform-power-consumption"].value .. "MW") * 0.9)
-                then
-                        navSat = beacon
-                        break
-                end
+        if player.controller_type == defines.controllers.remote then
+            --chart_zoomed_in doesn't seem to work
+            --if player.render_mode == defines.render_mode.chart or player.render_mode == defines.render_mode.chart_zoomed_in then
+            local navSat = nil
+            local enough_light = false
+            for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
+                    if nav_surface.name == player.surface.name then
+                        local beacon = storage.nav_beacons[beacon_id]
+                        if  beacon ~= nil
+                            and beacon.force == player.force
+                            and beacon.energy >= (util.parse_energy(settings.startup["platform-power-consumption"].value .. "MW") * 0.9)
+                        then
+                                navSat = beacon
+                                player.add_custom_alert(beacon,
+                                {type = "item", name = "nav-beacon"},
+                                {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}},
+                                false
+                                )
+                                break
+                        else
+                            player.remove_alert{entity = beacon}
+                        end
+                    else 
+                        player.remove_alert{entity = beacon}
+                    end
             end
-        end
 
-        if navSat ~= nil then
-            local pos = player.position
-            --game.print(navSat.quality.level)
-            local offset = 100 + navSat.quality.level * 25
-            local chartBounds = {
-                left_top = { pos.x - offset, pos.y - offset},
-                right_bottom = { pos.x + offset, pos.y + offset}
-            }
-            player.force.chart(player.surface, chartBounds)
-
+            if navSat ~= nil then
+                local pos = player.position
+                --game.print(navSat.quality.level)
+                local offset = 100 + navSat.quality.level * 25
+                local chartBounds = {
+                    left_top = { pos.x - offset, pos.y - offset},
+                    right_bottom = { pos.x + offset, pos.y + offset}
+                }
+                player.force.chart(player.surface, chartBounds)
+            
+            end
+            --end
+        else
+            player.remove_alert{entity = beacon}
         end
-        --end
     end
 end)
 
@@ -194,13 +208,13 @@ script.on_event(defines.events.script_raised_built, function(event)
     built_nav_beacon(entity)
 end, filter_built)
 
----@param event on_built_entity
-script.on_event(defines.events.on_built_entity, function(event)
-    local entity = event.entity or event.created_entity
-    if not entity or not entity.valid then return end
+-- ---@param event on_built_entity
+-- script.on_event(defines.events.on_built_entity, function(event)
+--     local entity = event.entity or event.created_entity
+--     if not entity or not entity.valid then return end
 
-    built_nav_beacon(entity)
-end, filter_built)
+--     built_nav_beacon(entity)
+-- end, filter_built)
 
 ---@param event on_robot_built_entity
 script.on_event(defines.events.on_robot_built_entity, function(event)
