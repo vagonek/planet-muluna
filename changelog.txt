@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.22.3
+Date: 2025-02-22
+  Compatibility:
+    - se-space-train entities are now placeable on Muluna. https://github.com/nicholasgower/planet-muluna/issues/87
+  Bugfixes:
+    - Added default energy required value when basic crushing recipes lack an explicitly defined value.
+---------------------------------------------------------------------------------------------------
 Version: 1.22.2
 Date: 2025-02-21
   Balancing:
