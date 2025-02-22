@@ -205,8 +205,8 @@ rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item",
 rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 40})
 data.raw["technology"]["wood-gas-processing"].unit = nil
 data.raw["technology"]["wood-gas-processing"].research_trigger = {
-    type="craft-item",
-    item="wood"
+    type="mine-entity",
+    entity="lunar-rock"
 }
 data.raw["technology"]["advanced-wood-gas-processing"].unit = {
     count = 500,
