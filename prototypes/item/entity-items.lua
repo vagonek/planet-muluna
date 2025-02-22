@@ -16,6 +16,7 @@ crusher_2.name = "crusher-2"
 crusher_2.place_result = "crusher-2"
 crusher_2.icon = "__planet-muluna__/graphics/icons/crusher-2.png"
 crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
+crusher_2.order = "sb[crusher-2]"
 --local crusher_2=nil
 if data.raw["item"]["biolab"] then
     local cryolab=table.deepcopy(data.raw["item"]["biolab"])
