@@ -33,7 +33,8 @@
     "? bztin",
     "? bzlead",
     "? bzzirconium",
-    "? bzsilicon"
+    "? bzsilicon",
+    "? se-space-trains"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
