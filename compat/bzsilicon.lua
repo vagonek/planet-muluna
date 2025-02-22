@@ -37,6 +37,9 @@ if data.raw["furnace"]["basic-crusher"] then
         end
     end
     data.raw["furnace"]["basic-crusher"].crafting_speed = data.raw["furnace"]["basic-crusher"].crafting_speed / 8
+    if data.raw["furnace"]["bioluminescent-basic-crusher"] then
+        data.raw["furnace"]["bioluminescent-basic-crusher"].crafting_speed = data.raw["furnace"]["bioluminescent-basic-crusher"].crafting_speed / 8
+    end
 end
 
 if mods["bztitanium"] then
