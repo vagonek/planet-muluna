@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.22.4
+Date: 2025-02-22
+  Gui:
+    - Adjusted orders and subgroups of intermediate items.
+    - Changed subgroup of crushers to "assembling-machine."
+  Balancing:
+    - Reduced U-235 cost of Interstellar science pack by 50%.
+  Compatibility:
+    - Fixed incorrect speed of bioluminescent basic crusher.
+---------------------------------------------------------------------------------------------------
 Version: 1.22.3
 Date: 2025-02-22
   Compatibility:
