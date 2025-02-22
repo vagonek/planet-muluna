@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.22.5
+Date: 2025-02-22
+  Balancing:
+    - Changed "Wood gas processing" trigger to be mining a lunar rock.
+    - Removed utility science pack requirement from "Space Chest" technology.
+  Bugfixes:
+    - Hardcoded cryolab's box dimensions to fix a difficult to diagnose crash.
+---------------------------------------------------------------------------------------------------
 Version: 1.22.4
 Date: 2025-02-22
   Gui:
