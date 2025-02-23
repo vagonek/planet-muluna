@@ -292,7 +292,7 @@ table.insert(data.raw["technology"]["space-platform"].effects,{
 })
 
 require("compat.orbital-ion-cannon")
-require("compat.aai-industry")
+
 
 local one_gravity_condition =
 {
@@ -400,6 +400,7 @@ require("compat.maraxsis")
 require("compat.tenebris")
 require("compat.space-age-galore")
 require("compat.space-trains")
+require("compat.schall-mods")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 
