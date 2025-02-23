@@ -65,3 +65,6 @@ data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 --     data.raw["technology"]["space-chest"] = nil
 -- end
 
+data.raw["recipe"]["copper-cable"].localised_name={"recipe-name.copper-cable"}
+
+require("compat.aai-industry")
