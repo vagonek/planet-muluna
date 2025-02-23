@@ -1,3 +1,6 @@
+local dual_icon = require("lib.dual-item-icon").dual_icon
+local dual_icon_reversed = require("lib.dual-item-icon").dual_icon_reversed
+
 local function crushing_icon(icon_dir,icon_size)
 return {
     {
@@ -98,7 +101,14 @@ local aluminum_cable = table.deepcopy(data.raw["recipe"]["copper-cable"])
 
 aluminum_cable.name = "aluminum-cable"
 aluminum_cable.ingredients = {{type = "item",name = "aluminum-plate",amount = 1}}
-aluminum_cable.results = {{type = "item",name = "aluminum-cable",amount = 2}}
+aluminum_cable.auto_recycle = false
+
+aluminum_cable.localised_name = {"item-name.aluminum-cable"}
+aluminum_cable.icons = dual_icon("copper-cable","aluminum-plate")
+aluminum_cable.subgroup="muluna-products"
+aluminum_cable.allow_decomposition = false
+aluminum_cable.allow_as_intermediate = false
+--aluminum_cable.results = {{type = "item",name = "aluminum-cable",amount = 2}}
 
 -- table.insert(data.raw["technology"]["asteroid-productivity"].effects, {
 --     effect = "enable-recipe",

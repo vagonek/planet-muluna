@@ -246,14 +246,14 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "low-density-structure-from-aluminum",
             },
-            {
-                type = "unlock-recipe",
-                recipe = "electronic-circuit-aluminum",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "advanced-circuit-aluminum",
-            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "electronic-circuit-aluminum",
+            -- },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "advanced-circuit-aluminum",
+            -- },
         },
         prerequisites = {
             "crusher"

@@ -78,25 +78,25 @@ data:extend{{
     weight=data.raw.item["iron-plate"].weight,
     default_import_location = "muluna",
 },
-{
-    type="item",
-    name="aluminum-cable",
-    icon="__planet-muluna__/graphics/icons/aluminum-cable.png",
-    icon_size=64,
-    -- icons ={
-    --     {
+-- {
+--     type="item",
+--     name="aluminum-cable",
+--     icon="__planet-muluna__/graphics/icons/aluminum-cable.png",
+--     icon_size=64,
+--     -- icons ={
+--     --     {
             
-    --     }
+--     --     }
         
-    -- },
+--     -- },
     
-    stack_size=data.raw.item["copper-cable"].stack_size,
-    order=data.raw.item["copper-cable"].order,
-    subgroup="muluna-products",
-    group=data.raw.item["copper-cable"].group,
-    weight=data.raw.item["copper-cable"].weight,
-    default_import_location = "muluna",
-},
+--     stack_size=data.raw.item["copper-cable"].stack_size,
+--     order=data.raw.item["copper-cable"].order,
+--     subgroup="muluna-products",
+--     group=data.raw.item["copper-cable"].group,
+--     weight=data.raw.item["copper-cable"].weight,
+--     default_import_location = "muluna",
+-- },
 {
     type="item",
     name="cellulose",

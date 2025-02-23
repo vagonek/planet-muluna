@@ -82,25 +82,25 @@ bricks_crushed_stone.icons = dual_icon("stone-brick","stone-crushed")
 bricks_crushed_stone.auto_recycle=false
 
 
-local aluminum_green_circuit = table.deepcopy(data.raw["recipe"]["electronic-circuit"])
-local aluminum_red_circuit = table.deepcopy(data.raw["recipe"]["advanced-circuit"])
+-- local aluminum_green_circuit = table.deepcopy(data.raw["recipe"]["electronic-circuit"])
+-- local aluminum_red_circuit = table.deepcopy(data.raw["recipe"]["advanced-circuit"])
 
-aluminum_green_circuit.auto_recycle=false
-aluminum_red_circuit.auto_recycle=false
-aluminum_red_circuit.allow_decomposition = false
-aluminum_green_circuit.allow_decomposition = false
-aluminum_red_circuit.allow_as_intermediate = false
-aluminum_green_circuit.allow_as_intermediate = false
---rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
---rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
---rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
-rro.replace_name(aluminum_green_circuit.ingredients,"copper-cable","aluminum-cable")
-rro.replace_name(aluminum_red_circuit.ingredients,"copper-cable","aluminum-cable")
-aluminum_green_circuit.name="electronic-circuit-aluminum"
-aluminum_red_circuit.name="advanced-circuit-aluminum"
+-- aluminum_green_circuit.auto_recycle=false
+-- aluminum_red_circuit.auto_recycle=false
+-- aluminum_red_circuit.allow_decomposition = false
+-- aluminum_green_circuit.allow_decomposition = false
+-- aluminum_red_circuit.allow_as_intermediate = false
+-- aluminum_green_circuit.allow_as_intermediate = false
+-- --rro.replace(aluminum_green_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
+-- --rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 4},{type = "item",name = "aluminum-cable",amount = 4})
+-- --rro.replace(aluminum_red_circuit.ingredients,{type = "item",name = "copper-cable",amount = 3},{type = "item",name = "aluminum-cable",amount = 3})
+-- rro.replace_name(aluminum_green_circuit.ingredients,"copper-cable","aluminum-cable")
+-- rro.replace_name(aluminum_red_circuit.ingredients,"copper-cable","aluminum-cable")
+-- aluminum_green_circuit.name="electronic-circuit-aluminum"
+-- aluminum_red_circuit.name="advanced-circuit-aluminum"
 
-aluminum_green_circuit.icons = dual_icon("electronic-circuit","aluminum-cable")
-aluminum_red_circuit.icons = dual_icon("advanced-circuit","aluminum-cable")
+-- aluminum_green_circuit.icons = dual_icon("electronic-circuit","aluminum-cable")
+-- aluminum_red_circuit.icons = dual_icon("advanced-circuit","aluminum-cable")
 
 local bio_plastic = table.deepcopy(data.raw["recipe"]["plastic-bar"])
 bio_plastic.allow_decomposition = false
@@ -108,13 +108,25 @@ bio_plastic.name = "plastic-from-wood"
 bio_plastic.icons = dual_icon("plastic-bar","wood")
 rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{type = "item",name = "cellulose",amount = 4})
 
-local recipes = {motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
-
+--local recipes = {motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
+local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic}
+--, ,aluminum_green_circuit,aluminum_red_circuit,
 for _,recipe in pairs(recipes) do
     recipe.subgroup = "muluna-products"
 end
 
 data:extend(recipes)
+
+
+--Productivity technologies 
+
+table.insert(data.raw["technology"]["low-density-structure-productivity"].effects,
+    {
+        type = "change-recipe-productivity",
+        recipe = "low-density-structure-from-aluminum",
+        change = 0.1
+    }
+)
 
 
 
