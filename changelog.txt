@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.0
+Date: 2025-02-23
+  Features:
+    - Removed "Aluminum cable" item. "Aluminum cable" recipe now produces electrical cable. Migrated all recipes using aluminum cable to copper cable counterparts.
+  Compatibility:
+    - Removed all surface conditions from Schall electric boiler when it is installed to make it usable on Muluna.
+    - Updated surface conditions of AAI industry entities.
+  Locale:
+    - Changed name of "Copper cable" to "Electrical cable."
+---------------------------------------------------------------------------------------------------
 Version: 1.22.5
 Date: 2025-02-22
   Balancing:
