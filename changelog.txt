@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.1
+Date: 2025-02-24
+  Bugfixes:
+    - Undid reset of vanilla ore values. https://github.com/nicholasgower/planet-muluna/issues/79 https://github.com/nicholasgower/planet-muluna/issues/37
+---------------------------------------------------------------------------------------------------
 Version: 1.23.0
 Date: 2025-02-23
   Features:
