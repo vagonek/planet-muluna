@@ -2,7 +2,7 @@
 --local sounds = require("prototypes.entity.sounds")
 local simulations = require("__base__.prototypes.factoriopedia-simulations")
 
-local resource = require("__base__.prototypes.entity.resources")
+--local resource = require("__base__.prototypes.entity.resources")
 local resource_autoplace = require("resource-autoplace")
 
 local function resource(resource_parameters, autoplace_parameters)
