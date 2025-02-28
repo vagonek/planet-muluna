@@ -119,7 +119,7 @@ local muluna=
     starmap_icon_size = 1482,
     subgroup = "satellites",
     magnitude = o_parent_planet.magnitude*3/5,
-    pollutant_type = "radiation",
+    --pollutant_type = "radiation",
     persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
     localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet="..parent_planet.."]"},
     surface_properties = {
