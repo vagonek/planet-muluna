@@ -4,7 +4,8 @@ local nauvis = data.raw["planet"]["nauvis"]
 local nauvis_gen = nauvis.map_gen_settings
 local asteroid_util = require "__space-age__.prototypes.planet.asteroid-spawn-definitions"
 local tau = 2*math.pi
-
+local meld = require("meld")
+local planet_catalogue_vulcanus = require("__space-age__.prototypes.planet.procession-catalogue-vulcanus")
 
 
 
@@ -149,8 +150,29 @@ local muluna=
           scale = 0.25*o_parent_planet.magnitude/(nauvis.magnitude),
         }
     },
+    surface_render_parameters = {
+      shadow_opacity = 0.9,
+    },
+    platform_procession_set =
+    {
+      arrival = {"planet-to-platform-b"},
+      departure = {"platform-to-planet-a"}
+    },
+    planet_procession_set =
+    {
+      arrival = {"platform-to-planet-b"},
+      departure = {"planet-to-platform-a"}
+    },
+    procession_graphic_catalogue = planet_catalogue_vulcanus,
+
     --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
 }
+
+
+
+
+muluna.distance = nil
+muluna.orientation = nil
 
 
 local bot_power = 0.2
