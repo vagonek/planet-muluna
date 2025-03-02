@@ -8,10 +8,10 @@ for _,tech in pairs(data.raw["technology"]) do
     
 end
 
-data.raw["recipe"]["crusher"].subgroup = "production-machine"
-data.raw["item"]["crusher"].subgroup = "production-machine"
-data.raw["assembling-machine"]["crusher"].subgroup = "production-machine"
-data.raw["item"]["crusher"].order = "sa[crusher]"
+data.raw["recipe"]["crusher"].subgroup = "smelting-machine"
+data.raw["item"]["crusher"].subgroup = "smelting-machine"
+data.raw["assembling-machine"]["crusher"].subgroup = "smelting-machine"
+data.raw["item"]["crusher"].order = "ca[crusher]"
 
 rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-science-pack","aai-signal-transmission")
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
