@@ -40,6 +40,9 @@ local map_gen = {
             ["muluna-dirt-4"] = {},
             ["muluna-dirt-5"] = {},
             ["muluna-dirt-6"] = {},
+            ["muluna-dirt-7"] = {},
+            ["muluna-dirt-8"] = {},
+            ["muluna-dirt-9"] = {},
         }
       },
       ["decorative"] =
