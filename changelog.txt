@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.7
+Date: 2025-03-02
+  Graphics:
+    - Added three additional tiles to Muluna terrain generation, using Alien Biomes' mineral-grey-sand textures.
+  Changes:
+    - Changed subgroup of crushers to "smelting-machine" and adjusted order to account for that.
+---------------------------------------------------------------------------------------------------
 Version: 1.23.6
 Date: 2025-03-01
   Locale:
