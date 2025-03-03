@@ -13,7 +13,7 @@ data.raw["item"]["crusher"].subgroup = "smelting-machine"
 data.raw["assembling-machine"]["crusher"].subgroup = "smelting-machine"
 data.raw["item"]["crusher"].order = "ca[crusher]"
 
-rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-science-pack","aai-signal-transmission")
+
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
 rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
 table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"advanced-boiler")
@@ -32,13 +32,23 @@ table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
     recipe="rocket-part-muluna"
 })
 data.raw["technology"]["space-platform-thruster"].unit=nil
-data.raw["technology"]["space-platform-thruster"].research_trigger = {
-    type="build-entity",
-    entity="aai-signal-receiver"
-}
 
-rro.replace(data.raw["technology"]["aai-signal-transmission"].prerequisites,"space-science-pack","space-platform")
-rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"space-science-pack",1})
+
+if mods["aai-signal-transmission"] then
+    rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-science-pack","aai-signal-transmission")
+    data.raw["technology"]["space-platform-thruster"].research_trigger = {
+        type="build-entity",
+        entity="aai-signal-receiver"
+    }
+    rro.replace(data.raw["technology"]["aai-signal-transmission"].prerequisites,"space-science-pack","space-platform")
+    rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"space-science-pack",1})
+else
+    table.insert(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-platform")
+   
+    data.raw["technology"]["space-platform-thruster"].research_trigger = data.raw["technology"]["space-platform"].research_trigger
+    table.insert(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-platform")
+end
+
 --rro.remove(data.raw["technology"]["space-platform-thruster"].unit.ingredients,{"space-science-pack",1})
 
 
@@ -147,17 +157,22 @@ local space_platform=data.raw["technology"]["space-platform"]
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="metallic-asteroid-crushing"})
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="carbonic-asteroid-crushing"})
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="oxide-asteroid-crushing"})
-space_platform.effects = table.deepcopy(data.raw["technology"]["aai-signal-transmission"].effects)
-rro.remove(space_platform.effects,{type="unlock-recipe",recipe="aai-signal-receiver"})
 
-rro.remove(data.raw["technology"]["aai-signal-transmission"].effects,{type="unlock-recipe",recipe="aai-signal-sender"})
-data.raw["technology"]["aai-signal-transmission"].unit=nil
-data.raw["technology"]["aai-signal-transmission"].research_trigger = {
-    --type="send-item-to-orbit",
-    type="build-entity",
-    --item="aai-signal-sender"
-    entity="aai-signal-sender"
-}
+if mods["aai-signal-transmission"] then
+    space_platform.effects = table.deepcopy(data.raw["technology"]["aai-signal-transmission"].effects)
+    rro.remove(space_platform.effects,{type="unlock-recipe",recipe="aai-signal-receiver"})
+    rro.remove(data.raw["technology"]["aai-signal-transmission"].effects,{type="unlock-recipe",recipe="aai-signal-sender"})
+    data.raw["technology"]["aai-signal-transmission"].unit=nil
+    data.raw["technology"]["aai-signal-transmission"].research_trigger = {
+        --type="send-item-to-orbit",
+        type="build-entity",
+        --item="aai-signal-sender"
+        entity="aai-signal-sender"
+    }
+else
+    space_platform.effects = nil
+end
+
 data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
