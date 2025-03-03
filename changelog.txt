@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.12
+Date: 2025-03-03
+  Compatibility:
+    - Removed hard dependency on aai-signal-transmission. When aai-signal-transmission is loaded, there are no changes to how it is integrated into Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.23.11
 Date: 2025-03-03
   Compatibility:
