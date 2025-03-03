@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.9
+Date: 2025-03-03
+  Compatibility:
+    - Increased PlanetsLib version requirement to 1.2.12.
+  Bugfixes:
+    - Fixed duplicate changelog entries
+---------------------------------------------------------------------------------------------------
 Version: 1.23.8
 Date: 2025-03-02
   Graphics:
