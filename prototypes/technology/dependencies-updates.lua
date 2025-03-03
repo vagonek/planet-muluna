@@ -256,16 +256,22 @@ table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
 --table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
 
 data.raw["recipe"]["wood-greenhouse"].energy_required=10*60
+data.raw["recipe"]["wood-seed-greenhouse"].energy_required=10*60
 data.raw["recipe"]["wood-greenhouse"].surface_conditions={{property = "oxygen",min=1}}
 data.raw["recipe"]["jellynut-seed-greenhouse"].energy_required=5*60
 data.raw["recipe"]["yumako-seed-greenhouse"].energy_required=5*60
-
-
+rro.remove(data.raw["technology"]["wood-gas-processing"].effects,{type = "unlock-recipe", recipe = "greenhouse"})
+rro.remove(data.raw["technology"]["agriculture"].effects,{type = "unlock-recipe", recipe = "greenhouse"})
+data.raw["recipe"]["greenhouse"] = nil
+data.raw["item"]["I-greenhouse"] = nil
+data.raw["assembling-machine"]["E-greenhouse"].minable = {mining_time = 0.5}
+data.raw["assembling-machine"]["E-greenhouse"].localised_name = {"entity-name.n-deprecated",{"entity-name.E-greenhouse"}}
 local seed_recipes = {"jellynut","yumako"}
 
 for _,seed in pairs(seed_recipes) do
-    data.raw["recipe"][seed.."-seed-greenhouse"].surface_conditions = {{property = "oxygen",min=1}}
+    data.raw["recipe"][seed.."-seed-greenhouse"].surface_conditions = {{property = "oxygen",min=1}}--,{property = "pressure", min = 2000, max = 2000}}
 end
+
 
 --data.raw["item"]["E-greenhouse"]=nil
 -- data.raw["recipe"]["greenhouse"].enabled = false
