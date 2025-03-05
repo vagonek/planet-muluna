@@ -69,9 +69,9 @@ data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 
 
 local electricity_description = {""} --Based on Maraxsis code for custom quality labels
-
+        local i = 0
         for _, quality in pairs(data.raw.quality) do
-            if quality.hidden then goto continue end
+            if quality.hidden or i >= 10 then goto continue end
             local quality_name = quality.localised_name or {"quality-name." .. quality.name}
 
             local quality_level = quality.level
@@ -80,6 +80,7 @@ local electricity_description = {""} --Based on Maraxsis code for custom quality
             local tiles = tostring(50 + 50*quality_level)
             table.insert(electricity_description, {"recipe-description.global-nav-beacon-quality-description", quality.name, drain, tiles})
             table.insert(electricity_description, "\n")
+            i = i + 1
             ::continue::
         end
         electricity_description[#electricity_description] = nil
