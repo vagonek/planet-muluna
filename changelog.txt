@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.24.0
+Date: 2025-03-05
+  Features:
+    - Added Satellite Radar, based on Zoryn's Navigation beacon.
+    - Changed size of nav beacon and added an alert when one is available.
+  Balancing:
+    - Increased crafting time of Satellite radar.
+---------------------------------------------------------------------------------------------------
 Version: 1.23.12
 Date: 2025-03-03
   Compatibility:
