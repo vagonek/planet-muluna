@@ -31,23 +31,39 @@ data:extend{
         max = 60,
         order = "ad",
       },
-      {
-        type = "double-setting",
-        name = "planet-power-consumption",
-        setting_type = "startup",
-        default_value = 300,
-        minimum_value = 1,
-        maximum_value = 1000,
-        order = "a"
-    },
+    --   {
+    --     type = "double-setting",
+    --     name = "planet-power-consumption",
+    --     setting_type = "startup",
+    --     default_value = 300,
+    --     minimum_value = 1,
+    --     maximum_value = 1000,
+    --     order = "a"
+    -- },
     {
         type = "double-setting",
         name = "platform-power-consumption",
         setting_type = "startup",
-        default_value = 50,
+        default_value = 100,
         minimum_value = 0.3,
         maximum_value = 1000,
-        order = "a"
+        order = "af"
+    },
+    {
+      type = "bool-setting",
+      name = "enable-nav-beacon",
+      setting_type = "startup",
+      default_value = true,
+      order = "ae"
+  },
+    {
+      type = "double-setting",
+      name = "nav-beacon-update-ticks",
+      setting_type="runtime-global",
+      default_value = 60,
+      minimum_value = 1,
+      maximum_value = 360,
+      order = "a",
     }
 }
 

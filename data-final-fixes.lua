@@ -65,3 +65,31 @@ data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 --     data.raw["technology"]["space-chest"] = nil
 -- end
 
+
+
+local electricity_description = {""} --Based on Maraxsis code for custom quality labels
+
+        for _, quality in pairs(data.raw.quality) do
+            if quality.hidden then goto continue end
+            local quality_name = quality.localised_name or {"quality-name." .. quality.name}
+
+            local quality_level = quality.level
+            if quality_level >= 5 and not mods["infinite-quality-tiers"] then quality_level = quality_level - 1 end
+            local drain = tostring(settings.startup["platform-power-consumption"].value *(1-0.1667*quality_level))
+            local tiles = tostring(50 + 50*quality_level)
+            table.insert(electricity_description, {"recipe-description.global-nav-beacon-quality-description", quality.name, drain, tiles})
+            table.insert(electricity_description, "\n")
+            ::continue::
+        end
+        electricity_description[#electricity_description] = nil
+
+        --electricity_description = maraxsis.shorten_localised_string(electricity_description)
+
+if data.raw["accumulator"]["nav-beacon"] then
+    data.raw["accumulator"]["nav-beacon"].factoriopedia_description = {"",{"entity-description.nav-beacon"},"\n",electricity_description}
+end
+if data.raw["item"]["nav-beacon"] then
+    data.raw["item"]["nav-beacon"].factoriopedia_description = {"",{"item-description.nav-beacon"},"\n",electricity_description}
+end
+
+-- navBeaconItem.localised_description = {"",{"item-description.nav-beacon"},"\n",electricity_description}

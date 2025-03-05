@@ -89,7 +89,7 @@ local function built_nav_beacon(entity)
             raise_destroy = false
         })
         local nav = surface.create_entity({
-            name = "nav-beacon-platform",
+            name = "nav-beacon",
             position = position,
             force = force,
             raise_built = false,
@@ -140,7 +140,7 @@ local filter_built = {
 
 ---@param event on_tick
 script.on_event(defines.events.on_tick, function(event)
-    if event.tick % 20 ~= 0 then return end
+    if event.tick % settings.global["nav-beacon-update-ticks"].value ~= 0 then return end
 
     for _,player in pairs(game.players) do
         if player.controller_type == defines.controllers.remote then
@@ -150,10 +150,9 @@ script.on_event(defines.events.on_tick, function(event)
             local enough_light = false
             for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
                     if nav_surface.name == player.surface.name then
-                        local beacon = storage.nav_beacons[beacon_id]
-                        if  beacon ~= nil
+                        local beacon = storage.nav_beacons[beacon_id] 
+                        if  beacon ~= nil     
                             and beacon.force == player.force
-                            and beacon.energy >= (util.parse_energy(settings.startup["platform-power-consumption"].value .. "MW") * 0.9)
                         then
                                 navSat = beacon
                                 player.add_custom_alert(beacon,
@@ -171,14 +170,20 @@ script.on_event(defines.events.on_tick, function(event)
             end
 
             if navSat ~= nil then
-                local pos = player.position
-                --game.print(navSat.quality.level)
-                local offset = 100 + navSat.quality.level * 25
-                local chartBounds = {
-                    left_top = { pos.x - offset, pos.y - offset},
-                    right_bottom = { pos.x + offset, pos.y + offset}
-                }
-                player.force.chart(player.surface, chartBounds)
+                if navSat.energy >= (util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ") * 1) then
+                    local pos = player.position
+                    --if player.force.is_chunk_visible(player.surface,{pos.x/32,pos.y/32}) == false then
+                        navSat.energy = navSat.energy - util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ")
+                        --game.print(navSat.quality.level)
+                        local offset = 50 + navSat.quality.level * 50
+                        local chartBounds = {
+                            left_top = { pos.x - offset/2, pos.y - offset/2},
+                            right_bottom = { pos.x + offset/2, pos.y + offset/2}
+                        }
+                        player.force.chart(player.surface, chartBounds)
+                    --end
+                end
+                    
             
             end
             --end

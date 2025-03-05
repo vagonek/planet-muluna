@@ -33,7 +33,8 @@
     "? bztin",
     "? bzlead",
     "? bzzirconium",
-    "? bzsilicon"
+    "? bzsilicon",
+    "? infinite-quality-tiers"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
