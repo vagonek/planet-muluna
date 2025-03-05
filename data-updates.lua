@@ -129,11 +129,11 @@ for _,pack in pairs(data.raw["tool"]) do
     local recipe = data.raw["recipe"][pack.name]
     if recipe then
         if recipe.surface_conditions == nil then
-            recipe.surface_conditions = {
-                {property = "oxygen",
-                    min = 1,
-                },
-            }
+            -- recipe.surface_conditions = {
+            --     {property = "oxygen",
+            --         min = 1,
+            --     },
+            -- }
         end
     end
 end
