@@ -34,6 +34,7 @@
     "? bzlead",
     "? bzzirconium",
     "? bzsilicon",
+    "? infinite-quality-tiers",
     "? se-space-trains"
   ],
   "quality_required": true,
