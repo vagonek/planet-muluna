@@ -23,7 +23,7 @@ i_lunar_pack.name = "interstellar-science-pack"
 i_lunar_pack.default_import_location = "muluna"
 i_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
 r_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
-r_lunar_pack.energy_required = r_lunar_pack.energy_required * 2
+r_lunar_pack.energy_required = r_lunar_pack.energy_required * 4
 --data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png" --Why was this here?
 t_lunar_pack.icon = "__planet-muluna__/graphics/technology/space-science-pack.png"
 
@@ -41,13 +41,13 @@ if data.raw["tool"]["hydraulic-science-pack"] then
 end
 
 
-r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 6}}
+r_lunar_pack.results = {{type = "item", name = "interstellar-science-pack", amount = 12}}
 r_lunar_pack.main_product = "interstellar-science-pack"
 r_lunar_pack.category = "crafting-with-fluid"
 r_lunar_pack.ingredients = {
-    {type = "fluid", name = "helium", amount = 200},
-    {type = "item", name = "rocket-fuel", amount = 4},
-    {type = "item", name = "aluminum-plate", amount = 20},
+    {type = "fluid", name = "helium", amount = 400},
+    {type = "item", name = "rocket-fuel", amount = 8},
+    {type = "item", name = "aluminum-plate", amount = 40},
     {type = "item", name = "uranium-235", amount = 1}
 }
 

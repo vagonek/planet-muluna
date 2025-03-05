@@ -8,7 +8,12 @@ for _,tech in pairs(data.raw["technology"]) do
     
 end
 
-rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-science-pack","aai-signal-transmission")
+data.raw["recipe"]["crusher"].subgroup = "smelting-machine"
+data.raw["item"]["crusher"].subgroup = "smelting-machine"
+data.raw["assembling-machine"]["crusher"].subgroup = "smelting-machine"
+data.raw["item"]["crusher"].order = "ca[crusher]"
+
+
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
 rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
 table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"advanced-boiler")
@@ -27,13 +32,23 @@ table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
     recipe="rocket-part-muluna"
 })
 data.raw["technology"]["space-platform-thruster"].unit=nil
-data.raw["technology"]["space-platform-thruster"].research_trigger = {
-    type="build-entity",
-    entity="aai-signal-receiver"
-}
 
-rro.replace(data.raw["technology"]["aai-signal-transmission"].prerequisites,"space-science-pack","space-platform")
-rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"space-science-pack",1})
+
+if mods["aai-signal-transmission"] then
+    rro.replace(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-science-pack","aai-signal-transmission")
+    data.raw["technology"]["space-platform-thruster"].research_trigger = {
+        type="build-entity",
+        entity="aai-signal-receiver"
+    }
+    rro.replace(data.raw["technology"]["aai-signal-transmission"].prerequisites,"space-science-pack","space-platform")
+    rro.remove(data.raw["technology"]["aai-signal-transmission"].unit.ingredients,{"space-science-pack",1})
+else
+    table.insert(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-platform")
+   
+    data.raw["technology"]["space-platform-thruster"].research_trigger = data.raw["technology"]["space-platform"].research_trigger
+    table.insert(data.raw["technology"]["space-platform-thruster"].prerequisites,"space-platform")
+end
+
 --rro.remove(data.raw["technology"]["space-platform-thruster"].unit.ingredients,{"space-science-pack",1})
 
 
@@ -142,17 +157,22 @@ local space_platform=data.raw["technology"]["space-platform"]
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="metallic-asteroid-crushing"})
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="carbonic-asteroid-crushing"})
 -- rro.remove(space_platform.effects,{type="unlock-recipe",recipe="oxide-asteroid-crushing"})
-space_platform.effects = table.deepcopy(data.raw["technology"]["aai-signal-transmission"].effects)
-rro.remove(space_platform.effects,{type="unlock-recipe",recipe="aai-signal-receiver"})
 
-rro.remove(data.raw["technology"]["aai-signal-transmission"].effects,{type="unlock-recipe",recipe="aai-signal-sender"})
-data.raw["technology"]["aai-signal-transmission"].unit=nil
-data.raw["technology"]["aai-signal-transmission"].research_trigger = {
-    --type="send-item-to-orbit",
-    type="build-entity",
-    --item="aai-signal-sender"
-    entity="aai-signal-sender"
-}
+if mods["aai-signal-transmission"] then
+    space_platform.effects = table.deepcopy(data.raw["technology"]["aai-signal-transmission"].effects)
+    rro.remove(space_platform.effects,{type="unlock-recipe",recipe="aai-signal-receiver"})
+    rro.remove(data.raw["technology"]["aai-signal-transmission"].effects,{type="unlock-recipe",recipe="aai-signal-sender"})
+    data.raw["technology"]["aai-signal-transmission"].unit=nil
+    data.raw["technology"]["aai-signal-transmission"].research_trigger = {
+        --type="send-item-to-orbit",
+        type="build-entity",
+        --item="aai-signal-sender"
+        entity="aai-signal-sender"
+    }
+else
+    space_platform.effects = nil
+end
+
 data.raw["technology"]["space-science-pack"].research_trigger = {
     type="build-entity",
     entity="crusher"
@@ -200,8 +220,8 @@ rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item",
 rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 40})
 data.raw["technology"]["wood-gas-processing"].unit = nil
 data.raw["technology"]["wood-gas-processing"].research_trigger = {
-    type="craft-item",
-    item="wood"
+    type="mine-entity",
+    entity="lunar-rock"
 }
 data.raw["technology"]["advanced-wood-gas-processing"].unit = {
     count = 500,
@@ -251,16 +271,22 @@ table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
 --table.insert(data.raw["technology"]["wood-gas-processing-to-crude-oil"].prerequisites,"interstellar-science-pack")
 
 data.raw["recipe"]["wood-greenhouse"].energy_required=10*60
+data.raw["recipe"]["wood-seed-greenhouse"].energy_required=10*60
 data.raw["recipe"]["wood-greenhouse"].surface_conditions={{property = "oxygen",min=1}}
 data.raw["recipe"]["jellynut-seed-greenhouse"].energy_required=5*60
 data.raw["recipe"]["yumako-seed-greenhouse"].energy_required=5*60
-
-
+rro.remove(data.raw["technology"]["wood-gas-processing"].effects,{type = "unlock-recipe", recipe = "greenhouse"})
+rro.remove(data.raw["technology"]["agriculture"].effects,{type = "unlock-recipe", recipe = "greenhouse"})
+data.raw["recipe"]["greenhouse"] = nil
+data.raw["item"]["I-greenhouse"] = nil
+data.raw["assembling-machine"]["E-greenhouse"].minable = {mining_time = 0.5}
+data.raw["assembling-machine"]["E-greenhouse"].localised_name = {"entity-name.n-deprecated",{"entity-name.E-greenhouse"}}
 local seed_recipes = {"jellynut","yumako"}
 
 for _,seed in pairs(seed_recipes) do
-    data.raw["recipe"][seed.."-seed-greenhouse"].surface_conditions = {{property = "oxygen",min=1}}
+    data.raw["recipe"][seed.."-seed-greenhouse"].surface_conditions = {{property = "oxygen",min=1}}--,{property = "pressure", min = 2000, max = 2000}}
 end
+
 
 --data.raw["item"]["E-greenhouse"]=nil
 -- data.raw["recipe"]["greenhouse"].enabled = false
@@ -271,3 +297,5 @@ end
 -- })
 
 data.raw["tool"]["space-science-pack"].default_import_location = "muluna"
+
+data.raw["item"]["copper-cable"].localised_name = {"item-name.copper-cable"}

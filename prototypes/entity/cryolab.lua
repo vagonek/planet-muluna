@@ -3,12 +3,15 @@ if data.raw["lab"]["biolab"] then
   local cryolab=table.deepcopy(data.raw["lab"]["biolab"])
 
 cryolab.name="cryolab"
-if cryolab.selection_box then
-  cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
-end
-if cryolab.collision_box then
-  cryolab.collision_box=flib_bounding_box.resize(cryolab.collision_box,1)
-end
+-- if cryolab.selection_box then
+--   cryolab.selection_box=flib_bounding_box.resize(cryolab.selection_box,1)
+-- end
+-- if cryolab.collision_box then
+--   cryolab.collision_box=flib_bounding_box.resize(cryolab.collision_box,1)
+-- end
+
+cryolab.collision_box = {{-3.2, -3.2}, {3.2, 3.2}}
+cryolab.selection_box = {{-3.5, -3.5}, {3.5, 3.5}}
 
 
 if mods["fluid-nutrients"] then

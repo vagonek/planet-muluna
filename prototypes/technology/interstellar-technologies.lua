@@ -20,7 +20,12 @@ local techs_interstellar = {
     --"planet-discovery-prosephina",
     "planet-discovery-dea-dia",
     "planet-pyroxsis",
-    "planet-discovery-lemures"
+    --"planet-discovery-lemures",
+    "promethium-processing",
+    "isotope-processing",
+    "promethium-weapons-tech",
+    "promethium-space-travel",
+    "promethium-power-handling"
 }
 
 local techs_asteroid = {"trace-oxide-processing","trace-carbonic-processing","trace-metallic-processing",

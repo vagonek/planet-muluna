@@ -29,10 +29,17 @@ if data.raw["furnace"]["basic-crusher"] then
         end
     for _,recipe in pairs(data.raw["recipe"]) do
         if recipe.category == "basic-crushing" then
-            recipe.energy_required = recipe.energy_required / 8
+            if recipe.energy_required then
+                recipe.energy_required = recipe.energy_required / 8
+            else
+                recipe.energy_required = 0.5 / 8
+            end
         end
     end
     data.raw["furnace"]["basic-crusher"].crafting_speed = data.raw["furnace"]["basic-crusher"].crafting_speed / 8
+    if data.raw["furnace"]["bioluminescent-basic-crusher"] then
+        data.raw["furnace"]["bioluminescent-basic-crusher"].crafting_speed = data.raw["furnace"]["bioluminescent-basic-crusher"].crafting_speed / 8
+    end
 end
 
 if mods["bztitanium"] then

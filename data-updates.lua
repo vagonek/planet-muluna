@@ -285,14 +285,20 @@ for i = 1,10,1 do --For compatibility with Roc's hardcore tech tree.
     end
 end
 
-
+if data.raw["technology"]["space-platform"].effects then
 table.insert(data.raw["technology"]["space-platform"].effects,{
     type = "unlock-recipe",
     recipe = "cargo-bay"
 })
+else
+    data.raw["technology"]["space-platform"].effects = {{
+        type = "unlock-recipe",
+        recipe = "cargo-bay"
+    }}
+end
 
 require("compat.orbital-ion-cannon")
-require("compat.aai-industry")
+
 
 local one_gravity_condition =
 {
@@ -399,6 +405,8 @@ require("compat.corrundum")
 require("compat.maraxsis")
 require("compat.tenebris")
 require("compat.space-age-galore")
+require("compat.space-trains")
+require("compat.schall-mods")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 

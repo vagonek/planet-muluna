@@ -1,4 +1,113 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.23.12
+Date: 2025-03-03
+  Compatibility:
+    - Removed hard dependency on aai-signal-transmission. When aai-signal-transmission is loaded, there are no changes to how it is integrated into Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.23.11
+Date: 2025-03-03
+  Compatibility:
+    - Added interstellar science pack to technologies from "Fall of Promethia"
+---------------------------------------------------------------------------------------------------
+Version: 1.23.10
+Date: 2025-03-03
+  Balancing:
+    - Deprecated the greenhouse building.
+---------------------------------------------------------------------------------------------------
+Version: 1.23.9
+Date: 2025-03-03
+  Compatibility:
+    - Increased PlanetsLib version requirement to 1.2.12.
+  Bugfixes:
+    - Fixed duplicate changelog entries
+---------------------------------------------------------------------------------------------------
+Version: 1.23.8
+Date: 2025-03-02
+  Graphics:
+    - Added procession sets to Muluna.
+    - Added shadow to "Moon discovery Muluna technology icon"
+---------------------------------------------------------------------------------------------------
+Version: 1.23.7
+Date: 2025-03-02
+  Graphics:
+    - Added three additional tiles to Muluna terrain generation, using Alien Biomes' mineral-grey-sand textures.
+  Changes:
+    - Changed subgroup of crushers to "smelting-machine" and adjusted order to account for that.
+---------------------------------------------------------------------------------------------------
+Version: 1.23.6
+Date: 2025-03-01
+  Info:
+    - Updated by Fr_Dae
+  Locale:
+    - Added French locale(By FrDae)
+    - improve info.json
+    - remove blank lign on locale/EN
+---------------------------------------------------------------------------------------------------
+Version: 1.23.5
+Date: 2025-02-28
+  Locale:
+    - Updated Čeština/Czech locale(By vagonek)
+---------------------------------------------------------------------------------------------------
+Version: 1.23.4
+Date: 2025-02-28
+  Locale:
+    - Updated Russian locale(by Astorin).
+---------------------------------------------------------------------------------------------------
+Version: 1.23.3
+Date: 2025-02-28
+  Changes:
+    - Removed "radiation" pollutant type.
+---------------------------------------------------------------------------------------------------
+Version: 1.23.2
+Date: 2025-02-26
+  Locale:
+    - Added Čeština/Czech locale
+---------------------------------------------------------------------------------------------------
+Version: 1.23.1
+Date: 2025-02-24
+  Bugfixes:
+    - Undid reset of vanilla ore values. https://github.com/nicholasgower/planet-muluna/issues/79 https://github.com/nicholasgower/planet-muluna/issues/37
+---------------------------------------------------------------------------------------------------
+Version: 1.23.0
+Date: 2025-02-23
+  Features:
+    - Removed "Aluminum cable" item. "Aluminum cable" recipe now produces electrical cable. Migrated all recipes using aluminum cable to copper cable counterparts.
+  Compatibility:
+    - Removed all surface conditions from Schall electric boiler when it is installed to make it usable on Muluna.
+    - Updated surface conditions of AAI industry entities.
+  Locale:
+    - Changed name of "Copper cable" to "Electrical cable."
+---------------------------------------------------------------------------------------------------
+Version: 1.22.5
+Date: 2025-02-22
+  Balancing:
+    - Changed "Wood gas processing" trigger to be mining a lunar rock.
+    - Removed utility science pack requirement from "Space Chest" technology.
+  Bugfixes:
+    - Hardcoded cryolab's box dimensions to fix a difficult to diagnose crash.
+---------------------------------------------------------------------------------------------------
+Version: 1.22.4
+Date: 2025-02-22
+  Gui:
+    - Adjusted orders and subgroups of intermediate items.
+    - Changed subgroup of crushers to "assembling-machine."
+  Balancing:
+    - Reduced U-235 cost of Interstellar science pack by 50%.
+  Compatibility:
+    - Fixed incorrect speed of bioluminescent basic crusher.
+---------------------------------------------------------------------------------------------------
+Version: 1.22.3
+Date: 2025-02-22
+  Compatibility:
+    - se-space-train entities are now placeable on Muluna. https://github.com/nicholasgower/planet-muluna/issues/87
+  Bugfixes:
+    - Added default energy required value when basic crushing recipes lack an explicitly defined value.
+---------------------------------------------------------------------------------------------------
+Version: 1.22.2
+Date: 2025-02-21
+  Balancing:
+    - Removed Lemures from list of interstellar science pack planets.
+---------------------------------------------------------------------------------------------------
 Version: 1.22.1
 Date: 2025-02-18
   Bugfixes:

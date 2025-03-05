@@ -7,6 +7,7 @@ space_boiler.name = "advanced-boiler"
 space_boiler.place_result = "advanced-boiler"
 space_boiler.icon="__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png"
 space_boiler.localised_name = {"entity-name.advanced-boiler"}
+space_boiler.order = "b[steam-power]-aa[advanced-boiler]"
 
 
 local crusher_2 = table.deepcopy(data.raw["item"]["crusher"])
@@ -15,6 +16,7 @@ crusher_2.name = "crusher-2"
 crusher_2.place_result = "crusher-2"
 crusher_2.icon = "__planet-muluna__/graphics/icons/crusher-2.png"
 crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
+crusher_2.order = "cb[crusher-2]"
 --local crusher_2=nil
 if data.raw["item"]["biolab"] then
     local cryolab=table.deepcopy(data.raw["item"]["biolab"])

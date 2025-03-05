@@ -246,14 +246,14 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "low-density-structure-from-aluminum",
             },
-            {
-                type = "unlock-recipe",
-                recipe = "electronic-circuit-aluminum",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "advanced-circuit-aluminum",
-            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "electronic-circuit-aluminum",
+            -- },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "advanced-circuit-aluminum",
+            -- },
         },
         prerequisites = {
             "crusher"
@@ -289,7 +289,14 @@ data:extend{
         prerequisites = {
             "space-platform-thruster"
         },
-        icons = PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1482),
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/technology/planet-technology.png",
+                icon_size = 256,
+                shift = {0,10},
+            },
+            table.unpack(PlanetsLib.technology_icons_moon("__planet-muluna__/graphics/moon-icon.png",1482))
+            },
         localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
@@ -603,7 +610,7 @@ data:extend{
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
-                {"utility-science-pack", 1},
+                --{"utility-science-pack", 1},
                 {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }

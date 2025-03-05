@@ -107,7 +107,7 @@ local space_boiling = {
   icons = dual_icon("steam","maraxsis-oxygen"),
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
-  subgroup="muluna-products",
+  subgroup="advanced-boiling",
   energy_required=1/recipe_time,
   enabled=false,
   ingredients = {
@@ -129,7 +129,7 @@ local space_boiling_atmosphere = {
   --icon_size= data.raw["fluid"]["steam"].icon_size,
   energy_required=1/recipe_time,
   enabled=false,
-  subgroup="muluna-products",
+  subgroup="advanced-boiling",
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
     {type = "fluid",name = "maraxsis-atmosphere", amount = 5*60/recipe_time},

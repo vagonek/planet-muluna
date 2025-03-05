@@ -18,7 +18,7 @@ for i = 1,6,1 do
     muluna_dirt.autoplace = {probability_expression = 'expression_in_range_base(0.45, -10, 0.55, 0.35) + 0.25*noise_layer_noise('..tostring(i)..')'}
     muluna_dirt.localised_name={"tile-name.muluna-dirt",tostring(i)}
     muluna_dirt.variants = tile_variations_template(
-    "__alien-biomes-graphics__/graphics/terrain/mineral-grey-dirt-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-1.png",
+    "__alien-biomes-graphics__/graphics/terrain/mineral-grey-dirt-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-3.png",
     {
    
       max_size = 4,
@@ -38,6 +38,45 @@ for i = 1,6,1 do
   muluna_dirt.map_color=color[i]
   data:extend{muluna_dirt}
 end
+
+
+local muluna_sand_base=table.deepcopy(data.raw["tile"]["dry-dirt"])
+
+local color_sand={
+    {85,85,85},
+    {90,90,90},
+    {87,87,87},
+}
+
+for i = 1,3,1 do
+    local muluna_dirt=table.deepcopy(muluna_sand_base)
+    muluna_dirt.name="muluna-dirt-"..tostring(i+6)
+    muluna_dirt.autoplace = {probability_expression = 'expression_in_range_base(0.45, -10, 0.55, 0.35) + 0.25*noise_layer_noise('..tostring(i+6)..')'}
+    muluna_dirt.localised_name={"tile-name.muluna-dirt",tostring(i+6)}
+    muluna_dirt.variants = tile_variations_template(
+    "__alien-biomes-graphics__/graphics/terrain/mineral-grey-sand-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-3.png",
+    {
+   
+      max_size = 4,
+      [1] = { weights = {0.085, 0.085, 0.085, 0.085, 0.087, 0.085, 0.065, 0.085, 0.045, 0.045, 0.045, 0.045, 0.005, 0.025, 0.045, 0.045 } },
+      [2] = { probability = 1, weights = {0.070, 0.070, 0.025, 0.070, 0.070, 0.070, 0.007, 0.025, 0.070, 0.050, 0.015, 0.026, 0.030, 0.005, 0.070, 0.027 }, },
+      [4] = { probability = 1.00, weights = {0.070, 0.070, 0.070, 0.070, 0.070, 0.070, 0.015, 0.070, 0.070, 0.070, 0.015, 0.050, 0.070, 0.070, 0.065, 0.070 }, },
+      --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
+    }
+    
+   
+    
+  )
+  muluna_dirt.absorptions_per_second={
+    radiation = 0.01/60
+  }
+  muluna_dirt.layer=25+i
+  muluna_dirt.map_color=color_sand[i]
+  data:extend{muluna_dirt}
+end
+
+
+
 
 
 

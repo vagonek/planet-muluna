@@ -21,11 +21,11 @@ end
 
 for _,technology in pairs(data.raw["technology"]["space-platform-thruster"].prerequisites) do
     
-    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" then
+    if technology ~= "afterburner" and technology ~= "aai-signal-transmission" and technology ~= "space-platform" then
         --rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisistes,technology)
-        table.insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
+        rro.soft_insert(data.raw["technology"]["asteroid-collector"].prerequisites,technology)
     else
-        table.insert(new_prereqs,technology)
+        rro.soft_insert(new_prereqs,technology)
     end
 
 end
@@ -67,6 +67,7 @@ data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 
 
 
+
 local electricity_description = {""} --Based on Maraxsis code for custom quality labels
 
         for _, quality in pairs(data.raw.quality) do
@@ -93,3 +94,8 @@ if data.raw["item"]["nav-beacon"] then
 end
 
 -- navBeaconItem.localised_description = {"",{"item-description.nav-beacon"},"\n",electricity_description}
+=======
+data.raw["recipe"]["copper-cable"].localised_name={"recipe-name.copper-cable"}
+
+require("compat.aai-industry")
+
