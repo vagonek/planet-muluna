@@ -124,6 +124,7 @@ if settings.startup["enable-nav-beacon"].value == true then
             name = "nav-beacon",
             subgroup = "space-platform",
             order = "q[nav-beacon]",
+            energy_required = 20,
             ingredients =
             {
                 { type = "item", name = "processing-unit", amount = 50 },

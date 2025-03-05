@@ -94,7 +94,6 @@ if data.raw["item"]["nav-beacon"] then
 end
 
 -- navBeaconItem.localised_description = {"",{"item-description.nav-beacon"},"\n",electricity_description}
-=======
 data.raw["recipe"]["copper-cable"].localised_name={"recipe-name.copper-cable"}
 
 require("compat.aai-industry")
