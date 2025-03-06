@@ -341,6 +341,20 @@ space_boiler_new.energy_source.light_flicker =
     minimum_intensity = 0.6*3,
     maximum_intensity = 0.95*3
   }
+space_boiler_new.energy_source.smoke =
+{
+  {
+    name = "smoke",
+    --north_position = util.by_pixel(-38, -47.5),
+    position = util.by_pixel(30.5, -85),
+    --east_position = util.by_pixel(20, -70),
+    --west_position = util.by_pixel(-19, -8.5),
+    frequency = 15,
+    starting_vertical_speed = 0.0,
+    starting_frame_deviation = 60
+  }
+}
+
 space_boiler_new.graphics_set.animation = { north = {
   layers =
           {
