@@ -299,3 +299,5 @@ end
 data.raw["tool"]["space-science-pack"].default_import_location = "muluna"
 
 data.raw["item"]["copper-cable"].localised_name = {"item-name.copper-cable"}
+
+PlanetsLib.restrict_surface_conditions(data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"], {property = "pressure", min = 200000})
