@@ -110,6 +110,7 @@ rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{ty
 rro.replace(bio_plastic.ingredients,{type = "item",name = "carbon-black",amount = 1},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "fluid",name = "petroleum-gas",amount = 15},{type = "fluid",name = "petroleum-gas",amount = 20})
 rro.remove(bio_plastic.ingredients,{type = "fluid",name = "organotins",amount = 5})
+rro.soft_insert(data.raw["technology"]["plastic-bar-productivity"].effects,{type="change-recipe-productivity",recipe="plastic-from-wood",change=0.1})
 --local recipes = {motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
 local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic}
 --, ,aluminum_green_circuit,aluminum_red_circuit,
