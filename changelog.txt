@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.24.5
+Date: 2025-03-06
+  Balancing:
+    - Coal synthesis is unlocked with Coal liquifaction in addition to with the rocket turret, to enable earlier coal liquifaction on Muluna.
+    - Increased walking and vehicle speeds of Muluna tiles to match that of concrete(dirt 1-6) and refined concrete(dirt 7-9)
+  Graphics:
+    - Corrected smoke effect position of advanced boiler
+  Changes:
+    - Increased update rate of several fluid-only recipes.
+---------------------------------------------------------------------------------------------------
 Version: 1.24.4
 Date: 2025-03-06
   Balancing:
