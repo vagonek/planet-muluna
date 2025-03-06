@@ -112,11 +112,11 @@ local space_boiling = {
   enabled=false,
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 60/recipe_time},
+    {type = "fluid",name = "maraxsis-oxygen", amount = 30/recipe_time},
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 30/recipe_time,temperature=165},
   }
 }
 
@@ -132,11 +132,11 @@ local space_boiling_atmosphere = {
   subgroup="advanced-boiling",
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
-    {type = "fluid",name = "maraxsis-atmosphere", amount = 5*60/recipe_time},
+    {type = "fluid",name = "maraxsis-atmosphere", amount = 5*30/recipe_time},
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 30/recipe_time,temperature=165},
   }
 }
 
@@ -158,11 +158,11 @@ local space_melting = {
   subgroup="muluna-products",
   ingredients = {
     {type = "item",name = "ice", amount = 1},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 60/15},
+    {type = "fluid",name = "maraxsis-oxygen", amount = 30/15},
   },
   results = {
     {type = "fluid",name = "water", amount = 20,temperature=15},
-    {type = "fluid",name = "carbon-dioxide", amount = 60/15,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 30/15,temperature=165},
   }
 }
 
