@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.24.4
+Date: 2025-03-06
+  Balancing:
+    - Halved CO2 output and O2 input of all advanced-boiling recipes.
+    - Halved sulfuric acid requirement for cellulose recipe.
+    - Reduced cellulose requirement for wood gasification recipes by 25%.
+  Compatibility:
+    - Restricted "maraxsis-hydrolox-rocket-fuel" recipe to Maraxsis to prevent Muluna's electrolysis recipe from being exploited for cheap rocket fuel on other surfaces.
+---------------------------------------------------------------------------------------------------
 Version: 1.24.3
 Date: 2025-03-06
   Locale:
