@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.24.6
+Date: 2025-03-06
+  Bugfixes:
+    - Added "plastic-from-wood" recipe to "plastic-bar-productivity" technology.
+    - Corrected Plastic-from-cellulose recipe when carbon black and organotins are added. https://github.com/nicholasgower/planet-muluna/issues/103
+---------------------------------------------------------------------------------------------------
 Version: 1.24.5
 Date: 2025-03-06
   Balancing:
