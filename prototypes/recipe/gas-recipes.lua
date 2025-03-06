@@ -243,12 +243,12 @@ data:extend{
         enabled = false,
         name = "cellulose",
         ingredients = {
-            {type = "item",name = "wood-crushed", amount=20},
+            {type = "item",name = "wood-crushed", amount=40},
             {type = "fluid",name = "sulfuric-acid", amount=5}
         },
-        energy_required = 8,
+        energy_required = 16,
         results = {
-            {type = "item",name = "cellulose", amount=20},
+            {type = "item",name = "cellulose", amount=40},
         },
         allow_productivity = true,
     },
