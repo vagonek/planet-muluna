@@ -81,13 +81,13 @@ data:extend{
         --icon_size = 64,
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "water", amount=300},
+            {type = "fluid",name = "water", amount=30},
         },
         results = {
-            {type = "fluid",name = "maraxsis-oxygen", amount=1000},
-            {type = "fluid",name = "maraxsis-hydrogen", amount=2000}
+            {type = "fluid",name = "maraxsis-oxygen", amount=100},
+            {type = "fluid",name = "maraxsis-hydrogen", amount=200}
         },
-        energy_required=20,
+        energy_required=2,
         subgroup="muluna-products"
     },
     {
@@ -98,7 +98,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "carbon-dioxide", amount=540},
+            {type = "fluid",name = "carbon-dioxide", amount=54},
         },
         results = {},
         surface_conditions = {
@@ -107,7 +107,7 @@ data:extend{
                 max = 50,
             }
         },
-        energy_required=1,
+        energy_required=0.1,
         subgroup="muluna-products"
     },
     {
@@ -118,7 +118,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "maraxsis-hydrogen", amount=540},
+            {type = "fluid",name = "maraxsis-hydrogen", amount=54},
         },
         results = {},
         surface_conditions = {
@@ -127,7 +127,7 @@ data:extend{
                 max = 50,
             }
         },
-        energy_required=1,
+        energy_required=0.1,
         subgroup="muluna-products"
     },
     -- {
