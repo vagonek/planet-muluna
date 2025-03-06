@@ -1,5 +1,6 @@
 
-
+local concrete = table.deepcopy(data.raw["tile"]["concrete"])
+local refined_concrete = table.deepcopy(data.raw["tile"]["refined-concrete"])
 
 local muluna_dirt_base=table.deepcopy(data.raw["tile"]["dry-dirt"])
 
@@ -17,6 +18,8 @@ for i = 1,6,1 do
     muluna_dirt.name="muluna-dirt-"..tostring(i)
     muluna_dirt.autoplace = {probability_expression = 'expression_in_range_base(0.45, -10, 0.55, 0.35) + 0.25*noise_layer_noise('..tostring(i)..')'}
     muluna_dirt.localised_name={"tile-name.muluna-dirt",tostring(i)}
+    muluna_dirt.walking_speed_modifier = concrete.walking_speed_modifier
+    muluna_dirt.vehicle_friction_modifier = concrete.vehicle_friction_modifier
     muluna_dirt.variants = tile_variations_template(
     "__alien-biomes-graphics__/graphics/terrain/mineral-grey-dirt-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-3.png",
     {
@@ -53,6 +56,8 @@ for i = 1,3,1 do
     muluna_dirt.name="muluna-dirt-"..tostring(i+6)
     muluna_dirt.autoplace = {probability_expression = 'expression_in_range_base(0.45, -10, 0.55, 0.35) + 0.25*noise_layer_noise('..tostring(i+6)..')'}
     muluna_dirt.localised_name={"tile-name.muluna-dirt",tostring(i+6)}
+    muluna_dirt.walking_speed_modifier = refined_concrete.walking_speed_modifier
+    muluna_dirt.vehicle_friction_modifier = refined_concrete.vehicle_friction_modifier
     muluna_dirt.variants = tile_variations_template(
     "__alien-biomes-graphics__/graphics/terrain/mineral-grey-sand-"..tostring(i)..".png", "__base__/graphics/terrain/masks/transition-3.png",
     {
