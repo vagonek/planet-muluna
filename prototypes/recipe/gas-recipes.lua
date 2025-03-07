@@ -24,7 +24,7 @@ data:extend{
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
             {type = "fluid",name = "carbon-dioxide", amount=10000},
-            {type = "fluid",name = "water", amount=1000},
+            {type = "fluid",name = "water", amount=500},
         },
         results = {
             {type = "item",name = "wood", amount=40},
@@ -43,7 +43,7 @@ data:extend{
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
             {type = "fluid",name = "carbon-dioxide", amount=10000},
-            {type = "fluid",name = "water", amount=500},
+            {type = "fluid",name = "water", amount=250},
         },
         results = {
             {type = "item",name = "wood", amount=40},
@@ -62,7 +62,7 @@ data:extend{
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
             {type = "fluid",name = "carbon-dioxide", amount=10000},
-            {type = "fluid",name = "water", amount=2000},
+            {type = "fluid",name = "water", amount=1000},
         },
         results = {
             {type = "item",name = "wood", amount=40},
