@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.24.7
+Date: 2025-03-07
+  Bugfixes:
+    - Fixed crash when Maraxsis is not installed https://github.com/nicholasgower/planet-muluna/issues/104
+---------------------------------------------------------------------------------------------------
 Version: 1.24.6
 Date: 2025-03-06
   Bugfixes:
