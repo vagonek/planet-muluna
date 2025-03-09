@@ -188,7 +188,7 @@ script.on_event(defines.events.on_tick, function(event)
             end
             --end
         else
-            player.remove_alert{entity = beacon}
+            player.remove_alert{type = defines.alert_type.custom, icon = {type = "item", name = "nav-beacon"},message = {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}}}
         end
     end
 end)
