@@ -1,6 +1,6 @@
+require("prototypes.technology.index")
 require("prototypes.planet.planet")
 require("prototypes.entity.index")
-require("prototypes.technology.index")
 require("prototypes.water-treatment")
 require("prototypes.item.index")
 require("prototypes.sound.index")

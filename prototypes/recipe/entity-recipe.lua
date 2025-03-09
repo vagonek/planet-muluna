@@ -27,6 +27,10 @@ crusher_2.ingredients = {
     {type = "item",name = "aluminum-plate",amount = 10},
     {type = "item",name = "crusher",amount = 1}
 }
+if settings.startup["muluna-hardcore-restrict-crusher"].value == true then
+    crusher_2.surface_conditions = {{property = "oxygen", max = 0, min = 0},{property = "gravity", max = 0.1, min = 0.1}}
+    
+end
 crusher_2.results = {{type = "item",name = "crusher-2",amount = 1}}
 
 
