@@ -307,3 +307,10 @@ if settings.startup["muluna-hardcore-restrict-crusher"].value == true then
     data.raw["recipe"]["crusher"].surface_conditions = {{property = "oxygen", max = 0, min = 0},{property = "gravity", max = 0.1, min = 0.1}}
     table.insert(data.raw["recipe"]["crusher"].ingredients, {type = "item", name = "aluminum-plate", amount = 10})
 end
+
+
+if settings.startup["muluna-hardcore-restrict-asteroid-collector"].value == true then
+    data.raw["recipe"]["asteroid-collector"].surface_conditions = {{property = "oxygen", max = 0, min = 0},{property = "gravity", max = 0.1, min = 0.1}}
+    table.insert(data.raw["recipe"]["asteroid-collector"].ingredients, {type = "item", name = "aluminum-plate", amount = 10})
+    
+end

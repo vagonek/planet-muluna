@@ -22,6 +22,13 @@ data:extend{
       },
       {
         type = "bool-setting",
+        name = "muluna-hardcore-restrict-asteroid-collector",
+        setting_type = "startup",
+        default_value = false,
+        order = "ac",
+      },
+      {
+        type = "bool-setting",
         name = "muluna-hardcore-require-helium-3-in-fusion-cell",
         setting_type = "startup",
         default_value = false,
@@ -34,7 +41,7 @@ data:extend{
         default_value = 2,
         min = 1,
         max = 10,
-        order = "ac",
+        order = "ca",
       },
       {
         type = "double-setting",
@@ -43,7 +50,7 @@ data:extend{
         default_value = 7,
         min = 0.01,
         max = 60,
-        order = "ad",
+        order = "cb",
       },
     --   {
     --     type = "double-setting",
@@ -61,15 +68,15 @@ data:extend{
         default_value = 100,
         minimum_value = 0.3,
         maximum_value = 1000,
-        order = "af"
+        order = "bb"
     },
     {
       type = "bool-setting",
       name = "enable-nav-beacon",
       setting_type = "startup",
       default_value = true,
-      order = "ae"
-  },
+      order = "ba"
+    },
     {
       type = "double-setting",
       name = "nav-beacon-update-ticks",
