@@ -170,7 +170,7 @@ if mods["aai-signal-transmission"] then
         entity="aai-signal-sender"
     }
 else
-    space_platform.effects = nil
+    space_platform.effects = {}
 end
 
 data.raw["technology"]["space-science-pack"].research_trigger = {
