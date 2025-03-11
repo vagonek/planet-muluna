@@ -197,6 +197,10 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe = "oxygen-venting"
+            },
+            {
+                type = "unlock-recipe",
                 recipe="muluna-electrolysis"
             },
             {

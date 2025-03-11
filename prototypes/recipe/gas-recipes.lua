@@ -96,6 +96,26 @@ data:extend{
     },
     {
         type = "recipe",
+        name = "oxygen-venting",
+        enabled = false,
+        hidden_in_factoriopedia = true,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/oxygen.png", icon_size = 64}}),
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "maraxsis-oxygen", amount=54},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 50,
+            }
+        },
+        energy_required=0.1,
+        subgroup="muluna-products"
+    },
+    {
+        type = "recipe",
         name = "carbon-dioxide-venting",
         enabled = false,
         hidden_in_factoriopedia = true,
