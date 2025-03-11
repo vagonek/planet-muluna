@@ -13,13 +13,17 @@ local function generate_void_icons(fluid_icons)
     return icons
 end
 
-
+table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories , "muluna-greenhouse")
 data:extend{
+     {
+        type="recipe-category",
+        name="muluna-greenhouse",
+      },
     {
         type = "recipe",
         name = "muluna-tree-growth-greenhouse",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
@@ -38,7 +42,7 @@ data:extend{
         type = "recipe",
         name = "muluna-tree-growth-greenhouse-water-saving",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","transport-belt"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
@@ -57,7 +61,7 @@ data:extend{
         type = "recipe",
         name = "muluna-tree-growth-greenhouse-quick",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","express-transport-belt"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood

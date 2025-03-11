@@ -63,4 +63,26 @@ space_chest=util.merge{space_chest,
 
 }
 
-data:extend{space_boiler,crusher_2,space_chest}
+local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse",
+        icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+        icon_size = 64,
+        --place_result = "muluna-greenhouse",
+        order = "z[muluna-greenhouse]",
+    }
+    
+}
+
+local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse-wood",
+        icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+        icon_size = 64,
+        place_result = "muluna-greenhouse-wood",
+        order = "z[muluna-greenhouse]",
+    }
+    
+}
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood}

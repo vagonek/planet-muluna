@@ -95,4 +95,18 @@ space_chest = util.merge{space_chest,
     }
 }
 
-data:extend{space_boiler,crusher_2,space_chest}
+local greenhouse = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse",
+        results = {{type = "item", name = "muluna-greenhouse", amount = 1}}
+    }
+}
+
+local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse-wood",
+        results = {{type = "item", name = "muluna-greenhouse-wood", amount = 1}}
+    }
+}
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood}
