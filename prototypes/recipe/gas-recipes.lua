@@ -37,6 +37,13 @@ data:extend{
         energy_required=5*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
@@ -56,6 +63,13 @@ data:extend{
         energy_required=10*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
@@ -75,6 +89,13 @@ data:extend{
         energy_required=3*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
