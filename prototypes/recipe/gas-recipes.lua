@@ -202,7 +202,7 @@ data:extend{
             {type = "fluid",name = "maraxsis-oxygen", amount=10}
         },
         results = {
-            {type = "fluid",name = "carbon-dioxide", amount=10}
+            {type = "fluid",name = "carbon-dioxide", amount=10, temperature = 165}
         },
         energy_required=1/6,
         subgroup="muluna-products"
