@@ -95,4 +95,49 @@ space_chest = util.merge{space_chest,
     }
 }
 
-data:extend{space_boiler,crusher_2,space_chest}
+local greenhouse = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse",
+        
+        results = {{type = "item", name = "muluna-greenhouse", amount = 1}}
+    }
+}
+greenhouse.ingredients = {
+    {type = "item", name = "aluminum-plate", amount = 50},
+    {type = "item", name = "steel-plate", amount = 25},
+    {type = "item", name = "small-lamp", amount = 25},
+    {type = "item", name = "pipe", amount = 25},
+    {type = "item", name = "chemical-plant", amount = 10},
+}
+
+local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
+    {
+        name = "muluna-greenhouse-wood",
+        category = "muluna-greenhouse",
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+                icon_size = 64,
+            },
+            {
+                icon = data.raw["item"]["wood"].icon,
+                icon_size = data.raw["item"]["wood"].icon_size,
+                scale = 0.25,
+                shift = {10,-10},
+                draw_background = true,
+            }
+        },
+        main_product = "muluna-greenhouse-wood",
+        energy_required = 3000,
+        results = {{type = "item", name = "muluna-greenhouse-wood", amount = 1,ignored_by_productivity=1},{type = "fluid", name = "maraxsis-oxygen", amount = 100000,ignored_by_productivity=100000},}
+    }
+}
+greenhouse_wood.ingredients = {
+    {type = "item", name = "muluna-greenhouse", amount = 1},
+    {type = "fluid", name = "carbon-dioxide", amount = 100000},
+    {type = "item", name = "tree-seed", amount = 100},
+    {type = "fluid", name = "water", amount = 10000},
+    {type = "item", name = "landfill", amount = 50},
+}
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood}

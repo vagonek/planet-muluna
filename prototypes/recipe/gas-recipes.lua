@@ -13,13 +13,17 @@ local function generate_void_icons(fluid_icons)
     return icons
 end
 
-
+table.insert(data.raw["assembling-machine"]["chemical-plant"].crafting_categories , "muluna-greenhouse")
 data:extend{
+     {
+        type="recipe-category",
+        name="muluna-greenhouse",
+      },
     {
         type = "recipe",
         name = "muluna-tree-growth-greenhouse",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","carbon-dioxide"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
@@ -33,12 +37,19 @@ data:extend{
         energy_required=5*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
         name = "muluna-tree-growth-greenhouse-water-saving",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","transport-belt"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
@@ -52,12 +63,19 @@ data:extend{
         energy_required=10*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
         name = "muluna-tree-growth-greenhouse-quick",
         enabled = false,
-        category = "chemistry",
+        category = "muluna-greenhouse",
         icons = dual_icon("wood","express-transport-belt"),
         ingredients = {
             {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
@@ -71,6 +89,13 @@ data:extend{
         energy_required=3*60,
         subgroup="muluna-products",
         max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
     },
     {
         type = "recipe",
@@ -88,6 +113,26 @@ data:extend{
             {type = "fluid",name = "maraxsis-hydrogen", amount=200}
         },
         energy_required=2,
+        subgroup="muluna-products"
+    },
+    {
+        type = "recipe",
+        name = "oxygen-venting",
+        enabled = false,
+        hidden_in_factoriopedia = true,
+        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/oxygen.png", icon_size = 64}}),
+        category = "chemistry",
+        ingredients = {
+            {type = "fluid",name = "maraxsis-oxygen", amount=54},
+        },
+        results = {},
+        surface_conditions = {
+            {
+                property = "pressure",
+                max = 50,
+            }
+        },
+        energy_required=0.1,
         subgroup="muluna-products"
     },
     {
@@ -157,7 +202,7 @@ data:extend{
             {type = "fluid",name = "maraxsis-oxygen", amount=10}
         },
         results = {
-            {type = "fluid",name = "carbon-dioxide", amount=10}
+            {type = "fluid",name = "carbon-dioxide", amount=10, temperature = 165}
         },
         energy_required=1/6,
         subgroup="muluna-products"
