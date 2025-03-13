@@ -74,11 +74,25 @@ local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"])
     
 }
 
+greenhouse.place_result = nil
+
 local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"]),
     {
         name = "muluna-greenhouse-wood",
-        icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
-        icon_size = 64,
+        icons = {
+            {
+                icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+                icon_size = 64,
+            },
+            {
+                icon = data.raw["item"]["wood"].icon,
+                icon_size = data.raw["item"]["wood"].icon_size,
+                scale = 0.25,
+                shift = {10,-10},
+                draw_background = true,
+            }
+        },
+        
         place_result = "muluna-greenhouse-wood",
         order = "z[muluna-greenhouse]",
     }
