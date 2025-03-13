@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.26.0
+Date: 2025-03-13
+  Features:
+    - Added "Oxygen venting" recipe
+    - Added Lunar greenhouse building
+  Balancing:
+    - Added maximum temperature value to wood growth recipes to prevent generating wood on Vulcanus.
+    - Doubled cost of ALICE propellant.
+    - Enabled productivity modules on wood gasification recipes.
+    - Set output temperature of "Controlled Combustion" to 165.
+---------------------------------------------------------------------------------------------------
 Version: 1.25.3
 Date: 2025-03-10
   Locale:
