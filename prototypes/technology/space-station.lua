@@ -116,7 +116,7 @@ data:extend{
         unit= {
             count = 500,
             time = 30,
-            ingredients = data.raw["technology"]["productivity-module-2"].unit.ingredients
+            ingredients = table.deepcopy(data.raw["technology"]["coal-liquefaction"].unit.ingredients)
         },
         effects = {
             {
@@ -147,7 +147,7 @@ data:extend{
             
         },
         prerequisites = {
-            "space-science-pack"
+            "metallurgic-science-pack"
         },
     },
     {
