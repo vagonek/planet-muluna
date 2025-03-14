@@ -52,6 +52,7 @@ if settings.startup["enable-nav-beacon"].value == true then
             minable = { mining_time = 2, result = "nav-beacon" },
             fast_replaceable_group = "nav-beacon",
             energy_per_sector = "1TJ",
+            
             --max_distance_of_sector_revealed = 1,
             --max_distance_of_nearby_sector_revealed = 15,
             energy_per_nearby_scan = "1kJ",
@@ -86,6 +87,7 @@ if settings.startup["enable-nav-beacon"].value == true then
     })
     navBeaconEntity.graphics_set = nil
     navBeaconEntity.circuit_connector = nil
+    navBeaconEntity.next_upgrade = nil
     navBeaconEntity.chargable_graphics =
             {
                 picture =
