@@ -14,3 +14,5 @@ crusher_2.energy_usage=tostring(energy*2) .. suffix
 crusher_2.localised_name={"",{"item-name.crusher"}," 2"}
 
 data:extend{crusher_2}
+
+data.raw["assembling-machine"]["crusher"].next_upgrade = crusher_2.name
