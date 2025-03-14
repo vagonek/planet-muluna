@@ -6,26 +6,61 @@ local rro = require("lib.remove-replace-object")
 
 
 local techs_interstellar = {
-    "planet-discovery-aquilo", "planet-discovery-maraxsis", "planet-discovery-tenebris", "promethium-science-pack",
-    "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite", "fusion-reactor", "railgun", "planet-discovery-naufulglebunusilo",
-    "platinum-thruster", "space-steam-production", "maraxsis-abyssal-diving-gear", "railgun-damage-1", "railgun-shooting-speed-1",
-    "orbital-ion-cannon-mk2","orbital-ion-cannon-mk2-upgrade",
-    "planet-discovery-secretas", "spaceship-scrap-recycling-productivity",
-    "shield-projector",
-    "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3",
-    "orbital-transfer",
-    "planet-discovery-shipyard",
-    "starsystem-discovery-nexuz",
-    --"system-discovery-dea-dia",
-    --"planet-discovery-prosephina",
-    "planet-discovery-dea-dia",
-    "planet-pyroxsis",
-    --"planet-discovery-lemures",
-    "promethium-processing",
-    "isotope-processing",
-    "promethium-weapons-tech",
-    "promethium-space-travel",
-    "promethium-power-handling"
+    ["planet-discovery"] = 
+        {
+            "planet-discovery-tenebris", "planet-discovery-naufulglebunusilo",
+        },
+    aquilo =
+        {
+            "planet-discovery-aquilo","fusion-reactor", "railgun", "railgun-damage-1", "railgun-shooting-speed-1",
+        },
+    infinite = 
+        {
+            "research-productivity", "maraxsis-promethium-productivity", "research-speed-infinite"
+        },
+    corrundum = 
+        {
+            "platinum-thruster", "space-steam-production",
+        },
+    maraxsis =
+        {
+            "planet-discovery-maraxsis","maraxsis-abyssal-diving-gear",
+        },
+    ["metal-and-stars"] = 
+        {
+            "planet-discovery-shipyard",
+        },
+    ["orbital-ion-cannon"] =
+        {
+            "orbital-ion-cannon-mk2","orbital-ion-cannon-mk2-upgrade",
+        },
+    ["dyson-sphere"] =
+        {
+            "slp-dyson-sphere-grounded","ds-energy-loader-mk2","ds-energy-loader-mk3",
+        },
+    ["fall-of-promethea"] =
+        {
+            "promethium-processing",
+            "isotope-processing",
+            "promethium-weapons-tech",
+            "promethium-space-travel",
+            "promethium-power-handling"
+        },
+    other = 
+        {
+            "promethium-science-pack",
+            "planet-discovery-secretas", "spaceship-scrap-recycling-productivity",
+            "shield-projector",
+            "orbital-transfer",
+            "starsystem-discovery-nexuz",
+            --"system-discovery-dea-dia",
+            --"planet-discovery-prosephina",
+            "planet-discovery-dea-dia",
+            "planet-pyroxsis",
+            --"planet-discovery-lemures",
+            
+        }
+    
 }
 
 local techs_asteroid = {"trace-oxide-processing","trace-carbonic-processing","trace-metallic-processing",
@@ -38,11 +73,15 @@ local planets_nexuz = {
     "planet-discovery-arrakis"
 }
 
-for _,tech in pairs(techs_interstellar) do
-    if data.raw["technology"][tech] then
-        rro.soft_insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1}) --Add science pack if it doesn't already exist.
-        rro.soft_insert(data.raw["technology"][tech].prerequisites,"interstellar-science-pack") --Add science pack if it doesn't already exist.
+for _,group in pairs(techs_interstellar) do
+    for _,tech in pairs(group) do
+        if data.raw["technology"][tech] then
+            rro.soft_insert(data.raw["technology"][tech].unit.ingredients,{"interstellar-science-pack",1}) --Add science pack if it doesn't already exist.
+            rro.soft_insert(data.raw["technology"][tech].prerequisites,"interstellar-science-pack") --Add science pack if it doesn't already exist.
+        end
     end
+
+    
     
 end
 
