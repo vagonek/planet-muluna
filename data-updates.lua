@@ -347,7 +347,7 @@ require("prototypes.entity.cryolab")
 
 for _,lab in pairs(data.raw["lab"]) do
     if lab.name ~= "cerys-lab" then
-        table.insert(lab.inputs,"interstellar-science-pack")
+        rro.soft_insert(lab.inputs,"interstellar-science-pack")
     end
 end
 

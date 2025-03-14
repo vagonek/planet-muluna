@@ -1,3 +1,5 @@
+local rro = require("lib.remove-replace-object")
+
 require("prototypes.technology.index")
 require("prototypes.planet.planet")
 require("prototypes.entity.index")
@@ -20,4 +22,10 @@ require("compat.maraxsis")
 --if mods["MT-lib"] then require("compat.MT-lib") end
 if mods["any-planet-start"] then
     APS.add_planet{name = "muluna" , filename = "__planet-muluna__/compat/any-planet-start", technology = "planet-discovery-muluna"}
+end
+
+for _,lab in pairs(data.raw["lab"]) do
+    if lab.name ~= "cerys-lab" then
+        rro.soft_insert(lab.inputs,"interstellar-science-pack")
+    end
 end
