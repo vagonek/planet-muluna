@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.26.3
+Date: 2025-03-14
+  Balancing:
+    - Added Metallurgic Science pack to prerequisites of advanced-stone-processing.
+    - Reduced cost of Pre-Aquilo rocket part productivity technologies.
+  Bugfixes:
+    - Added crusher-2 to next_upgrade of crusher.
+  Changes:
+    - Internal refactoring of interstellar technologies code.
+---------------------------------------------------------------------------------------------------
 Version: 1.26.2
 Date: 2025-03-14
   Compatibility:
