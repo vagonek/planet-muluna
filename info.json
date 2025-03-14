@@ -16,7 +16,7 @@
     "flib",
     "? aai-signal-transmission",
     "PlanetsLib >= 1.2.12",
-    "orbital-transfer >= 0.2.3",
+    "? orbital-transfer >= 0.2.3",
     "? alien-biomes",
     "? maraxsis",
     "(?) Tiered-Solar-System >= 1.1.3",
