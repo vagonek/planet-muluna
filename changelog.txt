@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.26.1
+Date: 2025-03-14
+  Bugfixes:
+    - Fixed problematic interaction with Maraxsis that stopped the Interstellar Science Pack from being given a research vessel.
+---------------------------------------------------------------------------------------------------
 Version: 1.26.0
 Date: 2025-03-13
   Features:
