@@ -71,7 +71,7 @@ local rocket_prod_aquilo=table.deepcopy(rocket_prod)
 rocket_prod.max_level=nil
 rro.replace(rocket_prod.unit.ingredients,{"cryogenic-science-pack",1},{"space-science-pack",1})
 rro.replace(rocket_prod.prerequisites,"cryogenic-science-pack","space-science-pack")
-rocket_prod.unit.count=500
+rocket_prod.unit.count=250
 rocket_prod.unit.count_formula=nil
 --rocket_prod.localised_name={"technology-name.rocket-part-productivity-muluna"}
 rocket_prod.localised_name={"",{"technology-name.rocket-part-productivity-muluna"}," ",tostring(1)}
@@ -122,7 +122,7 @@ for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
 
     local tech_2=table.deepcopy(tech)
     tech_2.name=tech_2.name .. "-2"
-    tech_2.unit.count=2000
+    tech_2.unit.count=1500
     tech_2.prerequisites={tech.name}
     tech_2.localised_name={"",{"technology-name.rocket-part-productivity-"..planet_name[i]}," ",tostring(2)}
     --table.insert(t2_planet_rocket_prod,tech_2.name)
@@ -212,7 +212,7 @@ data.raw["technology"]["logistic-system"].unit.count=300
 
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
 
-table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
+--table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
 --table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
 
 table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
