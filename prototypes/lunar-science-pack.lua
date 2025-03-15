@@ -32,7 +32,7 @@ t_lunar_pack.prerequisites = {
     "agricultural-science-pack",
     "metallurgic-science-pack",
     "kovarex-enrichment-process",
-    "anorthite-processing",
+    "muluna-anorthite-processing",
 
 }
 i_lunar_pack.order = "j[interstellar-science-pack]"

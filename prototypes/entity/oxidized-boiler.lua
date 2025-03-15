@@ -64,7 +64,7 @@ space_boiler.localised_name = {"entity-name.space-boiler-legacy"}
 space_boiler.localised_description = {"entity-description.space-boiler-legacy"}
 space_boiler.surface_conditions = nil  -- Remove any surface restrictions
 space_boiler.energy_consumption = "1.8MW"
-space_boiler.minable.result = "advanced-boiler"
+space_boiler.minable.result = "muluna-advanced-boiler"
 
 -- Example custom tweak: you could adjust fluid_box filters or effectivity:
 -- space_boiler.fluid_box.filter      = "thruster-oxidizer"
@@ -174,10 +174,10 @@ data:extend{space_melting,space_melting_oxygen}
 
 local space_boiler_new = {
   type="assembling-machine",
-  name= "advanced-boiler",
+  name= "muluna-advanced-boiler",
   icon = "__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png",
   flags = {"placeable-neutral", "player-creation"},
-  minable = {mining_time = 0.5, result = "advanced-boiler"},
+  minable = {mining_time = 0.5, result = "muluna-advanced-boiler"},
   fast_replaceable_group = "boiler",
   max_health = 600,
   corpse = "boiler-remnants",

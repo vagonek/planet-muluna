@@ -16,7 +16,7 @@ data.raw["item"]["crusher"].order = "ca[crusher]"
 
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
 rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
-table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"advanced-boiler")
+table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"muluna-advanced-boiler")
 table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"greenhouses")
 -- table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
 --     type="unlock-space-location",
@@ -212,8 +212,8 @@ data.raw["technology"]["logistic-system"].unit.count=300
 
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
 
---table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"advanced-stone-processing")
---table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"advanced-stone-processing")
+--table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"muluna-advanced-stone-processing")
+--table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"muluna-advanced-stone-processing")
 
 table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
 rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 15})

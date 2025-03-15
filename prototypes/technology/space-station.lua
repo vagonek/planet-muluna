@@ -112,7 +112,7 @@ data:extend{
     },
     {
         type = "technology",
-        name = "advanced-stone-processing",
+        name = "muluna-advanced-stone-processing",
         unit= {
             count = 500,
             time = 30,
@@ -152,7 +152,7 @@ data:extend{
     },
     {
         type = "technology",
-        name = "advanced-boiler",
+        name = "muluna-advanced-boiler",
         research_trigger = {
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
@@ -161,7 +161,7 @@ data:extend{
         effects = {
             {
                 type = "unlock-recipe",
-                recipe = "advanced-boiler"
+                recipe = "muluna-advanced-boiler"
             },
             {
                 type = "unlock-recipe",
@@ -220,7 +220,7 @@ data:extend{
     },
     {
         type = "technology",
-        name = "anorthite-processing",
+        name = "muluna-anorthite-processing",
         research_trigger = {
             type = "mine-entity",
             entity = "anorthite-chunk"
@@ -340,7 +340,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "biolab","quantum-processor","helium-enrichment"
+            "biolab","quantum-processor","muluna-helium-enrichment"
         },
         icons = {
             {
@@ -356,7 +356,7 @@ data:extend{
     },
     {
         type = "technology",
-        name = "helium-enrichment",
+        name = "muluna-helium-enrichment",
         --localised_name = {"entity-name.cryolab"},
         --localised_description = {"entity-description.asteroid-collector"},
         unit= {

@@ -1,5 +1,5 @@
 {
     "technology":[
-        ["space-boiler", "advanced-boiler"]
+        ["space-boiler", "muluna-advanced-boiler"]
     ]
 }

@@ -2,8 +2,8 @@ local rro = require("lib.remove-replace-object")
 
 local space_boiler = table.deepcopy(data.raw["recipe"]["boiler"])
 space_boiler.icon = "__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png"
-space_boiler.name = "advanced-boiler"
-space_boiler.place_result = "advanced-boiler"
+space_boiler.name = "muluna-advanced-boiler"
+space_boiler.place_result = "muluna-advanced-boiler"
 
 space_boiler.ingredients = {
     {type = "item", name = "boiler", amount = 1},
@@ -13,7 +13,7 @@ space_boiler.ingredients = {
 space_boiler.energy_required = 10
 
 
-space_boiler.results = {{type = "item",name = "advanced-boiler",amount = 1}}
+space_boiler.results = {{type = "item",name = "muluna-advanced-boiler",amount = 1}}
 
 local crusher_2 = table.deepcopy(data.raw["recipe"]["crusher"])
 

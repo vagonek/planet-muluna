@@ -3,8 +3,8 @@ local all = {}
 
 local space_boiler = table.deepcopy(data.raw["item"]["boiler"])
 
-space_boiler.name = "advanced-boiler"
-space_boiler.place_result = "advanced-boiler"
+space_boiler.name = "muluna-advanced-boiler"
+space_boiler.place_result = "muluna-advanced-boiler"
 space_boiler.icon="__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png"
 space_boiler.localised_name = {"entity-name.advanced-boiler"}
 space_boiler.order = "b[steam-power]-aa[advanced-boiler]"
