@@ -66,9 +66,20 @@ data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 -- end
 
 
+local function get_boiler_quality_description(quality) 
+    local quality_name = quality.localised_name or {"quality-name." .. quality.name}
 
+    local quality_level = quality.level
+    --if quality_level >= 5 and not mods["infinite-quality-tiers"] then quality_level = quality_level - 1 end
+
+    local efficiency = 150*(1+0.3*quality_level)
+    
+
+    return {"recipe-description.global-advanced-boiler-quality-description", quality.name, tostring(efficiency)}
+end
 
 local electricity_description = {""} --Based on Maraxsis code for custom quality labels
+local boiler_description = {""}
         local i = 0
         for _, quality in pairs(data.raw.quality) do
             if quality.hidden or i >= 10 then goto continue end
@@ -80,12 +91,21 @@ local electricity_description = {""} --Based on Maraxsis code for custom quality
             local tiles = tostring(50 + 50*quality_level)
             table.insert(electricity_description, {"recipe-description.global-nav-beacon-quality-description", quality.name, drain, tiles})
             table.insert(electricity_description, "\n")
+            
+            table.insert(boiler_description, get_boiler_quality_description(quality))
+            table.insert(boiler_description, "\n")
+
+
             i = i + 1
             ::continue::
         end
         electricity_description[#electricity_description] = nil
-
+        boiler_description[#boiler_description] = nil
         --electricity_description = maraxsis.shorten_localised_string(electricity_description)
+
+if data.raw["assembling-machine"]["muluna-advanced-boiler"] then
+    data.raw["assembling-machine"]["muluna-advanced-boiler"].factoriopedia_description = {"",{"entity-description.muluna-advanced-boiler"},"\n",boiler_description}
+end
 
 if data.raw["accumulator"]["nav-beacon"] then
     data.raw["accumulator"]["nav-beacon"].factoriopedia_description = {"",{"entity-description.nav-beacon"},"\n",electricity_description}
