@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.27.2
+Date: 2025-03-16
+  Locale:
+    - Added quality labels to advanced boiler factoriopedia description indicating the efficiency of different quality boilers.
+    - Fixed advanced boiler locale key
+---------------------------------------------------------------------------------------------------
 Version: 1.27.1
 Date: 2025-03-16
   Locale:
