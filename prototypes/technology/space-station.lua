@@ -157,7 +157,7 @@ data:extend{
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
         },
-        localised_name = {"entity-name.advanced-boiler"},
+        localised_name = {"entity-name.muluna-advanced-boiler"},
         effects = {
             {
                 type = "unlock-recipe",

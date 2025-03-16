@@ -283,6 +283,14 @@ data.raw["recipe"]["greenhouse"] = nil
 data.raw["item"]["I-greenhouse"] = nil
 data.raw["assembling-machine"]["E-greenhouse"].minable = {mining_time = 0.5}
 data.raw["assembling-machine"]["E-greenhouse"].localised_name = {"entity-name.n-deprecated",{"entity-name.E-greenhouse"}}
+table.insert(data.raw["technology"]["heating-tower"].effects,
+    
+        {
+            type = "unlock-recipe",
+            recipe = "advanced-water-boiling-high-temperature",
+        }
+    
+)
 local seed_recipes = {"jellynut","yumako"}
 
 for _,seed in pairs(seed_recipes) do
