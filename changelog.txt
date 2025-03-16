@@ -1,4 +1,16 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.27.0
+Date: 2025-03-16
+  Features:
+    - Added high-temperature boiling recipe to advanced boiler, unlocking with the heating tower.
+  Balancing:
+    - Added 1% oxygen condition to Heating tower
+    - Doubled CO2 production of steam production
+  Bugfixes:
+    - Added default icon for dual-item icons for when icon is not found.
+  Locale:
+    - Adjusted locale keys of "helium-enrichment", "anorthite-processing", "advanced-stone-processing", and "advanced-boiler", adding "muluna-" to the beginning of each key.
+---------------------------------------------------------------------------------------------------
 Version: 1.26.3
 Date: 2025-03-14
   Balancing:
