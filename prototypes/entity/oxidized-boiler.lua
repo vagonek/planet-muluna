@@ -112,31 +112,29 @@ local space_boiling = {
   enabled=false,
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 30/recipe_time},
+    {type = "fluid",name = "maraxsis-oxygen", amount = 60/recipe_time},
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 30/recipe_time,temperature=165},
+    {type = "fluid",name = "carbon-dioxide", amount = 60/recipe_time,temperature=165},
   }
 }
 
-local space_boiling_atmosphere = {
-  type = "recipe",
-  category = "double-boiler",
+local space_boiling_atmosphere = util.merge{space_boiling,{
   name = "advanced-water-boiling-atmosphere",
   icons = dual_icon("steam","maraxsis-atmosphere"),
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
-  energy_required=1/recipe_time,
-  enabled=false,
-  subgroup="advanced-boiling",
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
     {type = "fluid",name = "maraxsis-atmosphere", amount = 5*30/recipe_time},
+    {type = "fluid",name = "maraxsis-atmosphere", amount = 5*60/recipe_time},
+  }
+}}
   },
   results = {
-    {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
-    {type = "fluid",name = "carbon-dioxide", amount = 30/recipe_time,temperature=165},
+    {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=500},
+    {type = "fluid",name = "carbon-dioxide", amount = temperature_time_ratio*60/recipe_time,temperature=500},
   }
 }
 
