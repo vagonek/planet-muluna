@@ -30,6 +30,7 @@ data.raw["recipe"]["advanced-thruster-fuel"].surface_conditions = nil
 data.raw["recipe"]["advanced-thruster-oxidizer"].surface_conditions = nil
 
 data.raw["fluid-turret"]["flamethrower-turret"].surface_conditions = ten_pressure_condition
+data.raw["reactor"]["heating-tower"].surface_conditions = ten_pressure_condition
 data.raw["furnace"]["stone-furnace"].surface_conditions = ten_pressure_condition
 data.raw["mining-drill"]["burner-mining-drill"].surface_conditions = ten_pressure_condition
 data.raw["furnace"]["steel-furnace"].surface_conditions = ten_pressure_condition
