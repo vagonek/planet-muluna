@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.27.3
+Date: 2025-03-18
+  Balancing:
+    - Increased surface solar power to 200% and reduced day-night-cycle to 7 minutes, improving efficacy of solar power on Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.27.2
 Date: 2025-03-16
   Locale:
