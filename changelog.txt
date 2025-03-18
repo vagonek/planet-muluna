@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.0
+Date: 2025-03-18
+  Features:
+    - Added "Tree" item, a type of tree seed that grows instantaneously. Grown in either a chemical plant or in a greenhouse. Trees are required to craft wood-growing greenhouses, which are now made in assembling machines and take ten seconds to craft.
+    - Added uranium ore to Muluna.
+  Graphics:
+    - Added mipmapped version of Muluna icon.
+  Locale:
+    - Added generic science pack description to Interstellar science pack.
+---------------------------------------------------------------------------------------------------
 Version: 1.27.3
 Date: 2025-03-18
   Balancing:
