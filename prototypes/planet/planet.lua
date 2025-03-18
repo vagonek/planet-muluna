@@ -127,10 +127,10 @@ local muluna=
     persistent_ambient_sounds=data.raw["space-platform-hub"]["space-platform-hub"].persistent_ambient_sounds,
     localised_description={"planetslib-templates.moon-description",{"space-location-description.muluna"},"[planet="..parent_planet.."]"},
     surface_properties = {
-        ["solar-power"] = 150,
+        ["solar-power"] = 200,
         ["pressure"] = 50,
         ["magnetic-field"] = 0.01,
-        ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"]*2,
+        ["day-night-cycle"] = nauvis.surface_properties["day-night-cycle"],
     },
     map_gen_settings = map_gen,
     parked_platforms_orientation=0.70,
