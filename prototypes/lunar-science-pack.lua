@@ -22,6 +22,7 @@ end
 i_lunar_pack.name = "interstellar-science-pack"
 i_lunar_pack.default_import_location = "muluna"
 i_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
+i_lunar_pack.localised_description = {"item-description.science-pack"}
 r_lunar_pack.icon = "__planet-muluna__/graphics/icons/space-science-pack.png"
 r_lunar_pack.energy_required = r_lunar_pack.energy_required * 4
 --data.raw["recipe"]["space-science-pack"].icon = "__planet-muluna__/graphics/icons/space-science-pack.png" --Why was this here?
