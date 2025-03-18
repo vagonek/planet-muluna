@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.1
+Date: 2025-03-18
+  Compatibility:
+    - Removed incompatibility flag for rso-mod https://github.com/nicholasgower/planet-muluna/issues/114
+---------------------------------------------------------------------------------------------------
 Version: 1.28.0
 Date: 2025-03-18
   Features:
