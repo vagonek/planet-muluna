@@ -106,13 +106,15 @@ local muluna=
     gravity_pull = 10,
     order = nauvis.order .. "a",
     
-    -- icons = {
-    --   {
-    --     icon = "__planet-muluna__/graphics/moon-icon.png",
-    --   }
-    -- },
-    icon = "__planet-muluna__/graphics/moon-icon.png",
-    icon_size = 1482,
+    icons = {
+      {
+        icon = "__planet-muluna__/graphics/moon-icon-mipped.png",
+        icon_size = 64,
+        
+      }
+    },
+    icon = "__planet-muluna__/graphics/moon-icon-mipped.png",
+    icon_size = 64,
     
     --orientation = nauvis.orientation-0.02,
     --distance = nauvis.distance*1.0,
