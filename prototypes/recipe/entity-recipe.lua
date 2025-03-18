@@ -113,7 +113,7 @@ greenhouse.ingredients = {
 local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
     {
         name = "muluna-greenhouse-wood",
-        category = "muluna-greenhouse",
+        category = "crafting",
         icons = {
             {
                 icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
@@ -128,15 +128,18 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-p
             }
         },
         main_product = "muluna-greenhouse-wood",
-        energy_required = 3000,
-        results = {{type = "item", name = "muluna-greenhouse-wood", amount = 1,ignored_by_productivity=1},{type = "fluid", name = "maraxsis-oxygen", amount = 100000,ignored_by_productivity=100000},}
+        energy_required = 10,
+        results = {
+            {type = "item", name = "muluna-greenhouse-wood", amount = 1,ignored_by_productivity=1},
+            --{type = "fluid", name = "maraxsis-oxygen", amount = 100000,ignored_by_productivity=100000},}
+        }
     }
 }
 greenhouse_wood.ingredients = {
     {type = "item", name = "muluna-greenhouse", amount = 1},
-    {type = "fluid", name = "carbon-dioxide", amount = 100000},
-    {type = "item", name = "tree-seed", amount = 100},
-    {type = "fluid", name = "water", amount = 10000},
+    --{type = "fluid", name = "carbon-dioxide", amount = 100000},
+    {type = "item", name = "muluna-sapling", amount = 100},
+    --{type = "fluid", name = "water", amount = 10000},
     {type = "item", name = "landfill", amount = 50},
 }
 

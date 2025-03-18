@@ -1,3 +1,5 @@
+local rro = require("lib.remove-replace-object")
+
 local iron_ore=data.raw["item"]["iron-ore"]
 data:extend{{
     type="item",
@@ -78,6 +80,27 @@ data:extend{{
     weight=data.raw.item["iron-plate"].weight,
     default_import_location = "muluna",
 },
+{
+    type="item",
+    name="muluna-sapling",
+    icon="__base__/graphics/icons/tree-01.png",
+    icon_size=64,
+    -- icons ={
+    --     {
+            
+    --     }
+        
+    -- },
+    
+    stack_size=1,
+    order=data.raw.item["tree-seed"].order .. "a",
+    subgroup=data.raw.item["tree-seed"].subgroup,
+    group=data.raw.item["tree-seed"].group,
+    weight=10*10^12,
+    default_import_location = "nauvis",
+    --plant_result = "tree-01",
+    place_result = "muluna-placed-tree",
+},
 -- {
 --     type="item",
 --     name="aluminum-cable",
@@ -155,3 +178,37 @@ data:extend{{
     fuel_category=data.raw["item"]["wood"].fuel_category,
 },
 }
+
+local placed_tree = table.deepcopy(data.raw["plant"]["tree-plant"])
+
+placed_tree.name = "muluna-placed-tree"
+placed_tree.growth_ticks = 1
+-- end
+--     {
+--     name = "muluna-placed-tree",
+--     growth_ticks = 1,
+--     type = "plant",
+
+
+
+
+-- })
+
+data:extend{placed_tree}
+    
+
+
+
+-- rro.soft_insert(data.raw["tree"]["tree-01"].flags,"placeable-player")
+
+-- data.raw["tree"]["tree-01"].autoplace =
+-- {
+--   probability_expression = 0,
+--   -- required to show agricultural tower plots
+--   tile_restriction =
+--   {
+--     "grass-1", "grass-2", "grass-3", "grass-4",
+--     "dry-dirt", "dirt-1", "dirt-2", "dirt-3", "dirt-4", "dirt-5", "dirt-6", "dirt-7",
+--     "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"
+--   }
+-- }

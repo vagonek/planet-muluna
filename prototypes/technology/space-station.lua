@@ -598,12 +598,18 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe = "muluna-sapling-growth-greenhouse",
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "muluna-greenhouse",
             },
             {
                 type = "unlock-recipe",
                 recipe = "muluna-greenhouse-wood",
             },
+            
+            
             -- {
             --     type = "unlock-recipe",
             --     recipe = "muluna-tree-growth-greenhouse-11x11"

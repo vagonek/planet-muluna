@@ -47,6 +47,33 @@ data:extend{
     },
     {
         type = "recipe",
+        name = "muluna-sapling-growth-greenhouse",
+        enabled = false,
+        category = "muluna-greenhouse",
+        --icons = dual_icon("muluna-sapling","carbon-dioxide"),
+        ingredients = {
+            {type = "item",name = "tree-seed", amount=10}, --Reminder: 1 tree seed = 2 wood
+            {type = "fluid",name = "carbon-dioxide", amount=10000},
+            {type = "fluid",name = "water", amount=500},
+        },
+        results = {
+            {type = "item",name = "muluna-sapling", amount=10},
+            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+        },
+        energy_required=5*60,
+        subgroup="muluna-products",
+        main_product = "muluna-sapling",
+        max_productivity = 3,
+        allow_productivity = true,
+        surface_conditions = {
+            {
+                property = "temperature",
+                max = 314
+            }
+        }
+    },
+    {
+        type = "recipe",
         name = "muluna-tree-growth-greenhouse-water-saving",
         enabled = false,
         category = "muluna-greenhouse",
