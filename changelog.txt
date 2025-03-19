@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.4
+Date: 2025-03-19
+  Bugfixes:
+    - Changed Crusher 2's working_visualisations to list to comply with 2.0.42's more stringent enforcement of working_visualisation's structure. https://forums.factorio.com/127608
+---------------------------------------------------------------------------------------------------
 Version: 1.28.3
 Date: 2025-03-19
   Bugfixes:
