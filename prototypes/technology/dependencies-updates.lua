@@ -305,6 +305,12 @@ end
 --     type = "unlock-recipe",
 --     recipe="greenhouse"
 -- })
+local muluna_imports = {"carbon","ice"}
+
+for _,item in pairs(muluna_imports) do
+    data.raw["item"][item].default_import_location = "muluna"
+end
+
 
 data.raw["tool"]["space-science-pack"].default_import_location = "muluna"
 
