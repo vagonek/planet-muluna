@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.5
+Date: 2025-03-20
+  Compatibility:
+    - Implemented basic support for crushing-industry.
+  Graphics:
+    - Added draw_background to all crushing recipe icons.
+---------------------------------------------------------------------------------------------------
 Version: 1.28.4
 Date: 2025-03-19
   Bugfixes:
