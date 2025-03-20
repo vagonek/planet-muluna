@@ -26,10 +26,10 @@ local techs_interstellar = {
         {
             "planet-discovery-maraxsis","maraxsis-abyssal-diving-gear",
         },
-    ["metal-and-stars"] = 
-        {
-            "planet-discovery-shipyard",
-        },
+    -- ["metal-and-stars"] = 
+    --     {
+    --         "planet-discovery-shipyard",
+    --     },
     ["orbital-ion-cannon"] =
         {
             "orbital-ion-cannon-mk2","orbital-ion-cannon-mk2-upgrade",
