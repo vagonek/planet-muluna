@@ -44,7 +44,7 @@ anorthite_crushing.icons = {
 },
 
 }
-anorthite_crushing.order=anorthite_crushing.order .. "a"
+anorthite_crushing.order="b-a-d"
 anorthite_crushing.results = {{type = "item",name = "alumina",amount = 20},{type = "item", name = "anorthite-chunk", amount = 1, probability = 0.2}}
 anorthite_crushing.ingredients = {{type = "item",name = "anorthite-chunk",amount = 1}}
 
@@ -71,12 +71,14 @@ alumina_crushing.name="alumina-crushing"
 alumina_crushing.results = {{type = "item",name = "alumina-crushed",amount = 10},{type = "item", name = "alumina", amount = 1}}
 alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 6}}
 
+alumina_crushing.order="b-aa-a"
 local stone_crushing=table.deepcopy(anorthite_crushing)
 
 stone_crushing.results = {{type = "item",name = "stone-crushed",amount = 9},{type = "item", name = "stone", amount = 1,ignored_by_productivity=1}}
 stone_crushing.ingredients = {{type = "item",name = "stone",amount = 7}}
 stone_crushing.name="stone-crushing"
 stone_crushing.energy_required=2
+stone_crushing.order="b-aa-c"
 stone_crushing.icons={
     {
         icon = data.raw.item["stone"].icon,
@@ -123,5 +125,5 @@ wood_crushing.name = "wood-crushing"
 wood_crushing.ingredients = {{type = "item",name = "wood",amount = 6}}
 wood_crushing.results = {{type = "item",name = "wood-crushed",amount = 10},{type = "item", name = "wood", amount = 1,ignored_by_productivity=1}}
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
-
+wood_crushing.order="b-aa-b"
 data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
