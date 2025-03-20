@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.7
+Date: 2025-03-20
+  Graphics:
+    - Added draw_background to all layers of all crushing recipe icons.
+    - Adjusted order of crushing recipes to group anorthite crushing with vanilla crushing recipes and non-asteroid crushing in their own group.
+    - Recolored crushing icon for non-asteroid recipes(Thank you SafTheLamb!)
+---------------------------------------------------------------------------------------------------
 Version: 1.28.6
 Date: 2025-03-20
   Balancing:
