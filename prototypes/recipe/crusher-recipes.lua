@@ -18,7 +18,7 @@ return {
         draw_background = true
     },
 }
-
+-- New icons
 end
 table.insert(data.raw["character"]["character"].crafting_categories,
 "crushing"    
