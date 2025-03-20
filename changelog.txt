@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.8
+Date: 2025-03-20
+  Compatibility:
+    - Added hard dependency on muluna-utility-constants. This mod multiplies the maximum fluid flow rate by 20 to accomodate high flow rate recipes. This multiplier can be configured.
+---------------------------------------------------------------------------------------------------
 Version: 1.28.7
 Date: 2025-03-20
   Graphics:
