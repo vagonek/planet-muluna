@@ -38,7 +38,7 @@ anorthite_crushing.icons = {
     scale=50/128,
 },
 {
-    icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
+    icon = "__planet-muluna__/graphics/icons/asteroid-crushing.png",
     icon_size=64,
     scale=0.5,
 },
