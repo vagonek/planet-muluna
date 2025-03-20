@@ -34,7 +34,8 @@
     "? bzzirconium",
     "? bzsilicon",
     "? infinite-quality-tiers",
-    "? se-space-trains"
+    "? se-space-trains",
+    "? crushing-industry"
   ],
   "quality_required": true,
   "rail_bridges_required": true,

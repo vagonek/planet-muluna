@@ -22,7 +22,7 @@ local rro = require("lib.remove-replace-object")
 --     end
 -- end
 
-if data.raw["furnace"]["basic-crusher"] then
+if data.raw["furnace"]["basic-crusher"] and not mods["crushing-industry"] then
     local crushers = {"crusher", "crusher-2"}
     for _,crusher in pairs(crushers) do
             table.insert(data.raw["assembling-machine"][crusher].crafting_categories,"basic-crushing")

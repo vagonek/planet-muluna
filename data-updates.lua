@@ -39,10 +39,26 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
-data.raw["assembling-machine"]["crusher"].surface_conditions = nil
-if data.raw["assembling-machine"]["crusher-2"] then
-    data.raw["assembling-machine"]["crusher-2"].surface_conditions = nil
+if not mods["crushing-industry"] then
+    data.raw["assembling-machine"]["crusher"].surface_conditions = nil
+    if data.raw["assembling-machine"]["crusher-2"] then
+        data.raw["assembling-machine"]["crusher-2"].surface_conditions = nil
+    end
+
+else 
+    local muluna_restriction = {
+
+        {
+            property = "gravity",
+            max = 0.1,
+        }
+    }
+    data.raw["assembling-machine"]["crusher"].surface_conditions = muluna_restriction
+    if data.raw["assembling-machine"]["crusher-2"] then
+        data.raw["assembling-machine"]["crusher-2"].surface_conditions = muluna_restriction
+    end
 end
+
 
 --  {
 --     {property = "gravity",
