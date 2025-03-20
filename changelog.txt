@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.6
+Date: 2025-03-20
+  Balancing:
+    - Raised HP of Crusher 2 by 50, and changed module slots of Crusher 2 to be 2 greater than that of Crusher 1.
+    - Reduced crusher 2 pollution to 0.75/minute
+---------------------------------------------------------------------------------------------------
 Version: 1.28.5
 Date: 2025-03-20
   Compatibility:
