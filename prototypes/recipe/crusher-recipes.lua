@@ -36,11 +36,13 @@ anorthite_crushing.icons = {
     --scale=0.3,
     shift = {0,-3},
     scale=50/128,
+    draw_background = true
 },
 {
     icon = "__planet-muluna__/graphics/icons/asteroid-crushing.png",
     icon_size=64,
     scale=0.5,
+    draw_background = true
 },
 
 }
@@ -53,20 +55,7 @@ anorthite_crushing.ingredients = {{type = "item",name = "anorthite-chunk",amount
 -- }
 
 local alumina_crushing=table.deepcopy(anorthite_crushing)
-alumina_crushing.icons = {
-    {
-        icon = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
-        icon_size=64,
-        --scale=0.3,
-        shift = {0,-3},
-        scale=50/128,
-    },
-    {
-        icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
-        icon_size=64,
-        scale=0.5,
-    },
-}
+alumina_crushing.icons = crushing_icon("__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",64)
 alumina_crushing.name="alumina-crushing"
 alumina_crushing.results = {{type = "item",name = "alumina-crushed",amount = 10},{type = "item", name = "alumina", amount = 1}}
 alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 6}}
@@ -79,20 +68,8 @@ stone_crushing.ingredients = {{type = "item",name = "stone",amount = 7}}
 stone_crushing.name="stone-crushing"
 stone_crushing.energy_required=2
 stone_crushing.order="b-aa-c"
-stone_crushing.icons={
-    {
-        icon = data.raw.item["stone"].icon,
-        icon_size=data.raw.item["stone"].icon_size,
-        --scale=0.3,
-        shift = {0,-3},
-        scale=50/128,
-    },
-    {
-        icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
-        icon_size=64,
-        scale=0.5,
-    },
-}
+stone_crushing.icons = crushing_icon(data.raw.item["stone"].icon,data.raw.item["stone"].icon_size)
+
 
 
 local aluminum_plate = table.deepcopy(data.raw["recipe"]["iron-plate"])
