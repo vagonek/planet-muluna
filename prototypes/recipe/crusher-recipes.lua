@@ -9,11 +9,13 @@ return {
         --scale=0.3,
         shift = {0,-3},
         scale=50/128,
+        draw_background = true
     },
     {
         icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
         icon_size=64,
         scale=0.5,
+        draw_background = true
     },
 }
 
