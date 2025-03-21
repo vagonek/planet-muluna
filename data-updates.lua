@@ -407,8 +407,8 @@ for _,gas in pairs(gases) do
         data.raw["recipe"][gas.."-barrel"].ingredients[1].amount=data.raw["recipe"][gas.."-barrel"].ingredients[1].amount*10
     end
 
-    if data.raw["recipe"]["empty".. gas .."-barrel"] then
-        data.raw["recipe"]["empty".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty".. gas .."-barrel"].ingredients[1].amount*10
+    if data.raw["recipe"]["empty-".. gas .."-barrel"] then
+        data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount*10
     end
 
     if data.raw["recipe"]["maraxsis-fluid-void-".. gas] then
