@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.28.11
+Date: 2025-03-21
+  Bugfixes:
+    - Fixed discrepancy between fluid amounts received/consumed when barreling and unbarreling gases.
+  Locale:
+    - Fixed broken locale for kovarex helium enrichment. https://github.com/nicholasgower/planet-muluna/issues/119
+---------------------------------------------------------------------------------------------------
 Version: 1.28.10
 Date: 2025-03-21
   Bugfixes:
