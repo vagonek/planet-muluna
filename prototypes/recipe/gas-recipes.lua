@@ -273,6 +273,7 @@ data:extend{
     { 
         type = "recipe",
         name = "kovarex-helium-enrichment",
+        localised_name = {"recipe-name.kovarex-muluna-helium-enrichment"},
         enabled = false,
         icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
         allow_productivity = true,
