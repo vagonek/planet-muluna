@@ -58,9 +58,7 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
 - Maraxsis, which adds several gases also used by this mod.
 
-- Corrundum, which offers an alternative form of carbon dioxide venting that generates electricity
-
-## Recommended Mods
+- Corrundum, which offers an alternative form of carbon dioxide venting that generates electricity.
 
 ## Known to be compatible with:
 
@@ -71,7 +69,6 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 ## Author-maintained locales:
 
 - English
-
 
 ## Community-maintained locales:
 
