@@ -1,10 +1,12 @@
 local rro = require("lib.remove-replace-object")
 
+
 require("prototypes.technology.index")
 require("prototypes.planet.planet")
 require("prototypes.entity.index")
 require("prototypes.water-treatment")
 require("prototypes.item.index")
+require("vanilla-changes.asteroid-chunk-icons")
 require("prototypes.sound.index")
 require("prototypes.atmosphere")
 require("prototypes.recipe.index")

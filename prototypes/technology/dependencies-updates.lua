@@ -117,7 +117,7 @@ for i,pack in ipairs(science_pack) do --T1 Planet rocket prod 1-2
     rro.replace(tech.prerequisites,"space-science-pack",science_pack[i])
     --table.insert(tech.prerequisites,pack)
     table.insert(tech.unit.ingredients,{science_pack[i],1})
-    tech.prerequisites={"rocket-part-productivity-2",science_pack[i]}
+    tech.prerequisites={"rocket-part-productivity-4",science_pack[i]}
     tech.unit.count=1000
 
     local tech_2=table.deepcopy(tech)
