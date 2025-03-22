@@ -5,15 +5,6 @@ Date: 2025-03-22
     - Added support for undoing wooden industry's changes to bio plastic recipe. https://github.com/nicholasgower/planet-muluna/issues/120
   Graphics:
     - Added rotated variants of asteroid icons to make belts full of asteroid chunks look more natural.
-  Changes:
-    - Null changelog
----------------------------------------------------------------------------------------------------
-Version: 1.28.13
-Date: 2025-03-22
-  Compatibility:
-    - Added support for undoing wooden industry's changes to bio plastic recipe. https://github.com/nicholasgower/planet-muluna/issues/120
-  Graphics:
-    - Added rotated variants of asteroid icons to make belts full of asteroid chunks look more natural.
 ---------------------------------------------------------------------------------------------------
 Version: 1.28.12
 Date: 2025-03-22
