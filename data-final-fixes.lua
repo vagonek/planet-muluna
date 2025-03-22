@@ -82,7 +82,7 @@ local electricity_description = {""} --Based on Maraxsis code for custom quality
 local boiler_description = {""}
         local i = 0
         for _, quality in pairs(data.raw.quality) do
-            if quality.hidden or i >= 10 then goto continue end
+            if quality.hidden or i >= 8 then goto continue end
             local quality_name = quality.localised_name or {"quality-name." .. quality.name}
 
             local quality_level = quality.level
