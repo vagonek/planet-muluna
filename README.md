@@ -72,13 +72,14 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
 - English
 
-- German(May not always be fully up to date. Translator is not a native speaker.)
 
 ## Community-maintained locales:
 
 - Russian
 
 - Simplified Chinese
+
+- German by [Lucanoria](https://github.com/Lucanoria)
 
 ## Special thanks to the following mods and creators:
 
