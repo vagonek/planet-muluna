@@ -197,18 +197,19 @@ data.raw.technology["rocket-silo"].research_trigger={
     item="logistic-robot",
     count=100,
 }
+    -- table.insert(data.raw.technology["logistic-robotics"].effects,{
+    --     type="unlock-recipe",
+    --     recipe="requester-chest",
+    -- })
 
-table.insert(data.raw.technology["logistic-robotics"].effects,{
-    type="unlock-recipe",
-    recipe="requester-chest",
-})
+    -- rro.remove(data.raw.technology["logistic-system"].effects,{
+    --     type="unlock-recipe",
+    --     recipe="requester-chest",
+    -- })
 
-rro.remove(data.raw.technology["logistic-system"].effects,{
-    type="unlock-recipe",
-    recipe="requester-chest",
-})
+    --data.raw["technology"]["logistic-system"].unit.count=300
 
-data.raw["technology"]["logistic-system"].unit.count=300
+
 
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
 
