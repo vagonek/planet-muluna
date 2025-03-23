@@ -66,7 +66,7 @@ end
 --     max = 0.1,
 --     }   
 -- }
-
+data.raw["recipe"]["rocket-part"].maximum_productivity = 7
 local rocket_part_muluna = table.deepcopy(data.raw["recipe"]["rocket-part"])
 rocket_part_muluna.name = "rocket-part-muluna"
 rocket_part_muluna.surface_conditions = {
@@ -76,7 +76,6 @@ rocket_part_muluna.surface_conditions = {
 }
 
 rocket_part_muluna.results = {{type = "item", name = "rocket-part", amount = 1}}
-
 rocket_part_muluna.localised_name = {"item-name.rocket-part"}
 
 
