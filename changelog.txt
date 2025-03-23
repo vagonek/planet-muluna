@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.29.3
+Date: 2025-03-23
+  Balancing:
+    - Increased maximum productivity of rocket part recipes to 700%. https://github.com/nicholasgower/planet-muluna/issues/124
+---------------------------------------------------------------------------------------------------
 Version: 1.29.2
 Date: 2025-03-22
   Bugfixes:
