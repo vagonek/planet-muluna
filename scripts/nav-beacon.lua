@@ -141,54 +141,55 @@ local filter_built = {
 ---@param event on_tick
 script.on_event(defines.events.on_tick, function(event)
     if event.tick % settings.global["nav-beacon-update-ticks"].value ~= 0 then return end
-
-    for _,player in pairs(game.players) do
-        if player.controller_type == defines.controllers.remote then
-            --chart_zoomed_in doesn't seem to work
-            --if player.render_mode == defines.render_mode.chart or player.render_mode == defines.render_mode.chart_zoomed_in then
-            local navSat = nil
-            local enough_light = false
-            for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
-                    if nav_surface.name == player.surface.name then
-                        local beacon = storage.nav_beacons[beacon_id] 
-                        if  beacon ~= nil     
-                            and beacon.force == player.force
-                        then
-                                navSat = beacon
-                                player.add_custom_alert(beacon,
-                                {type = "item", name = "nav-beacon"},
-                                {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}},
-                                false
-                                )
-                                break
-                        else
+    if settings.startup["enable-nav-beacon"].value == true then
+        for _,player in pairs(game.players) do
+            if player.controller_type == defines.controllers.remote then
+                --chart_zoomed_in doesn't seem to work
+                --if player.render_mode == defines.render_mode.chart or player.render_mode == defines.render_mode.chart_zoomed_in then
+                local navSat = nil
+                local enough_light = false
+                for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
+                        if nav_surface.name == player.surface.name then
+                            local beacon = storage.nav_beacons[beacon_id] 
+                            if  beacon ~= nil     
+                                and beacon.force == player.force
+                            then
+                                    navSat = beacon
+                                    player.add_custom_alert(beacon,
+                                    {type = "item", name = "nav-beacon"},
+                                    {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}},
+                                    false
+                                    )
+                                    break
+                            else
+                                player.remove_alert{entity = beacon}
+                            end
+                        else 
                             player.remove_alert{entity = beacon}
                         end
-                    else 
-                        player.remove_alert{entity = beacon}
-                    end
-            end
-
-            if navSat ~= nil then
-                if navSat.energy >= (util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ") * 1) then
-                    local pos = player.position
-                    --if player.force.is_chunk_visible(player.surface,{pos.x/32,pos.y/32}) == false then
-                        navSat.energy = navSat.energy - util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ")
-                        --game.print(navSat.quality.level)
-                        local offset = 50 + navSat.quality.level * 50
-                        local chartBounds = {
-                            left_top = { pos.x - offset/2, pos.y - offset/2},
-                            right_bottom = { pos.x + offset/2, pos.y + offset/2}
-                        }
-                        player.force.chart(player.surface, chartBounds)
-                    --end
                 end
-                    
-            
+
+                if navSat ~= nil then
+                    if navSat.energy >= (util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ") * 1) then
+                        local pos = player.position
+                        --if player.force.is_chunk_visible(player.surface,{pos.x/32,pos.y/32}) == false then
+                            navSat.energy = navSat.energy - util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ")
+                            --game.print(navSat.quality.level)
+                            local offset = 50 + navSat.quality.level * 50
+                            local chartBounds = {
+                                left_top = { pos.x - offset/2, pos.y - offset/2},
+                                right_bottom = { pos.x + offset/2, pos.y + offset/2}
+                            }
+                            player.force.chart(player.surface, chartBounds)
+                        --end
+                    end
+                        
+                
+                end
+                --end
+            else
+                player.remove_alert{type = defines.alert_type.custom, icon = {type = "item", name = "nav-beacon"},message = {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}}}
             end
-            --end
-        else
-            player.remove_alert{type = defines.alert_type.custom, icon = {type = "item", name = "nav-beacon"},message = {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}}}
         end
     end
 end)
