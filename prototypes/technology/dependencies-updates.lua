@@ -281,8 +281,11 @@ rro.remove(data.raw["technology"]["wood-gas-processing"].effects,{type = "unlock
 rro.remove(data.raw["technology"]["agriculture"].effects,{type = "unlock-recipe", recipe = "greenhouse"})
 data.raw["recipe"]["greenhouse"] = nil
 data.raw["item"]["I-greenhouse"] = nil
-data.raw["assembling-machine"]["E-greenhouse"].minable = {mining_time = 0.5}
-data.raw["assembling-machine"]["E-greenhouse"].localised_name = {"entity-name.n-deprecated",{"entity-name.E-greenhouse"}}
+if data.raw["assembling-machine"]["E-greenhouse"] then
+    data.raw["assembling-machine"]["E-greenhouse"].minable = {mining_time = 0.5}
+    data.raw["assembling-machine"]["E-greenhouse"].localised_name = {"entity-name.n-deprecated",{"entity-name.E-greenhouse"}}
+end
+
 table.insert(data.raw["technology"]["heating-tower"].effects,
     
         {

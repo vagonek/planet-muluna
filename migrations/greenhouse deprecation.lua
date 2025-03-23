@@ -1,1 +1,0 @@
-game.print("[entity=E-greenhouse] has been deprecated. Existing greenhouse entities will continue to exist, but greenhouse items have been removed.")
