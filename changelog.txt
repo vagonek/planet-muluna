@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.29.5
+Date: 2025-03-23
+  Balancing:
+    - Removed space science pack from "logistic-system" technology costs, and moved logistic-system to become available for research after unlocking "space-platform."
+    - Undid changes to logistic-system robot effects.
+  Bugfixes:
+    - Added control-level check to disable checking for satellite radar items when it is disabled. https://github.com/nicholasgower/planet-muluna/issues/127
+    - When Roc's Hardcore Delayed tech tree delays Logistic system, all changes to Logistic technologies is disabled. https://github.com/nicholasgower/planet-muluna/issues/129
+---------------------------------------------------------------------------------------------------
 Version: 1.29.4
 Date: 2025-03-23
   Bugfixes:
