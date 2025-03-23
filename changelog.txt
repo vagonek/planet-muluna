@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.29.4
+Date: 2025-03-23
+  Bugfixes:
+    - Fixed crash when another mod removes the E-greenhouse. https://github.com/nicholasgower/planet-muluna/issues/125
+---------------------------------------------------------------------------------------------------
 Version: 1.29.3
 Date: 2025-03-23
   Balancing:
