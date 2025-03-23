@@ -197,6 +197,7 @@ data.raw.technology["rocket-silo"].research_trigger={
     item="logistic-robot",
     count=100,
 }
+if not (settings.startup["rocs-hardcore-push-back-logistic-system"] and settings.startup["rocs-hardcore-push-back-logistic-system"].value == true) then
     -- table.insert(data.raw.technology["logistic-robotics"].effects,{
     --     type="unlock-recipe",
     --     recipe="requester-chest",
@@ -209,6 +210,7 @@ data.raw.technology["rocket-silo"].research_trigger={
 
     --data.raw["technology"]["logistic-system"].unit.count=300
 
+end
 
 
 table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"production-science-pack")
