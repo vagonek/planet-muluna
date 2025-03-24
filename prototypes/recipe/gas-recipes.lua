@@ -153,12 +153,12 @@ data:extend{
             {type = "fluid",name = "maraxsis-oxygen", amount=54},
         },
         results = {},
-        surface_conditions = {
-            {
-                property = "pressure",
-                max = 50,
-            }
-        },
+        -- surface_conditions = {
+        --     {
+        --         property = "pressure",
+        --         max = 50,
+        --     }
+        -- },
         energy_required=0.1,
         subgroup="muluna-products"
     },
@@ -173,12 +173,12 @@ data:extend{
             {type = "fluid",name = "carbon-dioxide", amount=54},
         },
         results = {},
-        surface_conditions = {
-            {
-                property = "pressure",
-                max = 50,
-            }
-        },
+        -- surface_conditions = {
+        --     {
+        --         property = "pressure",
+        --         max = 50,
+        --     }
+        -- },
         energy_required=0.1,
         subgroup="muluna-products"
     },
@@ -193,12 +193,12 @@ data:extend{
             {type = "fluid",name = "maraxsis-hydrogen", amount=54},
         },
         results = {},
-        surface_conditions = {
-            {
-                property = "pressure",
-                max = 50,
-            }
-        },
+        -- surface_conditions = {
+        --     {
+        --         property = "pressure",
+        --         max = 50,
+        --     }
+        -- },
         energy_required=0.1,
         subgroup="muluna-products"
     },
