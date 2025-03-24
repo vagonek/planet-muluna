@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.29.9
+Date: 2025-03-24
+  Balancing:
+    - Changed new crusher recipes from deterministic to random, slightly improving productivity and reducing the amount of returned ingredients.
+---------------------------------------------------------------------------------------------------
 Version: 1.29.8
 Date: 2025-03-24
   Balancing:
