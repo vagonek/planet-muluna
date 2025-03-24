@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.29.6
+Date: 2025-03-23
+  Bugfixes:
+    - Changed default import location of crusher and asteroid collector to Muluna when those recipes are restricted to Muluna.
+  Locale:
+    - Expanded Muluna description to add some hints on what to bring to Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.29.5
 Date: 2025-03-23
   Balancing:
