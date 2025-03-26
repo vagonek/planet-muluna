@@ -52,7 +52,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "space-science-pack"
+            "space-science-pack", "muluna-anorthite-processing"
         },
         icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
         icon_size=256,
