@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.30.0
+Date: 2025-03-26
+  Features:
+    - Added casting recipes making aluminum plate, electrical cables, and low density structures from molten aluminum.
+  Balancing:
+    - Made "Anorthite processing" a prerequisite of "Asteroid collector."
+---------------------------------------------------------------------------------------------------
 Version: 1.29.10
 Date: 2025-03-24
   Balancing:
