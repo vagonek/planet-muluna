@@ -13,12 +13,17 @@ local function generate_void_icons(fluid_icons)
     return icons
 end
 
-function Public.dual_icon(item_1,item_2)
+
+
+function Public.dual_icon(item_1,item_2,item_3)
     local icon = {}
     local type_1 = "item"
     local type_2 = "item"
+    local type_3 = "item"
     if data.raw["fluid"][item_1] then type_1 = "fluid" end
     if data.raw["fluid"][item_2] then type_2 = "fluid" end
+    if data.raw["fluid"][item_3] then type_3 = "fluid" end
+
     if data.raw[type_1][item_1].icon then
         icon[1]={
             icon=data.raw[type_1][item_1].icon,
@@ -76,6 +81,30 @@ function Public.dual_icon(item_1,item_2)
             draw_background = true,
         }
 
+    end
+
+    if data.raw[type_3][item_3] then
+        icon[3]=table.deepcopy(icon[2]) --Rearrange order.
+        if data.raw[type_3][item_3].icon then
+            icon[2]={
+                icon=data.raw[type_3][item_3].icon,
+                icon_size=data.raw[type_3][item_3].icon_size,
+                scale=0.30,
+                shift = {3,-10},
+                draw_background = true,
+                }
+                if data.raw[type_3][item_3].icon_size then
+                    icon[3].scale=icon[3].scale* 64 /data.raw[type_3][item_3].icon_size
+                end
+        elseif data.raw[type_3][item_3].icons then
+            icon[2]={
+                icon=data.raw[type_3][item_3].icons[1].icon,
+                icon_size=data.raw[type_3][item_3].icons[1].icon_size,
+                scale=0.30,
+                shift = {3,-10},
+                draw_background = true,
+                }
+        end
     end
     
     
