@@ -14,28 +14,35 @@ data:extend{{
 {
     type="item",
     name="alumina-crushed",
-    icons={
-        {
-            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
-            scale=0.25,
-            shift={0.25,0}
-        },
-        {
-            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-3.png",
-            scale=0.25,
-            shift={0,0.25}
-        },
-        {
-            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
-            scale=0.25,
-            shift={0,-0.25}
-        },
-        {
-            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
-            scale=0.25,
-            shift={-0.25,0}
-        },
+    icon = "__planet-muluna__/graphics/icons/crushed-alumina.png",
+    pictures =
+    {
+        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina-1.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina-2.png",scale = 0.5, mipmap_count = 4},
     },
+    -- icons={
+    --     {
+    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+    --         scale=0.25,
+    --         shift={0.25,0}
+    --     },
+    --     {
+    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-3.png",
+    --         scale=0.25,
+    --         shift={0,0.25}
+    --     },
+    --     {
+    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
+    --         scale=0.25,
+    --         shift={0,-0.25}
+    --     },
+    --     {
+    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
+    --         scale=0.25,
+    --         shift={-0.25,0}
+    --     },
+    -- },
     stack_size=iron_ore.stack_size*2,
     order="b[alumina-crushed]",
     subgroup="muluna-products",
@@ -180,20 +187,8 @@ data:extend{{
 }
 
 local placed_tree = table.deepcopy(data.raw["plant"]["tree-plant"])
-
 placed_tree.name = "muluna-placed-tree"
 placed_tree.growth_ticks = 1
--- end
---     {
---     name = "muluna-placed-tree",
---     growth_ticks = 1,
---     type = "plant",
-
-
-
-
--- })
-
 data:extend{placed_tree}
     
 

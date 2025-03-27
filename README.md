@@ -80,7 +80,9 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
 ## Special thanks to the following mods and creators:
 
-- Maraxsis, for code and certain fluids copied for cross-compatibility purposes.
+- SafTheLamb, for crushed alumina icon and for collaborating with me to ensure compatibility between Muluna and her mods.
+
+- Maraxsis by notnotmelon, for code and certain fluids copied for cross-compatibility purposes.
 
 - Hurricane, for their many freely available high-quality art assets.
 
