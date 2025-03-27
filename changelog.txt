@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.30.1
+Date: 2025-03-27
+  Bugfixes:
+    - Fixed crash on loading with Crushing-industry. https://mods.factorio.com/mod/crushing-industry/discussion/67e494375c8e289c63f80b88
+---------------------------------------------------------------------------------------------------
 Version: 1.30.0
 Date: 2025-03-26
   Features:
