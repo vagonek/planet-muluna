@@ -207,3 +207,25 @@ data:extend{placed_tree}
 --     "red-desert-0", "red-desert-1", "red-desert-2", "red-desert-3"
 --   }
 -- }
+
+
+-- if not data.raw["item"]["sand"] then
+--     data:extend{ --Copied from Crushing Industry
+--         type = "item",
+--         name = "sand",
+--         icon = "__crushing-industry__/graphics/icons/sand.png",
+--         pictures = {
+--           {size=64, filename="__planet-muluna__/graphics/icons/sand.png", scale=0.5, mipmap_count=4},
+--           {size=64, filename="__planet-muluna__/graphics/icons/sand-1.png", scale=0.5, mipmap_count=4},
+--           {size=64, filename="__planet-muluna__/graphics/icons/sand-2.png", scale=0.5, mipmap_count=4},
+--         },
+--         subgroup = "raw-resource",
+--         order = "d[stone]-c[crushed]",
+--         inventory_move_sound = item_sounds.resource_inventory_move,
+--         pick_sound = item_sounds.resource_inventory_pickup,
+--         drop_sound = item_sounds.resource_inventory_move,
+--         stack_size = 200,
+--         weight = 1 * kg
+--       }
+    
+-- end
