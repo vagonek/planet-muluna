@@ -6,6 +6,7 @@ local function replace_metal(old_string)
     local new_string = old_string
     
     new_string = string.gsub(new_string,old_metal,new_metal,1)
+    if new_string == "crushed-aluminum-ore" then new_string = "alumina-crushed" end
     if new_string == "aluminum-ore" then new_string = "alumina" end
     if new_string == "aluminum-cable" then new_string = "copper-cable" end
     return new_string
