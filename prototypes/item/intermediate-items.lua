@@ -209,8 +209,10 @@ if not data.raw["item"]["silicon"] then --Copied from Moshine
         random_tint_color = item_tints.iron_rust,
         stack_size = 50,
         weight = 20*kg,
-      },
-      {
+      }}
+end
+if not data.raw["item"]["silicon-cell"] then
+      data:extend{{
         type = "item",
         name = "silicon-cell",
         icon = "__planet-muluna__/graphics/icons/silicon-cell.png",
