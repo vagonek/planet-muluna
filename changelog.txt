@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.31.0
+Date: 2025-03-30
+  Features:
+    - Added "Advanced anorthite crushing" recipe, acting as the primary source of silicon on Muluna. Locked behind "Silicon processing technology," which requires production science pack.
+    - Added "Solar panel from silicon cell" recipe, a solar panel recipe that can be produced on Muluna.
+    - Ported Moshine's Silicon and Silicon cell items, as well as Silicon cell's recipe.
+  Changes:
+    - Corrected license year to reflect that mod was first created in late 2024.
+---------------------------------------------------------------------------------------------------
 Version: 1.30.2
 Date: 2025-03-27
   Graphics:
