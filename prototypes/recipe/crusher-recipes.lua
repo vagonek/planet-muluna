@@ -108,4 +108,22 @@ wood_crushing.energy_required = 0.5
 
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
 wood_crushing.order="b-aa-b"
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
+data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}if not data.raw["recipe"]["silicon-cell"] then
+
+data:extend{{ --Moshine recipe
+    type = "recipe",
+    name = "silicon-cell",
+    category = "electronics",
+    energy_required = 2,
+    ingredients =
+    {
+      {type = "item", name = "silicon", amount = 5},
+      {type = "item", name = "electronic-circuit", amount = 1},
+    },
+    results = {{type = "item", name = "silicon-cell", amount = 1}},
+    allow_productivity = true,
+    enabled = false,
+  }}
+
+end
+

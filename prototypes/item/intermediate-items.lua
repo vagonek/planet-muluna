@@ -1,4 +1,6 @@
 local rro = require("lib.remove-replace-object")
+local item_sounds = require("__base__.prototypes.item_sounds")
+local item_tints = require("__base__.prototypes.item-tints")
 
 local iron_ore=data.raw["item"]["iron-ore"]
 data:extend{{
@@ -192,6 +194,36 @@ placed_tree.growth_ticks = 1
 data:extend{placed_tree}
     
 
+
+if not data.raw["item"]["silicon"] then --Copied from Moshine
+    data:extend{{
+        type = "item",
+        name = "silicon",
+        icon = "__planet-muluna__/graphics/icons/silicon.png",
+        subgroup = "muluna-products",
+        order = "bbb",
+        inventory_move_sound = item_sounds.metal_small_inventory_move,
+        pick_sound = item_sounds.metal_small_inventory_pickup,
+        drop_sound = item_sounds.metal_small_inventory_move,
+        default_import_location = "muluna",
+        random_tint_color = item_tints.iron_rust,
+        stack_size = 50,
+        weight = 20*kg,
+      },
+      {
+        type = "item",
+        name = "silicon-cell",
+        icon = "__planet-muluna__/graphics/icons/silicon-cell.png",
+        subgroup = "muluna-products",
+        order = "eee",
+        inventory_move_sound = item_sounds.metal_small_inventory_move,
+        pick_sound = item_sounds.metal_small_inventory_pickup,
+        drop_sound = item_sounds.metal_small_inventory_move,
+        default_import_location = "muluna",
+        stack_size = 50,
+        weight = 20*kg,
+      }}
+end
 
 
 -- rro.soft_insert(data.raw["tree"]["tree-01"].flags,"placeable-player")
