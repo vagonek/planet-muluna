@@ -279,6 +279,44 @@ data:extend{
     },
     {
         type = "technology",
+        name = "muluna-silicon-processing",
+        unit = {
+            count = 500,
+            time = 30,
+            ingredients = {
+                    {"automation-science-pack", 1},
+                    {"logistic-science-pack", 1},
+                    {"chemical-science-pack", 1},
+                    {"production-science-pack", 1},
+                    --{"utility-science-pack", 1},
+                    --{"space-science-pack", 1},
+            }
+        },
+        prerequisites = {
+            "muluna-anorthite-processing",
+            --"space-science-pack",
+            "production-science-pack",
+            --"utility-science-pack",
+        },
+        icon = "__planet-muluna__/graphics/technology/moshine-tech-silicon-cell.png",
+        icon_size = 256,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-anorthite-crushing",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "silicon-cell",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-silicon-solar-panel",
+            },
+        }
+    },
+    {
+        type = "technology",
         name = "planet-discovery-muluna",
         research_trigger = {
             type = "build-entity",

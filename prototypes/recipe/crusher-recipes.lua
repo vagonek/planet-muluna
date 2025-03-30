@@ -18,8 +18,60 @@ return {
         draw_background = true
     },
 }
--- New icons
+
 end
+
+local function advanced_crushing_icon(icon_dir,product_1,product_2)
+    return {
+        {
+            icon = product_1,
+            icon_size=64,
+            scale = 0.25,
+            shift = {-8,8},
+            draw_background = true
+        },
+        {
+            icon = product_1,
+            icon_size=64,
+            scale = 0.25,
+            shift = {8,-8},
+            draw_background = true
+        },
+        {
+            icon = product_2,
+            icon_size=64,
+            scale = 0.25,
+            shift = {-8,-8},
+            draw_background = true
+        },
+        {
+            icon = product_2,
+            icon_size=64,
+            scale = 0.25,
+            shift = {8,8},
+            draw_background = true
+        },
+        {
+            icon = icon_dir,
+            icon_size=64,
+            scale=0.4,
+            -- shift = {0,-3},
+            --scale = 0.5,
+            --scale=50/128,
+            draw_background = true
+        },
+        
+        -- {
+        --     icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
+        --     icon_size=64,
+        --     scale=0.5,
+        --     draw_background = true
+        -- },
+    }
+
+end
+-- New icons
+
 table.insert(data.raw["character"]["character"].crafting_categories,
 "crushing"    
 
@@ -53,6 +105,29 @@ anorthite_crushing.ingredients = {{type = "item",name = "anorthite-chunk",amount
 -- anorthite_crushing.surface_conditions={
 --     PlanetsLib.surface_conditions.restrict_to_surface("muluna")
 -- }
+
+
+local advanced_anorthite_crushing = util.merge{table.deepcopy(anorthite_crushing),
+
+{
+    name = "advanced-anorthite-crushing",
+    order = "g[advanced-anorthite-crushing]",
+    icons = advanced_crushing_icon(
+        "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+        data.raw["item"]["alumina"].icon,
+        data.raw["item"]["silicon"].icon
+    ),
+}
+
+
+}
+
+advanced_anorthite_crushing.results = {{type = "item",name = "alumina",amount = 10},{type = "item",name = "silicon",amount = 4},{type = "item", name = "anorthite-chunk", amount = 1, probability = 0.05}}
+    
+
+data:extend{advanced_anorthite_crushing}
+
+
 
 local alumina_crushing=table.deepcopy(anorthite_crushing)
 alumina_crushing.icons = crushing_icon("__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",64)
@@ -108,7 +183,12 @@ wood_crushing.energy_required = 0.5
 
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
 wood_crushing.order="b-aa-b"
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}if not data.raw["recipe"]["silicon-cell"] then
+data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
+
+
+
+
+if not data.raw["recipe"]["silicon-cell"] then
 
 data:extend{{ --Moshine recipe
     type = "recipe",
@@ -126,4 +206,5 @@ data:extend{{ --Moshine recipe
   }}
 
 end
+
 
