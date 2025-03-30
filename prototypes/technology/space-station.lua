@@ -281,7 +281,7 @@ data:extend{
         type = "technology",
         name = "muluna-silicon-processing",
         unit = {
-            count = 500,
+            count = 100,
             time = 30,
             ingredients = {
                     {"automation-science-pack", 1},
