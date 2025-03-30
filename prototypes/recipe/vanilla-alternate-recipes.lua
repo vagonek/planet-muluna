@@ -117,8 +117,20 @@ rro.remove(bio_plastic.ingredients,{type = "fluid",name = "organotins",amount = 
 if data.raw["technology"]["plastic-bar-productivity"] then
     rro.soft_insert(data.raw["technology"]["plastic-bar-productivity"].effects,{type="change-recipe-productivity",recipe="plastic-from-wood",change=0.1})
 end
+
+
+
+local solar_panel = util.merge{data.raw["recipe"]["solar-panel"],
+    {
+        name = "muluna-silicon-solar-panel",
+        icons = dual_icon("solar-panel","silicon-cell")
+    }
+}
+rro.replace_name(solar_panel.ingredients,"copper-plate","silicon-cell")
+rro.replace_name(solar_panel.ingredients,"steel-plate","aluminum-plate")
+
 --local recipes = {motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
-local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic}
+local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic,solar_panel}
 --, ,aluminum_green_circuit,aluminum_red_circuit,
 for _,recipe in pairs(recipes) do
     recipe.subgroup = "muluna-products"
