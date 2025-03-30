@@ -134,6 +134,7 @@ local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfi
 --, ,aluminum_green_circuit,aluminum_red_circuit,
 for _,recipe in pairs(recipes) do
     recipe.subgroup = "muluna-products"
+    recipe.auto_recycle = false
 end
 
 data:extend(recipes)
