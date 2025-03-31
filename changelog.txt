@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.0
+Date: 2025-03-31
+  Features:
+    - Added "Thruster oxidizer separation" recipe, adding an alternative method of oxygen production mirroring oxidizer production on space platforms.
+---------------------------------------------------------------------------------------------------
 Version: 1.31.4
 Date: 2025-03-30
   Bugfixes:
