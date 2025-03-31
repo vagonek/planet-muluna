@@ -342,3 +342,35 @@ data:extend{
 
 
 }
+
+local divider = 40 --I'm too tired to do mental math. This will simplify the ratio calculations.
+local probability = 1
+local oxygen_from_oxidizer = {
+    type = "recipe",
+    name = "muluna-oxygen-from-oxidizer",
+    category = "chemistry",
+    icons = dual_icon("maraxsis-oxygen","thruster-oxidizer"),
+    energy_required = 0.1,
+    ingredients = {
+        { --At 300% productivity using advanced oxidizer recipe, you will reclaim 100% of your water.
+            type = "fluid",
+            name = "thruster-oxidizer",
+            amount = 4000/divider,
+        }
+    },
+    results = {
+        {
+            type = "fluid",
+            name = "maraxsis-oxygen",
+            amount = 4000/divider,
+        },
+        {
+            type = "fluid",
+            name = "water",
+            amount = 100/divider/probability,
+            probability = probability,
+        }
+    }
+}
+
+data:extend{oxygen_from_oxidizer}

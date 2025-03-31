@@ -214,6 +214,10 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
+                recipe = "muluna-oxygen-from-oxidizer"
+            },
+            {
+                type = "unlock-recipe",
                 recipe = "advanced-water-boiling"
             },
             {

@@ -25,6 +25,8 @@ thruster_fuel.icons= {
     --     shift = {0,0},
     -- }
 }
+
+
 thruster_fuel.icon=nil
 thruster_fuel.icon_size=nil
 data:extend{thruster_fuel}
@@ -33,3 +35,4 @@ table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
     type="unlock-recipe",
     recipe="thruster-fuel-from-rocket-fuel",
 })
+
