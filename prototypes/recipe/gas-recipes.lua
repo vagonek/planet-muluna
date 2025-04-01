@@ -351,6 +351,7 @@ local oxygen_from_oxidizer = {
     category = "chemistry",
     icons = dual_icon("maraxsis-oxygen","thruster-oxidizer"),
     energy_required = 0.1,
+    subgroup="muluna-products",
     ingredients = {
         { --At 300% productivity using advanced oxidizer recipe, you will reclaim 100% of your water.
             type = "fluid",
