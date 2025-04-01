@@ -9,6 +9,7 @@ if data.raw["technology"]["planet-discovery-corrundum"] then
             }
         }
     end
+    require("prototypes.technology.electrochemical-techs")
 end
 
 if data.raw["generator"]["red-steam-engine"] then 
