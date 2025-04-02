@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.3
+Date: 2025-04-02
+  Bugfixes:
+    - Removed non-standard character from file that caused issues with unzipping the mod on a Mac.
+---------------------------------------------------------------------------------------------------
 Version: 1.32.2
 Date: 2025-04-02
   Compatibility:
