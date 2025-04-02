@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.2
+Date: 2025-04-02
+  Compatibility:
+    - When Corrundum is installed, "thruster-fuel-productivity" now requires the electromagnetic science pack.
+  Bugfixes:
+    - Changed "muluna-silicon-solar-panel" order and subgroup to match standard solar panel recipe.
+---------------------------------------------------------------------------------------------------
 Version: 1.32.1
 Date: 2025-04-01
   Bugfixes:
