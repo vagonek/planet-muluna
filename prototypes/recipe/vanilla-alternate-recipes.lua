@@ -123,7 +123,9 @@ end
 local solar_panel = util.merge{data.raw["recipe"]["solar-panel"],
     {
         name = "muluna-silicon-solar-panel",
-        icons = dual_icon("solar-panel","silicon-cell")
+        icons = dual_icon("solar-panel","silicon-cell"),
+        subgroup = data.raw["item"]["solar-panel"].subgroup,
+        order = data.raw["item"]["solar-panel"].order .. "a"
     }
 }
 rro.replace_name(solar_panel.ingredients,"copper-plate","silicon-cell")
@@ -133,7 +135,10 @@ rro.replace_name(solar_panel.ingredients,"steel-plate","aluminum-plate")
 local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic,solar_panel}
 --, ,aluminum_green_circuit,aluminum_red_circuit,
 for _,recipe in pairs(recipes) do
-    recipe.subgroup = "muluna-products"
+    if recipe.subgroup ~= data.raw["item"]["solar-panel"].subgroup then
+        recipe.subgroup = "muluna-products"
+    end
+    
     recipe.auto_recycle = false
 end
 
