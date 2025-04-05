@@ -271,7 +271,18 @@ anorthite.minable.mining_time = 20
 anorthite.autoplace.control="anorthite-chunk"
 anorthite.icons=nil
 anorthite.icon="__planet-muluna__/graphics/icons/anorthite-chunk.png"
-
+anorthite.stages =
+{
+  sheet =
+  {
+    filename = "__planet-muluna__/graphics/entities/oxide-asteroid-ore/grayscale-ore.png",
+    priority = "extra-high",
+    size = 128,
+    frame_count = 8,
+    variation_count = 8,
+    scale = 0.5,
+  }
+}
 -- ice_ore.autoplace = {
 --     control = "ice",
 --     default_enabled = false,
