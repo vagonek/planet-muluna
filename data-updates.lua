@@ -280,6 +280,12 @@ if data.raw["technology"]["asteroid-productivity"] then
         change = 0.1,
         hidden = false
     })
+    table.insert(data.raw["technology"]["asteroid-productivity"].effects,{
+        type = "change-recipe-productivity",
+        recipe = "advanced-anorthite-crushing",
+        change = 0.1,
+        hidden = false
+    })
 end
 
 for i = 1,10,1 do --For compatibility with Roc's hardcore tech tree.
@@ -287,6 +293,12 @@ for i = 1,10,1 do --For compatibility with Roc's hardcore tech tree.
         table.insert(data.raw["technology"]["asteroid-productivity-"..tostring(i)].effects,{
             type = "change-recipe-productivity",
             recipe = "anorthite-crushing",
+            change = 0.1,
+            hidden = false
+        })
+        table.insert(data.raw["technology"]["asteroid-productivity"].effects,{
+            type = "change-recipe-productivity",
+            recipe = "advanced-anorthite-crushing",
             change = 0.1,
             hidden = false
         })
