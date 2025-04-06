@@ -138,7 +138,7 @@ for _,recipe in pairs(recipes) do
     if recipe.subgroup ~= data.raw["item"]["solar-panel"].subgroup then
         recipe.subgroup = "muluna-products"
     end
-    
+    recipe.hide_from_signal_gui = false
     recipe.auto_recycle = false
 end
 

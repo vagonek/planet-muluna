@@ -6,6 +6,7 @@ rro.replace(thruster_fuel.ingredients,{type="fluid", name="water", amount=10},{t
 thruster_fuel.energy_required=thruster_fuel.energy_required*3.5
 thruster_fuel.results[1].amount=250
 thruster_fuel.name="thruster-fuel-from-rocket-fuel"
+thruster_fuel.hide_from_signal_gui = false
 thruster_fuel.icons= {
     {
         icon=data.raw["fluid"]["thruster-fuel"].icon,

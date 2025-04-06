@@ -29,6 +29,7 @@ for _,recipe_name in pairs(old_recipes) do
     
     if recipe.category == "metallurgy" then
         local new_recipe = table.deepcopy(recipe)
+        new_recipe.hide_from_signal_gui = false
         if string.find(new_recipe.name, old_metal) then
             new_recipe.name = replace_metal(new_recipe.name)
         else

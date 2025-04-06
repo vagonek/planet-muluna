@@ -123,7 +123,7 @@ local advanced_anorthite_crushing = util.merge{table.deepcopy(anorthite_crushing
 }
 
 advanced_anorthite_crushing.results = {{type = "item",name = "alumina",amount = 10},{type = "item",name = "silicon",amount = 4},{type = "item", name = "anorthite-chunk", amount = 1, probability = 0.05}}
-    
+advanced_anorthite_crushing.hide_from_signal_gui = false
 
 data:extend{advanced_anorthite_crushing}
 
@@ -183,7 +183,14 @@ wood_crushing.energy_required = 0.5
 
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
 wood_crushing.order="b-aa-b"
-data:extend{anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
+
+local recipes = {anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
+
+for _,recipe in pairs(recipes) do
+    recipe.hide_from_signal_gui = false
+end
+
+data:extend(recipes)
 
 
 
