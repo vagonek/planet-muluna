@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.9
+Date: 2025-04-06
+  Compatibility:
+    - Changed internal name of "wood-crushed" and "wood-crushing" to "woodchips" to match Wooden Industries.
+  Graphics:
+    - Changed graphics of Alumina and Cellulose.
+    - Replaced wood in "plastic from cellulose" recipe icon with cellulose.
+---------------------------------------------------------------------------------------------------
 Version: 1.32.8
 Date: 2025-04-06
   Bugfixes:
