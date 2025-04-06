@@ -105,7 +105,7 @@ bricks_crushed_stone.auto_recycle=false
 local bio_plastic = table.deepcopy(data.raw["recipe"]["plastic-bar"])
 bio_plastic.allow_decomposition = false
 bio_plastic.name = "plastic-from-wood"
-bio_plastic.icons = dual_icon("plastic-bar","wood")
+bio_plastic.icons = dual_icon("plastic-bar","cellulose")
 rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "carbon-black",amount = 1},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "crushed-coal",amount = 3},{type = "item",name = "cellulose",amount = 4})

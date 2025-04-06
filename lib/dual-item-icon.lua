@@ -29,7 +29,7 @@ function Public.dual_icon(item_1,item_2,item_3)
             icon=data.raw[type_1][item_1].icon,
             icon_size=data.raw[type_1][item_1].icon_size,
             scale=0.35,
-            draw_background = true
+            draw_background = true,
         }
         if data.raw[type_1][item_1].icon_size then
             icon[1].scale=icon[1].scale * 64 /data.raw[type_1][item_1].icon_size
@@ -42,6 +42,7 @@ function Public.dual_icon(item_1,item_2,item_3)
             icon_size=data.raw[type_1][item_1].icons[1].icon_size,
             scale=0.35,
             draw_background = true,
+            tint = data.raw[type_1][item_1].icons[1].tint,
         }
     else 
         log(type_1 .. " \"".. item_1 .. "\" icon not found. Using a placeholder in composite icon instead." )
@@ -70,6 +71,7 @@ function Public.dual_icon(item_1,item_2,item_3)
             scale=0.30,
             shift = {10,-10},
             draw_background = true,
+            tint = data.raw[type_2][item_2].icons[1].tint,
             }
     else
         icon[2]={
@@ -96,6 +98,7 @@ function Public.dual_icon(item_1,item_2,item_3)
                 if data.raw[type_3][item_3].icon_size then
                     icon[3].scale=icon[3].scale* 64 /data.raw[type_3][item_3].icon_size
                 end
+                
         elseif data.raw[type_3][item_3].icons then
             icon[2]={
                 icon=data.raw[type_3][item_3].icons[1].icon,
@@ -103,9 +106,11 @@ function Public.dual_icon(item_1,item_2,item_3)
                 scale=0.30,
                 shift = {3,-10},
                 draw_background = true,
+                tint = data.raw[type_3][item_3].icons[1].tint,
                 }
         end
     end
+    
     
     
     return icon
