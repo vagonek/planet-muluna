@@ -265,7 +265,7 @@ table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
 })
 table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
     type = "unlock-recipe",
-    recipe="wood-crushing"
+    recipe="woodchips"
 })
 table.insert(data.raw["technology"]["wood-gas-processing"].effects, {
     type = "unlock-recipe",

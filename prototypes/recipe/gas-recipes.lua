@@ -316,7 +316,7 @@ data:extend{
         enabled = false,
         name = "cellulose",
         ingredients = {
-            {type = "item",name = "wood-crushed", amount=40},
+            {type = "item",name = "woodchips", amount=40},
             {type = "fluid",name = "sulfuric-acid", amount=5}
         },
         energy_required = 16,

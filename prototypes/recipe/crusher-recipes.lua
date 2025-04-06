@@ -173,11 +173,11 @@ aluminum_cable.allow_as_intermediate = false
 
 
 local wood_crushing = table.deepcopy(anorthite_crushing)
-wood_crushing.name = "wood-crushing"
+wood_crushing.name = "woodchips"
 --wood_crushing.ingredients = {{type = "item",name = "wood",amount = 6}}
---wood_crushing.results = {{type = "item",name = "wood-crushed",amount = 10},{type = "item", name = "wood", amount = 1,ignored_by_productivity=1}}
+--wood_crushing.results = {{type = "item",name = "woodchips",amount = 10},{type = "item", name = "wood", amount = 1,ignored_by_productivity=1}}
 
-wood_crushing.results = {{type = "item", name = "wood", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "wood-crushed",amount = 2}}
+wood_crushing.results = {{type = "item", name = "wood", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "woodchips",amount = 2}}
 wood_crushing.ingredients = {{type = "item",name = "wood",amount = 1}}
 wood_crushing.energy_required = 0.5
 

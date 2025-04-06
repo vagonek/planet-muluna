@@ -177,15 +177,35 @@ data:extend{{
             --shift={0.25,0}
             tint = {1,0.8,0.4}
         },
+{ --Copied from Wooden industries
+    type = "item",
+    name = "woodchips",
+    icon = "__planet-muluna__/graphics/icons/woodchips.png",
+    icon_size = 64,
+    pictures = {
+      {size=64, filename="__planet-muluna__/graphics/icons/woodchips.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-1.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-2.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-3.png", scale=0.5, mipmap_count=4}
     },
-    stack_size=iron_ore.stack_size*4,
-    order="b[cellulose]",
-    subgroup="muluna-products",
-    --recipe_group="intermediate-products",
-    weight=iron_ore.weight*1/2,
+    -- icons={
+    --     {
+    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+    --         --scale=0.25,
+    --         --shift={0.25,0}
+    --         tint = {1,0.8,0.4}
+    --     },
+    -- },
+    fuel_category = "chemical",
     fuel_value = "1MJ",
-    fuel_category=data.raw["item"]["wood"].fuel_category,
-},
+    subgroup = "raw-resource",
+    order = "a[wood]-c[chips]",
+    inventory_move_sound = item_sounds.wood_inventory_move,
+    pick_sound = item_sounds.wood_inventory_pickup,
+    drop_sound = item_sounds.wood_inventory_move,
+    stack_size = 200,
+    weight = 1*kg
+  },
 }
 
 local placed_tree = table.deepcopy(data.raw["plant"]["tree-plant"])
