@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.11
+Date: 2025-04-07
+  Graphics:
+    - Replaced icon for molten aluminum to match 2.0.44's changes to molten iron/copper fluids. https://forums.factorio.com/128050
+---------------------------------------------------------------------------------------------------
 Version: 1.32.10
 Date: 2025-04-07
   Bugfixes:
