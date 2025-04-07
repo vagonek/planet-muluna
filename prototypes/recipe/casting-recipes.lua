@@ -12,6 +12,34 @@ local function replace_metal(old_string)
     return new_string
 end
 
+local function melting_icon(metal,ore)
+
+    return {
+        
+        {
+            icon = data.raw["item"]["calcite"].icon,
+            icon_size=64,
+            scale = 0.25,
+            shift = {8,-8},
+            draw_background = true
+        },
+        {
+            icon = ore,
+            icon_size=64,
+            scale = 0.25,
+            shift = {-8,-8},
+            draw_background = true
+        },
+        {
+            icon = metal,
+            scale = 0.45,
+            shift = {-2,3},
+            draw_background = true
+        },
+    }
+
+end
+
 local old_recipes = 
 
 {
@@ -79,7 +107,8 @@ data.raw["recipe"]["casting-aluminum-cable"].order = "b[casting]-ha[casting-alum
 table.insert(data.raw["recipe"]["molten-aluminum"].results,{type = "fluid", name = "maraxsis-oxygen", amount = 750})
 data.raw["fluid"]["molten-aluminum"].base_color = {0.7,0.7,0.7}
 data.raw["fluid"]["molten-aluminum"].flow_color = {0.7,0.7,0.7}
-
+data.raw["recipe"]["molten-aluminum"].icons = melting_icon(data.raw["fluid"]["molten-aluminum"].icon,data.raw["item"]["alumina"].icon)
+data.raw["recipe"]["molten-aluminum"].localised_name = {"recipe-name.molten-aluminum"}
 data.raw["recipe"]["casting-aluminum-cable"].icons = dual_icon("copper-cable","molten-aluminum") --{
 
     -- {

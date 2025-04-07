@@ -87,12 +87,13 @@ function Public.dual_icon(item_1,item_2,item_3)
 
     if data.raw[type_3][item_3] then
         icon[3]=table.deepcopy(icon[2]) --Rearrange order.
+        icon[2]=table.deepcopy(icon[1]) --Rearrange order.
         if data.raw[type_3][item_3].icon then
-            icon[2]={
+            icon[1]={
                 icon=data.raw[type_3][item_3].icon,
                 icon_size=data.raw[type_3][item_3].icon_size,
                 scale=0.30,
-                shift = {3,-10},
+                shift = {0,-10},
                 draw_background = true,
                 }
                 if data.raw[type_3][item_3].icon_size then
@@ -100,11 +101,11 @@ function Public.dual_icon(item_1,item_2,item_3)
                 end
                 
         elseif data.raw[type_3][item_3].icons then
-            icon[2]={
+            icon[1]={
                 icon=data.raw[type_3][item_3].icons[1].icon,
                 icon_size=data.raw[type_3][item_3].icons[1].icon_size,
                 scale=0.30,
-                shift = {3,-10},
+                shift = {0,-10},
                 draw_background = true,
                 tint = data.raw[type_3][item_3].icons[1].tint,
                 }
