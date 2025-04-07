@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.10
+Date: 2025-04-07
+  Bugfixes:
+    - Fixed crash with Hardcore Delayed Tech https://github.com/nicholasgower/planet-muluna/issues/139
+---------------------------------------------------------------------------------------------------
 Version: 1.32.9
 Date: 2025-04-06
   Compatibility:
