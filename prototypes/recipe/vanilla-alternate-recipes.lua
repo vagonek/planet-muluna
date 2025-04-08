@@ -108,10 +108,12 @@ bio_plastic.name = "plastic-from-wood"
 bio_plastic.icons = dual_icon("plastic-bar","cellulose")
 rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "carbon-black",amount = 1},{type = "item",name = "cellulose",amount = 4})
+rro.replace(bio_plastic.ingredients,{type = "item",name = "crushed-coal",amount = 2},{type = "item",name = "cellulose",amount = 3})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "crushed-coal",amount = 3},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "resin",amount = 1},{type = "item",name = "cellulose",amount = 4}) --Wooden industries
 rro.replace(bio_plastic.ingredients,{type = "item",name = "resin",amount = 2},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "fluid",name = "petroleum-gas",amount = 15},{type = "fluid",name = "petroleum-gas",amount = 20})
+
 --fixed bio_plastic
 rro.remove(bio_plastic.ingredients,{type = "fluid",name = "organotins",amount = 5})
 if data.raw["technology"]["plastic-bar-productivity"] then
