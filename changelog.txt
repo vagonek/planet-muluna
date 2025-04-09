@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.33.0
+Date: 2025-04-09
+  Features:
+    - When new Muluna surface is created, crushers, solar panels, medium power poles, electric furnaces, and lunar rocks will be randomly placed surrounding the player's spawn point, making it possible to start a Muluna base without any external supplies.
+  Compatibility:
+    - Completed compatibility patch for any-planet-start. When Muluna is selected as the starting planet, automation science packs and early game research triggers have copper plates replaced with aluminum plates.
+---------------------------------------------------------------------------------------------------
 Version: 1.32.14
 Date: 2025-04-09
   Graphics:
