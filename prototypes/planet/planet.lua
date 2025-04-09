@@ -70,6 +70,8 @@ local map_gen = {
           ["oxide-asteroid-chunk"] = {},
           ["metallic-asteroid-chunk"] = {},
           ["carbonic-asteroid-chunk"] = {},
+          ["anorthite-chunk"] = {},
+          ["helium"] = {},
           ["uranium-ore"] = {},
         }
       }
@@ -88,7 +90,8 @@ local parent_planet = "nauvis"
 
 
 if mods["any-planet-start"] then
-  local parent_planet = settings.startup["aps-planet"].value
+  parent_planet = settings.startup["aps-planet"].value
+  --assert(1==2,tostring(parent_planet))
   local start_planet = settings.startup["aps-planet"].value
   if parent_planet == "none" or parent_planet =="muluna" then
     parent_planet = "nauvis"
@@ -175,7 +178,7 @@ local muluna=
     },
     procession_graphic_catalogue = planet_catalogue_vulcanus,
 
-    --asteroid_spawn_definitions = data.raw["planet"][parent_planet].asteroid_spawn_definitions,
+    
 }
 
 
@@ -197,11 +200,7 @@ if settings.startup["PlanetsLib-enable-oxygen"].value == true then
   muluna.surface_properties["oxygen"] = 0
 end
 
-local asteroid_spawn_definitions_connection = asteroid_util.spawn_definitions(asteroid_util.nauvis_vulcanus)
-table.remove(asteroid_spawn_definitions_connection,6) --Removes medium asteroids from path
-table.remove(asteroid_spawn_definitions_connection,5)
-table.remove(asteroid_spawn_definitions_connection,4)
---table.remove(asteroid_spawn_definitions_connection,2)
+
 
 local muluna_connection = {
   type = "space-connection",
@@ -210,8 +209,12 @@ local muluna_connection = {
   to = "muluna",
   subgroup = data.raw["space-connection"]["nauvis-vulcanus"].subgroup,
   length = 1000,
-  asteroid_spawn_definitions = asteroid_spawn_definitions_connection
+  --asteroid_spawn_definitions = asteroid_spawn_definitions_connection
 }
+
+
+
+
 
 if settings.startup["override-space-connection"].value == true then
   local connections = {
