@@ -1,6 +1,6 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/Y8Y019GOIS)
 
-Explore Nauvis' moon of Muluna, and take your first step into space. Revamps the Space Science pack to be crafted on Muluna, and adds a second science pack called the Interstellar science pack. The surface is devoid of life, but who knows what lurks in the planet's many craters?
+Explore Nauvis' moon of Muluna, the source of the space science pack, and take your first step into space. Discover new uses for crushers, now enabled on all surfaces. Use the Interstellar science pack to upgrade your space platforms and reach even deeper into space.
 
 Muluna's low gravity makes it easier to launch rockets from than from Nauvis or other planets, making it an ideal location for constructing space platforms and shipping materials to other planets. However, the low pressure makes it impossible to craft any science other than Space Science.
 
@@ -24,6 +24,8 @@ This mod currently relies on vanilla prototypes for many world features. While t
 
 - Stone
 
+- Uranium ore
+
 ## New recipes
 
 Crushers can now be placed on any surface, and in addition to their vanilla recipes, which form the backbone of any Muluna base, a few new crusher recipes have been added, some of which are useful on any planet.
@@ -34,7 +36,7 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
   - (Assembling) ALICE Propellant: 10 crushed alumina + 2 ice + 100 water -> 1 rocket fuel
 
-- (Crusher) Stone crushing: 7 stone -> 9 crushed stone + 1 stone
+- (Crusher) Stone crushing: 2 stone -> 3 crushed stone + 5% stone
 
   - (Furnace) Bricks from crushed stone: 2 crushed stone -> 1 stone brick
   
@@ -46,7 +48,7 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 
 - Crusher 2: A faster crusher with 4 module slots. Requires interstellar science packs to unlock.
 
-- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs. Has a speed of 6 and a science pack drain of 35%, and has 6 module slots. Crafting this is an endgame-level challenge that stretches the vanilla game mechanics to their absolute limit.
+- Cryolab: A lab with a footprint of 7x7, big enough to easily fit 14 science packs. Has a speed of 6, a science pack drain of 50% and 6 module slots. Crafting this is an endgame-level challenge that stretches the vanilla game mechanics to their absolute limit.
 
 ## Notable technologies
 
@@ -65,6 +67,8 @@ Crushers can now be placed on any surface, and in addition to their vanilla reci
 - Alien Biomes
 
 - AAI Industries
+
+- Crushing Industries(With this mod installed, the Crusher and Crusher 2 are renamed to "Space crushers," and can only be built on space platforms and on Muluna. Crushing industries gives vanilla/Muluna crushers a 25% quality bonus, which makes Crushing Industries crushers the best crusher to use when starting on Muluna.)
 
 ## Author-maintained locales:
 
