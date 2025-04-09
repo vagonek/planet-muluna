@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.33.1
+Date: 2025-04-09
+  Bugfixes:
+    - Added Anorthite-chunk and helium entities to autoplace_settings.
+    - Added migration that makes adding Muluna to existing saves more seamless.
+    - Changed force of randomly placed starting buildings from "neutral" to "player."
+    - Moved asteroid definition code to data-updates to fix incompatibility issues with any-planet-start.
+  Locale:
+    - Added localised label for Muluna when any-planet-start is installed.
+---------------------------------------------------------------------------------------------------
 Version: 1.33.0
 Date: 2025-04-09
   Features:
