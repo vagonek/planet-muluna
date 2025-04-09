@@ -4,13 +4,15 @@ local function random_place(surface,entity)
 
     local x = math.random(-128,128)
     local y = math.random(-128,128)
-    local entity = {name = entity, position = {x,y}, force = "neutral"}
+    local entity = {name = entity, position = {x,y}, force = "player"}
     if surface.can_place_entity(entity) == false then
         entity.position[1] = entity.position[1] + math.random(-8,8)
         entity.position[2] = entity.position[2] + math.random(-8,8) 
     end
     surface.create_entity(entity)
 end
+
+
 
 function Public.on_new_surface(muluna_index)
 -- 3 crushers
