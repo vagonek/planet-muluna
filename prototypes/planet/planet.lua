@@ -88,11 +88,17 @@ local parent_planet = "nauvis"
 
 
 if mods["any-planet-start"] then
-  parent_planet = settings.startup["aps-planet"].value
+  local parent_planet = settings.startup["aps-planet"].value
+  local start_planet = settings.startup["aps-planet"].value
   if parent_planet == "none" or parent_planet =="muluna" then
     parent_planet = "nauvis"
   end
-end
+  if start_planet == "muluna" then
+    data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
+    rro.replace_name(data.raw["recipe"]["automation-science-pack"].ingredients,"copper-plate","aluminum-plate")
+
+  end
+  end
 
 
 local o_parent_planet = data.raw["planet"][parent_planet]

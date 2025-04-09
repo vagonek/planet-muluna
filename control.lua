@@ -45,7 +45,17 @@ script.on_event(defines.events.on_built_entity, function(event)
     sd.on_built_rocket_silo(event)
 end)
 
+local new_surface = require("scripts.new-surface")
 
+script.on_event(defines.events.on_surface_created,function(event)
+    -- game.print(tostring(event.surface_index))
+    -- game.print(tostring(event.tick))
+    --game.print(tostring(tick))
+    new_surface.on_new_surface(event.surface_index)
+
+end
+
+)
 
 
 
