@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.32.13
+Date: 2025-04-09
+  Compatibility:
+    - Moved rocket-part-productivity technology changes from data stage to data-updates stage to allow mods not declared as dependencies to add their rocket part recipes to these technologies.
+---------------------------------------------------------------------------------------------------
 Version: 1.32.12
 Date: 2025-04-08
   Compatibility:
