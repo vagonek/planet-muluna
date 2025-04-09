@@ -10,7 +10,7 @@ if data.raw["fluid"]["maraxsis-atmosphere"] == nil then
         base_flow_rate = data.raw.fluid.steam.base_flow_rate,
         base_color = {1, 1, 1},
         flow_color = {0.5, 0.5, 1},
-        icon = "__planet-muluna__/graphics/icons/atmosphere.png",
+        icon = "__muluna-graphics__/graphics/icons/atmosphere.png",
         subgroup=data.raw["fluid"]["water"].subgroup,
         icon_size = 64,
         gas_temperature = 25,

@@ -10,7 +10,7 @@ local greenhouse_category = {
 local greenhouse = {
     type="assembling-machine",
     name= "muluna-greenhouse-wood",
-    icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+    icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon.png",
     flags = {"placeable-neutral", "player-creation"},
     minable = {mining_time = 0.5, result = "muluna-greenhouse-wood"},
     fast_replaceable_group = "",
@@ -113,7 +113,7 @@ local greenhouse = {
           --   north = {
           --     layers = {
           --       {
-          --         filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
+          --         filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
           --         draw_as_glow = true,
           --         priority = "extra-high",
           --         frame_count = 64,
@@ -134,7 +134,7 @@ local greenhouse = {
             -- {
             --   animation = {
                 
-            --       filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
+            --       filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
             --       priority = "extra-high",
             --       frame_count = 64,
             --       line_length = 8,
@@ -157,17 +157,17 @@ local greenhouse = {
                 {
                   stripes = {
                     {
-                        filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
+                        filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
                         width_in_frames = 8,
                         height_in_frames = 8
                     },
                     {
-                        filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-emission-2.png",
+                        filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-emission-2.png",
                         width_in_frames = 8,
                         height_in_frames = 8
                     }
                 },
-                  --filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
+                  --filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-emission-1.png",
                   draw_as_glow = true,
                   priority = "extra-high",
                   frame_count = 128,
@@ -195,17 +195,17 @@ local greenhouse = {
               animation ={
                 stripes = {
                   {
-                      filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-color3-1.png",
+                      filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-color3-1.png",
                       width_in_frames = 8,
                       height_in_frames = 8
                   },
                   {
-                      filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-color3-2.png",
+                      filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-color3-2.png",
                       width_in_frames = 8,
                       height_in_frames = 8
                   }
               },
-                --filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-color3-1.png",
+                --filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-color3-1.png",
                 draw_as_glow = true,
                 priority = "extra-high",
                 frame_count = 128,
@@ -227,7 +227,7 @@ local greenhouse = {
               north = {
                 layers = {
                     {
-                      filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-shadow.png",
+                      filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-shadow.png",
                       priority = "high",
                       width = 700,
                       height = 500,
@@ -242,17 +242,17 @@ local greenhouse = {
                     {
                       stripes = {
                         {
-                            filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
+                            filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
                             width_in_frames = 8,
                             height_in_frames = 8
                         },
                         {
-                            filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-animation-2.png",
+                            filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-animation-2.png",
                             width_in_frames = 8,
                             height_in_frames = 8
                         }
                     },
-                      --filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
+                      --filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-animation-1.png",
                       priority = "extra-high",
                       frame_count = 128,
                       lines_per_file = 8,
@@ -279,7 +279,7 @@ local greenhouse = {
                 
                 
           --       -- {
-          --       --   filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-emission-2.png",
+          --       --   filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-emission-2.png",
           --       --   --draw_as_glow = true,
           --       --   priority = "extra-high",
           --       --   frame_count = 64,
@@ -294,7 +294,7 @@ local greenhouse = {
           --       --   apply_runtime_tint = true
           --       -- },
           --       -- {
-          --       --   filename = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-hr-shadow.png",
+          --       --   filename = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-hr-shadow.png",
           --       --   draw_as_shadow = true,
           --       --   priority = "extra-high",
           --       --   frame_count = 1,
@@ -307,7 +307,7 @@ local greenhouse = {
           --       --   run_mode = "forward-then-backward",
           --       -- },
           --       -- {
-          --       --   filename = "__planet-muluna__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
+          --       --   filename = "__muluna-graphics__/graphics/thermal-plant/thermal-plant-hr-shadow.png",
           --       --   priority = "extra-high",
           --       --   width = 900,
           --       --   height = 500,

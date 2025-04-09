@@ -12,7 +12,7 @@ return {
         draw_background = true
     },
     {
-        icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
+        icon = "__muluna-graphics__/graphics/icons/generic-crushing.png",
         icon_size=64,
         scale=0.5,
         draw_background = true
@@ -62,7 +62,7 @@ local function advanced_crushing_icon(icon_dir,product_1,product_2)
         },
         
         -- {
-        --     icon = "__planet-muluna__/graphics/icons/generic-crushing.png",
+        --     icon = "__muluna-graphics__/graphics/icons/generic-crushing.png",
         --     icon_size=64,
         --     scale=0.5,
         --     draw_background = true
@@ -83,7 +83,7 @@ anorthite_crushing.name = "anorthite-crushing"
 
 anorthite_crushing.icons = {
 {
-    icon = "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+    icon = "__muluna-graphics__/graphics/icons/anorthite-chunk.png",
     icon_size=64,
     --scale=0.3,
     shift = {0,-3},
@@ -91,7 +91,7 @@ anorthite_crushing.icons = {
     draw_background = true
 },
 {
-    icon = "__planet-muluna__/graphics/icons/asteroid-crushing.png",
+    icon = "__muluna-graphics__/graphics/icons/asteroid-crushing.png",
     icon_size=64,
     scale=0.5,
     draw_background = true
@@ -113,7 +113,7 @@ local advanced_anorthite_crushing = util.merge{table.deepcopy(anorthite_crushing
     name = "advanced-anorthite-crushing",
     order = "g[advanced-anorthite-crushing]",
     icons = advanced_crushing_icon(
-        "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+        "__muluna-graphics__/graphics/icons/anorthite-chunk.png",
         data.raw["item"]["alumina"].icon,
         data.raw["item"]["silicon"].icon
     ),
@@ -130,7 +130,7 @@ data:extend{advanced_anorthite_crushing}
 
 
 local alumina_crushing=table.deepcopy(anorthite_crushing)
-alumina_crushing.icons = crushing_icon("__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",64)
+alumina_crushing.icons = crushing_icon("__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",64)
 alumina_crushing.name="alumina-crushing"
 alumina_crushing.results = {{type = "item", name = "alumina", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "alumina-crushed",amount = 2}}
 alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 1}}

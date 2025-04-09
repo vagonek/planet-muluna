@@ -26,7 +26,7 @@ if settings.startup["enable-nav-beacon"].value == true then
             place_result = "nav-beacon",
             subgroup = "space-platform",
             order = "q[nav-beacon]",
-            icon = "__planet-muluna__/graphics/icons/nav-beacon-icon.png",
+            icon = "__muluna-graphics__/graphics/icons/nav-beacon-icon.png",
             localised_description = { "item-description.nav-beacon"},
             icon_size = 64,
             stack_size = 10,
@@ -70,7 +70,7 @@ if settings.startup["enable-nav-beacon"].value == true then
                 }
             },
             energy_usage = settings.startup["platform-power-consumption"].value .. "MW",
-            icon = "__planet-muluna__/graphics/icons/nav-beacon-icon.png",
+            icon = "__muluna-graphics__/graphics/icons/nav-beacon-icon.png",
             icon_size = 64,
             rotation_speed = 0.01,
             corpse = "medium-remnants",
@@ -93,7 +93,7 @@ if settings.startup["enable-nav-beacon"].value == true then
                 picture =
                 
                     {
-                        filename = "__planet-muluna__/graphics/entities/nav-beacon/nav-beacon.png",
+                        filename = "__muluna-graphics__/graphics/entities/nav-beacon/nav-beacon.png",
                         priority = "low",
                         width = 197,
                         height = 212,
@@ -175,7 +175,7 @@ if settings.startup["enable-nav-beacon"].value == true then
                 },
                 time = 30
             },
-            icon = "__planet-muluna__/graphics/icons/nav-beacon-icon.png",
+            icon = "__muluna-graphics__/graphics/icons/nav-beacon-icon.png",
             icon_size = 64,
         }
     })

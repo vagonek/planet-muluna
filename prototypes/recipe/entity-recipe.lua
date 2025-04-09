@@ -1,7 +1,7 @@
 local rro = require("lib.remove-replace-object")
 
 local space_boiler = table.deepcopy(data.raw["recipe"]["boiler"])
-space_boiler.icon = "__planet-muluna__/graphics/thermal-plant/thermal-plant-icon.png"
+space_boiler.icon = "__muluna-graphics__/graphics/thermal-plant/thermal-plant-icon.png"
 space_boiler.name = "muluna-advanced-boiler"
 space_boiler.place_result = "muluna-advanced-boiler"
 
@@ -116,7 +116,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-p
         category = "crafting",
         icons = {
             {
-                icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon.png",
+                icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon.png",
                 icon_size = 64,
             },
             {

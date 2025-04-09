@@ -4,7 +4,7 @@ if not mods["maraxsis"] then
     data:extend {{
         type = "fluid",
         name = "maraxsis-oxygen",
-        icon = "__planet-muluna__/graphics/icons/oxygen.png",
+        icon = "__muluna-graphics__/graphics/icons/oxygen.png",
         localised_name = {"fluid-name.oxygen"},
         --group = "fluids",
         subgroup="fluid",
@@ -24,7 +24,7 @@ if not mods["maraxsis"] then
     data:extend {{
         type = "fluid",
         name = "maraxsis-hydrogen",
-        icon = "__planet-muluna__/graphics/icons/hydrogen.png",
+        icon = "__muluna-graphics__/graphics/icons/hydrogen.png",
         --group = "fluids",
         subgroup="fluid",
         icon_size = 64,
@@ -61,14 +61,14 @@ if data.raw["fluid"]["carbon-dioxide"] == nil then
         flow_to_energy_ratio = data.raw.fluid["water"].flow_to_energy_ratio,
     }}  
 end
-data.raw["fluid"]["carbon-dioxide"].icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png"
+data.raw["fluid"]["carbon-dioxide"].icon = "__muluna-graphics__/graphics/icons/molecule-carbon-dioxide.png"
 data.raw["fluid"]["carbon-dioxide"].heat_capacity=multiply_energy(data.raw["fluid"]["carbon-dioxide"].heat_capacity,1/10)
 
 
 data:extend {{
     type = "fluid",
     name = "helium",
-    icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+    icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
     --group = "fluids",
     subgroup="fluid",
     icon_size = 64,
@@ -88,7 +88,7 @@ data:extend {{
     name = "helium-4",
     icons = {
         {
-            icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+            icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
             icon_size = 64,
             tint = {1,0.8,1}
         },
@@ -112,7 +112,7 @@ data:extend {{
     name = "helium-3",
     icons = {
         {
-            icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+            icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
             icon_size = 64,
             tint = {1,0.6,1}
         },

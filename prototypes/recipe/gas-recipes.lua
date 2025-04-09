@@ -129,7 +129,7 @@ data:extend{
         name = "muluna-electrolysis",
         enabled = false,
         icons = dual_icon("maraxsis-oxygen","maraxsis-hydrogen"),
-        --icon = "__planet-muluna__/graphics/icons/maraxsis-water.png",
+        --icon = "__muluna-graphics__/graphics/icons/maraxsis-water.png",
         --icon_size = 64,
         category = "chemistry",
         ingredients = {
@@ -147,7 +147,7 @@ data:extend{
         name = "oxygen-venting",
         enabled = false,
         hidden_in_factoriopedia = true,
-        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/oxygen.png", icon_size = 64}}),
+        icons = generate_void_icons({{icon = "__muluna-graphics__/graphics/icons/oxygen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "maraxsis-oxygen", amount=54},
@@ -167,7 +167,7 @@ data:extend{
         name = "carbon-dioxide-venting",
         enabled = false,
         hidden_in_factoriopedia = true,
-        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
+        icons = generate_void_icons({{icon = "__muluna-graphics__/graphics/icons/molecule-carbon-dioxide.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "carbon-dioxide", amount=54},
@@ -187,7 +187,7 @@ data:extend{
         name = "hydrogen-venting",
         enabled = false,
         hidden_in_factoriopedia = true,
-        icons = generate_void_icons({{icon = "__planet-muluna__/graphics/icons/hydrogen.png", icon_size = 64}}),
+        icons = generate_void_icons({{icon = "__muluna-graphics__/graphics/icons/hydrogen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
             {type = "fluid",name = "maraxsis-hydrogen", amount=54},
@@ -221,7 +221,7 @@ data:extend{
         type = "recipe",
         name = "controlled-combustion",
         enabled = false,
-        icon = "__planet-muluna__/graphics/icons/molecule-carbon-dioxide.png",
+        icon = "__muluna-graphics__/graphics/icons/molecule-carbon-dioxide.png",
         icon_size = 64,
         category = "double-boiler",
         ingredients = {
@@ -241,21 +241,21 @@ data:extend{
         enabled = false,
         icons = {   
                 {
-                    icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                    icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
                     icon_size = 64,
                     tint = {1,0.8,1},
                     scale = 0.5,
                     shift = {16,0}
                 },
                 {
-                    icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                    icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
                     icon_size = 64,
                     tint = {1,0.6,1},
                     scale = 0.5,
                     shift = {-16,0}
                 },   
         },
-        --icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        --icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
         --icon_size = 64,
         category = "chemistry",
         ingredients = {
@@ -275,12 +275,12 @@ data:extend{
         name = "kovarex-helium-enrichment",
         localised_name = {"recipe-name.kovarex-muluna-helium-enrichment"},
         enabled = false,
-        icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+        icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
         allow_productivity = true,
         --icon_size = 64,
         icons = {   
             {
-                icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
                 icon_size = 64,
                 tint = {1,0.6,1},
                 scale = 0.5,
@@ -288,7 +288,7 @@ data:extend{
                 draw_background = true,
             },
             {
-                icon = "__planet-muluna__/graphics/icons/molecule-noble-gas.png",
+                icon = "__muluna-graphics__/graphics/icons/molecule-noble-gas.png",
                 icon_size = 64,
                 tint = {1,0.6,1},
                 scale = 0.5,

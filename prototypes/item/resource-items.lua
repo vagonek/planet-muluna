@@ -9,7 +9,7 @@ local space_age_item_sounds = require("__space-age__.prototypes.item_sounds")
 data:extend{{
     type = "item",
     name = "anorthite-chunk",
-    icon="__planet-muluna__/graphics/icons/anorthite-chunk.png",
+    icon="__muluna-graphics__/graphics/icons/anorthite-chunk.png",
     subgroup = "space-material",
     order = "a[metallic]-f[chunk]",
     inventory_move_sound = space_age_item_sounds.rock_inventory_move,

@@ -6,12 +6,12 @@ local iron_ore=data.raw["item"]["iron-ore"]
 data:extend{{
     type="item",
     name="alumina",
-    icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+    icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",
     pictures =
     {
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",scale = 0.5, mipmap_count = 4},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",scale = 0.5, mipmap_count = 4},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-3.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-2.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-3.png",scale = 0.5, mipmap_count = 4},
     },
     stack_size=iron_ore.stack_size,
     order="a[alumina]",
@@ -22,31 +22,31 @@ data:extend{{
 {
     type="item",
     name="alumina-crushed",
-    icon = "__planet-muluna__/graphics/icons/crushed-alumina.png",
+    icon = "__muluna-graphics__/graphics/icons/crushed-alumina.png",
     pictures =
     {
-        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina.png",scale = 0.5, mipmap_count = 4},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina-1.png",scale = 0.5, mipmap_count = 4},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/crushed-alumina-2.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/crushed-alumina.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/crushed-alumina-1.png",scale = 0.5, mipmap_count = 4},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/crushed-alumina-2.png",scale = 0.5, mipmap_count = 4},
     },
     -- icons={
     --     {
-    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+    --         icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",
     --         scale=0.25,
     --         shift={0.25,0}
     --     },
     --     {
-    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-3.png",
+    --         icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-3.png",
     --         scale=0.25,
     --         shift={0,0.25}
     --     },
     --     {
-    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
+    --         icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-2.png",
     --         scale=0.25,
     --         shift={0,-0.25}
     --     },
     --     {
-    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",
+    --         icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-2.png",
     --         scale=0.25,
     --         shift={-0.25,0}
     --     },
@@ -61,7 +61,7 @@ data:extend{{
 {
     type="item", --Intended to be compatible with Bio-industries, whenever it gets updated to 2.0
     name="stone-crushed",
-    icon="__planet-muluna__/graphics/icons/crushed-stone.png", --icon from bio-industries crushed stone
+    icon="__muluna-graphics__/graphics/icons/crushed-stone.png", --icon from bio-industries crushed stone
     icon_size=32,
     -- icons ={
     --     {
@@ -79,7 +79,7 @@ data:extend{{
 {
     type="item",
     name="aluminum-plate",
-    icon="__planet-muluna__/graphics/icons/metal-plate-aluminium.png",
+    icon="__muluna-graphics__/graphics/icons/metal-plate-aluminium.png",
     icon_size=64,
     -- icons ={
     --     {
@@ -119,7 +119,7 @@ data:extend{{
 -- {
 --     type="item",
 --     name="aluminum-cable",
---     icon="__planet-muluna__/graphics/icons/aluminum-cable.png",
+--     icon="__muluna-graphics__/graphics/icons/aluminum-cable.png",
 --     icon_size=64,
 --     -- icons ={
 --     --     {
@@ -140,7 +140,7 @@ data:extend{{
     name="cellulose",
     icons={
         {
-            icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+            icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",
             --scale=0.25,
             --shift={0.25,0}
             tint = {1,0.8,0.4}
@@ -148,9 +148,9 @@ data:extend{{
     },
     pictures =
     {
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-2.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
-        {size = 64, filename = "__planet-muluna__/graphics/icons/scrap-metal-aluminium-3.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-2.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
+        {size = 64, filename = "__muluna-graphics__/graphics/icons/scrap-metal-aluminium-3.png",scale = 0.5, mipmap_count = 4,tint = {1,0.8,0.4}},
     },
     stack_size=iron_ore.stack_size*4,
     order="b[cellulose]",
@@ -163,17 +163,17 @@ data:extend{{
 { --Copied from Wooden industries
     type = "item",
     name = "woodchips",
-    icon = "__planet-muluna__/graphics/icons/woodchips.png",
+    icon = "__muluna-graphics__/graphics/icons/woodchips.png",
     icon_size = 64,
     pictures = {
-      {size=64, filename="__planet-muluna__/graphics/icons/woodchips.png", scale=0.5, mipmap_count=4},
-      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-1.png", scale=0.5, mipmap_count=4},
-      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-2.png", scale=0.5, mipmap_count=4},
-      {size=64, filename="__planet-muluna__/graphics/icons/woodchips-3.png", scale=0.5, mipmap_count=4}
+      {size=64, filename="__muluna-graphics__/graphics/icons/woodchips.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__muluna-graphics__/graphics/icons/woodchips-1.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__muluna-graphics__/graphics/icons/woodchips-2.png", scale=0.5, mipmap_count=4},
+      {size=64, filename="__muluna-graphics__/graphics/icons/woodchips-3.png", scale=0.5, mipmap_count=4}
     },
     -- icons={
     --     {
-    --         icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+    --         icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",
     --         --scale=0.25,
     --         --shift={0.25,0}
     --         tint = {1,0.8,0.4}
@@ -194,7 +194,7 @@ data:extend{{
 --     name="wood-crushed",
 --     icons={
 --         {
---             icon="__planet-muluna__/graphics/icons/scrap-metal-aluminium-1.png",
+--             icon="__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png",
 --             --scale=0.25,
 --             --shift={0.25,0}
 --             tint = {1,0.8,0.4}
@@ -221,7 +221,7 @@ if not data.raw["item"]["silicon"] then --Copied from Moshine
     data:extend{{
         type = "item",
         name = "silicon",
-        icon = "__planet-muluna__/graphics/icons/silicon.png",
+        icon = "__muluna-graphics__/graphics/icons/silicon.png",
         subgroup = "muluna-products",
         order = "bbb",
         inventory_move_sound = item_sounds.metal_small_inventory_move,
@@ -237,7 +237,7 @@ if not data.raw["item"]["silicon-cell"] then
       data:extend{{
         type = "item",
         name = "silicon-cell",
-        icon = "__planet-muluna__/graphics/icons/silicon-cell.png",
+        icon = "__muluna-graphics__/graphics/icons/silicon-cell.png",
         subgroup = "muluna-products",
         order = "eee",
         inventory_move_sound = item_sounds.metal_small_inventory_move,
@@ -271,9 +271,9 @@ end
 --         name = "sand",
 --         icon = "__crushing-industry__/graphics/icons/sand.png",
 --         pictures = {
---           {size=64, filename="__planet-muluna__/graphics/icons/sand.png", scale=0.5, mipmap_count=4},
---           {size=64, filename="__planet-muluna__/graphics/icons/sand-1.png", scale=0.5, mipmap_count=4},
---           {size=64, filename="__planet-muluna__/graphics/icons/sand-2.png", scale=0.5, mipmap_count=4},
+--           {size=64, filename="__muluna-graphics__/graphics/icons/sand.png", scale=0.5, mipmap_count=4},
+--           {size=64, filename="__muluna-graphics__/graphics/icons/sand-1.png", scale=0.5, mipmap_count=4},
+--           {size=64, filename="__muluna-graphics__/graphics/icons/sand-2.png", scale=0.5, mipmap_count=4},
 --         },
 --         subgroup = "raw-resource",
 --         order = "d[stone]-c[crushed]",

@@ -99,7 +99,7 @@ for _,recipe_name in pairs(old_recipes) do
         end
 end
 
-data.raw["fluid"]["molten-aluminum"].icon = "__planet-muluna__/graphics/icons/molten-aluminum.png"
+data.raw["fluid"]["molten-aluminum"].icon = "__muluna-graphics__/graphics/icons/molten-aluminum.png"
 data.raw["fluid"]["molten-aluminum"].order = "b[new-fluid]-b[vulcanus]-ba[molten-aluminum]"
 data.raw["recipe"]["casting-aluminum"].order = "b[casting]-ba[casting-aluminum]"
 data.raw["recipe"]["casting-low-density-structure-aluminum"].order = "b[casting]-fa[low-density-structure]"

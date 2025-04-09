@@ -4,7 +4,7 @@ local function technology_icon_moon(moon_icon, icon_size)
     icons[3]=icons[2]
     icons[2]=icons[1]
     icons[1] = {
-        icon = "__planet-muluna__/graphics/technology/planet-technology.png",
+        icon = "__muluna-graphics__/graphics/technology/planet-technology.png",
         icon_size = 256,
         shift = {0,10},
     }
@@ -87,7 +87,7 @@ data:extend{
         prerequisites = {
             "space-science-pack", "muluna-anorthite-processing"
         },
-        icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        icon = "__muluna-graphics__/graphics/technology/asteroid-collector(ai-upscaled).png",
         icon_size=256,
     },
     -- {
@@ -138,7 +138,7 @@ data:extend{
         },
         icons = {
             {
-                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon = "__muluna-graphics__/graphics/technology/comminution.png",
                 icon_size = 968,
             },  
         }
@@ -167,7 +167,7 @@ data:extend{
         },
         icons = {
             {
-                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon = "__muluna-graphics__/graphics/technology/comminution.png",
                 icon_size = 968,
             },  
             {
@@ -301,11 +301,11 @@ data:extend{
         },
         icons = {
             {
-                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon = "__muluna-graphics__/graphics/technology/comminution.png",
                 icon_size = 968,
             },  
             {
-                icon = "__planet-muluna__/graphics/icons/anorthite-chunk.png",
+                icon = "__muluna-graphics__/graphics/icons/anorthite-chunk.png",
                 icon_size=64,
                 --scale=0.3,
                 shift = {45,45},
@@ -335,7 +335,7 @@ data:extend{
             "production-science-pack",
             --"utility-science-pack",
         },
-        icon = "__planet-muluna__/graphics/technology/moshine-tech-silicon-cell.png",
+        icon = "__muluna-graphics__/graphics/technology/moshine-tech-silicon-cell.png",
         icon_size = 256,
         effects = {
             {
@@ -368,7 +368,7 @@ data:extend{
         prerequisites = {
             "space-platform-thruster"
         },
-        icons = technology_icon_moon("__planet-muluna__/graphics/moon-icon.png",1482),
+        icons = technology_icon_moon("__muluna-graphics__/graphics/moon-icon.png",1482),
         localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
@@ -412,14 +412,14 @@ data:extend{
         },
         icons = {
             {
-                icon = "__planet-muluna__/graphics/photometric-lab/photometric-lab-icon-big.png",
+                icon = "__muluna-graphics__/graphics/photometric-lab/photometric-lab-icon-big.png",
                 icon_size = 640
                 --icon=data.raw["technology"]["biolab"].icon,
                 --icon_size=data.raw["technology"]["biolab"].icon_size,
                 --tint = {r=0.7,g=0.7,b=1}
             },
         }
-        --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        --icon = "__muluna-graphics__/graphics/technology/asteroid-collector(ai-upscaled).png",
         --icon_size=256,
     },
     {
@@ -465,12 +465,12 @@ data:extend{
         },
         icons = {
             {
-                icon="__planet-muluna__/graphics/technology/molecule-noble-gas.png",
+                icon="__muluna-graphics__/graphics/technology/molecule-noble-gas.png",
                 icon_size=644,
                 tint = {r=0.7,g=0.7,b=1}
             },
         }
-        --icon = "__planet-muluna__/graphics/technology/asteroid-collector(ai-upscaled).png",
+        --icon = "__muluna-graphics__/graphics/technology/asteroid-collector(ai-upscaled).png",
         --icon_size=256,
     },
     {
@@ -593,7 +593,7 @@ data:extend{
         },
         icons = {
             {
-                icon = "__planet-muluna__/graphics/technology/comminution.png",
+                icon = "__muluna-graphics__/graphics/technology/comminution.png",
                 icon_size = 968,
             },  
             {
@@ -618,7 +618,7 @@ data:extend{
     {
         type = "technology",
         name = "greenhouses",
-        icon = "__planet-muluna__/graphics/greenhouse/sprites/greenhouse-icon-big.png",--data.raw["technology"]["tree-seeding"].icon,
+        icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon-big.png",--data.raw["technology"]["tree-seeding"].icon,
         icon_size = 640,--data.raw["technology"]["tree-seeding"].icon_size,
         research_trigger = {
             type = "mine-entity",
@@ -690,7 +690,7 @@ data:extend{
         type = "technology",
         name = "space-chest",
         localised_name = {"entity-name.space-chest"},
-        icon = "__planet-muluna__/graphics/technology/packaging.png",
+        icon = "__muluna-graphics__/graphics/technology/packaging.png",
         icon_size = 1024,
         unit = {
             count = 500,

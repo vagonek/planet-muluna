@@ -10,7 +10,7 @@ local function resource(resource_parameters, autoplace_parameters)
   {
     type = "resource",
     name = resource_parameters.name,
-    icon = "__planet-muluna__/graphics/icons/" .. resource_parameters.name .. ".png",
+    icon = "__muluna-graphics__/graphics/icons/" .. resource_parameters.name .. ".png",
     flags = {"placeable-neutral"},
     order="a-b-"..resource_parameters.order,
     tree_removal_probability = 0.8,
@@ -45,7 +45,7 @@ local function resource(resource_parameters, autoplace_parameters)
     {
       sheet =
       {
-        filename = "__planet-muluna__/graphics/entities/" .. resource_parameters.name .. "/" .. resource_parameters.name .. ".png",
+        filename = "__muluna-graphics__/graphics/entities/" .. resource_parameters.name .. "/" .. resource_parameters.name .. ".png",
         priority = "extra-high",
         size = 128,
         frame_count = 8,
@@ -166,7 +166,7 @@ ice_ore.stages =
 {
   sheet =
   {
-    filename = "__planet-muluna__/graphics/entities/oxide-asteroid-ore/oxide-asteroid-ore.png",
+    filename = "__muluna-graphics__/graphics/entities/oxide-asteroid-ore/oxide-asteroid-ore.png",
     priority = "extra-high",
     size = 128,
     frame_count = 8,
@@ -179,28 +179,28 @@ local ice_ore_particle = table.deepcopy(data.raw["optimized-particle"]["copper-o
 
 ice_ore_particle.pictures = {
     {
-      filename = "__planet-muluna__/graphics/particle/ice-ore-particle/ice-ore-particle-1.png",
+      filename = "__muluna-graphics__/graphics/particle/ice-ore-particle/ice-ore-particle-1.png",
       priority = "extra-high",
       width = 32,
       height = 32,
       scale = 0.5
     },
     {
-      filename = "__planet-muluna__/graphics/particle/ice-ore-particle/ice-ore-particle-2.png",
+      filename = "__muluna-graphics__/graphics/particle/ice-ore-particle/ice-ore-particle-2.png",
       priority = "extra-high",
       width = 32,
       height = 32,
       scale = 0.5
     },
     {
-      filename = "__planet-muluna__/graphics/particle/ice-ore-particle/ice-ore-particle-3.png",
+      filename = "__muluna-graphics__/graphics/particle/ice-ore-particle/ice-ore-particle-3.png",
       priority = "extra-high",
       width = 32,
       height = 32,
       scale = 0.5
     },
     {
-      filename = "__planet-muluna__/graphics/particle/ice-ore-particle/ice-ore-particle-4.png",
+      filename = "__muluna-graphics__/graphics/particle/ice-ore-particle/ice-ore-particle-4.png",
       priority = "extra-high",
       width = 32,
       height = 32,
@@ -270,12 +270,12 @@ anorthite.minable.result= "anorthite-chunk"
 anorthite.minable.mining_time = 20
 anorthite.autoplace.control="anorthite-chunk"
 anorthite.icons=nil
-anorthite.icon="__planet-muluna__/graphics/icons/anorthite-chunk.png"
+anorthite.icon="__muluna-graphics__/graphics/icons/anorthite-chunk.png"
 anorthite.stages =
 {
   sheet =
   {
-    filename = "__planet-muluna__/graphics/entities/oxide-asteroid-ore/grayscale-ore.png",
+    filename = "__muluna-graphics__/graphics/entities/oxide-asteroid-ore/grayscale-ore.png",
     priority = "extra-high",
     size = 128,
     frame_count = 8,

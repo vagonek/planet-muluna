@@ -110,12 +110,12 @@ local muluna=
     
     icons = {
       {
-        icon = "__planet-muluna__/graphics/moon-icon-mipped.png",
+        icon = "__muluna-graphics__/graphics/moon-icon-mipped.png",
         icon_size = 64,
         
       }
     },
-    icon = "__planet-muluna__/graphics/moon-icon-mipped.png",
+    icon = "__muluna-graphics__/graphics/moon-icon-mipped.png",
     icon_size = 64,
     
     --orientation = nauvis.orientation-0.02,
@@ -123,7 +123,7 @@ local muluna=
     
     
     label_orientation = 0.55,
-    starmap_icon = "__planet-muluna__/graphics/moon-icon.png",
+    starmap_icon = "__muluna-graphics__/graphics/moon-icon.png",
     starmap_icon_size = 1482,
     subgroup = "satellites",
     magnitude = o_parent_planet.magnitude*3/5,
@@ -149,7 +149,7 @@ local muluna=
       
         sprite = {
           type = "sprite",
-          filename = "__planet-muluna__/graphics/orbits/orbit-muluna.png",
+          filename = "__muluna-graphics__/graphics/orbits/orbit-muluna.png",
           size = 412,
           scale = 0.25*o_parent_planet.magnitude/(nauvis.magnitude),
         }

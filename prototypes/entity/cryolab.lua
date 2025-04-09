@@ -59,7 +59,7 @@ cryolab.energy_source.emissions_per_minute.pollution=cryolab.energy_source.emiss
 cryolab.on_animation = {
     layers = {
       {
-        filename = "__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
+        filename = "__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
         priority = "extra-high",
         --width = 1300,
         --height = 700,
@@ -73,14 +73,14 @@ cryolab.on_animation = {
         repeat_count = 126,
         shift = {0,-1},
       },
-      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
+      util.sprite_load("__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
         frame_count = 64,
         scale = 0.7,
         animation_speed = 0.05,
         run_mode="forward-then-backward",
         --tint = {r=0.7,g=0.7,b=1}
       }),
-      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
+      util.sprite_load("__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
         frame_count = 64,
         draw_as_glow = true,
         blend_mode = "additive",
@@ -95,7 +95,7 @@ cryolab.on_animation = {
 cryolab.off_animation = {
     layers = {
       {
-        filename = "__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
+        filename = "__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-shadow.png",
         priority = "extra-high",
         --width = 1300,
         --height = 700,
@@ -109,14 +109,14 @@ cryolab.off_animation = {
         repeat_count = 126,
         shift = {0,-1},
       },
-      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
+      util.sprite_load("__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-animation-1",{
         frame_count = 64,
         scale = 0.7,
         animation_speed = 0.1,
         run_mode="forward-then-backward",
         --tint = {r=0.7,g=0.7,b=1}
       }),
-      util.sprite_load("__planet-muluna__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
+      util.sprite_load("__muluna-graphics__/graphics/photometric-lab/photometric-lab-hr-emission-1",{
         frame_count = 64,
         draw_as_glow = true,
         blend_mode = "additive",
