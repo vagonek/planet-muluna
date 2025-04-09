@@ -2,6 +2,8 @@
 
 Explore Nauvis' moon of Muluna, the source of the space science pack, and take your first step into space. Discover new uses for crushers, now enabled on all surfaces. Use the Interstellar science pack to upgrade your space platforms and reach even deeper into space.
 
+Muluna can be seamlessly added to any save, but it is recommended that you start with either a fresh save or a save that has not left Nauvis yet.
+
 Muluna's low gravity makes it easier to launch rockets from than from Nauvis or other planets, making it an ideal location for constructing space platforms and shipping materials to other planets. However, the low pressure makes it impossible to craft any science other than Space Science.
 
 Your first space platform is likely to look very different from a typical Space Age platform. You will not initially have access to asteroid collectors or crushers, so your first platform will be completely dependent on shipments from Nauvis. Thruster fuel can be made from rocket fuel, and like in vanilla, oxidizer can be made from iron ore. Luckily, there are no dangerous asteroids between Nauvis and Muluna, so you can skip placing turrets on any Nauvis-Muluna ships.
