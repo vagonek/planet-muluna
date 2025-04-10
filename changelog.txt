@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.34.2
+Date: 2025-04-10
+  Graphics:
+    - Created custom cliff graphics for Muluna cliffs. https://github.com/nicholasgower/planet-muluna/issues/32
+    - Created shadow-separated version of "pipe to ground" entity, allowing deeper shadows to be visible on Muluna on this entity.
+---------------------------------------------------------------------------------------------------
 Version: 1.34.1
 Date: 2025-04-10
   Compatibility:
