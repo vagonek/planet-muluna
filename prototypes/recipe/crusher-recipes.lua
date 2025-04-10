@@ -134,14 +134,14 @@ alumina_crushing.icons = crushing_icon("__muluna-graphics__/graphics/icons/scrap
 alumina_crushing.name="alumina-crushing"
 alumina_crushing.results = {{type = "item", name = "alumina", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "alumina-crushed",amount = 2}}
 alumina_crushing.ingredients = {{type = "item",name = "alumina",amount = 1}}
-alumina_crushing.energy_required = 0.5
+alumina_crushing.energy_required = 1
 alumina_crushing.order="b-aa-a"
 local stone_crushing=table.deepcopy(anorthite_crushing)
 
 stone_crushing.results = {{type = "item", name = "stone", amount = 1,ignored_by_productivity=1, probability = 1/10},{type = "item",name = "stone-crushed",amount = 3}}
 stone_crushing.ingredients = {{type = "item",name = "stone",amount = 2}}
 stone_crushing.name="stone-crushing"
-stone_crushing.energy_required=0.5
+stone_crushing.energy_required=1
 stone_crushing.order="b-aa-c"
 stone_crushing.icons = crushing_icon(data.raw.item["stone"].icon,data.raw.item["stone"].icon_size)
 
@@ -179,7 +179,7 @@ wood_crushing.name = "woodchips"
 
 wood_crushing.results = {{type = "item", name = "wood", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "woodchips",amount = 2}}
 wood_crushing.ingredients = {{type = "item",name = "wood",amount = 1}}
-wood_crushing.energy_required = 0.5
+wood_crushing.energy_required = 1
 
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
 wood_crushing.order="b-aa-b"
