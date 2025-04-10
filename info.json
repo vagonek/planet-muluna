@@ -17,7 +17,7 @@
     "alien-biomes-graphics >= 0.7.0",
     "flib",
     "? aai-signal-transmission",
-    "PlanetsLib >= 1.2.12",
+    "PlanetsLib >= 1.2.18",
     "? orbital-transfer >= 0.2.3",
     "? alien-biomes",
     "? maraxsis",
