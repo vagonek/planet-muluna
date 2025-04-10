@@ -96,11 +96,6 @@ if mods["any-planet-start"] then
   if parent_planet == "none" or parent_planet =="muluna" then
     parent_planet = "nauvis"
   end
-  if start_planet == "muluna" then
-    data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
-    rro.replace_name(data.raw["recipe"]["automation-science-pack"].ingredients,"copper-plate","aluminum-plate")
-
-  end
   end
 
 
