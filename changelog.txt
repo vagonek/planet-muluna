@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.34.1
+Date: 2025-04-10
+  Compatibility:
+    - Raised required PlanetsLib version to 1.2.18.
+  Sounds:
+    - Copied space platform music to Muluna. https://github.com/nicholasgower/planet-muluna/issues/133
+---------------------------------------------------------------------------------------------------
 Version: 1.34.0
 Date: 2025-04-10
   Features:
