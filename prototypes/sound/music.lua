@@ -13,3 +13,5 @@ if settings.startup["disable-muluna-music"].value == false then
     }  
 end
 
+PlanetsLib.borrow_music("space-platform", data.raw["planet"]["muluna"])
+
