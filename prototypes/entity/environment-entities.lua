@@ -56,3 +56,10 @@ data:extend{
 
 
 }
+
+local ancient_container = table.deepcopy(data.raw["temporary-container"]["cargo-pod-container"])
+
+ancient_container.picture.layers[1].filename = "__muluna-graphics__/graphics/entities/cargo-pod/pod-landing.png"
+ancient_container.name = "fulgoran-cargo-pod-container"
+data:extend{ancient_container}
+

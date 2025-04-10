@@ -13,10 +13,12 @@ function rro.deep_equals(table1, table2) --Checks if two objects are identical. 
 end
 
 function rro.remove(list, objectToRemove) --Removes object from list
-    for i = #list, 1, -1 do -- Iterate backward to avoid index shifting
-        if rro.deep_equals(list[i] , objectToRemove) then
-            table.remove(list, i)
-            break -- Exit the loop once the object is found and removed
+    if list then
+        for i = #list, 1, -1 do -- Iterate backward to avoid index shifting
+            if rro.deep_equals(list[i] , objectToRemove) then
+                table.remove(list, i)
+                break -- Exit the loop once the object is found and removed
+            end
         end
     end
 end
