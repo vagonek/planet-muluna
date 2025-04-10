@@ -12,7 +12,7 @@ local planet_catalogue_vulcanus = require("__space-age__.prototypes.planet.proce
 local map_gen = {
     cliff_settings = 
     {
-        name = "cliff",
+        name = "cliff-muluna",
         control = "nauvis_cliff",
         cliff_smoothing = 0.5,
         cliff_elevation_0 = -0,

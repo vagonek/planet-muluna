@@ -63,3 +63,23 @@ ancient_container.picture.layers[1].filename = "__muluna-graphics__/graphics/ent
 ancient_container.name = "fulgoran-cargo-pod-container"
 data:extend{ancient_container}
 
+
+
+local simulations = require("__base__.prototypes.factoriopedia-simulations")
+local lunar_cliff = table.deepcopy(data.raw["cliff"]["cliff"])
+lunar_cliff.name = "cliff-muluna"
+
+local lunar_cliff = scaled_cliff(
+    {
+      mod_name = "__muluna-graphics__",
+      name = "cliff-muluna",
+      map_color = {r=90, g=90, b=110},
+      suffix = nil,
+      scale = 1.0,
+      has_lower_layer = true,
+      factoriopedia_simulation = simulations.factoriopedia_cliff
+    }
+  )
+data:extend{lunar_cliff}
+
+
