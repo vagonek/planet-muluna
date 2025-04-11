@@ -14,7 +14,7 @@ if settings.startup["muluna-separate-shadows"].value == true then
         log(new_filename)
         log(new_filename_shadow)
         --assert(new_filename ~= old_picture.filename,new_filename)
-        assert(new_filename_shadow ~= new_filename,new_filename_shadow)
+        --assert(new_filename_shadow ~= new_filename,new_filename_shadow)
         if new_filename ~= old_picture.filename and new_filename_shadow ~= new_filename then
             local new_layers = {
                 {
@@ -76,7 +76,7 @@ if settings.startup["muluna-separate-shadows"].value == true then
             log(new_filename)
             log(new_filename_shadow)
             --assert(new_filename ~= old_picture.filename,new_filename)
-            assert(new_filename_shadow ~= new_filename,new_filename_shadow)
+            --assert(new_filename_shadow ~= new_filename,new_filename_shadow)
             if new_filename ~= old_picture.filename and new_filename_shadow ~= new_filename then
                 local new_layers = {
                     {
