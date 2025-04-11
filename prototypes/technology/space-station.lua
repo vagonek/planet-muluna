@@ -716,6 +716,36 @@ data:extend{
             },
         }
     },
+    {
+        type = "technology",
+        name = "low-density-space-platform-foundation",
+        localised_name = {"item-name.low-density-space-platform-foundation"},
+        icon = data.raw["technology"]["space-platform"].icon,
+        icon_size = data.raw["technology"]["space-platform"].icon_size,
+        unit = {
+            count = 1000,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"agricultural-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","carbon-fiber"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="low-density-space-platform-foundation"
+            },
+        }
+    },
     
     -- {
     --     type = "technology",

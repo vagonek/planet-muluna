@@ -143,4 +143,34 @@ greenhouse_wood.ingredients = {
     {type = "item", name = "landfill", amount = 50},
 }
 
-data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood}
+local low_density_space_platform_foundation = util.merge{table.deepcopy(data.raw["recipe"]["space-platform-foundation"]),
+{
+    name = "low-density-space-platform-foundation",
+    results = {{type = "item",name = "low-density-space-platform-foundation", amount = 2}},
+    energy_required = 30,
+    ingredients = {
+        {
+            type = "item",
+            name = "space-platform-foundation",
+            amount = 1,
+        },
+        {
+            type = "item",
+            name = "aluminum-plate",
+            amount = 2,
+        },
+        {
+            type = "item",
+            name = "carbon-fiber",
+            amount = 2,
+        },
+        {
+            type = "item",
+            name = "low-density-structure",
+            amount = 5,
+        },
+    }
+}
+}
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation}

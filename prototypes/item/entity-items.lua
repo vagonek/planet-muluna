@@ -99,4 +99,16 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-pla
     
 }
 
-data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood}
+local low_density_space_platform_foundation = table.deepcopy(data.raw["item"]["space-platform-foundation"])
+low_density_space_platform_foundation = util.merge{low_density_space_platform_foundation,
+{
+    name = "low-density-space-platform-foundation",
+    icon = "__muluna-graphics__/graphics/icons/low-density-space-platform-foundation.png",
+    order = "aa[low-density-space-platform-foundation]",
+    weight = low_density_space_platform_foundation.weight / 2,
+}
+}
+low_density_space_platform_foundation.place_as_tile.result = "low-density-space-platform-foundation"
+
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation}
