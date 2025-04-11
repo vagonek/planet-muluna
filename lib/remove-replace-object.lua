@@ -60,6 +60,7 @@ function rro.contains(list,object) --Check if object exists in list.
 end
 
 function rro.soft_insert(list,objectToAdd) --Adds object to list if it doesn't already exist. 
+    if list == nil then list = {} end
     if rro.contains(list,objectToAdd) == false then
         table.insert(list,objectToAdd)
     end
