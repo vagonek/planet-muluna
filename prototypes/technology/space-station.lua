@@ -570,7 +570,7 @@ data:extend{
         type = "technology",
         name = "crusher-2",
         unit = {
-            count = 500,
+            count = 1000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
@@ -580,6 +580,7 @@ data:extend{
                 {"utility-science-pack", 1},
                 {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
+                {"metallurgic-science-pack",1},
             }
         },
         effects = {
