@@ -33,6 +33,36 @@ local function init_storage_nav_beacons()
     end
 end
 
+local function reset_storage_nav_beacons() 
+    -- storage = {
+    --     ---@type table<int, LuaEntity>
+    --     nav_beacons = {}, -- beacon [unit_number] = LuaEntity (nav-beacon)
+    --     ---@type table<int, LuaSpacePlatform>
+    --     beacon_platforms = {}, -- beacon [unit_number] = LuaSpacePlatform
+    --     ---@type table<int, LuaEntity>
+    --     platform_beacons = {}, -- platform [index] = LuaEntity (nav-beacon)
+    --     ---@type table<int, LuaSpaceLocationPrototype>
+    --     nav_surfaces = {}, -- beacon [unit_number] = LuaSpaceLocationPrototype
+    --     ---@type table<int, LuaEntity>
+    --     beacon_electric_interfaces = {}, -- beacon [unit_number] = LuaEntity (nav-beacon-electric-interface)
+    -- }
+    
+        storage.nav_beacons = {}
+    
+    
+        storage.beaconed_platforms = {}
+    
+    
+        storage.platform_beacons = {}
+   
+    
+        storage.nav_surfaces = {}
+    
+    
+        storage.beacon_electric_interfaces = {}
+    
+end
+
 script.on_init(function()
 
     init_storage_nav_beacons()
@@ -148,12 +178,13 @@ script.on_event(defines.events.on_tick, function(event)
                 --if player.render_mode == defines.render_mode.chart or player.render_mode == defines.render_mode.chart_zoomed_in then
                 local navSat = nil
                 local enough_light = false
+                --game.print(serpent.block(storage.nav_surfaces))
                 for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
                         if nav_surface.name == player.surface.name then
                             local beacon = storage.nav_beacons[beacon_id] 
-                            if  beacon ~= nil     
-                                and beacon.force == player.force
-                            then
+                            if beacon.valid == false then game.print("[Muluna] ERROR: Satellite Radar data storage invalid, deleting storage to prevent crash. You might need to place your radars again.") reset_storage_nav_beacons() break end
+                            --game.print(beacon)
+                            if beacon ~= nil then if beacon.force == player.force then
                                     navSat = beacon
                                     player.add_custom_alert(beacon,
                                     {type = "item", name = "nav-beacon"},
@@ -163,7 +194,8 @@ script.on_event(defines.events.on_tick, function(event)
                                     break
                             else
                                 player.remove_alert{entity = beacon}
-                            end
+                            end end
+                        
                         else 
                             player.remove_alert{entity = beacon}
                         end
