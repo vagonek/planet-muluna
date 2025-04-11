@@ -35,6 +35,13 @@ data:extend{
         order = "ad",
       },
       {
+        type = "bool-setting",
+        name = "muluna-separate-shadows",
+        setting_type = "startup",
+        default_value = true,
+        order = "ga",
+      },
+      {
         type = "int-setting",
         name = "space-science-pack-output",
         setting_type = "startup",
