@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.1
+Date: 2025-04-11
+  Balancing:
+    - Removed all surface conditions from asteroid collector. Does not affect gameplay at this time.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.0
 Date: 2025-04-11
   Features:
