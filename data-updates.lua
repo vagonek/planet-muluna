@@ -162,6 +162,7 @@ data.raw["boiler"]["boiler"].surface_conditions = ten_pressure_condition
 data.raw["inserter"]["burner-inserter"].surface_conditions = ten_pressure_condition
 
 
+data.raw["asteroid-collector"]["asteroid-collector"].surface_conditions = nil
 if not mods["crushing-industry"] then
     data.raw["assembling-machine"]["crusher"].surface_conditions = nil
     if data.raw["assembling-machine"]["crusher-2"] then
