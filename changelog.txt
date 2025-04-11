@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.34.4
+Date: 2025-04-11
+  Bugfixes:
+    - Added fallback storage reset for satellite radars when a crash related to satellite radars is imminent. https://github.com/nicholasgower/planet-muluna/issues/141
+---------------------------------------------------------------------------------------------------
 Version: 1.34.3
 Date: 2025-04-10
   Bugfixes:
