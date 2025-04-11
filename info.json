@@ -16,6 +16,7 @@
     "Wood_Gasification_updated",
     "alien-biomes-graphics >= 0.7.0",
     "flib",
+    "tile-upgrade-planner >= 20.0.1",
     "? aai-signal-transmission",
     "PlanetsLib >= 1.2.18",
     "? orbital-transfer >= 0.2.3",
