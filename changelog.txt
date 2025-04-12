@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.5
+Date: 2025-04-12
+  Bugfixes:
+    - Fixed technology cycle crash when loading any mod that adds a technology with non-trigger technologies without prerequisites.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.4
 Date: 2025-04-12
   Bugfixes:
