@@ -94,7 +94,7 @@ for i = 1, #science_packs - 1 do
                 end
                 rro.remove(tech.prerequisites,"interstellar-science-pack")
             end
-            if tech.unit and (tech.prerequisites == {} or tech.prerequisites == nil) then
+            if tech.unit and rro.contains(tech.unit.ingredients,{"interstellar-science-pack",1})  and (tech.prerequisites == {} or tech.prerequisites == nil) then
                 tech.prerequisites = {}
                 tech.prerequisites = {"space-science-pack"}
                 if rro.contains(tech.unit.ingredients,{"utility-science-pack",1}) then
