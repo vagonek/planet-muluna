@@ -28,7 +28,7 @@ r_lunar_pack.energy_required = r_lunar_pack.energy_required * 4
 --data.raw["recipe"]["space-science-pack"].icon = "__muluna-graphics__/graphics/icons/space-science-pack.png" --Why was this here?
 t_lunar_pack.icon = "__muluna-graphics__/graphics/technology/space-science-pack.png"
 
-t_lunar_pack.prerequisites = {
+t_lunar_pack.prerequisites = { --These prerequisites are overridden by interstellar-science-pack-final-fix.
     "electromagnetic-science-pack",
     "agricultural-science-pack",
     "metallurgic-science-pack",

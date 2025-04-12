@@ -485,7 +485,7 @@ data:extend{
             --},
         --},
         max_level = "infinite",
-        prerequisites = {"interstellar-science-pack"},
+        prerequisites = {"interstellar-science-pack","production-science-pack","space-science-pack"},
         upgrade = true,
         unit = {
             count_formula = "2000*1.5^(L-1)",
@@ -531,7 +531,7 @@ data:extend{
     {
         type = "technology",
         name = "advanced-space-science-pack",
-        prerequisites = {"interstellar-science-pack"},
+        prerequisites = {"interstellar-science-pack","space-science-pack","production-science-pack","utility-science-pack"},
         icons = {
             {
                 icon = data.raw["technology"]["space-science-pack"].icon,
@@ -545,15 +545,15 @@ data:extend{
             },
         },
         unit = {
-            count = 300,
+            count = 500,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
-                --{"utility-science-pack", 1},
-                --{"space-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }
         },
@@ -707,7 +707,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "interstellar-science-pack",
+            "interstellar-science-pack", "production-science-pack", "space-science-pack"
         },
         effects = {
             {

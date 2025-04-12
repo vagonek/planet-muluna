@@ -49,6 +49,7 @@ end
 
 function rro.contains(list,object) --Check if object exists in list.
     --local contains = false
+    if list == nil then return false end
     for _,item in pairs(list) do -- Iterate forward
         if rro.deep_equals(item , object) then
             return true
