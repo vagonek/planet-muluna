@@ -45,7 +45,8 @@ local function dynamic_interstellar_pack_tech(pack1,pack2)
     
     }   
     new_pack.icon = nil
-    new_pack.prerequisites = {pack1,pack2}
+    rro.soft_insert(new_pack.prerequisites, pack1)
+    rro.soft_insert(new_pack.prerequisites, pack2)
     return new_pack
 end
 
