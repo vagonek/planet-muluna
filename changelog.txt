@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.2
+Date: 2025-04-12
+  Balancing:
+    - Relaxed requirements for unlocking interstellar science pack. Interstellar science pack technology now requires unlocking any two planetary science packs.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.1
 Date: 2025-04-11
   Balancing:
