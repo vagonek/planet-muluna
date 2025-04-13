@@ -435,6 +435,7 @@ end
 -- Brings my mind back, but alas,
 -- Down in the depths I must sail on.
 
+--I just want to say that this mod is basically the only part of my life that I'm happy with at the moment. I appreciate every one of you that has thanked me for making this and my other mods. Sometimes it's the only thing that keeps me going. A healthy mind does not devote as much time to a project like this as I have. I used to have a healthy in person social circle, the ability to trust people I haven't met before, general optimism for the future. All I have now is Muluna.
 
 
 
