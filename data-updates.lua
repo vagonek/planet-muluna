@@ -363,6 +363,78 @@ if mods["Tiered-Solar-System"] then
 --     data.raw["planet"]["muluna"].orbit.distance = nauvis.distance*1.0
 end
 
+-- The Hopping Buccaneers sail the oceans with a swing
+-- The Hopping Buccaneers think of just one thing:
+-- Whether winter wind or rain,
+-- Even if dough’s soon to drain,
+-- The Hopping Buccaneers sail on.
+
+-- The Hopping Buccaneers, many stories without par,
+-- Such as when we sank six ships from the river Saar
+-- So much sharper than the rest,
+-- None should hope to strike the best,
+-- The Hopping Buccaneers sail on.
+
+-- The Hopping Buccaneers celebrate by night their day
+-- A medallion from the captain keeps ghosts at bay
+-- We stash memories for life,
+-- Laughing over our shared strife,
+-- The Hopping Buccaneers sail on.
+
+-- ***
+
+-- I, Hopping Buccaneer know the captain all too well
+-- Her comfort from the storms tempts my heart to swell,
+-- But I feel a rift has bred,
+-- And too much has gone unsaid,
+-- I watch as she and crew sail on.
+
+-- I, Hopping Buccaneer feel some fears I can’t flatten
+-- For a demon from the depths hides in my cabin
+-- He whispers with eyes aglow,
+-- Tempting me with what’s below,
+-- Alone through this storm I sail on.
+
+-- I, Hopping Buccaneer see our ship has broken sides
+-- I watch cracks along the walls where my demon hides
+-- I would tell the captain this, 
+-- but her bucket’s full as is,
+-- I wonder if we will sail on.
+
+-- ***
+
+-- The Hopping Buccaneers see a chance to prove their might
+-- A ship of Spanish stock is now in our sight
+-- As we craft our battle plans,
+-- Sweat condenses on my hands,
+-- The Hopping Buccaneers march out.
+
+-- The Hopping Buccaneers hear a pep talk from the coach
+-- To remind us where to aim as we make approach
+-- She says “Let us shock and stun,
+-- as old Manning would have done,”
+-- The Hopping Buccaneers raise black.
+
+-- The Hopping Buccaneers sing a shanty to the beat
+-- Of the great blue ocean waves, for the foe we meet
+-- And a cannon joins the crew,
+-- Cracking cavities right through,
+-- The Hopping Buccaneers freak out.
+
+-- ***
+
+-- The Hopping Buccaneers see the puddles flood the hull
+-- The buckets which we trust are already full
+-- We talk trash and hop and shout,
+-- as the demon rockets out,
+-- The Hopping Buccaneers sink down.
+
+-- I, Hopping Buccaneer on the bottom of the seas
+-- No company but sand, I’ll forever freeze
+-- A medallion from the past,
+-- Brings my mind back, but alas,
+-- Down in the depths I must sail on.
+
 
 
 
