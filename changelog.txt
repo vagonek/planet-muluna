@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.6
+Date: 2025-04-13
+  Graphics:
+    - Replaced inserter graphics with shadow-split variants, allowing Muluna's deeper shadows to apply to inserters. Modded inserters that use vanilla assets are also affected.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.5
 Date: 2025-04-12
   Bugfixes:
