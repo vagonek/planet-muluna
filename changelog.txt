@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.7
+Date: 2025-04-13
+  Graphics:
+    - Added optional setting to change the shadow opacity of vanilla and modded planets to demonstrate Muluna's separated shadow textures for common entities.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.6
 Date: 2025-04-13
   Graphics:
