@@ -85,6 +85,13 @@ data:extend{
       order = "ba"
     },
     {
+      type = "bool-setting",
+      name = "muluna-change-planet-shadow-opacity",
+      setting_type = "startup",
+      default_value = false,
+      order = "ga"
+    },
+    {
       type = "double-setting",
       name = "nav-beacon-update-ticks",
       setting_type="runtime-global",

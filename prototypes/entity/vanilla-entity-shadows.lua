@@ -11,8 +11,8 @@ if settings.startup["muluna-separate-shadows"].value == true then
         local new_filename_shadow = string.gsub(old_picture.filename,"__base__/graphics/entity","__muluna-graphics__/graphics/entities")
         local new_filename = string.gsub(old_picture.filename,"__base__/graphics","__muluna-graphics__/graphics")
         local new_filename_shadow = string.gsub(new_filename,"/pipe%-to%-ground/","/pipe-to-ground-shadow/")
-        log(new_filename)
-        log(new_filename_shadow)
+        --log(new_filename)
+        --log(new_filename_shadow)
         --assert(new_filename ~= old_picture.filename,new_filename)
         --assert(new_filename_shadow ~= new_filename,new_filename_shadow)
         if new_filename ~= old_picture.filename and new_filename_shadow ~= new_filename then
@@ -154,3 +154,26 @@ for _,inserter in pairs(data.raw["inserter"]) do
         inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__space%-age__","__muluna-graphics__")
     end
 end
+
+if settings.startup["muluna-change-planet-shadow-opacity"].value == true then
+    local planets = {
+        vulcanus = 0.3,
+        fulgora = 0.6,
+        moshine=0.55,
+        corrundum = 0.2,
+        aquilo = 0.7,
+        frozeta = 0.75,
+        maraxsis = 0.2,
+    }
+    for planet,opacity in pairs(planets) do
+        log(planet .. " " .. opacity)
+        if data.raw["planet"][planet] then
+            if data.raw["planet"][planet].surface_render_parameters == nil then
+                data.raw["planet"][planet].surface_render_parameters = {}
+            end
+            data.raw["planet"][planet].surface_render_parameters.shadow_opacity = opacity
+        end
+
+    end
+end
+
