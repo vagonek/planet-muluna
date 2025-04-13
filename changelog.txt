@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.8
+Date: 2025-04-13
+  Balancing:
+    - Removed all vanilla recipes from tree seeding tech. If no other mods add effects to this tech, it will be removed and all other technologies with have their prerequisite for this mod replaced with the agricultural science pack.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.7
 Date: 2025-04-13
   Graphics:
