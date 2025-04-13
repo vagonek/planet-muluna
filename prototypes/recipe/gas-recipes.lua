@@ -348,6 +348,7 @@ local probability = 1
 local oxygen_from_oxidizer = {
     type = "recipe",
     name = "muluna-oxygen-from-oxidizer",
+    enabled = false,
     category = "chemistry",
     icons = dual_icon("maraxsis-oxygen","thruster-oxidizer"),
     energy_required = 0.1,

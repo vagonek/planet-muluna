@@ -118,4 +118,4 @@ end
 data.raw["recipe"]["copper-cable"].localised_name={"recipe-name.copper-cable"}
 
 require("compat.aai-industry")
-
+require("prototypes.technology.interstellar-science-pack-final-fix")

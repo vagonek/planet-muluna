@@ -12,7 +12,7 @@ local planet_catalogue_vulcanus = require("__space-age__.prototypes.planet.proce
 local map_gen = {
     cliff_settings = 
     {
-        name = "cliff",
+        name = "cliff-muluna",
         control = "nauvis_cliff",
         cliff_smoothing = 0.5,
         cliff_elevation_0 = -0,
@@ -95,11 +95,6 @@ if mods["any-planet-start"] then
   local start_planet = settings.startup["aps-planet"].value
   if parent_planet == "none" or parent_planet =="muluna" then
     parent_planet = "nauvis"
-  end
-  if start_planet == "muluna" then
-    data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
-    rro.replace_name(data.raw["recipe"]["automation-science-pack"].ingredients,"copper-plate","aluminum-plate")
-
   end
   end
 

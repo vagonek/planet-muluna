@@ -64,16 +64,18 @@ end
 
 
 
-
-
-
 local u_ore_order = table.deepcopy(data.raw["autoplace-control"]["uranium-ore"].order)
+
+if mods["any-planet-start"] then if settings.startup["aps-planet"].value == "muluna" then
+  u_ore_order = "aaa"
+end end
+
 
 data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "oxide-asteroid-chunk",
-    localised_name = {"", "[item=oxide-asteroid-chunk]", " ",{"item-name.oxide-asteroid-chunk"}},
+    localised_name = {"", "[item=oxide-asteroid-chunk]", " ",{"entity-name.oxide-asteroid-chunk"}},
     order = u_ore_order.."0",
     richness = true
 }}
@@ -81,7 +83,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "metallic-asteroid-chunk",
-    localised_name = {"","[item=metallic-asteroid-chunk]" ," ",{"item-name.metallic-asteroid-chunk"}},
+    localised_name = {"","[item=metallic-asteroid-chunk]" ," ",{"entity-name.metallic-asteroid-chunk"}},
     order = u_ore_order.."1",
     richness = true
 }}
@@ -89,7 +91,7 @@ data:extend {{
     type = "autoplace-control",
     category = "resource",
     name = "carbonic-asteroid-chunk",
-    localised_name = {"", "[item=carbonic-asteroid-chunk]"," ", {"item-name.carbonic-asteroid-chunk"}},
+    localised_name = {"", "[item=carbonic-asteroid-chunk]"," ", {"entity-name.carbonic-asteroid-chunk"}},
     order = u_ore_order.."2",
     richness = true
 }}
@@ -147,9 +149,9 @@ ice_ore.icon = data.raw["item"]["oxide-asteroid-chunk"].icon
 
 
 
-metal_ore.localised_name = {"item-name.metallic-asteroid-chunk"}
-carbon_ore.localised_name = {"item-name.carbonic-asteroid-chunk"}
-ice_ore.localised_name = {"item-name.oxide-asteroid-chunk"}
+metal_ore.localised_name = {"entity-name.metallic-asteroid-chunk"}
+carbon_ore.localised_name = {"entity-name.carbonic-asteroid-chunk"}
+ice_ore.localised_name = {"entity-name.oxide-asteroid-chunk"}
 helium.localised_name = {"fluid-name.helium"}
 
 

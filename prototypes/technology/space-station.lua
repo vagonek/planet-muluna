@@ -485,7 +485,7 @@ data:extend{
             --},
         --},
         max_level = "infinite",
-        prerequisites = {"interstellar-science-pack"},
+        prerequisites = {"interstellar-science-pack","production-science-pack","space-science-pack"},
         upgrade = true,
         unit = {
             count_formula = "2000*1.5^(L-1)",
@@ -531,7 +531,7 @@ data:extend{
     {
         type = "technology",
         name = "advanced-space-science-pack",
-        prerequisites = {"interstellar-science-pack"},
+        prerequisites = {"interstellar-science-pack","space-science-pack","production-science-pack","utility-science-pack"},
         icons = {
             {
                 icon = data.raw["technology"]["space-science-pack"].icon,
@@ -545,15 +545,15 @@ data:extend{
             },
         },
         unit = {
-            count = 300,
+            count = 500,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
                 {"logistic-science-pack", 1},
                 {"chemical-science-pack", 1},
                 {"production-science-pack", 1},
-                --{"utility-science-pack", 1},
-                --{"space-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
             }
         },
@@ -570,7 +570,7 @@ data:extend{
         type = "technology",
         name = "crusher-2",
         unit = {
-            count = 500,
+            count = 1000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
@@ -580,6 +580,7 @@ data:extend{
                 {"utility-science-pack", 1},
                 {"space-science-pack", 1},
                 {"interstellar-science-pack",1},
+                {"metallurgic-science-pack",1},
             }
         },
         effects = {
@@ -706,12 +707,42 @@ data:extend{
             }
         },
         prerequisites = {
-            "interstellar-science-pack",
+            "interstellar-science-pack", "production-science-pack", "space-science-pack"
         },
         effects = {
             {
                 type = "unlock-recipe",
                 recipe="space-chest"
+            },
+        }
+    },
+    {
+        type = "technology",
+        name = "low-density-space-platform-foundation",
+        localised_name = {"item-name.low-density-space-platform-foundation"},
+        icon = data.raw["technology"]["space-platform"].icon,
+        icon_size = data.raw["technology"]["space-platform"].icon_size,
+        unit = {
+            count = 1000,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"agricultural-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","carbon-fiber"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="low-density-space-platform-foundation"
             },
         }
     },

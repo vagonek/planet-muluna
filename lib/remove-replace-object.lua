@@ -13,10 +13,12 @@ function rro.deep_equals(table1, table2) --Checks if two objects are identical. 
 end
 
 function rro.remove(list, objectToRemove) --Removes object from list
-    for i = #list, 1, -1 do -- Iterate backward to avoid index shifting
-        if rro.deep_equals(list[i] , objectToRemove) then
-            table.remove(list, i)
-            break -- Exit the loop once the object is found and removed
+    if list then
+        for i = #list, 1, -1 do -- Iterate backward to avoid index shifting
+            if rro.deep_equals(list[i] , objectToRemove) then
+                table.remove(list, i)
+                break -- Exit the loop once the object is found and removed
+            end
         end
     end
 end
@@ -47,6 +49,7 @@ end
 
 function rro.contains(list,object) --Check if object exists in list.
     --local contains = false
+    if list == nil then return false end
     for _,item in pairs(list) do -- Iterate forward
         if rro.deep_equals(item , object) then
             return true
@@ -58,6 +61,7 @@ function rro.contains(list,object) --Check if object exists in list.
 end
 
 function rro.soft_insert(list,objectToAdd) --Adds object to list if it doesn't already exist. 
+    if list == nil then list = {} end
     if rro.contains(list,objectToAdd) == false then
         table.insert(list,objectToAdd)
     end
