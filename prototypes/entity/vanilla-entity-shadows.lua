@@ -115,3 +115,42 @@ if settings.startup["muluna-separate-shadows"].value == true then
 
 
 end
+
+
+--Inserters 
+
+local pictures = {
+    hand_base_picture = "hand_base_shadow",
+    hand_open_picture = "hand_open_shadow",
+    hand_closed_picture = "hand_closed_shadow",
+}
+
+for _,inserter in pairs(data.raw["inserter"]) do
+    for picture, shadow in pairs(pictures) do
+        -- inserter[picture] = {
+        --     layers = {
+        --         table.deepcopy(inserter[picture]),
+        --         util.merge{table.deepcopy(inserter[shadow]){draw_as_shadow = true}}
+        --     }
+        -- }
+        inserter[shadow].draw_as_shadow = true
+        -- if string.find(inserter[shadow].filename,"burner$-inserter$-hand$-")
+        -- or string.find(inserter[shadow].filename,"bulk$-inserter$-hand$-")
+        -- or string.find(inserter[shadow].filename,"stack$-inserter$-hand$-")
+        -- then
+            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__base__","__muluna-graphics__")
+            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__space%-age__","__muluna-graphics__")
+        -- end
+    end
+    if inserter.platform_picture.sheet then
+        inserter.platform_picture.sheets = {
+            table.deepcopy(inserter.platform_picture.sheet),
+            table.deepcopy(inserter.platform_picture.sheet),
+        }
+        inserter.platform_picture.sheet = nil
+        inserter.platform_picture.sheets[2].filename = "__muluna-graphics__/graphics/entity/stack-inserter/stack-inserter-platform-shadow.png"
+        inserter.platform_picture.sheets[2].draw_as_shadow = true
+        inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__base__","__muluna-graphics__")
+        inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__space%-age__","__muluna-graphics__")
+    end
+end
