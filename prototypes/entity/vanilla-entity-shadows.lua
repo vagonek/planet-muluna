@@ -1,4 +1,4 @@
-if settings.startup["muluna-separate-shadows"].value == true then
+if settings.startup["muluna-separate-shadows"].value == true and not(mods["reskins-library"]) then
     local rro = require("lib.remove-replace-object")
 
     local pipe_ground = table.deepcopy(data.raw["pipe-to-ground"]["pipe-to-ground"])
@@ -8,9 +8,13 @@ if settings.startup["muluna-separate-shadows"].value == true then
         local old_picture = table.deepcopy(pipe_ground.pictures[key])
         --local new_layers = {old_picture}
         -- old_picture.filename = __base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png
-        local new_filename_shadow = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics/entity","__muluna-graphics__/graphics/entities")
-        local new_filename = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics","__muluna-graphics__/graphics")
-        local new_filename_shadow = string.gsub(new_filename,"/pipe%-to%-ground/","/pipe-to-ground-shadow/")
+        --local new_filename_shadow = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__.+__/graphics/entity","__muluna-graphics__/graphics/entities")
+        local new_filename = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__.+__/graphics","__muluna-graphics__/graphics")
+        local new_filename_shadow = new_filename
+        if string.find(new_filename,"__muluna%-graphics__") then
+            new_filename_shadow = string.gsub(new_filename,"/pipe%-to%-ground/","/pipe-to-ground-shadow/")
+        end
+        
         --log(new_filename)
         --log(new_filename_shadow)
         --assert(new_filename ~= old_picture.filename,new_filename)
@@ -72,7 +76,11 @@ if settings.startup["muluna-separate-shadows"].value == true then
             new_pictures[key] = old_picture
         else
             local new_filename = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics","__muluna-graphics__/graphics")
-            local new_filename_shadow = string.gsub(new_filename,"/pipe/","/pipe-shadow/")
+            local new_filename_shadow = new_filename 
+            if string.find(new_filename_shadow,"__muluna-graphics__") then
+                new_filename_shadow = string.gsub(new_filename,"/pipe/","/pipe-shadow/")
+            end
+            
             log(new_filename)
             log(new_filename_shadow)
             --assert(new_filename ~= old_picture.filename,new_filename)
@@ -113,10 +121,6 @@ if settings.startup["muluna-separate-shadows"].value == true then
 
     data:extend{pipe}
 
-
-end
-
-
 --Inserters 
 
 local pictures = {
@@ -147,21 +151,27 @@ for _,inserter in pairs(data.raw["inserter"]) do
             
         -- end
     end
-    if inserter.platform_picture.sheet then
-        inserter.platform_picture.sheets = {
-            table.deepcopy(inserter.platform_picture.sheet),
-            table.deepcopy(inserter.platform_picture.sheet),
-        }
-        inserter.platform_picture.sheet = nil
-        inserter.platform_picture.sheets[2].filename = "__muluna-graphics__/graphics/entity/stack-inserter/stack-inserter-platform-shadow.png"
-        inserter.platform_picture.sheets[2].size = nil
-        inserter.platform_picture.sheets[2].width = 105
-        inserter.platform_picture.sheets[2].height = 79
-        inserter.platform_picture.sheets[2].draw_as_shadow = true
-        inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__base__","__muluna-graphics__")
-        inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__space%-age__","__muluna-graphics__")
+    if inserter.platform_picture then
+        if inserter.platform_picture.sheet then
+            inserter.platform_picture.sheets = {
+                table.deepcopy(inserter.platform_picture.sheet),
+                table.deepcopy(inserter.platform_picture.sheet),
+            }
+            inserter.platform_picture.sheet = nil
+            inserter.platform_picture.sheets[2].filename = "__muluna-graphics__/graphics/entity/stack-inserter/stack-inserter-platform-shadow.png"
+            inserter.platform_picture.sheets[2].size = nil
+            inserter.platform_picture.sheets[2].width = 105
+            inserter.platform_picture.sheets[2].height = 79
+            inserter.platform_picture.sheets[2].draw_as_shadow = true
+            inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__base__","__muluna-graphics__")
+            inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__space%-age__","__muluna-graphics__")
+        end
     end
 end
+end
+
+
+
 
 if settings.startup["muluna-change-planet-shadow-opacity"].value == true then
     local planets = {
