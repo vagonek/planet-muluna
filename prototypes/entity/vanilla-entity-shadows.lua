@@ -149,6 +149,9 @@ for _,inserter in pairs(data.raw["inserter"]) do
         }
         inserter.platform_picture.sheet = nil
         inserter.platform_picture.sheets[2].filename = "__muluna-graphics__/graphics/entity/stack-inserter/stack-inserter-platform-shadow.png"
+        inserter.platform_picture.sheets[2].size = nil
+        inserter.platform_picture.sheets[2].width = 105
+        inserter.platform_picture.sheets[2].height = 79
         inserter.platform_picture.sheets[2].draw_as_shadow = true
         inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__base__","__muluna-graphics__")
         inserter.platform_picture.sheets[1].filename = string.gsub(inserter.platform_picture.sheets[1].filename,"__space%-age__","__muluna-graphics__")
