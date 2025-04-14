@@ -135,14 +135,16 @@ for _,inserter in pairs(data.raw["inserter"]) do
         -- }
         if inserter[shadow] then
             inserter[shadow].draw_as_shadow = true
+            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__base__","__muluna-graphics__")
+            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__space%-age__","__muluna-graphics__")
         end
         
         -- if string.find(inserter[shadow].filename,"burner$-inserter$-hand$-")
         -- or string.find(inserter[shadow].filename,"bulk$-inserter$-hand$-")
         -- or string.find(inserter[shadow].filename,"stack$-inserter$-hand$-")
         -- then
-            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__base__","__muluna-graphics__")
-            inserter[shadow].filename = string.gsub(inserter[shadow].filename,"__space%-age__","__muluna-graphics__")
+            
+            
         -- end
     end
     if inserter.platform_picture.sheet then
