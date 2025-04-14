@@ -12,6 +12,159 @@ local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
 
 data.raw["tile"]["space-platform-foundation"].decorative_removal_probability = 1
 
+local animation_speed = 0.5
+
+local animation =
+{
+  north =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/north",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/north-lights",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  east =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/east",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/east-lights",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  south =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/south",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/south-lights",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  west =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/west",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/west-lights",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  }
+}
+local top_animation =
+{
+  north =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/north-top",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/north-lights-top",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  east =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/east-top",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/east-lights-top",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  south =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/south-top",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/south-lights-top",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  },
+  west =
+  {
+    layers =
+    {
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/west-top",{
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      }),
+      util.sprite_load("__muluna-graphics__/graphics/terrain/low-density-space-platform/tile-animations/west-lights-top",{
+        draw_as_glow = true,
+        blend_mode = "additive",
+        frame_count = 64,
+        scale = 0.5,
+        animation_speed = animation_speed
+      })
+    }
+  }
+}
+
 local low_density_space_platform_foundation = {
     type = "tile",
     name = "low-density-space-platform-foundation",
