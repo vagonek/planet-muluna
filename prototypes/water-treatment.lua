@@ -3,7 +3,7 @@ local multiply_energy = require("lib.energy-multiply").multiply_energy
 if not mods["maraxsis"] then
     data:extend {{
         type = "fluid",
-        name = "maraxsis-oxygen",
+        name = "oxygen",
         icon = "__muluna-graphics__/graphics/icons/oxygen.png",
         localised_name = {"fluid-name.oxygen"},
         --group = "fluids",
@@ -23,7 +23,7 @@ if not mods["maraxsis"] then
 
     data:extend {{
         type = "fluid",
-        name = "maraxsis-hydrogen",
+        name = "hydrogen",
         icon = "__muluna-graphics__/graphics/icons/hydrogen.png",
         --group = "fluids",
         subgroup="fluid",

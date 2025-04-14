@@ -32,7 +32,7 @@ data:extend{
         },
         results = {
             {type = "item",name = "wood", amount=40},
-            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+            {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=5*60,
         subgroup="muluna-products",
@@ -58,7 +58,7 @@ data:extend{
         },
         results = {
             {type = "item",name = "muluna-sapling", amount=10},
-            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+            {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=5*60,
         subgroup="muluna-products",
@@ -85,7 +85,7 @@ data:extend{
         },
         results = {
             {type = "item",name = "wood", amount=40},
-            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+            {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=10*60,
         subgroup="muluna-products",
@@ -111,7 +111,7 @@ data:extend{
         },
         results = {
             {type = "item",name = "wood", amount=40},
-            {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+            {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=3*60,
         subgroup="muluna-products",
@@ -128,7 +128,7 @@ data:extend{
         type = "recipe",
         name = "muluna-electrolysis",
         enabled = false,
-        icons = dual_icon("maraxsis-oxygen","maraxsis-hydrogen"),
+        icons = dual_icon("oxygen","hydrogen"),
         --icon = "__muluna-graphics__/graphics/icons/maraxsis-water.png",
         --icon_size = 64,
         category = "chemistry",
@@ -136,8 +136,8 @@ data:extend{
             {type = "fluid",name = "water", amount=30},
         },
         results = {
-            {type = "fluid",name = "maraxsis-oxygen", amount=100},
-            {type = "fluid",name = "maraxsis-hydrogen", amount=200}
+            {type = "fluid",name = "oxygen", amount=100},
+            {type = "fluid",name = "hydrogen", amount=200}
         },
         energy_required=2,
         subgroup="muluna-products"
@@ -150,7 +150,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__muluna-graphics__/graphics/icons/oxygen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "maraxsis-oxygen", amount=54},
+            {type = "fluid",name = "oxygen", amount=54},
         },
         results = {},
         -- surface_conditions = {
@@ -190,7 +190,7 @@ data:extend{
         icons = generate_void_icons({{icon = "__muluna-graphics__/graphics/icons/hydrogen.png", icon_size = 64}}),
         category = "chemistry",
         ingredients = {
-            {type = "fluid",name = "maraxsis-hydrogen", amount=54},
+            {type = "fluid",name = "hydrogen", amount=54},
         },
         results = {},
         -- surface_conditions = {
@@ -211,7 +211,7 @@ data:extend{
     --         {type = "item",name = "atmosphere", amount=100}
     --     },
     --     results = {
-    --         {type = "item",name = "maraxsis-oxygen", amount=20},
+    --         {type = "item",name = "oxygen", amount=20},
     --         {type = "item",name = "nitrogen", amount=80}
     --     },
     --     energy_required=10*60,
@@ -226,7 +226,7 @@ data:extend{
         category = "double-boiler",
         ingredients = {
             --{type = "item",name = "carbon", amount=1},
-            {type = "fluid",name = "maraxsis-oxygen", amount=10}
+            {type = "fluid",name = "oxygen", amount=10}
         },
         results = {
             {type = "fluid",name = "carbon-dioxide", amount=10, temperature = 165}
@@ -350,7 +350,7 @@ local oxygen_from_oxidizer = {
     name = "muluna-oxygen-from-oxidizer",
     enabled = false,
     category = "chemistry",
-    icons = dual_icon("maraxsis-oxygen","thruster-oxidizer"),
+    icons = dual_icon("oxygen","thruster-oxidizer"),
     energy_required = 0.1,
     subgroup="muluna-products",
     ingredients = {
@@ -363,7 +363,7 @@ local oxygen_from_oxidizer = {
     results = {
         {
             type = "fluid",
-            name = "maraxsis-oxygen",
+            name = "oxygen",
             amount = 4000/divider,
         },
         {

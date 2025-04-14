@@ -131,7 +131,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-p
         energy_required = 10,
         results = {
             {type = "item", name = "muluna-greenhouse-wood", amount = 1,ignored_by_productivity=1},
-            --{type = "fluid", name = "maraxsis-oxygen", amount = 100000,ignored_by_productivity=100000},}
+            --{type = "fluid", name = "oxygen", amount = 100000,ignored_by_productivity=100000},}
         }
     }
 }

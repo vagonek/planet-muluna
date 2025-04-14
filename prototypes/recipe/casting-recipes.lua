@@ -104,7 +104,7 @@ data.raw["fluid"]["molten-aluminum"].order = "b[new-fluid]-b[vulcanus]-ba[molten
 data.raw["recipe"]["casting-aluminum"].order = "b[casting]-ba[casting-aluminum]"
 data.raw["recipe"]["casting-low-density-structure-aluminum"].order = "b[casting]-fa[low-density-structure]"
 data.raw["recipe"]["casting-aluminum-cable"].order = "b[casting]-ha[casting-aluminum-cable]"
-table.insert(data.raw["recipe"]["molten-aluminum"].results,{type = "fluid", name = "maraxsis-oxygen", amount = 750})
+table.insert(data.raw["recipe"]["molten-aluminum"].results,{type = "fluid", name = "oxygen", amount = 750})
 data.raw["fluid"]["molten-aluminum"].base_color = {0.7,0.7,0.7}
 data.raw["fluid"]["molten-aluminum"].flow_color = {0.7,0.7,0.7}
 data.raw["recipe"]["molten-aluminum"].icons = melting_icon(data.raw["fluid"]["molten-aluminum"].icon,data.raw["item"]["alumina"].icon)
