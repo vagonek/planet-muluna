@@ -10,6 +10,8 @@ local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds
 
 local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
 
+data.raw["tile"]["space-platform-foundation"].decorative_removal_probability = 1
+
 local low_density_space_platform_foundation = {
     type = "tile",
     name = "low-density-space-platform-foundation",
@@ -20,6 +22,7 @@ local low_density_space_platform_foundation = {
     mined_sound = base_sounds.deconstruct_bricks(0.8),
     is_foundation = true,
     allows_being_covered = false,
+    decorative_removal_probability = 1,
     max_health = 100,
     weight = 100,
     collision_mask = tile_collision_masks.ground(),
