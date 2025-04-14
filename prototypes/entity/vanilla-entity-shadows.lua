@@ -8,8 +8,8 @@ if settings.startup["muluna-separate-shadows"].value == true then
         local old_picture = table.deepcopy(pipe_ground.pictures[key])
         --local new_layers = {old_picture}
         -- old_picture.filename = __base__/graphics/entity/pipe-to-ground/pipe-to-ground-up.png
-        local new_filename_shadow = string.gsub(old_picture.filename,"__base__/graphics/entity","__muluna-graphics__/graphics/entities")
-        local new_filename = string.gsub(old_picture.filename,"__base__/graphics","__muluna-graphics__/graphics")
+        local new_filename_shadow = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics/entity","__muluna-graphics__/graphics/entities")
+        local new_filename = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics","__muluna-graphics__/graphics")
         local new_filename_shadow = string.gsub(new_filename,"/pipe%-to%-ground/","/pipe-to-ground-shadow/")
         --log(new_filename)
         --log(new_filename_shadow)
@@ -71,7 +71,7 @@ if settings.startup["muluna-separate-shadows"].value == true then
         if rro.contains(excluded_keys,key) or string.find(key,"frozen") or string.find(key,"visualization") then
             new_pictures[key] = old_picture
         else
-            local new_filename = string.gsub(old_picture.filename,"__base__/graphics","__muluna-graphics__/graphics")
+            local new_filename = string.gsub(old_picture.filename or old_picture.layers[1].filename,"__base__/graphics","__muluna-graphics__/graphics")
             local new_filename_shadow = string.gsub(new_filename,"/pipe/","/pipe-shadow/")
             log(new_filename)
             log(new_filename_shadow)
