@@ -133,7 +133,10 @@ for _,inserter in pairs(data.raw["inserter"]) do
         --         util.merge{table.deepcopy(inserter[shadow]){draw_as_shadow = true}}
         --     }
         -- }
-        inserter[shadow].draw_as_shadow = true
+        if inserter[shadow] then
+            inserter[shadow].draw_as_shadow = true
+        end
+        
         -- if string.find(inserter[shadow].filename,"burner$-inserter$-hand$-")
         -- or string.find(inserter[shadow].filename,"bulk$-inserter$-hand$-")
         -- or string.find(inserter[shadow].filename,"stack$-inserter$-hand$-")
