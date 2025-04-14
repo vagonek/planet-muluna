@@ -31,16 +31,16 @@ local low_density_space_platform_foundation = {
     dying_explosion = "space-platform-foundation-explosion",
     trigger_effect = tile_trigger_effects.landfill_trigger_effect(),
 
-    -- bound_decoratives =
-    -- {
-    --   "space-platform-decorative-pipes-2x1",
-    --   "space-platform-decorative-pipes-1x2",
-    --   "space-platform-decorative-pipes-1x1",
-    --   "space-platform-decorative-4x4",
-    --   "space-platform-decorative-2x2",
-    --   "space-platform-decorative-1x1",
-    --   "space-platform-decorative-tiny",
-    -- },
+     bound_decoratives =
+     {
+       "low-density-space-platform-decorative-pipes-2x1",
+       "low-density-space-platform-decorative-pipes-1x2",
+       "low-density-space-platform-decorative-pipes-1x1",
+      -- "low-density-space-platform-decorative-4x4",
+      "low-density-space-platform-decorative-2x2",
+       "low-density-space-platform-decorative-1x1",
+       "low-density-space-platform-decorative-tiny",
+    },
 
     build_animations = space_platform_tile_animations.top_animation,
     build_animations_background = space_platform_tile_animations.animation,
