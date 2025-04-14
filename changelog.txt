@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.13
+Date: 2025-04-14
+  Bugfixes:
+    - Gave both the original and low density space platform foundation a decorative_removal_probability of 100%.
+  Graphics:
+    - Added new decoratives for "low density space platform"(By AngryZealot)
+---------------------------------------------------------------------------------------------------
 Version: 1.35.12
 Date: 2025-04-14
   Bugfixes:
