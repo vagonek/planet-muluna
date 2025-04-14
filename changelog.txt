@@ -1,4 +1,25 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.17
+Date: 2025-04-14
+  Bugfixes:
+    - Added additional protections against problematic automated asset replacements. https://github.com/nicholasgower/planet-muluna/issues/150
+    - Fixed problem related to technologies that lack prerequisites.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.16
+Date: 2025-04-14
+  Locale:
+    - Updated German locale(By Lucanoria)
+---------------------------------------------------------------------------------------------------
+Version: 1.35.15
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed regression concerning inserters without shadows. https://github.com/nicholasgower/planet-muluna/issues/148
+---------------------------------------------------------------------------------------------------
+Version: 1.35.14
+Date: 2025-04-14
+  Bugfixes:
+    - Added case for when a inserter doesn't have a shadow sprite.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.13
 Date: 2025-04-14
   Bugfixes:
