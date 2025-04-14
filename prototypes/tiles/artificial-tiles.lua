@@ -10,6 +10,8 @@ local space_age_tile_sounds = require("__space-age__/prototypes/tile/tile-sounds
 
 local tile_graphics = require("__base__/prototypes/tile/tile-graphics")
 
+data.raw["tile"]["space-platform-foundation"].decorative_removal_probability = 1
+
 local low_density_space_platform_foundation = {
     type = "tile",
     name = "low-density-space-platform-foundation",
@@ -20,6 +22,7 @@ local low_density_space_platform_foundation = {
     mined_sound = base_sounds.deconstruct_bricks(0.8),
     is_foundation = true,
     allows_being_covered = false,
+    decorative_removal_probability = 1,
     max_health = 100,
     weight = 100,
     collision_mask = tile_collision_masks.ground(),
@@ -31,16 +34,16 @@ local low_density_space_platform_foundation = {
     dying_explosion = "space-platform-foundation-explosion",
     trigger_effect = tile_trigger_effects.landfill_trigger_effect(),
 
-    -- bound_decoratives =
-    -- {
-    --   "space-platform-decorative-pipes-2x1",
-    --   "space-platform-decorative-pipes-1x2",
-    --   "space-platform-decorative-pipes-1x1",
-    --   "space-platform-decorative-4x4",
-    --   "space-platform-decorative-2x2",
-    --   "space-platform-decorative-1x1",
-    --   "space-platform-decorative-tiny",
-    -- },
+     bound_decoratives =
+     {
+       "low-density-space-platform-decorative-pipes-2x1",
+       "low-density-space-platform-decorative-pipes-1x2",
+       "low-density-space-platform-decorative-pipes-1x1",
+      -- "low-density-space-platform-decorative-4x4",
+      "low-density-space-platform-decorative-2x2",
+       "low-density-space-platform-decorative-1x1",
+       "low-density-space-platform-decorative-tiny",
+    },
 
     build_animations = space_platform_tile_animations.top_animation,
     build_animations_background = space_platform_tile_animations.animation,
