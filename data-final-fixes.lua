@@ -18,9 +18,11 @@ local function delete_tech(deleted_tech,new_tech)
     data.raw["technology"][deleted_tech] = nil
     
     for _,technology in pairs(data.raw["technology"]) do
-        rro.remove(technology.prerequisites,deleted_tech)
-        if new_tech and (not technology.prerequisites or #technology.prerequisites == 0)  then
-            rro.soft_insert(technology.prerequisites,new_tech)
+        if rro.contains(technology.prerequisites,deleted_tech) then
+            rro.remove(technology.prerequisites,deleted_tech)
+            if new_tech and (not technology.prerequisites or #technology.prerequisites == 0)  then
+                rro.soft_insert(technology.prerequisites,new_tech)
+            end
         end
     end
 end
