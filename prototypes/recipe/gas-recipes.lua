@@ -35,7 +35,7 @@ data:extend{
             {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=5*60,
-        subgroup="muluna-products",
+        subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
         surface_conditions = {
@@ -61,7 +61,7 @@ data:extend{
             {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=5*60,
-        subgroup="muluna-products",
+        subgroup="muluna-forestry",
         main_product = "muluna-sapling",
         max_productivity = 3,
         allow_productivity = true,
@@ -88,7 +88,7 @@ data:extend{
             {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=10*60,
-        subgroup="muluna-products",
+        subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
         surface_conditions = {
@@ -114,7 +114,7 @@ data:extend{
             {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
         },
         energy_required=3*60,
-        subgroup="muluna-products",
+        subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
         surface_conditions = {

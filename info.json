@@ -38,6 +38,7 @@
     "(?) crushing-industry",
     "(?) maraxsis-start",
     "(?) bobpower >= 2.0.0",
+    "(?) bioprocessing-tab",
     "! Wood_Gasification_updated"
   ],
   "quality_required": true,

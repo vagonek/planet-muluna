@@ -69,7 +69,8 @@ local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"])
         icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon.png",
         icon_size = 64,
         --place_result = "muluna-greenhouse",
-        order = "z[muluna-greenhouse]",
+        subgroup = "agriculture",
+        order = "c[muluna-greenhouse]",
     }
     
 }
@@ -92,9 +93,9 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-pla
                 draw_background = true,
             }
         },
-        
+        subgroup = "agriculture",
         place_result = "muluna-greenhouse-wood",
-        order = "z[muluna-greenhouse]",
+        order = "ca[muluna-greenhouse]",
     }
     
 }

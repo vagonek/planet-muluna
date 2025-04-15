@@ -105,6 +105,7 @@ bricks_crushed_stone.auto_recycle=false
 local bio_plastic = table.deepcopy(data.raw["recipe"]["plastic-bar"])
 bio_plastic.allow_decomposition = false
 bio_plastic.name = "plastic-from-wood"
+bio_plastic.subgroup = "muluna-forestry"
 bio_plastic.icons = dual_icon("plastic-bar","cellulose")
 rro.replace(bio_plastic.ingredients,{type = "item",name = "coal",amount = 1},{type = "item",name = "cellulose",amount = 4})
 rro.replace(bio_plastic.ingredients,{type = "item",name = "carbon-black",amount = 1},{type = "item",name = "cellulose",amount = 4})
@@ -134,7 +135,7 @@ rro.replace_name(solar_panel.ingredients,"copper-plate","silicon-cell")
 rro.replace_name(solar_panel.ingredients,"steel-plate","aluminum-plate")
 
 --local recipes = {motor_carbon, aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,aluminum_green_circuit,aluminum_red_circuit, bio_plastic}
-local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone, bio_plastic,solar_panel}
+local recipes = {motor_carbon,aluminum_rocket_fuel, carbon_nanotubes_lds, landfill_crushed_stone, bricks_crushed_stone,solar_panel}
 --, ,aluminum_green_circuit,aluminum_red_circuit,
 for _,recipe in pairs(recipes) do
     if recipe.subgroup ~= data.raw["item"]["solar-panel"].subgroup then
@@ -143,6 +144,8 @@ for _,recipe in pairs(recipes) do
     recipe.hide_from_signal_gui = false
     recipe.auto_recycle = false
 end
+
+table.insert(recipes,bio_plastic)
 
 data:extend(recipes)
 

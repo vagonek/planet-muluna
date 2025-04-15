@@ -15,7 +15,7 @@ data:extend({
     },
     icon = "__muluna-graphics__/graphics/wood-gasification/icon/wood-gasification.png",
     icon_size = 64,
-    subgroup = "fluid-recipes",
+    subgroup = "muluna-forestry",
     order = "a[fluid-chemistry]-w[wood-gas-processing]",
 -- order = "a-w",
     crafting_machine_tint =
@@ -42,7 +42,7 @@ data:extend({
     },
     icon = "__muluna-graphics__/graphics/wood-gasification/icon/solid-fuel-from-tar.png",
     icon_size = 64,
-    subgroup = "fluid-recipes",
+    subgroup = "muluna-forestry",
     order = "a[fluid-chemistry]-w[solid-fuel-from-tar]",
   -- order = "a-w",
     crafting_machine_tint =
@@ -70,7 +70,7 @@ data:extend({
     },
     icon = "__muluna-graphics__/graphics/wood-gasification/icon/crude-oil-from-tar.png",
     icon_size = 64,
-    subgroup = "fluid-recipes",
+    subgroup = "muluna-forestry",
     order = "a[fluid-chemistry]-w[crude-oil-from-tar]",
 -- order = "a-w",
     crafting_machine_tint =
@@ -102,7 +102,7 @@ data:extend({
     },
     icon = "__muluna-graphics__/graphics/wood-gasification/icon/advanced-wood-gasification.png",
     icon_size = 64,
-    subgroup = "fluid-recipes",
+    subgroup = "muluna-forestry",
     order = "a[oil-processing]-w[advanced-wood-gasification]",
 -- order = "a-w",
     always_show_products = true,
