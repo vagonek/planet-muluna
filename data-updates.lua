@@ -34,6 +34,17 @@ if data.raw.technology["rocket-part-productivity"] then
       
 end
 
+for _,quality in pairs(data.raw["quality"]) do
+    if quality.level <=5 then
+        quality.science_pack_drain_multiplier = 1 - 0.1*quality.level
+    else
+        quality.science_pack_drain_multiplier = 1 - 0.1*5 -0.01*(quality.level-5)
+    end
+    if quality.science_pack_drain_multiplier < 0.1 then
+        quality.science_pack_drain_multiplier = 0.1
+    end
+end
+
 local rocket_prod_aquilo=table.deepcopy(rocket_prod)
 
 rocket_prod.max_level=nil

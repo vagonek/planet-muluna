@@ -52,7 +52,7 @@ cryolab.energy_usage="1.5MW"
 cryolab.minable = {mining_time = 0.5, result = "cryolab"}
 cryolab.researching_speed=cryolab.researching_speed*3
 cryolab.science_pack_drain_rate_percent=50
-
+cryolab.uses_quality_drain_modifier = true
 cryolab.max_health=500
 cryolab.module_slots=6
 cryolab.energy_source.emissions_per_minute.pollution=cryolab.energy_source.emissions_per_minute.pollution*2

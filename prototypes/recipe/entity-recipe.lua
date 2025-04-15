@@ -59,7 +59,12 @@ if data.raw["recipe"]["biolab"] then
         {
             property = "temperature",
             max = 265,
-        }
+        },
+        {
+            property = "oxygen",
+            min = 0,
+            max = 0,
+        },
     }
     data:extend{cryolab}
 end
