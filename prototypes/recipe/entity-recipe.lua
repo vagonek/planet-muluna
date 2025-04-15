@@ -82,15 +82,15 @@ local space_chest = table.deepcopy(data.raw["recipe"]["steel-chest"])
 
 space_chest = util.merge{space_chest,
     {   
-        name = "space-chest",
-        results = {{type = "item", name = "space-chest", amount = 1}},
+        name = "space-chest-muluna",
+        results = {{type = "item", name = "space-chest-muluna", amount = 1}},
         ingredients = {
             {type = "item", name = "aluminum-plate", amount = 8},
             {type = "item", name = "low-density-structure", amount = 1},
             {type = "item", name = "processing-unit", amount = 1},
             },
         subgroup = "space-platform",
-        order = "ca[space-chest]"
+        order = "ca[space-chest-muluna]"
         --auto_recycle = false
     }
 }
@@ -131,7 +131,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-p
         energy_required = 10,
         results = {
             {type = "item", name = "muluna-greenhouse-wood", amount = 1,ignored_by_productivity=1},
-            --{type = "fluid", name = "maraxsis-oxygen", amount = 100000,ignored_by_productivity=100000},}
+            --{type = "fluid", name = "oxygen", amount = 100000,ignored_by_productivity=100000},}
         }
     }
 }

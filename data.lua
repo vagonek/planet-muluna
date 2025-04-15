@@ -1,6 +1,6 @@
 local rro = require("lib.remove-replace-object")
 
-
+require("wood-gasification.data")
 require("prototypes.technology.index")
 require("prototypes.planet.planet")
 require("prototypes.entity.index")
@@ -19,6 +19,8 @@ require("prototypes.subgroups")
 require("prototypes.lunar-science-pack")
 require("prototypes.technology.interstellar-technologies") --Also runs during data-updates
 require("prototypes.nav-beacon")
+require("prototypes.decoratives.muluna-decoratives")
+
 
 require("compat.maraxsis")
 --if mods["MT-lib"] then require("compat.MT-lib") end

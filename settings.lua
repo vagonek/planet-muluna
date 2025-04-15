@@ -1,3 +1,4 @@
+require("wood-gasification.settings")
 data:extend{
     {
         type = "bool-setting",
@@ -83,6 +84,13 @@ data:extend{
       setting_type = "startup",
       default_value = true,
       order = "ba"
+    },
+    {
+      type = "bool-setting",
+      name = "muluna-change-planet-shadow-opacity",
+      setting_type = "startup",
+      default_value = false,
+      order = "ga"
     },
     {
       type = "double-setting",

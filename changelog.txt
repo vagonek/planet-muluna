@@ -1,4 +1,124 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.28
+Date: 2025-04-15
+  Bugfixes:
+    - Fixed outdated migration
+---------------------------------------------------------------------------------------------------
+Version: 1.35.27
+Date: 2025-04-15
+  Balancing:
+    - Expanded the number of valid planets for unlocking the interstellar science pack.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.26
+Date: 2025-04-15
+  Bugfixes:
+    - Further relaxed the requirements of getting the interstellar science pack.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.25
+Date: 2025-04-15
+  Bugfixes:
+    - Fixed crash on load with Maraxsis.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.24
+Date: 2025-04-15
+  Compatibility:
+    - Changed internal name of space-chest to space-chest-muluna to improve compatibility with Metal and Stars.
+  Bugfixes:
+    - Reverted the removal of the tree-seeding technology.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.23
+Date: 2025-04-15
+  Compatibility:
+    - Rearranged dependencies list to make what is and isn't required clearer.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.22
+Date: 2025-04-15
+  Compatibility:
+    - Integrated contents of Wood Gasification into Muluna and labeled the previously-required mod as incompatible.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.21
+Date: 2025-04-15
+  Compatibility:
+    - Added preliminary compatibility with Bob's Power.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.20
+Date: 2025-04-14
+  Compatibility:
+    - Changed internal name of oxygen and hydrogen to match Maraxsis' new name.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.19
+Date: 2025-04-14
+  Bugfixes:
+    - Reenabled improved inserter shaders when Artisanal library is loaded.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.18
+Date: 2025-04-14
+  Graphics:
+    - Added prototypes for updated low density platform tile animations(By AngryZealot)
+---------------------------------------------------------------------------------------------------
+Version: 1.35.17
+Date: 2025-04-14
+  Bugfixes:
+    - Added additional protections against problematic automated asset replacements. https://github.com/nicholasgower/planet-muluna/issues/150
+    - Fixed problem related to technologies that lack prerequisites.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.16
+Date: 2025-04-14
+  Locale:
+    - Updated German locale(By Lucanoria)
+---------------------------------------------------------------------------------------------------
+Version: 1.35.15
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed regression concerning inserters without shadows. https://github.com/nicholasgower/planet-muluna/issues/148
+---------------------------------------------------------------------------------------------------
+Version: 1.35.14
+Date: 2025-04-14
+  Bugfixes:
+    - Added case for when a inserter doesn't have a shadow sprite.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.13
+Date: 2025-04-14
+  Bugfixes:
+    - Gave both the original and low density space platform foundation a decorative_removal_probability of 100%.
+  Graphics:
+    - Added new decoratives for "low density space platform"(By AngryZealot)
+---------------------------------------------------------------------------------------------------
+Version: 1.35.12
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed impossible start when loaded with Lignumis. https://github.com/nicholasgower/planet-muluna/issues/146
+---------------------------------------------------------------------------------------------------
+Version: 1.35.11
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed crash on load with Exotic Space Industries related to cranes.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.10
+Date: 2025-04-14
+  Bugfixes:
+    - Restored enhanced shadows.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.9
+Date: 2025-04-14
+  Bugfixes:
+    - Fixed crash on loading with Lignumis.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.8
+Date: 2025-04-13
+  Balancing:
+    - Removed all vanilla recipes from tree seeding tech. If no other mods add effects to this tech, it will be removed and all other technologies with have their prerequisite for this mod replaced with the agricultural science pack.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.7
+Date: 2025-04-13
+  Graphics:
+    - Added optional setting to change the shadow opacity of vanilla and modded planets to demonstrate Muluna's separated shadow textures for common entities.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.6
+Date: 2025-04-13
+  Graphics:
+    - Replaced inserter graphics with shadow-split variants, allowing Muluna's deeper shadows to apply to inserters. Modded inserters that use vanilla assets are also affected.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.5
 Date: 2025-04-12
   Bugfixes:

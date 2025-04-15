@@ -14,7 +14,7 @@
 --     },
 --     results = {
 --         {type = "item",name = "wood", amount=seeds * 4},
---         {type = "fluid",name = "maraxsis-oxygen", amount=1000*seeds,ignored_by_productivity=1000*seeds}
+--         {type = "fluid",name = "oxygen", amount=1000*seeds,ignored_by_productivity=1000*seeds}
 --     },
 --     energy_required=time,
 --     subgroup="muluna-products",
@@ -34,7 +34,7 @@
 --     },
 --     results = {
 --         {type = "item",name = "wood", amount=40},
---         {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+--         {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
 --     },
 --     energy_required=10*60,
 --     subgroup="muluna-products",
@@ -53,7 +53,7 @@
 --     },
 --     results = {
 --         {type = "item",name = "wood", amount=40},
---         {type = "fluid",name = "maraxsis-oxygen", amount=10000,ignored_by_productivity=10000}
+--         {type = "fluid",name = "oxygen", amount=10000,ignored_by_productivity=10000}
 --     },
 --     energy_required=3*60,
 --     subgroup="muluna-products",

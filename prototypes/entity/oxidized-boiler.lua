@@ -104,7 +104,7 @@ local space_boiling = {
   type = "recipe",
   category = "double-boiler",
   name = "advanced-water-boiling",
-  icons = dual_icon("steam","maraxsis-oxygen"),
+  icons = dual_icon("steam","oxygen"),
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
   subgroup="advanced-boiling",
@@ -112,7 +112,7 @@ local space_boiling = {
   enabled=false,
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 60/recipe_time},
+    {type = "fluid",name = "oxygen", amount = 60/recipe_time},
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=165},
@@ -141,7 +141,7 @@ local space_boiling_high_temperature = util.merge{space_boiling,{
   energy_required = space_boiling.energy_required * temperature_time_ratio,
   ingredients = {
     {type = "fluid",name = "water", amount = 6/recipe_time,temperature=15},
-    {type = "fluid",name = "maraxsis-oxygen", amount = temperature_time_ratio*60/recipe_time},
+    {type = "fluid",name = "oxygen", amount = temperature_time_ratio*60/recipe_time},
   },
   results = {
     {type = "fluid",name = "steam", amount = 60/recipe_time,temperature=500},
@@ -172,7 +172,7 @@ local space_melting = {
   subgroup="muluna-products",
   ingredients = {
     {type = "item",name = "ice", amount = 1},
-    {type = "fluid",name = "maraxsis-oxygen", amount = 60/15},
+    {type = "fluid",name = "oxygen", amount = 60/15},
   },
   results = {
     {type = "fluid",name = "water", amount = 20,temperature=15},
@@ -181,7 +181,7 @@ local space_melting = {
 }
 
 local space_melting_oxygen = table.deepcopy(space_melting)
-ingredient_multiply(space_melting_oxygen.ingredients,"maraxsis-oxygen",5,"maraxsis-atmosphere")
+ingredient_multiply(space_melting_oxygen.ingredients,"oxygen",5,"maraxsis-atmosphere")
 space_melting_oxygen.name="advanced-water-melting-atmosphere"
 data:extend{space_melting,space_melting_oxygen}
 

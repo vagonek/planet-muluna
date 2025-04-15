@@ -46,8 +46,8 @@ local space_chest = table.deepcopy(data.raw["item"]["steel-chest"])
 
 space_chest=util.merge{space_chest,
     {
-        name="space-chest",
-        place_result="space-chest",
+        name="space-chest-muluna",
+        place_result="space-chest-muluna",
         icons = {
             {
             icon=space_chest.icon,
@@ -58,7 +58,7 @@ space_chest=util.merge{space_chest,
             
         },
         subgroup = "space-platform",
-        order = "ca[space-chest]"
+        order = "ca[space-chest-muluna]"
     }
 
 }

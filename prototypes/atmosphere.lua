@@ -52,7 +52,7 @@ data:extend {{
         {type = "fluid", name = "maraxsis-atmosphere", amount = 1000, temperature = 25}
     },
     results = {
-        {type = "fluid", name = "maraxsis-oxygen", amount = 200, temperature = 25}
+        {type = "fluid", name = "oxygen", amount = 200, temperature = 25}
     },
     enabled = false,
     --main_product = "maraxsis-atmosphere",

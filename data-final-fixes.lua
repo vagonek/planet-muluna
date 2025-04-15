@@ -1,10 +1,40 @@
+local rro = require("lib.remove-replace-object")
+
+local function delete_tech(deleted_tech,new_tech)
+    for _,effect in pairs(data.raw["technology"][deleted_tech].effects) do
+        if effect.type == "unlock-recipe" then
+            if new_tech then
+                rro.soft_insert(data.raw["technology"][new_tech].effects, 
+                {
+                    type = "unlock-recipe",
+                    recipe = data.raw["recipe"][effect.recipe].name,
+                }
+            )
+            else
+                data.raw["recipe"][effect.recipe].enabled = true
+            end
+        end
+    end
+    data.raw["technology"][deleted_tech] = nil
+    
+    for _,technology in pairs(data.raw["technology"]) do
+        if rro.contains(technology.prerequisites,deleted_tech) then
+            rro.remove(technology.prerequisites,deleted_tech)
+            if new_tech and (not technology.prerequisites or #technology.prerequisites == 0)  then
+                rro.soft_insert(technology.prerequisites,new_tech)
+            end
+        end
+    end
+end
+
+
 if mods["bztitanium"] or mods["bzcarbon"] or mods["bztin"] or mods["bzlead"] or mods["bzzirconium"] or mods["bzsilicon"] then
     require("prototypes.recipe.vanilla-alternate-recipes")
 end
 
 require("prototypes.technology.interstellar-technologies")
 
-local rro = require("lib.remove-replace-object")
+
 
 --Overrides any mods which add their own techs to space platform thruster as a prereq.
 --Moves prereq to asteroid collector, which is roughly equivalent to space platform thruster's place in the vanilla tech tree.
@@ -62,7 +92,7 @@ end
 data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 
 -- if mods["metal-and-stars"] then
---     data.raw["technology"]["space-chest"] = nil
+--     data.raw["technology"]["space-chest-muluna"] = nil
 -- end
 
 
@@ -119,3 +149,13 @@ data.raw["recipe"]["copper-cable"].localised_name={"recipe-name.copper-cable"}
 
 require("compat.aai-industry")
 require("prototypes.technology.interstellar-science-pack-final-fix")
+require("prototypes.entity.vanilla-entity-shadows")
+if data.raw["technology"]["tree-seeding"] and not data.raw.planet.lignumis then --Removed vanilla/wood-gasification recipes from tree seeding, then deletes the tech if no other mods add recipes to the tech.
+--Technologies that have this tech as a prerequisite are moved to having agricultural science pack as the prerequisite.
+    rro.remove(data.raw["technology"]["tree-seeding"].effects, {type = "unlock-recipe", recipe = "wood-processing"})
+    rro.remove(data.raw["technology"]["tree-seeding"].effects, {type = "unlock-recipe", recipe = "wood-seed-greenhouse"})
+    -- if #data.raw["technology"]["tree-seeding"].effects == 0 then
+    --     delete_tech("tree-seeding","agricultural-science-pack")
+    -- end
+    
+end

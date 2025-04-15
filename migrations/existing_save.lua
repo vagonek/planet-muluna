@@ -32,7 +32,7 @@ for _,force in pairs(game.forces) do
         end
 
         if force.technologies["planet-discovery-aquilo"].researched == true then
-            force.technologies["interstellar-science-pack"].researched = true
+            --force.technologies["interstellar-science-pack"].researched = true
             force.technologies["advanced-space-science-pack"].researched = true
             force.technologies["thruster-fuel-productivity"].researched = true
             force.technologies["thruster-fuel-productivity"].level = 6
