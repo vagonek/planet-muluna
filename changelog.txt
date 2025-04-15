@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.31
+Date: 2025-04-15
+  Balancing:
+    - Cryolabs now drop in science pack drain as quality increases, with quality drain matching that of Dea-Dia.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.30
 Date: 2025-04-15
   Compatibility:
