@@ -105,7 +105,7 @@ for i = 1, #science_packs - 1 do
                 end
             end
         end
-        if has_as_prerequisite then data:extend{dynamic_interstellar_pack_tech(item1,item2)} end
+        data:extend{dynamic_interstellar_pack_tech(item1,item2)}
     end
 end
 
