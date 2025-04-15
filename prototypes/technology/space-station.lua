@@ -689,8 +689,8 @@ data:extend{
     },
     {
         type = "technology",
-        name = "space-chest",
-        localised_name = {"entity-name.space-chest"},
+        name = "space-chest-muluna",
+        localised_name = {"entity-name.space-chest-muluna"},
         icon = "__muluna-graphics__/graphics/technology/packaging.png",
         icon_size = 1024,
         unit = {
@@ -712,7 +712,7 @@ data:extend{
         effects = {
             {
                 type = "unlock-recipe",
-                recipe="space-chest"
+                recipe="space-chest-muluna"
             },
         }
     },
