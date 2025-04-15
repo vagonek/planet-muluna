@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.24
+Date: 2025-04-15
+  Compatibility:
+    - Changed internal name of space-chest to space-chest-muluna to improve compatibility with Metal and Stars.
+  Bugfixes:
+    - Reverted the removal of the tree-seeding technology.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.23
 Date: 2025-04-15
   Compatibility:
