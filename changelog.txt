@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.30
+Date: 2025-04-15
+  Compatibility:
+    - Added support for bioprocessing-tab.
+  Changes:
+    - Rearranged item orders, addressing https://github.com/nicholasgower/planet-muluna/issues/152 and making other changes.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.29
 Date: 2025-04-15
   Locale:
