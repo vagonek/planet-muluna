@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.22
+Date: 2025-04-15
+  Compatibility:
+    - Integrated contents of Wood Gasification into Muluna and labeled the previously-required mod as incompatible.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.21
 Date: 2025-04-15
   Compatibility:
