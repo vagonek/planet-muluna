@@ -92,7 +92,7 @@ end
 data.raw["lab"]["cryolab"].inputs = data.raw["lab"]["biolab"].inputs
 
 -- if mods["metal-and-stars"] then
---     data.raw["technology"]["space-chest"] = nil
+--     data.raw["technology"]["space-chest-muluna"] = nil
 -- end
 
 
@@ -154,8 +154,8 @@ if data.raw["technology"]["tree-seeding"] and not data.raw.planet.lignumis then 
 --Technologies that have this tech as a prerequisite are moved to having agricultural science pack as the prerequisite.
     rro.remove(data.raw["technology"]["tree-seeding"].effects, {type = "unlock-recipe", recipe = "wood-processing"})
     rro.remove(data.raw["technology"]["tree-seeding"].effects, {type = "unlock-recipe", recipe = "wood-seed-greenhouse"})
-    if #data.raw["technology"]["tree-seeding"].effects == 0 then
-        delete_tech("tree-seeding","agricultural-science-pack")
-    end
+    -- if #data.raw["technology"]["tree-seeding"].effects == 0 then
+    --     delete_tech("tree-seeding","agricultural-science-pack")
+    -- end
     
 end
