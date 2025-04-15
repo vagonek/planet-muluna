@@ -18,7 +18,7 @@
     "(?) aai-signal-transmission",
     "(?) orbital-transfer >= 0.2.3",
     "(?) alien-biomes",
-    "(?) maraxsis >= 1.29.24",
+    "(?) maraxsis >= 1.29.25",
     "(?) Tiered-Solar-System >= 1.1.3",
     "! MT-lib",
     "(?) modules-t4",

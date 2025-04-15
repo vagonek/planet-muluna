@@ -597,11 +597,11 @@ if mods["maraxsis"] then
     {type="fluid",name="oxygen",amount=100},
     {type="fluid",name="oxygen",amount=1000}
     )
-    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    rro.replace(data.raw["recipe"]["salt"].results,
     {type="fluid",name="oxygen",amount=100},
     {type="fluid",name="oxygen",amount=1000}
     )
-    rro.replace(data.raw["recipe"]["maraxsis-salt"].results,
+    rro.replace(data.raw["recipe"]["salt"].results,
     {type="fluid",name="hydrogen",amount=200},
     {type="fluid",name="hydrogen",amount=2000}
     )
