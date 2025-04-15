@@ -1,3 +1,4 @@
+require("wood-gasification.settings")
 data:extend{
     {
         type = "bool-setting",
