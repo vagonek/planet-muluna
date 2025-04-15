@@ -184,14 +184,19 @@ if settings.startup["muluna-change-planet-shadow-opacity"].value == true then
         aquilo = 0.7,
         frozeta = 0.75,
         maraxsis = 0.2,
+        --["space-platform"] = 0.8,
     }
     for planet,opacity in pairs(planets) do
         log(planet .. " " .. opacity)
-        if data.raw["planet"][planet] then
-            if data.raw["planet"][planet].surface_render_parameters == nil then
-                data.raw["planet"][planet].surface_render_parameters = {}
+        local type = "planet"
+        if not data.raw["planet"][planet] then
+            type = "space-platform-hub"
+        end
+        if data.raw[type][planet] then
+            if data.raw[type][planet].surface_render_parameters == nil then
+                data.raw[type][planet].surface_render_parameters = {}
             end
-            data.raw["planet"][planet].surface_render_parameters.shadow_opacity = opacity
+            data.raw[type][planet].surface_render_parameters.shadow_opacity = opacity
         end
 
     end

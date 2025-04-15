@@ -1,4 +1,4 @@
-local function technology_icon_moon(moon_icon, icon_size)
+local function technology_icon_moon_complete(moon_icon, icon_size)
 	icon_size = icon_size or 256
 	local icons = util.technology_icon_constant_planet(moon_icon)
     icons[3]=icons[2]
@@ -370,7 +370,7 @@ data:extend{
         prerequisites = {
             "space-platform-thruster"
         },
-        icons = technology_icon_moon("__muluna-graphics__/graphics/moon-icon.png",1482),
+        icons = technology_icon_moon_complete("__muluna-graphics__/graphics/moon-icon.png",1482),
         localised_description={"space-location-description.muluna"},
         -- icons = {
         --     {
