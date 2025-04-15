@@ -632,6 +632,7 @@ require("compat.tenebris")
 require("compat.space-age-galore")
 require("compat.space-trains")
 require("compat.schall-mods")
+require("compat.bob-mods")
 
 local parent_planet = "nauvis"
 if mods["any-planet-start"] then 

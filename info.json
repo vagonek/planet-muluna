@@ -39,7 +39,8 @@
     "? infinite-quality-tiers",
     "? se-space-trains",
     "? crushing-industry",
-    "? maraxsis-start"
+    "? maraxsis-start",
+    "? bobpower >= 2.0.0"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
