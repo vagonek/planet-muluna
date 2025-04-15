@@ -13,14 +13,14 @@ local function dynamic_interstellar_pack_icon(pack1,pack2)
             icon_size = 256,
         },
         {
-            icon = data.raw["tool"][pack1].icon,
-            icon_size = data.raw["tool"][pack1].icon_size,
+            icon = data.raw["tool"][pack1].icon or data.raw["tool"]["interstellar-science-pack"].icon,
+            icon_size = data.raw["tool"][pack1].icon_size or data.raw["tool"]["interstellar-science-pack"].icon_size,
             shift = {35,-35},
             scale=0.75,
         },
         {
-            icon = data.raw["tool"][pack2].icon,
-            icon_size=data.raw["tool"][pack2].icon_size,
+            icon = data.raw["tool"][pack2].icon or data.raw["tool"]["interstellar-science-pack"].icon,
+            icon_size=data.raw["tool"][pack2].icon_size or data.raw["tool"]["interstellar-science-pack"].icon_size,
             --scale=0.3,
             shift = {-35,-35},
             scale=0.75,
@@ -36,6 +36,7 @@ end
 
 local function dynamic_interstellar_pack_tech(pack1,pack2)
     local new_pack = table.deepcopy(data.raw["technology"]["interstellar-science-pack"])
+    
     new_pack = util.merge{new_pack,
     {
         name = dynamic_interstellar_pack_tech_name(pack1,pack2),
@@ -44,9 +45,15 @@ local function dynamic_interstellar_pack_tech(pack1,pack2)
     },
     
     }   
+    if pack1 == "slp-sun-science-pack" then pack1 = "slp-sunpack" end
+    if pack2 == "slp-sun-science-pack" then pack2 = "slp-sunpack" end
     new_pack.icon = nil
-    rro.soft_insert(new_pack.prerequisites, pack1)
-    rro.soft_insert(new_pack.prerequisites, pack2)
+    if data.raw["technology"][pack1] then
+        rro.soft_insert(new_pack.prerequisites, pack1)
+    end
+    if data.raw["technology"][pack2] then
+        rro.soft_insert(new_pack.prerequisites, pack2)
+    end
     return new_pack
 end
 
@@ -57,16 +64,24 @@ local possible_science_packs =
     "agricultural-science-pack",
     "electromagnetic-science-pack",
     "electrochemical-science-pack",
-    --"janus-time-science-pack",
-    "slp-sun-pack",
+    "janus-time-science-pack",
+    "slp-sunpack",
     "nanite-science-pack",
     --"insulation-science-pack",
     "battlefield-science-pack",
 }
 
+local special_cases = {
+    ["slp-sunpack"] = "slp-sun-science-pack"
+}
+
+
+
 for _,pack in pairs(possible_science_packs) do 
     if data.raw["tool"][pack] then
         table.insert(science_packs,pack)
+    elseif data.raw["tool"][special_cases[pack]] then
+        table.insert(science_packs,special_cases[pack])
     end
 end
 

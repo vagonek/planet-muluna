@@ -73,6 +73,7 @@ data:extend{
         name = "asteroid-collector",
         localised_name = {"entity-name.asteroid-collector"},
         localised_description = {"entity-description.asteroid-collector"},
+        essential = true,
         unit= {
             count = 300,
             time = 60,
@@ -355,6 +356,7 @@ data:extend{
     {
         type = "technology",
         name = "planet-discovery-muluna",
+        essential = true,
         research_trigger = {
             type = "build-entity",
             entity = "thruster"
