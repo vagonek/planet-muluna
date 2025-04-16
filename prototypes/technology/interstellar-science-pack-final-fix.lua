@@ -57,6 +57,11 @@ local function dynamic_interstellar_pack_tech(pack1,pack2)
     return new_pack
 end
 
+local function has_prerequisite(tech,technologies)
+   return rro.contains()
+    
+end
+
 local science_packs = {}
 local possible_science_packs = 
 {

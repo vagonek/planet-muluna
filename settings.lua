@@ -43,6 +43,13 @@ data:extend{
         order = "ga",
       },
       {
+        type = "bool-setting",
+        name = "muluna-change-quality-science-pack-drain",
+        setting_type = "startup",
+        default_value = true,
+        order = "cc",
+      },
+      {
         type = "int-setting",
         name = "space-science-pack-output",
         setting_type = "startup",
