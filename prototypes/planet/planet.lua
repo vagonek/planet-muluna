@@ -160,6 +160,41 @@ local muluna=
     },
     surface_render_parameters = {
       shadow_opacity = 0.9,
+      -- clouds = util.merge{nauvis.surface_render_parameters.clouds,
+      --                     opacity_at_day = 0.9,
+      --                     opacity_at_night = 0.9,
+      --                     density_at_day = 0.9,
+      --                     density_at_night = 0.9,
+
+      --                     },
+      -- clouds = {
+      --   shape_noise_texture =
+      --   {
+      --     filename = "__muluna-graphics__/graphics/clouds-noise-new.png",
+      --     size = 2048
+      --   },
+      --   detail_noise_texture =
+      --   {
+      --     filename = "__muluna-graphics__/graphics/clouds-detail-noise-3.png",
+      --     size = 2048
+      --   },
+      --   opacity = 0.9,
+      --   opacity_at_night = 0.9,
+      --   density = 0.9,
+      --   density_at_night = 0.9,
+      --   warp_sample_1 = { scale = 0.8 / 16 },
+      --   warp_sample_2 = { scale = 0.8 / 16 },
+      --   warped_shape_sample = { scale = 1 },
+      --   additional_density_sample = { scale = 1, wind_speed_factor = 1.77 },
+      --   detail_sample_1 = { scale = 1, wind_speed_factor = 0.2 / 1.709 },
+      --   detail_sample_2 = { scale = 1, wind_speed_factor = 0.2 / 1.709 },
+  
+      --   scale = 1,
+      --   movement_speed_multiplier = 0.1,
+      --   shape_warp_strength = 0.06,
+      --   shape_warp_weight = 0.4,
+      --   detail_sample_morph_duration = 0,
+      -- }
     },
     platform_procession_set =
     {

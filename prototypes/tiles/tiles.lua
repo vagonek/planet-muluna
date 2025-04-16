@@ -39,6 +39,7 @@ for i = 1,6,1 do
   }
   muluna_dirt.layer=19+i
   muluna_dirt.map_color=color[i]
+  --muluna_dirt.effect = "space"
   data:extend{muluna_dirt}
 end
 
@@ -69,9 +70,11 @@ for i = 1,3,1 do
       --[8] = { probability = 1.00, weights = {0.090, 0.125, 0.125, 0.125, 0.125, 0.125, 0.125, 0.025, 0.125, 0.005, 0.010, 0.100, 0.100, 0.010, 0.020, 0.020} }
     }
     
+    
    
     
   )
+  --muluna_dirt.effect = "space"
   muluna_dirt.absorptions_per_second={
     radiation = 0.01/60
   }

@@ -1,7 +1,7 @@
 local rro = require("lib.remove-replace-object")
 local advanced_boiler_tiers = 5
 
-if mods["bobpower"] then
+if false and mods["bobpower"] then
     local function temperature(tier)
         return 15 + 150*tier
     end
