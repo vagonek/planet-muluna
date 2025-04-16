@@ -15,6 +15,7 @@
     "tile-upgrade-planner >= 20.0.1",
     "alien-biomes-graphics >= 0.7.0",
     "flib",
+    "enhanced-shadows",
     "(?) aai-signal-transmission",
     "(?) orbital-transfer >= 0.2.3",
     "(?) alien-biomes",

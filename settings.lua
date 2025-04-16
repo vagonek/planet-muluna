@@ -35,13 +35,7 @@ data:extend{
         default_value = false,
         order = "ad",
       },
-      {
-        type = "bool-setting",
-        name = "muluna-separate-shadows",
-        setting_type = "startup",
-        default_value = true,
-        order = "ga",
-      },
+      
       {
         type = "bool-setting",
         name = "muluna-change-quality-science-pack-drain",
@@ -91,13 +85,6 @@ data:extend{
       setting_type = "startup",
       default_value = true,
       order = "ba"
-    },
-    {
-      type = "bool-setting",
-      name = "muluna-change-planet-shadow-opacity",
-      setting_type = "startup",
-      default_value = false,
-      order = "ga"
     },
     {
       type = "double-setting",
