@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.35.36
+Date: 2025-04-17
+  Changes:
+    - Added "Tips and tricks" item summarizing Muluna.
+    - Modified vanilla "Tips and Tricks" item to match Muluna's changes.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.35
 Date: 2025-04-16
   Compatibility:
