@@ -592,7 +592,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "interstellar-science-pack", "crusher"
+            "interstellar-science-pack", "crusher","metallurgic-science-pack"
         },
         icons = {
             {
@@ -600,8 +600,8 @@ data:extend{
                 icon_size = 968,
             },  
             {
-                icon = data.raw["item"]["uranium-ore"].icon,
-                icon_size=data.raw["item"]["uranium-ore"].icon_size,
+                icon = data.raw["item"]["tungsten-plate"].icon,
+                icon_size=data.raw["item"]["tungsten-plate"].icon_size,
                 --scale=0.3,
                 shift = {45,45},
                 scale=0.75,
