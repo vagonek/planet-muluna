@@ -44,11 +44,14 @@ function Public.on_new_surface(muluna_index)
         -- game.print("Muluna created")
         local muluna = game.planets["muluna"].surface
         
-        for i = 1,math.random(4,8) do
-            random_place(muluna,"crusher")
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"crusher",math.random(1,3))
         end
-        for i = 1,math.random(4,8) do
-            random_place(muluna,"electric-furnace")
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"electric-furnace",math.random(1,3))
+        end
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"electric-mining-drill",math.random(1,3))
         end
         for i = 1,math.random(3,10) do
             random_place(muluna,"solar-panel",math.random(1,3))
@@ -72,14 +75,14 @@ function Public.on_new_surface(muluna_index)
             random_place(muluna,"spoilage",math.random(20,50)+math.random(20,50))
         end
         local mods = script.active_mods
-        local mod_list = {
+        local mod_list = { --A bunch of items from various mods to make it seem like many years ago, an ancient Fulgoran ship dropped a bunch of cargo in this area.
             moshine = "moshine-tech-magnet",
             maraxsis = "maraxsis-wyrm-specimen",
             corrundum = "platinum-plate",
             secretas = "gold-plate",
             tenebris = "quartz-crystal",
             ["tenebris-prime"] = "quartz-crystal",
-            janus = "janus-shiftite-alpha",
+            --janus = "janus-shiftite-alpha",
             castra = "nickel-plate",
             ["dea-dia-system"] = "fossil",
             terrapalus = "palusium-plate"
@@ -115,13 +118,16 @@ function Public.on_new_surface(muluna_index)
         if mods["maraxsis"] then
             table.insert(random_chance_table,{"maraxsis-hydro-plant",8,1})
         end
-        local dice_roll = math.random(1,200)
-        for _,item in pairs(random_chance_table) do
-            if dice_roll<= item[2] then
-                random_place(muluna,item[1],item[3])
-                break
+        for i = 1,2 do 
+            local dice_roll = math.random(1,200)
+            for _,item in pairs(random_chance_table) do
+                if dice_roll<= item[2] then
+                    random_place(muluna,item[1],item[3])
+                    break
+                end
             end
         end
+        
         -- for i = 1,10 do
         --     random_place(muluna,"accumulator")
         -- end
