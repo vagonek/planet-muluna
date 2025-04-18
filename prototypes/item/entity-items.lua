@@ -112,4 +112,13 @@ low_density_space_platform_foundation = util.merge{low_density_space_platform_fo
 low_density_space_platform_foundation.place_as_tile.result = "low-density-space-platform-foundation"
 
 
-data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation}
+local recycling_turbine = util.merge{table.deepcopy(data.raw["item"]["fusion-generator"]),
+    {
+        name = "muluna-cycling-steam-turbine",
+        place_result = "muluna-cycling-steam-turbine",
+    }
+
+}
+
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation,recycling_turbine}

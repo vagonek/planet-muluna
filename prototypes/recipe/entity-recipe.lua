@@ -178,4 +178,36 @@ local low_density_space_platform_foundation = util.merge{table.deepcopy(data.raw
 }
 }
 
-data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation}
+local recycling_turbine = util.merge{table.deepcopy(data.raw["recipe"]["fusion-generator"]),
+{
+    name = "muluna-cycling-steam-turbine",
+    results = {{type = "item",name = "muluna-cycling-steam-turbine", amount = 1}},
+    energy_required = 30,
+    ingredients = {
+        {
+            type = "item",
+            name = "space-platform-foundation",
+            amount = 1,
+        },
+        {
+            type = "item",
+            name = "aluminum-plate",
+            amount = 2,
+        },
+        {
+            type = "item",
+            name = "carbon-fiber",
+            amount = 2,
+        },
+        {
+            type = "item",
+            name = "low-density-structure",
+            amount = 5,
+        },
+    }
+}
+}
+
+
+
+data:extend{space_boiler,crusher_2,space_chest,greenhouse,greenhouse_wood,low_density_space_platform_foundation,recycling_turbine}

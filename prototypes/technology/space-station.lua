@@ -748,6 +748,72 @@ data:extend{
             },
         }
     },
+    {
+        type = "technology",
+        name = "muluna-cycling-steam-turbine",
+        icon = data.raw["technology"]["space-platform"].icon,
+        icon_size = data.raw["technology"]["space-platform"].icon_size,
+        unit = {
+            count = 1000,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"agricultural-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","carbon-fiber"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe= "muluna-cycling-steam-turbine"
+            },
+            {
+                type = "unlock-recipe",
+                recipe= "muluna-steam-condensation"
+            },
+           
+        }
+    },
+    {
+        type = "technology",
+        name = "water-recycling-productivity",
+        icon = data.raw["technology"]["space-platform"].icon,
+        icon_size = data.raw["technology"]["space-platform"].icon_size,
+        unit = {
+            --count = 1000,
+            count_formula = "1000*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"agricultural-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","carbon-fiber","muluna-cycling-steam-turbine"
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "muluna-steam-condensation",
+                change = 0.1,
+            },
+           
+        }
+    },
     
     -- {
     --     type = "technology",
