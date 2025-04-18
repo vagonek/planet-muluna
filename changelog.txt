@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.36.0
+Date: 2025-04-18
+  Features:
+    - Added steam furnace, a furnace that consumes steam for energy. Unlocks at the same time as the steel furnace.
+  Balancing:
+    - Made various adjustments to make any-planet start easier.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.38
 Date: 2025-04-17
   Graphics:
