@@ -36,6 +36,9 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     delete_tech("advanced-material-processing","muluna-advanced-boiler")
     delete_tech("steel-processing")
     delete_tech("advanced-circuit","electronics")
+    delete_tech("oil-processing","oil-gathering")
+    delete_tech("fluid-handling")
+    data.raw["research-achievement"]["eco-unfriendly"] = nil
     rro.remove(data.raw["technology"]["wood-gas-processing"].prerequisites,"oil-processing")
     
     --delete_tech("processing-unit","electronics")
