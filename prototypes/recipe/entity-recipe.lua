@@ -108,11 +108,11 @@ local greenhouse = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"
     }
 }
 greenhouse.ingredients = {
-    {type = "item", name = "aluminum-plate", amount = 50},
-    {type = "item", name = "steel-plate", amount = 25},
-    {type = "item", name = "small-lamp", amount = 25},
-    {type = "item", name = "pipe", amount = 25},
-    {type = "item", name = "chemical-plant", amount = 10},
+    {type = "item", name = "aluminum-plate", amount = 25},
+    {type = "item", name = "steel-plate", amount = 10},
+    {type = "item", name = "small-lamp", amount = 20},
+    {type = "item", name = "pipe", amount = 10},
+    {type = "item", name = "chemical-plant", amount = 5},
 }
 
 local greenhouse_wood = util.merge{table.deepcopy(data.raw["recipe"]["chemical-plant"]),
