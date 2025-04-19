@@ -38,6 +38,13 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     delete_tech("advanced-circuit","electronics")
     delete_tech("oil-processing","oil-gathering")
     delete_tech("fluid-handling")
+    rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"production-science-pack",1})
+    rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"chemical-science-pack",1})
+    rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"logistic-robotics")
+    rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"cargo-planes")
+    rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisites,"afterburner")
+    data.raw["technology"]["rocket-silo"].research_trigger.item =  "rocket-fuel"
+    delete_tech("advanced-wood-gas-processing","advanced-oil-processing")
     data.raw["research-achievement"]["eco-unfriendly"] = nil
     rro.remove(data.raw["technology"]["wood-gas-processing"].prerequisites,"oil-processing")
     
