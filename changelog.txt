@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.36.2
+Date: 2025-04-19
+  Balancing:
+    - Any-planet-start changes: Technologies dependent on batteries removed from prerequisites of rocket silo to make it possible to leave Muluna on any-planet start.
+    - Reduced the cost of the Sealed Greenhouse
+  Compatibility:
+    - Removed all modifications of content of AAI Signal transmission.
+  Bugfixes:
+    - Added "Casting low density structure from Aluminum" recipe to "low-density-structure-productivity." https://github.com/nicholasgower/planet-muluna/issues/155
+---------------------------------------------------------------------------------------------------
 Version: 1.36.1
 Date: 2025-04-19
   Bugfixes:
