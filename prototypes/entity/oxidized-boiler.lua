@@ -198,6 +198,10 @@ local space_boiler_new = {
   dying_explosion = "boiler-explosion",
   impact_category = "metal-large",
   mode = "output-to-separate-pipe",
+  circuit_connector = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"].circuit_connector),
+  circuit_connector_flipped = table.deepcopy(data.raw["assembling-machine"]["assembling-machine-1"].circuit_connector_flipped),
+  draw_circuit_wires = true,
+  circuit_wire_max_distance = data.raw["assembling-machine"]["assembling-machine-1"].circuit_wire_max_distance,
   working_sound = base_boiler.working_sound,
   open_sound = base_boiler.open_sound,
   close_sound = base_boiler.close_sound,
@@ -208,7 +212,15 @@ local space_boiler_new = {
   fire_flicker_enabled = true,
   fire_glow_flicker_enabled = true,
   --damaged_trigger_effect = hit_effects.entity(),
+  effect_receiver = {
+    base_effect = {},
+    uses_module_effects = true,
+    uses_beacon_effects = false,
+    uses_surface_effects =false,
+  },
+  allowed_module_categories = {
 
+  },
   target_temperature = 65,
   fluid_boxes = {
       {
