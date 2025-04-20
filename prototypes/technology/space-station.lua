@@ -734,7 +734,7 @@ data:extend{
         icon = "__muluna-graphics__/graphics/technology/packaging.png",
         icon_size = 1024,
         unit = {
-            count = 500,
+            count = 1000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
