@@ -44,8 +44,11 @@ recycling_turbine.output_fluid_box = util.merge{table.deepcopy(recycling_turbine
         volume = 200,
         
     }
-    
 }
+if mods["maraxsis"] then
+    recycling_turbine.maraxsis_buildability_rules = {water = false, dome = true, coral = false, trench = true, trench_entrance = false, trench_lava = false}
+end
+
 recycling_turbine.output_fluid_box.pipe_connections =
 {
   { flow_direction="input-output", direction = defines.direction.west,  position = {-1,  0}, connection_category = {"default"} },
