@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.0
+Date: 2025-04-20
+  Features:
+    - Added Water-saving steam turbine entity.
+  Balancing:
+    - Raised cost of "crusher-2" technology to 2000 packs.
+    - Raised cost of "Low density space platform foundation" technology to 2000 packs.
+    - Raised cost of "space-chest" tech to 1000 packs.
+  Compatibility:
+    - Raised muluna-graphics version requirement.
+---------------------------------------------------------------------------------------------------
 Version: 1.36.3
 Date: 2025-04-19
   Changes:
