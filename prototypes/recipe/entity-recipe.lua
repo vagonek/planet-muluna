@@ -182,7 +182,7 @@ local recycling_turbine = util.merge{table.deepcopy(data.raw["recipe"]["fusion-g
 {
     name = "muluna-cycling-steam-turbine",
     results = {{type = "item",name = "muluna-cycling-steam-turbine", amount = 1}},
-    energy_required = 30,
+    energy_required = 10,
     
     ingredients = {
         {
@@ -193,6 +193,11 @@ local recycling_turbine = util.merge{table.deepcopy(data.raw["recipe"]["fusion-g
         {
             type = "item",
             name = "tungsten-plate",
+            amount = 10,
+        },
+        {
+            type = "item",
+            name = "aluminum-plate",
             amount = 10,
         },
         {
