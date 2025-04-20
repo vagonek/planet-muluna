@@ -183,30 +183,34 @@ local recycling_turbine = util.merge{table.deepcopy(data.raw["recipe"]["fusion-g
     name = "muluna-cycling-steam-turbine",
     results = {{type = "item",name = "muluna-cycling-steam-turbine", amount = 1}},
     energy_required = 30,
+    
     ingredients = {
         {
             type = "item",
-            name = "space-platform-foundation",
+            name = "steam-turbine",
             amount = 1,
         },
         {
             type = "item",
-            name = "aluminum-plate",
-            amount = 2,
+            name = "tungsten-plate",
+            amount = 10,
         },
         {
             type = "item",
-            name = "carbon-fiber",
-            amount = 2,
+            name = "superconductor",
+            amount = 10,
         },
         {
             type = "item",
-            name = "low-density-structure",
-            amount = 5,
+            name = "pipe",
+            amount = 20,
         },
     }
 }
 }
+recycling_turbine.category = "crafting"
+recycling_turbine.surface_conditions = nil
+recycling_turbine.factoriopedia_description = nil
 
 
 

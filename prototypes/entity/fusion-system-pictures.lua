@@ -21,19 +21,19 @@ local function reactor_pictures()
 end
 
 local function reactor_glow_pictures()
-  return
-  {
-    layers =
-    {
-      util.sprite_load("__space-age__/graphics/entity/fusion-reactor/fusion-reactor-glow",
-      {
-        priority = "high",
-        blend_mode = "additive",
-        draw_as_glow = true,
-        scale = 0.5
-      })
-    }
-  }
+  return nil
+  -- {
+  --   layers =
+  --   {
+  --     util.sprite_load("__space-age__/graphics/entity/fusion-reactor/fusion-reactor-glow",
+  --     {
+  --       priority = "high",
+  --       blend_mode = "additive",
+  --       draw_as_glow = true,
+  --       scale = 0.5
+  --     })
+  --   }
+  -- }
 end
 
 local function reactor_connection_pictures(num, plasma_uv_shift)
@@ -119,23 +119,23 @@ local function generator_pictures_input(direction, fluid_input)
   if fluid_input ~= 0 then
     fluid_input_string = "-input-".. fluid_input
   end
-  return
-  {
-    layers =
-    {
-      util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string,
-      {
-        priority = "high",
-        scale = 0.5,
-      }),
-      util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string .. "-shadow",
-      {
-        priority = "high",
-        draw_as_shadow = true,
-        scale = 0.5
-      })
-    }
-  }
+  return nil
+  -- {
+  --   layers =
+  --   {
+  --     util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string,
+  --     {
+  --       priority = "high",
+  --       scale = 0.5,
+  --     }),
+  --     util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string .. "-shadow",
+  --     {
+  --       priority = "high",
+  --       draw_as_shadow = true,
+  --       scale = 0.5
+  --     })
+  --   }
+  -- }
 end
 
 local function generator_working_light(direction, fluid_input)
@@ -170,13 +170,13 @@ local function generator_uv_map(direction, shift, fluid_input)
     fluid_input_string = "-input-".. fluid_input
   end
   shift = shift or {0, 0}
-  return util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string .."-uv",
-                          {
-                            priority = "extra-high",
-                            scale = 0.5,
-                            shift = shift,
-                            dice = 2
-                          })
+   return bil -- util.sprite_load("__space-age__/graphics/entity/fusion-generator/".. direction .. "/fusion-generator-" .. direction .. fluid_input_string .."-uv",
+  --                         {
+  --                           priority = "extra-high",
+  --                           scale = 0.5,
+  --                           shift = shift,
+  --                           dice = 2
+  --                         })
 end
 
 return
@@ -223,18 +223,18 @@ return
     north_graphics_set =
     {
       animation = generator_pictures("north"),
-      working_light = generator_working_light("north"),
-      fusion_effect_uv_map = generator_uv_map("north", {0, 0.5}),
+      --working_light = generator_working_light("north"),
+      --fusion_effect_uv_map = generator_uv_map("north", {0, 0.5}),
       fluid_input_graphics = {
         {
           sprite = generator_pictures_input("north", 1),
-          working_light = generator_working_light("north",1),
-          fusion_effect_uv_map = generator_uv_map("north", {-1,2},1),
+          --working_light = generator_working_light("north",1),
+          --fusion_effect_uv_map = generator_uv_map("north", {-1,2},1),
         },
         {
           sprite = generator_pictures_input("north",2),
-          working_light = generator_working_light("north",2),
-          fusion_effect_uv_map = generator_uv_map("north", {1,2},2)
+          --working_light = generator_working_light("north",2),
+          --fusion_effect_uv_map = generator_uv_map("north", {1,2},2)
         },
         --{},{},{},{},{}
       }
@@ -242,18 +242,18 @@ return
     east_graphics_set =
     {
       animation = generator_pictures("east"),
-      working_light = generator_working_light("east"),
+      --working_light = generator_working_light("east"),
       fusion_effect_uv_map = generator_uv_map("east", {-1,-0}),
       fluid_input_graphics = {
         {
           sprite = generator_pictures_input("east",1),
-          working_light = generator_working_light("east",1),
-          fusion_effect_uv_map = generator_uv_map("east", {-2,-1},1),
+          --working_light = generator_working_light("east",1),
+          --fusion_effect_uv_map = generator_uv_map("east", {-2,-1},1),
         },
         {
           sprite = generator_pictures_input("east",2),
-          working_light = generator_working_light("east",2),
-          fusion_effect_uv_map = generator_uv_map("east", {-2,0.5},2)
+          --working_light = generator_working_light("east",2),
+          --fusion_effect_uv_map = generator_uv_map("east", {-2,0.5},2)
         },
         --{},{},{},{},{}
       }
@@ -261,17 +261,17 @@ return
     south_graphics_set =
     {
       animation = generator_pictures("north"),
-      working_light = generator_working_light("north"),
-      fusion_effect_uv_map = generator_uv_map("north", {0,-1}),
+      --working_light = generator_working_light("north"),
+      --fusion_effect_uv_map = generator_uv_map("north", {0,-1}),
       fluid_input_graphics = {
         {
           sprite = generator_pictures_input("north",1),
-          working_light = generator_working_light("north",1),
+          --working_light = generator_working_light("north",1),
           --fusion_effect_uv_map = generator_uv_map("north", {1,-2.5},1),
         },
         {
           sprite = generator_pictures_input("north",2),
-          working_light = generator_working_light("north",2),
+          --working_light = generator_working_light("north",2),
           --fusion_effect_uv_map = generator_uv_map("north", {-1,-2.5},2),
         },
         --{},{},{},{},{}
@@ -280,17 +280,17 @@ return
     west_graphics_set =
     {
       animation = generator_pictures("east"),
-      working_light = generator_working_light("east"),
-      fusion_effect_uv_map = generator_uv_map("east", {1,0}),
+      --working_light = generator_working_light("east"),
+      --fusion_effect_uv_map = generator_uv_map("east", {1,0}),
       fluid_input_graphics = {
         {
           sprite = generator_pictures_input("east",1),
-          working_light = generator_working_light("east",1),
+          --working_light = generator_working_light("east",1),
           --fusion_effect_uv_map = generator_uv_map("east", {2,1},1),
         },
         {
           sprite = generator_pictures_input("east",2),
-          working_light = generator_working_light("east",2),
+          --working_light = generator_working_light("east",2),
           --fusion_effect_uv_map = generator_uv_map("east", {2,-1},2),
         },
         --{},{},{},{},{}

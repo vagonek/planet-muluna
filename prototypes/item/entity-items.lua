@@ -116,6 +116,9 @@ local recycling_turbine = util.merge{table.deepcopy(data.raw["item"]["fusion-gen
     {
         name = "muluna-cycling-steam-turbine",
         place_result = "muluna-cycling-steam-turbine",
+        icon = "__muluna-graphics__/graphics/icons/advanced-steam-turbine.png",
+        icon_size = 64,
+        order = "f[nuclear-energy]-g[muluna-cycling-steam-turbine]"
     }
 
 }

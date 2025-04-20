@@ -36,7 +36,7 @@ recycling_turbine.input_fluid_box.pipe_connections =
   --{ flow_direction="output", direction = defines.direction.west,  position = {-1, -1}, connection_category = {"fusion-plasma"} },
   --{ flow_direction="output", direction = defines.direction.east,  position = { 1, -1}, connection_category = {"fusion-plasma"} },
 }
-
+recycling_turbine.surface_conditions = nil
 recycling_turbine.output_fluid_box = util.merge{table.deepcopy(recycling_turbine.output_fluid_box),
     {
         filter = "cooled-steam",
@@ -61,7 +61,7 @@ recycling_turbine.energy_source.output_flow_limit = "9MW"
 recycling_turbine.graphics_set = require ("__planet-muluna__.prototypes.entity.fusion-system-pictures").generator_graphics_set
 
 
-
+recycling_turbine.max_health = 500
 
 -- recycling_turbine.input_fluid_box.filter = "steam"
 -- recycling_turbine.output_fluid_box.filter = "water"
@@ -82,7 +82,7 @@ local cooled_steam = util.merge{table.deepcopy(data.raw["fluid"]["steam"]),
 
 }
 
-
+recycling_turbine.factoriopedia_description = nil
 
 
 
