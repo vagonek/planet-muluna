@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.1
+Date: 2025-04-20
+  Compatibility:
+    - Advanced steam turbines now function on the Maraxsis trench, similarly to standard steam turbines.
+---------------------------------------------------------------------------------------------------
 Version: 1.37.0
 Date: 2025-04-20
   Features:
