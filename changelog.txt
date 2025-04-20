@@ -1,4 +1,36 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.36.3
+Date: 2025-04-19
+  Changes:
+    - Added circuit connector to Advanced boiler.
+---------------------------------------------------------------------------------------------------
+Version: 1.36.2
+Date: 2025-04-19
+  Balancing:
+    - Any-planet-start changes: Technologies dependent on batteries removed from prerequisites of rocket silo to make it possible to leave Muluna on any-planet start.
+    - Reduced the cost of the Sealed Greenhouse
+  Compatibility:
+    - Removed all modifications of content of AAI Signal transmission.
+  Bugfixes:
+    - Added "Casting low density structure from Aluminum" recipe to "low-density-structure-productivity." https://github.com/nicholasgower/planet-muluna/issues/155
+---------------------------------------------------------------------------------------------------
+Version: 1.36.1
+Date: 2025-04-19
+  Bugfixes:
+    - Removed some technologies when playing any-planet-start to make it easier to play.
+---------------------------------------------------------------------------------------------------
+Version: 1.36.0
+Date: 2025-04-18
+  Features:
+    - Added steam furnace, a furnace that consumes steam for energy. Unlocks at the same time as the steel furnace.
+  Balancing:
+    - Made various adjustments to make any-planet start easier.
+---------------------------------------------------------------------------------------------------
+Version: 1.35.38
+Date: 2025-04-17
+  Graphics:
+    - Changed icon of "Crusher 2" to include Tungsten plate item instead of Uranium ore.
+---------------------------------------------------------------------------------------------------
 Version: 1.35.37
 Date: 2025-04-17
   Locale:

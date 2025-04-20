@@ -126,3 +126,6 @@ data.raw["recipe"]["casting-aluminum-cable"].icons = dual_icon("copper-cable","m
 data.raw["recipe"]["casting-aluminum"].icons = dual_icon("aluminum-plate","molten-aluminum")
 data.raw["recipe"]["casting-low-density-structure-aluminum"].icons = dual_icon("low-density-structure","molten-aluminum","molten-iron")
 
+if data.raw["technology"]["low-density-structure-productivity"] then
+    rro.soft_insert(data.raw["technology"]["low-density-structure-productivity"].effects,{type="change-recipe-productivity",recipe="casting-low-density-structure-aluminum",change=0.1})
+end
