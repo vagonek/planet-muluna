@@ -763,7 +763,7 @@ data:extend{
         icon = data.raw["technology"]["space-platform"].icon,
         icon_size = data.raw["technology"]["space-platform"].icon_size,
         unit = {
-            count = 1000,
+            count = 2000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
