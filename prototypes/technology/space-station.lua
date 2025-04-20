@@ -827,6 +827,7 @@ data:extend{
         icons = technology_icon_constant_recipe_productivity("__muluna-graphics__/graphics/technology/filtration.png",1024),
         icon = data.raw["technology"]["space-platform"].icon,
         icon_size = data.raw["technology"]["space-platform"].icon_size,
+        max_level = "infinite",
         unit = {
             --count = 1000,
             count_formula = "500*1.5^(L-1)",
