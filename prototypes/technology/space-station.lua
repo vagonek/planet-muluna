@@ -1,3 +1,41 @@
+local function technology_icon_constant_productivity(technology_icon,new_icon_size)
+    local icon_size = new_icon_size or 256
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = icon_size
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-mining-productivity.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    }
+    return icons
+  end
+  local function technology_icon_constant_recipe_productivity(technology_icon,new_icon_size)
+    local icon_size = new_icon_size or 256
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = icon_size
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    }
+    return icons
+  end
+
+
 local function technology_icon_moon_complete(moon_icon, icon_size)
 	icon_size = icon_size or 256
 	local icons = util.technology_icon_constant_planet(moon_icon)
@@ -478,7 +516,7 @@ data:extend{
     {
         type = "technology",
         name = "thruster-fuel-productivity",
-        icons = util.technology_icon_constant_recipe_productivity(data.raw["technology"]["space-platform-thruster"].icon),
+        icons = technology_icon_constant_recipe_productivity(data.raw["technology"]["space-platform-thruster"].icon),
         --icons = {
             --{
                 --icon= data.raw["technology"]["space-platform-thruster"].icon,
@@ -572,7 +610,7 @@ data:extend{
         type = "technology",
         name = "crusher-2",
         unit = {
-            count = 1000,
+            count = 2000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
@@ -696,7 +734,7 @@ data:extend{
         icon = "__muluna-graphics__/graphics/technology/packaging.png",
         icon_size = 1024,
         unit = {
-            count = 500,
+            count = 1000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
@@ -725,7 +763,7 @@ data:extend{
         icon = data.raw["technology"]["space-platform"].icon,
         icon_size = data.raw["technology"]["space-platform"].icon_size,
         unit = {
-            count = 1000,
+            count = 2000,
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
@@ -746,6 +784,75 @@ data:extend{
                 type = "unlock-recipe",
                 recipe="low-density-space-platform-foundation"
             },
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-cycling-steam-turbine",
+        icon = "__muluna-graphics__/graphics/icons/advanced-steam-turbine.png",
+        icon_size = 64,
+        unit = {
+            count = 2000,
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"electromagnetic-science-pack",1},
+                {"metallurgic-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","electromagnetic-science-pack","metallurgic-science-pack"
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe= "muluna-cycling-steam-turbine"
+            },
+            {
+                type = "unlock-recipe",
+                recipe= "muluna-steam-condensation"
+            },
+           
+        }
+    },
+    {
+        type = "technology",
+        name = "water-recycling-productivity",
+        icons = technology_icon_constant_recipe_productivity("__muluna-graphics__/graphics/technology/filtration.png",1024),
+        icon = data.raw["technology"]["space-platform"].icon,
+        icon_size = data.raw["technology"]["space-platform"].icon_size,
+        unit = {
+            --count = 1000,
+            count_formula = "500*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"chemical-science-pack", 1},
+                --{"production-science-pack", 1},
+                {"utility-science-pack", 1},
+                {"space-science-pack", 1},
+                {"interstellar-science-pack",1},
+                {"electromagnetic-science-pack",1},
+                {"metallurgic-science-pack",1},
+            }
+        },
+        prerequisites = {
+            "interstellar-science-pack","muluna-cycling-steam-turbine"
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "muluna-steam-condensation",
+                change = 0.1,
+            },
+           
         }
     },
     

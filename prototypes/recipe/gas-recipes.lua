@@ -325,6 +325,23 @@ data:extend{
         },
         allow_productivity = true,
     },
+    --local steam_condensing = 
+    {   
+        type = "recipe",
+        name = "muluna-steam-condensation",
+        category = "chemistry-or-cryogenics",
+        subgroup="muluna-products",
+        icons = dual_icon("water","cooled-steam"),
+        ingredients = {
+            {type = "fluid" , name = "cooled-steam" , amount = 1000}
+        },
+        results = {
+            {type = "fluid", name = "water", amount = 25}
+        },
+        allow_productivity = true,
+    
+    },
+
     -- {
     --     type = "recipe",
     --     category = "chemistry",
