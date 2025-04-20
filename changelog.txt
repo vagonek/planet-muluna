@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.2
+Date: 2025-04-20
+  Bugfixes:
+    - Changed "Water recycling productivity" technology to "infinite" https://github.com/nicholasgower/planet-muluna/issues/158
+---------------------------------------------------------------------------------------------------
 Version: 1.37.1
 Date: 2025-04-20
   Compatibility:
