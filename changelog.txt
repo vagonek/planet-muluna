@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.3
+Date: 2025-04-21
+  Bugfixes:
+    - Changed max productivity of maraxsis rocket part recipe to 700%
+    - Set default import location of several Muluna entity items to Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.37.2
 Date: 2025-04-20
   Bugfixes:
