@@ -33,6 +33,7 @@ if data.raw["item"]["biolab"] then
         },
         
     }
+    cryolab.default_import_location = "muluna"
     data:extend{cryolab}
 end
     
@@ -58,7 +59,8 @@ space_chest=util.merge{space_chest,
             
         },
         subgroup = "space-platform",
-        order = "ca[space-chest-muluna]"
+        order = "ca[space-chest-muluna]",
+        default_import_location = "muluna",
     }
 
 }
@@ -71,6 +73,7 @@ local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"])
         --place_result = "muluna-greenhouse",
         subgroup = "agriculture",
         order = "c[muluna-greenhouse]",
+        default_import_location = "muluna",
     }
     
 }
@@ -96,6 +99,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-pla
         subgroup = "agriculture",
         place_result = "muluna-greenhouse-wood",
         order = "ca[muluna-greenhouse]",
+        default_import_location = "muluna",
     }
     
 }
@@ -107,6 +111,7 @@ low_density_space_platform_foundation = util.merge{low_density_space_platform_fo
     icon = "__muluna-graphics__/graphics/icons/low-density-space-platform-foundation.png",
     order = "aa[low-density-space-platform-foundation]",
     weight = low_density_space_platform_foundation.weight / 2,
+    default_import_location = "muluna",
 }
 }
 low_density_space_platform_foundation.place_as_tile.result = "low-density-space-platform-foundation"
@@ -118,7 +123,8 @@ local recycling_turbine = util.merge{table.deepcopy(data.raw["item"]["fusion-gen
         place_result = "muluna-cycling-steam-turbine",
         icon = "__muluna-graphics__/graphics/icons/advanced-steam-turbine.png",
         icon_size = 64,
-        order = "f[nuclear-energy]-g[muluna-cycling-steam-turbine]"
+        order = "f[nuclear-energy]-g[muluna-cycling-steam-turbine]",
+        default_import_location = "muluna",
     }
 
 }
