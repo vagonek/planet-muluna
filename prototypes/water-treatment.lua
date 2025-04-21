@@ -62,6 +62,9 @@ if data.raw["fluid"]["carbon-dioxide"] == nil then
     }}  
 end
 data.raw["fluid"]["carbon-dioxide"].icon = "__muluna-graphics__/graphics/icons/molecule-carbon-dioxide.png"
+if data.raw["fluid"]["carbon-dioxide"].heat_capacity == nil then
+    data.raw["fluid"]["carbon-dioxide"].heat_capacity = data.raw.fluid["water"].heat_capacity
+end
 data.raw["fluid"]["carbon-dioxide"].heat_capacity=multiply_energy(data.raw["fluid"]["carbon-dioxide"].heat_capacity,1/10)
 
 
