@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.4
+Date: 2025-04-21
+  Bugfixes:
+    - Added special case when another mod adds "carbon dioxide" fluid without defining a heat capacity.
+  Locale:
+    - Updated Advanced steam turbine description to display input/output fluid temperatures.
+---------------------------------------------------------------------------------------------------
 Version: 1.37.3
 Date: 2025-04-21
   Bugfixes:
