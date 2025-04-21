@@ -232,6 +232,7 @@ end
 scalar_recipe_multiply(data.raw.recipe["rocket-part"].ingredients,2)
 if mods["maraxsis"] then
     scalar_recipe_multiply(data.raw.recipe["maraxsis-rocket-part"].ingredients,2)
+    data.raw["recipe"]["maraxsis-rocket-part"].maximum_productivity = 7
 end
 -- data.raw.recipe["rocket-part"].ingredients =
 -- {
