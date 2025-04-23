@@ -51,11 +51,11 @@ local map_gen = {
       {
         settings =
         {
-          ["medium-rock"] = {},
-          ["small-rock"] = {},
-          ["tiny-rock"] = {},
-          ["medium-sand-rock"] = {},
-          ["small-sand-rock"] = {}
+          --["medium-rock"] = {},
+          --["small-rock"] = {},
+          --["tiny-rock"] = {},
+          --["medium-sand-rock"] = {},
+          --["small-sand-rock"] = {}
         }
       },
         ["entity"] =
@@ -65,8 +65,8 @@ local map_gen = {
           ["stone"] = {},
           ["lunar-rock"] = {},
           --["big-sand-rock"] = {},
-          ["huge-rock"] = {},
-          ["big-rock"] = {},
+          --["huge-rock"] = {},
+          --["big-rock"] = {},
           ["oxide-asteroid-chunk"] = {},
           ["metallic-asteroid-chunk"] = {},
           ["carbonic-asteroid-chunk"] = {},
