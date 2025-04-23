@@ -45,13 +45,22 @@ function Public.on_new_surface(muluna_index)
         local muluna = game.planets["muluna"].surface
         
         for i = 1,math.random(2,4) do
-            random_place(muluna,"crusher",math.random(1,3))
+            random_place(muluna,"crusher",math.random(2,4))
         end
         for i = 1,math.random(2,4) do
             random_place(muluna,"electric-furnace",math.random(1,3))
         end
         for i = 1,math.random(2,4) do
             random_place(muluna,"electric-mining-drill",math.random(1,3))
+        end
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"pipe",math.random(10,20))
+        end
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"pipe-to-ground",math.random(2,5))
+        end
+        for i = 1,math.random(2,4) do
+            random_place(muluna,"chemical-plant",math.random(1,3))
         end
         for i = 1,math.random(3,10) do
             random_place(muluna,"solar-panel",math.random(1,3))
