@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.7
+Date: 2025-04-23
+  Balancing:
+    - Added additional items to Muluna's crashsite.
+  Bugfixes:
+    - Set Muluna steam condensation to disabled at start.
+---------------------------------------------------------------------------------------------------
 Version: 1.37.6
 Date: 2025-04-23
   Changes:
