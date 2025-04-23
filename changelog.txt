@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.37.6
+Date: 2025-04-23
+  Changes:
+    - Removed remaining Nauvis decoratives/entities from Muluna.
+    - Replaced Nauvis cliff autoplace algorithm on Muluna with custom autoplace algorithm.
+---------------------------------------------------------------------------------------------------
 Version: 1.37.5
 Date: 2025-04-22
   Locale:
