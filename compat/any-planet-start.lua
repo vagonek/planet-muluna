@@ -1,5 +1,23 @@
 local rro = require("lib.remove-replace-object")
 
+local function technology_icon_constant_recipe_productivity(technology_icon,new_icon_size)
+    local icon_size = new_icon_size or 256
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = icon_size
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    }
+    return icons
+  end
 
 local function delete_tech(deleted_tech,new_tech)
     for _,effect in pairs(data.raw["technology"][deleted_tech].effects) do
@@ -74,4 +92,41 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     delete_tech("electric-energy-distribution-1")
     delete_tech("sulfur-processing","wood-gas-processing")
     delete_tech("engine","steam-power") 
+
+    data:extend{{
+        type = "technology",
+        name = "wood-gas-processing-productivity",
+        icons = technology_icon_constant_recipe_productivity(data.raw["technology"]["wood-gas-processing"].icon),
+        --icons = {
+            --{
+                --icon= data.raw["technology"]["space-platform-thruster"].icon,
+                --icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
+            --},
+        --},
+        max_level = "infinite",
+        prerequisites = {"wood-gas-processing"},
+        upgrade = true,
+        unit = {
+            count_formula = "100*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"space-science-pack",1}
+            }
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "wood-gasification",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-wood-gasification",
+                change = 0.1,
+            },
+        },
+    }}
   end
