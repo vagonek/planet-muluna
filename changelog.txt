@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.38.0
+Date: 2025-04-24
+  Features:
+    - Added "Stone steam furnace"
+  Locale:
+    - Added locale for "Automation science pack from aluminum"
+---------------------------------------------------------------------------------------------------
 Version: 1.37.9
 Date: 2025-04-24
   Compatibility:
