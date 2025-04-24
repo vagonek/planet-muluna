@@ -68,6 +68,9 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     delete_tech("fluid-handling")
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"production-science-pack",1})
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"chemical-science-pack",1})
+    --rro.replace(data.raw["technology"]["advanced-oil-processing"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
+    --data.raw["technology"]["advanced-oil-processing"].unit.count = 500
+    --rro.replace(data.raw["technology"]["rocket-fuel"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
     rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"logistic-robotics")
     rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"cargo-planes")
     rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisites,"afterburner")
