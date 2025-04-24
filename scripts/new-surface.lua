@@ -44,8 +44,8 @@ function Public.on_new_surface(muluna_index)
         -- game.print("Muluna created")
         local muluna = game.planets["muluna"].surface
         
-        for i = 1,math.random(2,4) do
-            random_place(muluna,"crusher",math.random(2,4))
+        for i = 1,math.random(3,5) do
+            random_place(muluna,"crusher",math.random(3,5))
         end
         for i = 1,math.random(2,4) do
             random_place(muluna,"electric-furnace",math.random(1,3))
