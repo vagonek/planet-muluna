@@ -1,5 +1,5 @@
 local rro = require("lib.remove-replace-object")
-
+local dual_icon = require("lib.dual-item-icon").dual_icon
 local function technology_icon_constant_recipe_productivity(technology_icon,new_icon_size)
     local icon_size = new_icon_size or 256
     local icons =
@@ -44,7 +44,17 @@ end
 
 if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "muluna" then
     data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
-    rro.replace_name(data.raw["recipe"]["automation-science-pack"].ingredients,"copper-plate","aluminum-plate")
+    local red_science = table.deepcopy(data.raw["recipe"]["automation-science-pack"])
+    rro.replace_name(red_science.ingredients,"copper-plate","aluminum-plate")
+    red_science.name="automation-science-pack-muluna"
+    red_science.icons=dual_icon("automation-science-pack","aluminum-plate")
+    data:extend{red_science}
+    
+    rro.soft_insert(data.raw["technology"]["automation-science-pack"].effects,
+    {
+        type = "unlock-recipe",
+        recipe = "automation-science-pack-muluna",
+    })
     --rro.replace_name(data.raw["recipe"]["electric-furnace"].ingredients,"advanced-circuit","electronic-circuit")
     --data.raw["recipe"]["electric-furnace"].enabled = true
     --data.raw["recipe"]["electric-mining-drill"].enabled = true
