@@ -159,3 +159,21 @@ if data.raw["technology"]["tree-seeding"] and not data.raw.planet.lignumis then 
     -- end
     
 end
+
+local gravity_condition = { --Taken from Cerys
+	property = "gravity",
+	min = 0.1,
+}
+
+for _, entity in pairs(data.raw["cargo-landing-pad"] or {}) do
+	PlanetsLib.relax_surface_conditions(entity, gravity_condition)
+end
+if data.raw["car"]["car"] then
+	PlanetsLib.relax_surface_conditions(data.raw["car"]["car"], gravity_condition)
+end
+if data.raw["car"]["tank"] then
+	PlanetsLib.relax_surface_conditions(data.raw["car"]["tank"], gravity_condition)
+end
+if data.raw["spider-vehicle"]["spidertron"] then
+	PlanetsLib.relax_surface_conditions(data.raw["spider-vehicle"]["spidertron"], gravity_condition)
+end
