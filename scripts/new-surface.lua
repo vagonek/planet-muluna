@@ -4,8 +4,8 @@ local Public = {}
 
 local function random_place(surface,item_name,item_count)
     --if item_count == nil then item_count = 1 end
-    local x = math.random(-128,128)
-    local y = math.random(-128,128)
+    local x = math.random(-128,128)+math.random(-128,128)
+    local y = math.random(-128,128)+math.random(-128,128)
     local entity = {name = "fulgoran-cargo-pod-container", position = {x,y}, force = "player"}
     if surface.can_place_entity(entity) == false then
         entity.position[1] = entity.position[1] + math.random(-8,8)
@@ -46,6 +46,9 @@ function Public.on_new_surface(muluna_index)
         
         for i = 1,math.random(3,5) do
             random_place(muluna,"crusher",math.random(3,5))
+        end
+        for i = 1,math.random(3,5) do
+            random_place(muluna,"plastic-bar",math.random(20,40))
         end
         for i = 1,math.random(2,4) do
             random_place(muluna,"electric-furnace",math.random(1,3))
