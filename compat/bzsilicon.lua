@@ -57,12 +57,12 @@ local function move_recipe(recipe,tech,tech_new)
 end
 
 if data.raw["recipe"]["alternative-metallic-asteroid-crushing"] then
-    move_recipe("alternative-metallic-asteroid-crushing","space-platform-thruster","crusher")
+    move_recipe("alternative-metallic-asteroid-crushing","space-platform-thruster","metallic-asteroid-crushing")
 end
 if data.raw["recipe"]["alternative-carbonic-asteroid-crushing"] then
-    move_recipe("alternative-carbonic-asteroid-crushing","space-platform-thruster","greenhouses")
+    move_recipe("alternative-carbonic-asteroid-crushing","space-platform-thruster","carbonic-asteroid-crushing")
 end
 if data.raw["recipe"]["metallic-asteroid-crushing-tin"] then
-    move_recipe("metallic-asteroid-crushing-tin","space-platform-thruster","crusher")
+    move_recipe("metallic-asteroid-crushing-tin","space-platform-thruster","metallic-asteroid-crushing")
 end
 
