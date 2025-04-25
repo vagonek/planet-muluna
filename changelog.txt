@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.39.0
+Date: 2025-04-25
+  Features:
+    - Rearranged tech tree following Muluna discovery to better guide new players.
+  Compatibility:
+    - Reworked Any-planet-start to reduce number of prematurely displayed technologies at start.
+---------------------------------------------------------------------------------------------------
 Version: 1.38.3
 Date: 2025-04-25
   Locale:
