@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.38.3
+Date: 2025-04-25
+  Locale:
+    - Changed settings marked "Hardcore" to "Hard."
+---------------------------------------------------------------------------------------------------
+Version: 1.38.2
+Date: 2025-04-24
+  Bugfixes:
+    - Attempt to fix issue with Satellite radars.
+---------------------------------------------------------------------------------------------------
+Version: 1.38.1
+Date: 2025-04-24
+  Balancing:
+    - Increased efficiency of steam furnaces to 35%.
+    - Increased starting number of crushers
+    - Reduced landfill cost of greenhouse seeding from 50 to 10.
+  Compatibility:
+    - Fixed surface conditions for vehicles so they work on Muluna.
+---------------------------------------------------------------------------------------------------
 Version: 1.38.0
 Date: 2025-04-24
   Features:
