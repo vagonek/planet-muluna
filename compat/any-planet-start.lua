@@ -59,15 +59,17 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     --data.raw["recipe"]["electric-furnace"].enabled = true
     --data.raw["recipe"]["electric-mining-drill"].enabled = true
     --data.raw["recipe"]["steel"].enabled = true
-    delete_tech("electric-mining-drill")
+    delete_tech("electric-mining-drill","metallic-asteroid-crushing")
     delete_tech("advanced-material-processing-2","muluna-advanced-boiler")
     delete_tech("advanced-material-processing","muluna-advanced-boiler")
-    delete_tech("steel-processing")
+    delete_tech("steel-processing","metallic-asteroid-crushing")
     delete_tech("advanced-circuit","electronics")
     delete_tech("oil-processing","oil-gathering")
-    delete_tech("fluid-handling")
+    delete_tech("fluid-handling","oxide-asteroid-crushing")
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"production-science-pack",1})
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"chemical-science-pack",1})
+    rro.soft_insert(data.raw["technology"]["steam-power"].prerequisites,"metallic-asteroid-crushing")
+    
     --rro.replace(data.raw["technology"]["advanced-oil-processing"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
     --data.raw["technology"]["advanced-oil-processing"].unit.count = 500
     --rro.replace(data.raw["technology"]["rocket-fuel"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
@@ -86,12 +88,12 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     --     type = "unlock-recipe",
     --     recipe = "advanced-circuit",
     -- })
-    rro.soft_insert(data.raw["technology"]["wood-gas-processing"].effects,
+    rro.soft_insert(data.raw["technology"]["oxide-asteroid-crushing"].effects,
     {
         type = "unlock-recipe",
         recipe = "chemical-plant",
     })
-    rro.soft_insert(data.raw["technology"]["muluna-advanced-boiler"].effects,
+    rro.soft_insert(data.raw["technology"]["muluna-oxygen"].effects,
     {
         type = "unlock-recipe",
         recipe = "thruster-oxidizer",
@@ -102,7 +104,7 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     -- rro.remove(data.raw["technology"]["muluna-silicon-processing"].prerequisites,"production-science-pack")
 
     delete_tech("muluna-silicon-processing","solar-energy")
-    delete_tech("electric-energy-distribution-1")
+    delete_tech("electric-energy-distribution-1","oxide-asteroid-crushing")
     delete_tech("sulfur-processing","wood-gas-processing")
     delete_tech("engine","steam-power") 
 
@@ -142,4 +144,12 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
             },
         },
     }}
+    for _,tech in pairs(data.raw["technology"]) do
+        if tech.unit then 
+           if rro.contains(tech.unit.ingredients ,{"logistic-science-pack" , 1}) then
+            rro.soft_insert(tech.prerequisites,"logistic-science-pack")
+           end
+        end
+            
+    end
   end
