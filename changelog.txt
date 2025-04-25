@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.39.2
+Date: 2025-04-25
+  Bugfixes:
+    - Updated outdated technology references in compatibility code for Brevven's mods.
+    - When starting on Muluna, Steel-axe is now a prerequisite of "Metallic asteroid crushing"
+---------------------------------------------------------------------------------------------------
 Version: 1.39.1
 Date: 2025-04-25
   Locale:
