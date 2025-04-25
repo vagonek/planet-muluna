@@ -2,9 +2,9 @@ local rro=require("lib.remove-replace-object")
 local thruster_fuel=table.deepcopy(data.raw["recipe"]["thruster-fuel"])
 
 rro.replace(thruster_fuel.ingredients,{type="item", name="carbon", amount=2},{type="item", name="rocket-fuel", amount=1})
-rro.replace(thruster_fuel.ingredients,{type="fluid", name="water", amount=10},{type="fluid", name="water", amount=35})
-thruster_fuel.energy_required=thruster_fuel.energy_required*3.5
-thruster_fuel.results[1].amount=250
+rro.replace(thruster_fuel.ingredients,{type="fluid", name="water", amount=10},{type="fluid", name="water", amount=70})
+thruster_fuel.energy_required=thruster_fuel.energy_required*7
+thruster_fuel.results[1].amount=500
 thruster_fuel.name="thruster-fuel-from-rocket-fuel"
 thruster_fuel.hide_from_signal_gui = false
 thruster_fuel.icons= {
@@ -32,8 +32,8 @@ thruster_fuel.icon=nil
 thruster_fuel.icon_size=nil
 data:extend{thruster_fuel}
 
-table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
-    type="unlock-recipe",
-    recipe="thruster-fuel-from-rocket-fuel",
-})
+-- table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
+--     type="unlock-recipe",
+--     recipe="thruster-fuel-from-rocket-fuel",
+-- })
 
