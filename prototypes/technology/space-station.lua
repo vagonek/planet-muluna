@@ -86,6 +86,25 @@ local function technology_icon_constant_planet(technology_icon,icon_size)
     return icons
   end
 
+local function crushing_technology_icon(item_sprite,item_sprite_size)
+    if not item_sprite_size then item_sprite_size = 64 end
+
+    return  {
+        {
+            icon = "__muluna-graphics__/graphics/technology/comminution.png",
+            icon_size = 968,
+        },  
+        {
+            icon = item_sprite,
+            icon_size=item_sprite_size,
+            --scale=0.3,
+            shift = {45,45},
+            scale=0.75,
+        },
+        
+    }
+end
+
 data:extend{
     -- {
     --     type = "technology",
@@ -151,18 +170,19 @@ data:extend{
     -- },
     {
         type = "technology",
-        name = "crusher",
+        name = "metallic-asteroid-crushing",
+        localised_name = {"recipe-name.metallic-asteroid-crushing"},
         research_trigger = {
             type = "mine-entity",
             entity = "metallic-asteroid-chunk"
         },
-        localised_name = {"item-name.crusher"},
-        localised_description = {"entity-description.crusher"},
+        --localised_name = {"item-name.crusher"},
+        --localised_description = {"entity-description.crusher"},
         effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "crusher"
-            },
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe = "crusher"
+            -- },
             {
                 type = "unlock-recipe",
                 recipe = "metallic-asteroid-crushing"
@@ -175,12 +195,13 @@ data:extend{
         prerequisites = {
              "planet-discovery-muluna"
         },
-        icons = {
-            {
-                icon = "__muluna-graphics__/graphics/technology/comminution.png",
-                icon_size = 968,
-            },  
-        }
+        -- icons = {
+        --     {
+        --         icon = "__muluna-graphics__/graphics/technology/comminution.png",
+        --         icon_size = 968,
+        --     },  
+        -- }
+        icons = crushing_technology_icon(data.raw["item"]["metallic-asteroid-chunk"].icon,data.raw["item"]["metallic-asteroid-chunk"].icon_size)
     },
     {
         type = "technology",
@@ -224,17 +245,13 @@ data:extend{
     },
     {
         type = "technology",
-        name = "muluna-advanced-boiler",
+        name = "oxide-asteroid-crushing",
+        localised_name = {"recipe-name.oxide-asteroid-crushing"},
         research_trigger = {
             type = "mine-entity",
             entity = "oxide-asteroid-chunk"
         },
-        localised_name = {"entity-name.muluna-advanced-boiler"},
         effects = {
-            {
-                type = "unlock-recipe",
-                recipe = "muluna-advanced-boiler"
-            },
             {
                 type = "unlock-recipe",
                 recipe = "oxide-asteroid-crushing"
@@ -243,56 +260,17 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "ice-melting"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "maraxsis-atmosphere"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "atmosphere-oxygen-separation"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "muluna-oxygen-from-oxidizer"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "advanced-water-boiling"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "advanced-water-boiling-atmosphere"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "carbon-dioxide-venting"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "hydrogen-venting"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "oxygen-venting"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="muluna-electrolysis"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="advanced-water-melting-atmosphere"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="advanced-water-melting-oxygen"
-            },
+            
+            
+            
+            
         },
         prerequisites = {
-            "crusher"
+            "planet-discovery-muluna"
         },
-        icon = data.raw["technology"]["steam-power"].icon,
-        icon_size = data.raw["technology"]["steam-power"].icon_size,
+        icons = crushing_technology_icon(data.raw["item"]["oxide-asteroid-chunk"].icon,data.raw["item"]["oxide-asteroid-chunk"].icon_size),
+        -- icon = data.raw["technology"]["steam-power"].icon,
+        -- icon_size = data.raw["technology"]["steam-power"].icon_size,
     },
     {
         type = "technology",
@@ -306,26 +284,7 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "anorthite-crushing"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "alumina-crushing"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "rocket-fuel-aluminum"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "aluminum-plate"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "aluminum-cable",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "low-density-structure-from-aluminum",
-            },
+            
             -- {
             --     type = "unlock-recipe",
             --     recipe = "electronic-circuit-aluminum",
@@ -336,7 +295,7 @@ data:extend{
             -- },
         },
         prerequisites = {
-            "crusher"
+            "metallic-asteroid-crushing"
         },
         icons = {
             {
@@ -351,6 +310,202 @@ data:extend{
                 scale=0.75,
             },
             
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-alumina-processing",
+        prerequisites = {"muluna-anorthite-processing"},
+        research_trigger = {
+            type = "craft-item",
+            item = "alumina",
+            count = 20,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "alumina-crushing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-plate"
+            },
+            
+        },
+        icons = crushing_technology_icon("__muluna-graphics__/graphics/icons/scrap-metal-aluminium-1.png")
+    },
+    {
+        type = "technology",
+        name = "muluna-aluminum-processing",
+        prerequisites = {"muluna-alumina-processing",},
+        research_trigger = {
+            type = "craft-item",
+            item = "aluminum-plate",
+            count = 20,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "aluminum-cable",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "low-density-structure-from-aluminum",
+            },
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-alice-propellant",
+        localised_name = {"recipe-name.rocket-fuel-aluminum"},
+        localised_description = {"recipe-description.rocket-fuel-aluminum"},
+        prerequisites = {"muluna-alumina-processing","oxide-asteroid-crushing"},
+        research_trigger = {
+            type = "craft-item",
+            item = "alumina-crushed",
+            count = 20,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "rocket-fuel-aluminum"
+            },
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-oxygen",
+        prerequisites = {"metallic-asteroid-crushing","oxide-asteroid-crushing"},
+        research_trigger = {
+            type = "craft-fluid",
+            fluid = "water",
+            amount = 100,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-oxygen-from-oxidizer"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-electrolysis"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "oxygen-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "hydrogen-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "maraxsis-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "atmosphere-oxygen-separation"
+            },
+            
+            
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-advanced-boiler",
+        localised_name = {"entity-name.muluna-advanced-boiler"},
+        localised_description = {"entity-description.muluna-advanced-boiler"},
+        prerequisites = {"oxide-asteroid-crushing","carbonic-asteroid-crushing","muluna-oxygen"},
+        research_trigger = {
+            type = "craft-item",
+            item = "carbon",
+            count = 20,
+        },
+        icon = "__muluna-graphics__/graphics/thermal-plant/thermal-plant-icon-big.png",
+        icon_size = 640,
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-advanced-boiler"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "advanced-water-boiling-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-atmosphere"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="advanced-water-melting-oxygen"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="controlled-combustion"
+            },
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-wood-cultivation",
+        prerequisites = {"muluna-advanced-boiler"},
+        research_trigger = {
+            type = "craft-fluid",
+            fluid = "carbon-dioxide",
+            amount = 100,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-water-saving"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="muluna-tree-growth-greenhouse-quick"
+            },
+            {
+                type = "unlock-recipe",
+                recipe="wood-processing"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "carbon-dioxide-venting"
+            },
+        }
+    },
+    {
+        type = "technology", 
+        name = "muluna-greenhouses",
+        prerequisites = {"muluna-wood-cultivation","muluna-aluminum-processing"},
+        icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon-big.png",--data.raw["technology"]["tree-seeding"].icon,
+        icon_size = 640,--data.raw["technology"]["tree-seeding"].icon_size,
+        research_trigger = {
+            type = "craft-item",
+            item = "wood",
+            count = 40,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-greenhouse",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-sapling-growth-greenhouse",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "muluna-greenhouse-wood",
+            },
         }
     },
     {
@@ -403,7 +558,11 @@ data:extend{
             {
                 type = "unlock-space-location",
                 space_location = "muluna"
-            }
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "crusher",
+            },
         },
         prerequisites = {
             "space-platform-thruster"
@@ -630,7 +789,7 @@ data:extend{
             }
         },
         prerequisites = {
-            "interstellar-science-pack", "crusher","metallurgic-science-pack"
+            "interstellar-science-pack", "metallic-asteroid-crushing","metallurgic-science-pack"
         },
         icons = {
             {
@@ -658,15 +817,14 @@ data:extend{
     },
     {
         type = "technology",
-        name = "greenhouses",
-        icon = "__muluna-graphics__/graphics/greenhouse/sprites/greenhouse-icon-big.png",--data.raw["technology"]["tree-seeding"].icon,
-        icon_size = 640,--data.raw["technology"]["tree-seeding"].icon_size,
+        name = "carbonic-asteroid-crushing",
+        localised_name = {"recipe-name.carbonic-asteroid-crushing"},
         research_trigger = {
             type = "mine-entity",
             entity = "carbonic-asteroid-chunk"
         },
         prerequisites = {
-            "crusher"
+            "planet-discovery-muluna"
         },
         effects = {
             {
@@ -677,46 +835,17 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "electric-engine-unit-from-carbon"
             },
-            {
-                type = "unlock-recipe",
-                recipe="controlled-combustion"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="muluna-electrolysis"
-            },
+            
+            -- {
+            --     type = "unlock-recipe",
+            --     recipe="muluna-electrolysis"
+            -- },
             -- {
             --     type = "unlock-recipe",
             --     recipe="cellulose"
             -- },
-            {
-                type = "unlock-recipe",
-                recipe="muluna-tree-growth-greenhouse"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="muluna-tree-growth-greenhouse-water-saving"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="muluna-tree-growth-greenhouse-quick"
-            },
-            {
-                type = "unlock-recipe",
-                recipe="wood-processing"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "muluna-sapling-growth-greenhouse",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "muluna-greenhouse",
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "muluna-greenhouse-wood",
-            },
+            
+            
             
             
             -- {
@@ -725,6 +854,7 @@ data:extend{
             -- }
 
         },
+        icons = crushing_technology_icon(data.raw["item"]["carbonic-asteroid-chunk"].icon,data.raw["item"]["carbonic-asteroid-chunk"].icon_size),
         
     },
     {

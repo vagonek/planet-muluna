@@ -36,7 +36,7 @@ end
 
 local function dynamic_interstellar_pack_tech(pack1,pack2)
     local new_pack = table.deepcopy(data.raw["technology"]["interstellar-science-pack"])
-    
+    --new_pack.hidden = true
     new_pack = util.merge{new_pack,
     {
         name = dynamic_interstellar_pack_tech_name(pack1,pack2),

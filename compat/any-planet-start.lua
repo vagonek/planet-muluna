@@ -1,5 +1,23 @@
 local rro = require("lib.remove-replace-object")
-
+local dual_icon = require("lib.dual-item-icon").dual_icon
+local function technology_icon_constant_recipe_productivity(technology_icon,new_icon_size)
+    local icon_size = new_icon_size or 256
+    local icons =
+    {
+      {
+        icon = technology_icon,
+        icon_size = icon_size
+      },
+      {
+        icon = "__core__/graphics/icons/technology/constants/constant-recipe-productivity.png",
+        icon_size = 128,
+        scale = 0.5,
+        shift = {50, 50},
+        floating = true
+      }
+    }
+    return icons
+  end
 
 local function delete_tech(deleted_tech,new_tech)
     for _,effect in pairs(data.raw["technology"][deleted_tech].effects) do
@@ -26,20 +44,47 @@ end
 
 if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "muluna" then
     data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
-    rro.replace_name(data.raw["recipe"]["automation-science-pack"].ingredients,"copper-plate","aluminum-plate")
+    local red_science = table.deepcopy(data.raw["recipe"]["automation-science-pack"])
+    rro.replace_name(red_science.ingredients,"copper-plate","aluminum-plate")
+    red_science.name="automation-science-pack-muluna"
+    red_science.icons=dual_icon("automation-science-pack","aluminum-plate")
+    data:extend{red_science}
+    
+    rro.soft_insert(data.raw["technology"]["automation-science-pack"].effects,
+    {
+        type = "unlock-recipe",
+        recipe = "automation-science-pack-muluna",
+    })
     --rro.replace_name(data.raw["recipe"]["electric-furnace"].ingredients,"advanced-circuit","electronic-circuit")
     --data.raw["recipe"]["electric-furnace"].enabled = true
     --data.raw["recipe"]["electric-mining-drill"].enabled = true
     --data.raw["recipe"]["steel"].enabled = true
-    delete_tech("electric-mining-drill")
+    delete_tech("electric-mining-drill","metallic-asteroid-crushing")
     delete_tech("advanced-material-processing-2","muluna-advanced-boiler")
     delete_tech("advanced-material-processing","muluna-advanced-boiler")
-    delete_tech("steel-processing")
+    delete_tech("steel-processing","metallic-asteroid-crushing")
     delete_tech("advanced-circuit","electronics")
     delete_tech("oil-processing","oil-gathering")
-    delete_tech("fluid-handling")
+    delete_tech("fluid-handling","oxide-asteroid-crushing")
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"production-science-pack",1})
     rro.remove(data.raw["technology"]["wood-gas-processing-to-crude-oil"].unit.ingredients,{"chemical-science-pack",1})
+    --rro.soft_insert(data.raw["technology"]["steam-power"].prerequisites,"metallic-asteroid-crushing")
+    
+    if data.raw["technology"]["steam-power"].prerequisites == nil then
+        data.raw["technology"]["steam-power"].prerequisites = {"metallic-asteroid-crushing"}
+    end
+    if data.raw["technology"]["steel-axe"].prerequisites == nil or data.raw["technology"]["steel-axe"].prerequisites == {} then
+        data.raw["technology"]["steel-axe"].prerequisites = {"metallic-asteroid-processing"}
+    end
+    
+    if data.raw["technology"]["electronics"].prerequisites == nil then
+        data.raw["technology"]["electronics"].prerequisites = {"muluna-aluminum-processing"}
+    end
+    
+
+    --rro.replace(data.raw["technology"]["advanced-oil-processing"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
+    --data.raw["technology"]["advanced-oil-processing"].unit.count = 500
+    --rro.replace(data.raw["technology"]["rocket-fuel"].unit.ingredients,{"chemical-science-pack",1},{"space-science-pack",1})
     rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"logistic-robotics")
     rro.remove(data.raw["technology"]["rocket-silo"].prerequisites,"cargo-planes")
     rro.remove(data.raw["technology"]["space-platform-thruster"].prerequisites,"afterburner")
@@ -55,12 +100,12 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     --     type = "unlock-recipe",
     --     recipe = "advanced-circuit",
     -- })
-    rro.soft_insert(data.raw["technology"]["wood-gas-processing"].effects,
+    rro.soft_insert(data.raw["technology"]["oxide-asteroid-crushing"].effects,
     {
         type = "unlock-recipe",
         recipe = "chemical-plant",
     })
-    rro.soft_insert(data.raw["technology"]["muluna-advanced-boiler"].effects,
+    rro.soft_insert(data.raw["technology"]["muluna-oxygen"].effects,
     {
         type = "unlock-recipe",
         recipe = "thruster-oxidizer",
@@ -71,7 +116,52 @@ if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "m
     -- rro.remove(data.raw["technology"]["muluna-silicon-processing"].prerequisites,"production-science-pack")
 
     delete_tech("muluna-silicon-processing","solar-energy")
-    delete_tech("electric-energy-distribution-1")
+    delete_tech("electric-energy-distribution-1","oxide-asteroid-crushing")
     delete_tech("sulfur-processing","wood-gas-processing")
     delete_tech("engine","steam-power") 
+
+    data:extend{{
+        type = "technology",
+        name = "wood-gas-processing-productivity",
+        icons = technology_icon_constant_recipe_productivity(data.raw["technology"]["wood-gas-processing"].icon),
+        --icons = {
+            --{
+                --icon= data.raw["technology"]["space-platform-thruster"].icon,
+                --icon_size=data.raw["technology"]["space-platform-thruster"].icon_size,
+                --tint = {r=0.7,g=0.7,b=1}
+            --},
+        --},
+        max_level = "infinite",
+        prerequisites = {"wood-gas-processing"},
+        upgrade = true,
+        unit = {
+            count_formula = "100*1.5^(L-1)",
+            time = 60,
+            ingredients = {
+                {"automation-science-pack", 1},
+                {"logistic-science-pack", 1},
+                {"space-science-pack",1}
+            }
+        },
+        effects = {
+            {
+                type = "change-recipe-productivity",
+                recipe = "wood-gasification",
+                change = 0.1,
+            },
+            {
+                type = "change-recipe-productivity",
+                recipe = "advanced-wood-gasification",
+                change = 0.1,
+            },
+        },
+    }}
+    for _,tech in pairs(data.raw["technology"]) do
+        if tech.unit then 
+           if rro.contains(tech.unit.ingredients ,{"logistic-science-pack" , 1}) then
+            rro.soft_insert(tech.prerequisites,"logistic-science-pack")
+           end
+        end
+            
+    end
   end

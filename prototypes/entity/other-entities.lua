@@ -1,8 +1,10 @@
-local steam_furnace = table.deepcopy(data.raw["furnace"]["steel-furnace"])
+for _,name in pairs({"steel-furnace","stone-furnace"}) do
+
+local steam_furnace = table.deepcopy(data.raw["furnace"][name])
 
 steam_furnace = util.merge{steam_furnace ,
     {
-        name = "muluna-steam-steel-furnace",
+        name = "muluna-steam-".. name,
     }
 
 
@@ -10,7 +12,7 @@ steam_furnace = util.merge{steam_furnace ,
 
 }
 
-steam_furnace.minable.result = "muluna-steam-steel-furnace"
+steam_furnace.minable.result = "muluna-steam-".. name
 steam_furnace.surface_conditions = nil
 -- data:extend{
 --     type = "fuel-category",
@@ -24,7 +26,7 @@ steam_furnace.energy_source = {
     maximum_temperature = 500,
     --burns_fluid = burns,
     scale_fluid_usage = true,
-    effectivity = 0.25,
+    effectivity = 0.35,
     fluid_box = {
         production_type = "input",
         filter = "steam",
@@ -41,26 +43,32 @@ steam_furnace.energy_source = {
     }
 }
 
-local recipe = table.deepcopy(data.raw["recipe"]["steel-furnace"])
-recipe.name = "muluna-steam-steel-furnace"
+local recipe = table.deepcopy(data.raw["recipe"][name])
+recipe.name = "muluna-steam-".. name
 recipe.ingredients = {
-    {type = "item", name = "steel-furnace", amount = 1},
+    {type = "item", name = name, amount = 1},
     {type = "item", name = "pipe", amount = 4},
 }
-recipe.results = {{type = "item", name = "muluna-steam-steel-furnace", amount = 1}}
+recipe.results = {{type = "item", name = "muluna-steam-".. name, amount = 1}}
+if name == "stone-furnace" then recipe.enabled = true
 
-table.insert(data.raw["technology"]["advanced-material-processing"].effects,
+
+else 
+    table.insert(data.raw["technology"]["advanced-material-processing"].effects,
     {
         type = "unlock-recipe",
-        recipe = "muluna-steam-steel-furnace"
+        recipe = "muluna-steam-".. name
     }
 )
+end
 
-local item = table.deepcopy(data.raw["item"]["steel-furnace"])
+
+
+local item = table.deepcopy(data.raw["item"][name])
 
 item.icons = {
     {
-        icon = data.raw["item"]["steel-furnace"].icon,
+        icon = data.raw["item"][name].icon,
         icon_size = 64,
     },
     {
@@ -72,16 +80,18 @@ item.icons = {
     }
 }
 
-item.name = "muluna-steam-steel-furnace"
-item.place_result = "muluna-steam-steel-furnace"
+item.name = "muluna-steam-".. name
+item.place_result = "muluna-steam-".. name
 item.order = item.order .. "a"
 
 data:extend{steam_furnace,recipe,item}
 
+end
+
 -- data:extend{
 --     util.merge{),
 --     {
---         name = "muluna-steam-steel-furnace",
+--         name = "muluna-steam-".. name,
 --         ingredients = {
 --             {}
 --         }

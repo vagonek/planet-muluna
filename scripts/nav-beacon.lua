@@ -151,7 +151,12 @@ script.on_event(defines.events.on_space_platform_changed_state, function(e)
     --only track platforms with a nav beacon
     local platformBeacon = storage.beaconed_platforms[e.platform.index]
     if platformBeacon ~= nil then
-        storage.nav_surfaces[platformBeacon.unit_number] = e.platform.space_location --this can be nil, which is acceptable
+        if platformBeacon.valid == true then
+            storage.nav_surfaces[platformBeacon.unit_number] = e.platform.space_location --this can be nil, which is acceptable
+        else
+            storage.beaconed_platforms[e.platform.index] = nil
+        end
+        
     end
 end)
 

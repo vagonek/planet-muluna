@@ -145,7 +145,7 @@ greenhouse_wood.ingredients = {
     --{type = "fluid", name = "carbon-dioxide", amount = 100000},
     {type = "item", name = "muluna-sapling", amount = 100},
     --{type = "fluid", name = "water", amount = 10000},
-    {type = "item", name = "landfill", amount = 50},
+    {type = "item", name = "landfill", amount = 10},
 }
 
 local low_density_space_platform_foundation = util.merge{table.deepcopy(data.raw["recipe"]["space-platform-foundation"]),

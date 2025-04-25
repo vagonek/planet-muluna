@@ -198,8 +198,8 @@ local low_density_space_platform_foundation = {
        "low-density-space-platform-decorative-tiny",
     },
 
-    build_animations = space_platform_tile_animations.top_animation,
-    build_animations_background = space_platform_tile_animations.animation,
+    build_animations = top_animation,
+    build_animations_background = animation,
     built_animation_frame = 32,
 
     sprite_usage_surface = "space",

@@ -329,6 +329,7 @@ data:extend{
     {   
         type = "recipe",
         name = "muluna-steam-condensation",
+        enabled = false,
         category = "chemistry-or-cryogenics",
         subgroup="muluna-products",
         icons = dual_icon("water","cooled-steam"),

@@ -1,4 +1,65 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.39.0
+Date: 2025-04-25
+  Features:
+    - Rearranged tech tree following Muluna discovery to better guide new players.
+  Compatibility:
+    - Reworked Any-planet-start to reduce number of prematurely displayed technologies at start.
+---------------------------------------------------------------------------------------------------
+Version: 1.38.3
+Date: 2025-04-25
+  Locale:
+    - Changed settings marked "Hardcore" to "Hard."
+---------------------------------------------------------------------------------------------------
+Version: 1.38.2
+Date: 2025-04-24
+  Bugfixes:
+    - Attempt to fix issue with Satellite radars.
+---------------------------------------------------------------------------------------------------
+Version: 1.38.1
+Date: 2025-04-24
+  Balancing:
+    - Increased efficiency of steam furnaces to 35%.
+    - Increased starting number of crushers
+    - Reduced landfill cost of greenhouse seeding from 50 to 10.
+  Compatibility:
+    - Fixed surface conditions for vehicles so they work on Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.38.0
+Date: 2025-04-24
+  Features:
+    - Added "Stone steam furnace"
+  Locale:
+    - Added locale for "Automation science pack from aluminum"
+---------------------------------------------------------------------------------------------------
+Version: 1.37.9
+Date: 2025-04-24
+  Compatibility:
+    - Created option to produce red science packs from copper on Muluna start.
+---------------------------------------------------------------------------------------------------
+Version: 1.37.8
+Date: 2025-04-23
+  Compatibility:
+    - Added "Wood gasification productivity" technology when starting on Muluna.
+---------------------------------------------------------------------------------------------------
+Version: 1.37.7
+Date: 2025-04-23
+  Balancing:
+    - Added additional items to Muluna's crashsite.
+  Bugfixes:
+    - Set Muluna steam condensation to disabled at start.
+---------------------------------------------------------------------------------------------------
+Version: 1.37.6
+Date: 2025-04-23
+  Changes:
+    - Removed remaining Nauvis decoratives/entities from Muluna.
+    - Replaced Nauvis cliff autoplace algorithm on Muluna with custom autoplace algorithm.
+---------------------------------------------------------------------------------------------------
+Version: 1.37.5
+Date: 2025-04-22
+  Locale:
+    - Updated Chinese locale
+---------------------------------------------------------------------------------------------------
 Version: 1.37.4
 Date: 2025-04-21
   Bugfixes:
