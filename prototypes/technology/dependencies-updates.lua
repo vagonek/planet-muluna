@@ -15,9 +15,9 @@ data.raw["item"]["crusher"].order = "ca[crusher]"
 
 
 --replace_object(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform-thruster","space-platform")
-rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","crusher")
-table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"muluna-advanced-boiler")
-table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"greenhouses")
+rro.replace(data.raw["technology"]["space-science-pack"].prerequisites,"space-platform","muluna-alice-propellant")
+table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"wood-gas-processing")
+--table.insert(data.raw["technology"]["space-science-pack"].prerequisites,"muluna-oxide-asteroid-processing")
 -- table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
 --     type="unlock-space-location",
 --     space_location="muluna"
@@ -130,7 +130,7 @@ table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"p
 --table.insert(data.raw["technology"]["advanced-asteroid-processing"].prerequisites,"muluna-advanced-stone-processing")
 --table.insert(data.raw["technology"]["asteroid-reprocessing"].prerequisites,"muluna-advanced-stone-processing")
 
-table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"greenhouses")
+table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"muluna-greenhouses")
 rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 15})
 rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 30})
 data.raw["recipe"]["wood-gasification"].allow_productivity = true
