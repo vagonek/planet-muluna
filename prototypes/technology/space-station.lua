@@ -370,6 +370,10 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "rocket-fuel-aluminum"
             },
+            {
+                type="unlock-recipe",
+                recipe="rocket-part-muluna"
+            }
         }
     },
     {
@@ -603,10 +607,6 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "crusher",
             },
-            {
-                type="unlock-recipe",
-                recipe="rocket-part-muluna"
-            }
         },
         prerequisites = {
             "thruster-fuel"
