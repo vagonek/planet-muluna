@@ -294,8 +294,47 @@ for _,pack in pairs(data.raw["tool"]) do
     end
 end
 
+local function copy_icons(to,from)
+    to.icon = from.icon
+    to.icons = from.icons
+    to.icon_size = from.icon_size
+end
+
 for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to technologies without icon
-    if tech.icon == nil then
+    if tech.icon == nil and tech.icons == nil then
+        local effects = tech.effects
+        if effects then
+            for _,effect in pairs(effects) do
+                if effect.type == "unlock-recipe" then
+                    local recipe = effect.recipe
+                    if data.raw["recipe"][recipe] then
+                        if data.raw["recipe"][recipe].icon or data.raw["recipe"][recipe].icons  then
+                            copy_icons(tech,data.raw["recipe"][recipe])
+                            break
+                        elseif recipe.main_product then 
+                            if data.raw["item"][recipe.main_product].icon or data.raw["item"][recipe.main_product].icons then
+                                copy_icons(tech,data.raw["item"][recipe.main_product])
+                                break
+                            elseif data.raw["fluid"][recipe.main_product].icon or data.raw["fluid"][recipe.main_product].icons then
+                                copy_icons(tech,data.raw["fluid"][recipe.main_product])
+                                break 
+                                
+                            end
+                        elseif recipe.results then 
+                            if data.raw["item"][recipe.results[1].name].icon or data.raw["item"][recipe.results[1].name].icons then
+                                copy_icons(tech,data.raw["item"][recipe.results[1].name])
+                                break
+                            elseif data.raw["fluid"][recipe.results[1].name].icon or data.raw["fluid"][recipe.results[1].name].icons then
+                                copy_icons(tech,data.raw["fluid"][recipe.results[1].name])
+                            break end
+                        end
+                        break
+                    end
+                    break 
+                end
+            end
+        end
+            
         tech.icon = data.raw["technology"]["space-science-pack"].icon
     end
 end
