@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.0
+Date: 2025-04-25
+  Features:
+    - Added additional trigger technologies to Muluna discovery's prerequisites to reduce user confusion. No locale update is necessary.
+  Balancing:
+    - Doubled fuel output per rocket fuel in "thruster fuel from rocket fuel" recipe.
+  Graphics:
+    - Changed icon of "ALICE Propellant" recipe to better reflect recipe ingredients.
+---------------------------------------------------------------------------------------------------
 Version: 1.39.2
 Date: 2025-04-25
   Bugfixes:
