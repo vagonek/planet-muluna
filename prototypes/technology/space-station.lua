@@ -548,11 +548,51 @@ data:extend{
     },
     {
         type = "technology",
-        name = "planet-discovery-muluna",
-        essential = true,
+        name = "thruster-oxidizer",
+        localised_name = {"fluid-name.thruster-oxidizer"},
+        icon = data.raw["fluid"]["thruster-oxidizer"].icon,
+        icon_size = 64,
+        prerequisites = {"space-platform-thruster"},
         research_trigger = {
             type = "build-entity",
             entity = "thruster"
+        },
+        effects = {
+            
+            {
+                type = "unlock-recipe",
+                recipe = "thruster-oxidizer"
+            },
+            
+
+        }
+    },
+    {
+        type = "technology",
+        name = "thruster-fuel",
+        localised_name = {"fluid-name.thruster-fuel"},
+        prerequisites = {"thruster-oxidizer"},
+        research_trigger = {
+            type = "craft-fluid",
+            fluid = "thruster-oxidizer"
+        },
+        effects = {
+            
+            {
+                type = "unlock-recipe",
+                recipe = "thruster-fuel-from-rocket-fuel"
+            },
+            
+
+    }
+    },
+    {
+        type = "technology",
+        name = "planet-discovery-muluna",
+        essential = true,
+        research_trigger = {
+            type = "craft-fluid",
+            fluid = "thruster-fuel"
         },
         effects = {
             {
@@ -563,9 +603,13 @@ data:extend{
                 type = "unlock-recipe",
                 recipe = "crusher",
             },
+            {
+                type="unlock-recipe",
+                recipe="rocket-part-muluna"
+            }
         },
         prerequisites = {
-            "space-platform-thruster"
+            "thruster-fuel"
         },
         icons = technology_icon_moon_complete("__muluna-graphics__/graphics/moon-icon.png",1482),
         localised_description={"space-location-description.muluna"},
@@ -834,6 +878,10 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "electric-engine-unit-from-carbon"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "thruster-fuel"
             },
             
             -- {

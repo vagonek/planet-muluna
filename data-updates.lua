@@ -321,12 +321,17 @@ for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to techno
                                 
                             end
                         elseif recipe.results then 
-                            if data.raw["item"][recipe.results[1].name].icon or data.raw["item"][recipe.results[1].name].icons then
-                                copy_icons(tech,data.raw["item"][recipe.results[1].name])
-                                break
-                            elseif data.raw["fluid"][recipe.results[1].name].icon or data.raw["fluid"][recipe.results[1].name].icons then
-                                copy_icons(tech,data.raw["fluid"][recipe.results[1].name])
-                            break end
+                            local result = recipe.results[1] 
+                            if result then
+                                copy_icons(tech,data.raw[result.type][recipe.name])
+                            end
+                            break
+                            -- if data.raw["item"][recipe.results[1].name].icon or data.raw["item"][recipe.results[1].name].icons then
+                            --     copy_icons(tech,data.raw["item"][recipe.results[1].name])
+                            --     break
+                            -- elseif data.raw["fluid"][recipe.results[1].name].icon or data.raw["fluid"][recipe.results[1].name].icons then
+                            --     copy_icons(tech,data.raw["fluid"][recipe.results[1].name])
+                            -- break end
                         end
                         break
                     end
@@ -334,8 +339,10 @@ for _,tech in pairs(data.raw["technology"]) do --Adds placeholder icon to techno
                 end
             end
         end
-            
-        tech.icon = data.raw["technology"]["space-science-pack"].icon
+        -- if tech.icon == nil and tech.icons == nil then
+        --     tech.icon = data.raw["technology"]["space-science-pack"].icon
+        -- end
+        
     end
 end
 
@@ -587,6 +594,19 @@ local one_gravity_condition =
     min = 0.1
   }
 }
+
+rro.remove(data.raw["technology"]["space-platform-thruster"].effects,
+    {
+        type = "unlock-recipe",
+        recipe = "thruster-oxidizer",
+    }
+)
+rro.remove(data.raw["technology"]["space-platform-thruster"].effects,
+    {
+        type = "unlock-recipe",
+        recipe = "thruster-fuel",
+    }
+)
 
 data.raw["spider-vehicle"]["spidertron"].surface_conditions = one_gravity_condition
 data.raw["legacy-curved-rail"]["legacy-curved-rail"].surface_conditions = one_gravity_condition

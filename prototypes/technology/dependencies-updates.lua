@@ -27,10 +27,7 @@ rro.remove(data.raw["technology"]["space-platform-thruster"].effects,{
     recipe="ice-melting"
 })
 
-table.insert(data.raw["technology"]["space-platform-thruster"].effects,{
-    type="unlock-recipe",
-    recipe="rocket-part-muluna"
-})
+
 data.raw["technology"]["space-platform-thruster"].unit=nil
 
 
