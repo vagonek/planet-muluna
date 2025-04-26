@@ -179,7 +179,7 @@ wood_crushing.name = "woodchips"
 
 wood_crushing.results = {{type = "item", name = "wood", amount = 1,ignored_by_productivity=1, probability = 1/20 },{type = "item",name = "woodchips",amount = 2}}
 wood_crushing.ingredients = {{type = "item",name = "wood",amount = 1}}
-wood_crushing.energy_required = 1
+wood_crushing.energy_required = 0.5
 
 wood_crushing.icons=crushing_icon(data.raw.item["wood"].icon,data.raw.item["wood"].icon_size)
 wood_crushing.order="b-aa-b"
