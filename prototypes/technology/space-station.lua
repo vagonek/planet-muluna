@@ -392,14 +392,6 @@ data:extend{
             },
             {
                 type = "unlock-recipe",
-                recipe = "oxygen-venting"
-            },
-            {
-                type = "unlock-recipe",
-                recipe = "hydrogen-venting"
-            },
-            {
-                type = "unlock-recipe",
                 recipe = "maraxsis-atmosphere"
             },
             {
@@ -476,10 +468,7 @@ data:extend{
                 type = "unlock-recipe",
                 recipe="wood-processing"
             },
-            {
-                type = "unlock-recipe",
-                recipe = "carbon-dioxide-venting"
-            },
+            
         }
     },
     {
@@ -505,6 +494,30 @@ data:extend{
             {
                 type = "unlock-recipe",
                 recipe = "muluna-greenhouse-wood",
+            },
+        }
+    },
+    {
+        type = "technology",
+        name = "muluna-gas-venting",
+        prerequisites = {"muluna-wood-cultivation"},
+        research_trigger = {
+            type = "craft-item",
+            item = "tree-seed",
+            count = 50,
+        },
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "carbon-dioxide-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "oxygen-venting"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "hydrogen-venting"
             },
         }
     },
