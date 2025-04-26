@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.4
+Date: 2025-04-26
+  Changes:
+    - Added "Gas venting" technology to eliminate a trap option and force players down the much more sustainable path of producing oxygen through wood production.
+---------------------------------------------------------------------------------------------------
 Version: 1.40.3
 Date: 2025-04-25
   Bugfixes:
