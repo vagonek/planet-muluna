@@ -129,7 +129,7 @@ table.insert(data.raw["technology"]["rocket-part-productivity"].prerequisites,"p
 
 table.insert(data.raw["technology"]["wood-gas-processing"].prerequisites,"muluna-greenhouses")
 rro.replace(data.raw["recipe"]["wood-gasification"].ingredients, {type = "item", name = "wood", amount = 10}, {type = "item", name = "cellulose", amount = 15})
-rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 30})
+--rro.replace(data.raw["recipe"]["advanced-wood-gasification"].ingredients, {type = "item", name = "wood", amount = 20}, {type = "item", name = "cellulose", amount = 20})
 data.raw["recipe"]["wood-gasification"].allow_productivity = true
 data.raw["recipe"]["advanced-wood-gasification"].allow_productivity = true
 data.raw["technology"]["wood-gas-processing"].unit = nil

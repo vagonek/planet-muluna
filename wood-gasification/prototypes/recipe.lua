@@ -7,7 +7,7 @@ data:extend({
     enabled = false,
     energy_required = 5,
     ingredients = {
-      {type="item", name="wood", amount=10},
+      {type="item", name="cellulose", amount=15},
     },
     results = {
       {type="fluid", name="petroleum-gas", amount=20},
@@ -91,14 +91,16 @@ data:extend({
     energy_required = 10,
     ingredients =
     {
-      {type="item", name="wood", amount=20},
+      {type="item", name="cellulose", amount=20},
+      {type="item", name="alumina-crushed", amount=1},
       {type="fluid", name="water", amount=200}
     },
     results=
     {
       {type="fluid", name="heavy-oil", amount=15},
       {type="fluid", name="light-oil", amount=15},
-      {type="fluid", name="petroleum-gas", amount=30}
+      {type="fluid", name="petroleum-gas", amount=30},
+      {type="item", name="alumina-crushed", amount=1,probability = 0.9,ignored_by_productivity=1},
     },
     icon = "__muluna-graphics__/graphics/wood-gasification/icon/advanced-wood-gasification.png",
     icon_size = 64,
@@ -109,6 +111,89 @@ data:extend({
     always_show_made_in = true,
     allow_decomposition = false,
   },
+--   {
+--     type = "recipe",
+--     name = "catalyzed-wood-gasification",
+--     category = "oil-processing",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients =
+--     {
+--       {type="item", name="wood-crushed", amount=20},
+--       {type="fluid", name="water", amount=100},
+--       {type = "item", name = "alumina-catalyst", amount = 1},
+--     },
+--     results=
+--     {
+--       {type="fluid", name="heavy-oil", amount=45},
+--       {type="fluid", name="light-oil", amount=30},
+--       {type="fluid", name="petroleum-gas", amount=30},
+--       {type = "item", name = "alumina-dirty-catalyst", amount = 1, probability = 0.95},
+--     },
+--     icon = "__muluna-graphics__/graphics/wood-gasification/icon/advanced-wood-gasification.png",
+--     icon_size = 64,
+--     subgroup = "muluna-forestry",
+--     order = "a[oil-processing]-w[advanced-wood-gasification]",
+-- -- order = "a-w",
+--     always_show_products = true,
+--     always_show_made_in = true,
+--     allow_decomposition = false,
+--   },
+--   {
+--     type = "recipe",
+--     name = "alumina-catalyst",
+--     category = "oil-processing",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients =
+--     {
+--       {type="item", name="wood-crushed", amount=20},
+--       {type="fluid", name="water", amount=100},
+--       {type = "item", name = "alumina-catalyst", amount = 1},
+--     },
+--     results=
+--     {
+--       {type="fluid", name="heavy-oil", amount=45},
+--       {type="fluid", name="light-oil", amount=30},
+--       {type="fluid", name="petroleum-gas", amount=30},
+--       {type = "item", name = "alumina-dirty-catalyst", amount = 1, probability = 0.95},
+--     },
+--     icon = "__muluna-graphics__/graphics/wood-gasification/icon/advanced-wood-gasification.png",
+--     icon_size = 64,
+--     subgroup = "muluna-forestry",
+--     order = "a[oil-processing]-w[advanced-wood-gasification]",
+-- -- order = "a-w",
+--     always_show_products = true,
+--     always_show_made_in = true,
+--     allow_decomposition = false,
+--   },
+--   {
+--     type = "recipe",
+--     name = "alumina-catalyst-cleaning",
+--     category = "oil-processing",
+--     enabled = false,
+--     energy_required = 10,
+--     ingredients =
+--     {
+--       {type="fluid", name="water", amount=100},
+--       {type = "item", name = "dirty-alumina-catalyst", amount = 1},
+--     },
+--     results=
+--     {
+--       {type = "item", name = "dirty-alumina-catalyst", amount = 1},
+--       --type="fluid", name="light-oil", amount=30},
+--       --{type="fluid", name="petroleum-gas", amount=30},
+--       --{type = "item", name = "alumina-dirty-catalyst", amount = 1, probability = 0.95},
+--     },
+--     icon = "__muluna-graphics__/graphics/wood-gasification/icon/advanced-wood-gasification.png",
+--     icon_size = 64,
+--     subgroup = "muluna-forestry",
+--     order = "a[oil-processing]-w[advanced-wood-gasification]",
+-- -- order = "a-w",
+--     always_show_products = true,
+--     always_show_made_in = true,
+--     allow_decomposition = false,
+--   },
 
 ------------------
 --- GREENHOUSE ---
