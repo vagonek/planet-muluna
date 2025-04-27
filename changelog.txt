@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.9
+Date: 2025-04-27
+  Bugfixes:
+    - Changed research trigger of "Oxygen separation" technology from "Craft 100 water" to "Craft 20 ice." https://github.com/nicholasgower/planet-muluna/issues/166
+---------------------------------------------------------------------------------------------------
 Version: 1.40.8
 Date: 2025-04-27
   Compatibility:
