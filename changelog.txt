@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.8
+Date: 2025-04-27
+  Compatibility:
+    - Improved compatibility with mods that create new rail-related entities by moving surface condition changes earlier in the loading process. Intended to fix incompatibility with Modular trains.
+---------------------------------------------------------------------------------------------------
 Version: 1.40.7
 Date: 2025-04-27
   Balancing:
