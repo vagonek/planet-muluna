@@ -93,7 +93,7 @@ data:extend({
     {
       {type="item", name="cellulose", amount=20},
       {type="item", name="alumina-crushed", amount=1},
-      {type="fluid", name="water", amount=200}
+      {type="fluid", name="water", amount=100}
     },
     results=
     {
