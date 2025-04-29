@@ -212,12 +212,15 @@ script.on_event(defines.events.on_tick, function(event)
                 end
 
                 if navSat ~= nil then
-                    if navSat.energy >= (util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ") * 1) then
+                    local multiplier = 1/(1+0.3*navSat.quality.level)
+                    if navSat.energy >= (util.parse_energy((settings.startup["platform-power-consumption"].value *multiplier) .. "MJ") * 1) then
                         local pos = player.position
                         --if player.force.is_chunk_visible(player.surface,{pos.x/32,pos.y/32}) == false then
-                            navSat.energy = navSat.energy - util.parse_energy((settings.startup["platform-power-consumption"].value *(1-0.1667*navSat.quality.level)) .. "MJ")
+                            --local multiplier = (1-0.1667*navSat.quality.level)
+                            
+                            navSat.energy = navSat.energy - util.parse_energy((settings.startup["platform-power-consumption"].value *multiplier) .. "MJ")
                             --game.print(navSat.quality.level)
-                            local offset = 50 + navSat.quality.level * 50
+                            local offset = 100 * (1+0.3*navSat.quality.level)
                             local chartBounds = {
                                 left_top = { pos.x - offset/2, pos.y - offset/2},
                                 right_bottom = { pos.x + offset/2, pos.y + offset/2}
