@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.11
+Date: 2025-04-29
+  Balancing:
+    - Changed formula for satellite radar scan energy cost, from (1-0.1667*quality_level) to (1/(1+0.3*quality_level). Legendary quality has a quality level of 6 in this formula, while it previously had a level of 5. Adjusted scan tile area to have a base value of 100, and the tile area now scales with quality.
+---------------------------------------------------------------------------------------------------
 Version: 1.40.10
 Date: 2025-04-29
   Changes:
