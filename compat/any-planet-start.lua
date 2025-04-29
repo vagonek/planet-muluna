@@ -43,6 +43,7 @@ end
 
 
 if settings.startup["aps-planet"] and settings.startup["aps-planet"].value == "muluna" then
+    --assert(settings.startup["muluna-hardcore-remove-starting-cargo-pods"].value == false,{"console.muluna-incompatible-aps-setting"})
     data.raw["technology"]["electronics"].research_trigger.item="aluminum-plate"
     local red_science = table.deepcopy(data.raw["recipe"]["automation-science-pack"])
     rro.replace_name(red_science.ingredients,"copper-plate","aluminum-plate")

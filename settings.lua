@@ -35,7 +35,20 @@ data:extend{
         default_value = false,
         order = "ad",
       },
-      
+      {
+        type = "bool-setting",
+        name = "muluna-hardcore-remove-steam-furnaces",
+        setting_type = "startup",
+        default_value = false,
+        order = "ae",
+      },
+      {
+        type = "bool-setting",
+        name = "muluna-hardcore-remove-starting-cargo-pods",
+        setting_type = "startup",
+        default_value = false,
+        order = "af",
+      },
       {
         type = "bool-setting",
         name = "muluna-change-quality-science-pack-drain",
