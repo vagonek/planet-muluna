@@ -60,7 +60,9 @@ local function reset_storage_nav_beacons()
     
     
         storage.beacon_electric_interfaces = {}
-    
+
+        --Search space platforms for nav beacons already placed
+        --Register those beacons using existing functions.
 end
 
 script.on_init(function()

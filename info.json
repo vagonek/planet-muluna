@@ -41,7 +41,8 @@
     "(?) bobpower >= 2.0.0",
     "(?) bioprocessing-tab",
     "! Wood_Gasification_updated",
-    "(?) modular-trains"
+    "(?) modular-trains",
+    "(?) solar-productivity"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
