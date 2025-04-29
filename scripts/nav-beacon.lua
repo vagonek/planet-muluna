@@ -189,7 +189,15 @@ script.on_event(defines.events.on_tick, function(event)
                 for beacon_id,nav_surface in pairs(storage.nav_surfaces) do
                         if nav_surface.name == player.surface.name then
                             local beacon = storage.nav_beacons[beacon_id] 
-                            if beacon.valid == false then game.print("[Muluna] ERROR: Satellite Radar data storage invalid, deleting storage to prevent crash. You might need to place your radars again.") reset_storage_nav_beacons() break end
+                            if beacon.valid == false then 
+                                game.print("[Muluna] ERROR: Satellite Radar data storage invalid, deleting storage to prevent crash. You might need to place your radars again.") 
+                                log("ERROR: Navigation beacon storage invalidated to prevent crash.")
+                                log("planet-muluna storage contents:")
+                                log(serpent.block(storage))
+                                log("End planet-muluna storage")
+                                reset_storage_nav_beacons() break 
+
+                                end
                             --game.print(beacon)
                             if beacon ~= nil then if beacon.force == player.force then
                                     navSat = beacon
