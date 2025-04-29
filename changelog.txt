@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.2
+Date: 2025-04-29
+  Compatibility:
+    - Replaced dependency on tile-upgrade-planner with dependency on fork that adds Muluna's space platform tiles to the upgrade planner.
+---------------------------------------------------------------------------------------------------
 Version: 1.41.1
 Date: 2025-04-29
   Compatibility:
