@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.3
+Date: 2025-04-29
+  Bugfixes:
+    - Fixed compatibility with mods that change stone/steel furnace icons. https://github.com/nicholasgower/planet-muluna/issues/168
+---------------------------------------------------------------------------------------------------
 Version: 1.41.2
 Date: 2025-04-29
   Compatibility:
