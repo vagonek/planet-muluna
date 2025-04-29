@@ -94,7 +94,15 @@ data:extend{
       minimum_value = 1,
       maximum_value = 360,
       order = "a",
-    }
+    },
+    {
+      type = "bool-setting",
+      name = "nav-beacon-display-alert",
+      setting_type = "runtime-per-user",
+      default_value = true,
+      order = "ba"
+    },
+
 }
 
 if mods["any-planet-start"] then
