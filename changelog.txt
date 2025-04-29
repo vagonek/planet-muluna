@@ -1,4 +1,29 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.40.12
+Date: 2025-04-29
+  Changes:
+    - When satellite radar's storage is found to be invalid, storage contents are dumped to the log to assist in debugging.
+---------------------------------------------------------------------------------------------------
+Version: 1.40.11
+Date: 2025-04-29
+  Balancing:
+    - Changed formula for satellite radar scan energy cost, from (1-0.1667*quality_level) to (1/(1+0.3*quality_level). Legendary quality has a quality level of 6 in this formula, while it previously had a level of 5. Adjusted scan tile area to have a base value of 100, and the tile area now scales with quality.
+---------------------------------------------------------------------------------------------------
+Version: 1.40.10
+Date: 2025-04-29
+  Changes:
+    - Added optional setting to disable alert displayed when satellite radar is available.
+---------------------------------------------------------------------------------------------------
+Version: 1.40.9
+Date: 2025-04-27
+  Bugfixes:
+    - Changed research trigger of "Oxygen separation" technology from "Craft 100 water" to "Craft 20 ice." https://github.com/nicholasgower/planet-muluna/issues/166
+---------------------------------------------------------------------------------------------------
+Version: 1.40.8
+Date: 2025-04-27
+  Compatibility:
+    - Improved compatibility with mods that create new rail-related entities by moving surface condition changes earlier in the loading process. Intended to fix incompatibility with Modular trains.
+---------------------------------------------------------------------------------------------------
 Version: 1.40.7
 Date: 2025-04-27
   Balancing:

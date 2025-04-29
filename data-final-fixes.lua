@@ -116,9 +116,11 @@ local boiler_description = {""}
             local quality_name = quality.localised_name or {"quality-name." .. quality.name}
 
             local quality_level = quality.level
-            if quality_level >= 5 and not mods["infinite-quality-tiers"] then quality_level = quality_level - 1 end
-            local drain = tostring(settings.startup["platform-power-consumption"].value *(1-0.1667*quality_level))
-            local tiles = tostring(50 + 50*quality_level)
+            --if quality_level >= 5 and not mods["infinite-quality-tiers"] then quality_level = quality_level - 1 end
+
+            local multiplier = 1/(1+0.3*quality_level)
+            local drain = string.format("%.2f",settings.startup["platform-power-consumption"].value * multiplier)
+            local tiles = tostring(100 *(1+0.3*quality_level))
             table.insert(electricity_description, {"recipe-description.global-nav-beacon-quality-description", quality.name, drain, tiles})
             table.insert(electricity_description, "\n")
             

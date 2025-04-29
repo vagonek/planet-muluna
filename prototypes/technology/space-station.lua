@@ -377,9 +377,9 @@ data:extend{
         name = "muluna-oxygen",
         prerequisites = {"metallic-asteroid-crushing","oxide-asteroid-crushing"},
         research_trigger = {
-            type = "craft-fluid",
-            fluid = "water",
-            amount = 100,
+            type = "craft-item",
+            item = "ice",
+            count = 20,
         },
         effects = {
             {
