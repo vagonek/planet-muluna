@@ -66,20 +66,25 @@ if settings.startup["muluna-hardcore-remove-steam-furnaces"].value == false then
 
 
     local item = table.deepcopy(data.raw["item"][name])
-
-    item.icons = {
-        {
-            icon = data.raw["item"][name].icon,
-            icon_size = 64,
-        },
-        {
-            icon = data.raw["fluid"]["steam"].icon,
-            icon_size = data.raw["fluid"]["steam"].icon_size,
-            scale = 0.25,
-            shift = {10,-10},
-            draw_background = true,
-        }
+    local steam_icon = {
+        icon = data.raw["fluid"]["steam"].icon,
+        icon_size = data.raw["fluid"]["steam"].icon_size,
+        scale = 0.25,
+        shift = {10,-10},
+        draw_background = true,
     }
+    if item.icons then
+        table.insert(item.icons,steam_icon)
+    else
+        item.icons = {
+            {
+                icons = data.raw["item"][name].icons,
+                icon = data.raw["item"][name].icon,
+                icon_size = 64,
+            },
+            steam_icon
+        }
+    end
 
     item.name = "muluna-steam-".. name
     item.place_result = "muluna-steam-".. name
