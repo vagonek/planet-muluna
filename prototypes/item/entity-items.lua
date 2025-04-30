@@ -72,7 +72,7 @@ local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"])
         icon_size = 64,
         --place_result = "muluna-greenhouse",
         subgroup = "agriculture",
-        order = "c[muluna-greenhouse]",
+        order = "a[agricultural-tower]-c[muluna-greenhouse]",
         default_import_location = "muluna",
     }
     
@@ -98,7 +98,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-pla
         },
         subgroup = "agriculture",
         place_result = "muluna-greenhouse-wood",
-        order = "ca[muluna-greenhouse]",
+        order = "a[agricultural-tower]-ca[muluna-greenhouse]",
         default_import_location = "muluna",
     }
     
