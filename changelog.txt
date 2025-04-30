@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.4
+Date: 2025-04-30
+  Compatibility:
+    - Added atmosphere to list of fluids whose volume is multiplied by 10.
+    - Rewrote gas volume-expanding function to be more general.
+---------------------------------------------------------------------------------------------------
 Version: 1.41.3
 Date: 2025-04-29
   Bugfixes:
