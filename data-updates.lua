@@ -684,13 +684,15 @@ if mods["maraxsis"] then
     --data.raw["item"]["hydrogen-barrel"].fuel_value="11.3MJ"
     
 end
-
-for _,quality in pairs(data.raw["quality"]) do
-    if quality.hidden then goto continue end
-    local regulator = data.raw["assembling-machine"]["maraxsis-regulator-fluidbox-" .. quality.name]
-    regulator.energy_source.fluid_box.volume = regulator.energy_source.fluid_box.volume*10
-    ::continue::
+if mods["maraxsis"] then
+    for _,quality in pairs(data.raw["quality"]) do
+        if quality.hidden then goto continue end
+        local regulator = data.raw["assembling-machine"]["maraxsis-regulator-fluidbox-" .. quality.name]
+        regulator.energy_source.fluid_box.volume = regulator.energy_source.fluid_box.volume*10
+        ::continue::
+    end
 end
+    
 
 local function multiply_ingredients(recipe,ingredient,multiplier)
     if recipe.ingredients then
