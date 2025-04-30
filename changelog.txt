@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.5
+Date: 2025-04-30
+  Bugfixes:
+    - Added compatibility with mods that modify the pictures field of the space science pack.
+---------------------------------------------------------------------------------------------------
 Version: 1.41.4
 Date: 2025-04-30
   Compatibility:
