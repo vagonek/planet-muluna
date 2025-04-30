@@ -6,7 +6,7 @@ if data.raw["fluid"]["maraxsis-atmosphere"] == nil then
         name = "maraxsis-atmosphere",
         default_temperature = 0,
         max_temperature = 100,
-        heat_capacity = "1kJ",
+        --heat_capacity = "1kJ",
         base_flow_rate = data.raw.fluid.steam.base_flow_rate,
         base_color = {1, 1, 1},
         flow_color = {0.5, 0.5, 1},
@@ -37,6 +37,8 @@ if data.raw["fluid"]["maraxsis-atmosphere"] == nil then
         }}
     }}
 end
+
+data.raw["fluid"]["maraxsis-atmosphere"].heat_capacity = "100J"
 data.raw["fluid"]["maraxsis-atmosphere"].localised_description = {"fluid-description.maraxsis-atmosphere"}
 
 data.raw["recipe"]["maraxsis-atmosphere"].results[1].amount=1000
