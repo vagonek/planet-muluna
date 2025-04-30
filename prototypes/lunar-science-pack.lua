@@ -23,6 +23,13 @@ i_lunar_pack.name = "interstellar-science-pack"
 i_lunar_pack.default_import_location = "muluna"
 i_lunar_pack.icon = "__muluna-graphics__/graphics/icons/space-science-pack.png"
 i_lunar_pack.localised_description = {"item-description.science-pack"}
+
+if i_lunar_pack.pictures then --Compatibility with glowing science packs
+    i_lunar_pack.pictures.layers[1].filename="__muluna-graphics__/graphics/icons/space-science-pack.png"
+    i_lunar_pack.pictures.layers[1].size=64
+    i_lunar_pack.pictures.layers[1].scale = 0.5
+end
+
 r_lunar_pack.icon = "__muluna-graphics__/graphics/icons/space-science-pack.png"
 r_lunar_pack.energy_required = r_lunar_pack.energy_required * 4
 --data.raw["recipe"]["space-science-pack"].icon = "__muluna-graphics__/graphics/icons/space-science-pack.png" --Why was this here?

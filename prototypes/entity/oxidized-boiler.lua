@@ -135,6 +135,7 @@ local temperature_time_ratio = (500-15)/(165-15)
 
 local space_boiling_high_temperature = util.merge{space_boiling,{
   name = "advanced-water-boiling-high-temperature",
+  --icons = dual_icon("steam","oxygen","oxygen"),
   --icons = dual_icon("steam","maraxsis-atmosphere"),
   --icon = data.raw["fluid"]["steam"].icon,
   --icon_size= data.raw["fluid"]["steam"].icon_size,
