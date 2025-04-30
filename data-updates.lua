@@ -651,52 +651,109 @@ for _,lab in pairs(data.raw["lab"]) do
     end
 end
 
-local gases = {"oxygen","hydrogen","carbon-dioxide","helium","helium-4","helium-3",}
+local gases = {"oxygen","hydrogen","carbon-dioxide","helium","helium-4","helium-3","maraxsis-atmosphere"}
 
 --Modifies values of gas fluids in Maraxsis entities to follow Factorio 2.0's convention of gas fluid units having 1/10 the matter of liquid fluid units(As in water vs. steam)
 if mods["maraxsis"] then
-    data.raw["recipe"]["maraxsis-water"].ingredients = {
-        {type="fluid",name="hydrogen",amount=2000},
-        {type="fluid",name="oxygen",amount=1000},
-    }
-    data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
-        {type="fluid",name="hydrogen",amount=2000},
-        {type="fluid",name="oxygen",amount=2000},
-    }
-    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
-    {type="fluid",name="hydrogen",amount=200},
-    {type="fluid",name="hydrogen",amount=2000}
-    )
+    -- data.raw["recipe"]["maraxsis-water"].ingredients = {
+    --     {type="fluid",name="hydrogen",amount=2000},
+    --     {type="fluid",name="oxygen",amount=1000},
+    -- }
+    -- data.raw["recipe"]["maraxsis-hydrolox-rocket-fuel"].ingredients = {
+    --     {type="fluid",name="hydrogen",amount=2000},
+    --     {type="fluid",name="oxygen",amount=2000},
+    -- }
+    -- rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-utility-science-pack"].ingredients,
+    -- {type="fluid",name="hydrogen",amount=200},
+    -- {type="fluid",name="hydrogen",amount=2000}
+    -- )
     
-    rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
-    {type="fluid",name="oxygen",amount=100},
-    {type="fluid",name="oxygen",amount=1000}
-    )
-    rro.replace(data.raw["recipe"]["salt"].results,
-    {type="fluid",name="oxygen",amount=100},
-    {type="fluid",name="oxygen",amount=1000}
-    )
-    rro.replace(data.raw["recipe"]["salt"].results,
-    {type="fluid",name="hydrogen",amount=200},
-    {type="fluid",name="hydrogen",amount=2000}
-    )
+    -- rro.replace(data.raw["recipe"]["maraxsis-deepsea-research-production-science-pack"].ingredients,
+    -- {type="fluid",name="oxygen",amount=100},
+    -- {type="fluid",name="oxygen",amount=1000}
+    -- )
+    -- rro.replace(data.raw["recipe"]["salt"].results,
+    -- {type="fluid",name="oxygen",amount=100},
+    -- {type="fluid",name="oxygen",amount=1000}
+    -- )
+    -- rro.replace(data.raw["recipe"]["salt"].results,
+    -- {type="fluid",name="hydrogen",amount=200},
+    -- {type="fluid",name="hydrogen",amount=2000}
+    -- )
     data.raw["fluid"]["hydrogen"].fuel_value="225kJ"
     --data.raw["item"]["hydrogen-barrel"].fuel_value="11.3MJ"
     
 end
 
+for _,quality in pairs(data.raw["quality"]) do
+    if quality.hidden then goto continue end
+    local regulator = data.raw["assembling-machine"]["maraxsis-regulator-fluidbox-" .. quality.name]
+    regulator.energy_source.fluid_box.volume = regulator.energy_source.fluid_box.volume*10
+    ::continue::
+end
+
+local function multiply_ingredients(recipe,ingredient,multiplier)
+    if recipe.ingredients then
+        for _,item in pairs(recipe.ingredients) do
+            if item.name == ingredient then
+                item.amount = item.amount*multiplier
+            end
+        end
+    end
+    if recipe.results then
+        for _,item in pairs(recipe.results) do
+            if item.name == ingredient then
+                item.amount = item.amount*multiplier
+            end
+        end
+    end
+    
+
+end
+
+-- local recipes_to_change = {
+--     "maraxsis-liquid-atmosphere",
+--     "maraxsis-liquid-atmosphere-decompression",
+-- }
+
+local recipe_blacklist = {
+    -- "helium-separation",
+    -- "kovarex-helium-enrichment"
+    "molten-aluminum",
+    "atmosphere-oxygen-separation",
+    "maraxsis-atmosphere",
+    "interstellar-science-pack",
+    "cryolab",
+}
+
+local category_blacklist = {
+    "double-boiler",
+    "muluna-greenhouse",
+}
+
+local subgroup_blacklist = {
+    "muluna-products"
+}
+
+
 for _,gas in pairs(gases) do
-    if data.raw["recipe"][gas.."-barrel"] then
-        data.raw["recipe"][gas.."-barrel"].ingredients[1].amount=data.raw["recipe"][gas.."-barrel"].ingredients[1].amount*10
+    for _,recipe in pairs(data.raw["recipe"]) do --pairs(recipes_to_change) do
+        if not (rro.contains(recipe_blacklist,recipe.name) or rro.contains(category_blacklist,recipe.category) or rro.contains(subgroup_blacklist,recipe.subgroup)) then
+            multiply_ingredients(recipe,gas,10)
+        end
+        
     end
+    -- if data.raw["recipe"][gas.."-barrel"] then
+    --     data.raw["recipe"][gas.."-barrel"].ingredients[1].amount=data.raw["recipe"][gas.."-barrel"].ingredients[1].amount*10
+    -- end
 
-    if data.raw["recipe"]["empty-".. gas .."-barrel"] then
-        data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount*10
-    end
+    -- if data.raw["recipe"]["empty-".. gas .."-barrel"] then
+    --     data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount=data.raw["recipe"]["empty-".. gas .."-barrel"].results[1].amount*10
+    -- end
 
-    if data.raw["recipe"]["maraxsis-fluid-void-".. gas] then
-        data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount=data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount*10
-    end
+    -- if data.raw["recipe"]["maraxsis-fluid-void-".. gas] then
+    --     data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount=data.raw["recipe"]["maraxsis-fluid-void-".. gas].ingredients[1].amount*10
+    -- end
 end
 
 
