@@ -44,6 +44,9 @@ if settings.startup["muluna-change-quality-science-pack-drain"].value == true th
         if quality.science_pack_drain_multiplier < 0.1 then
             quality.science_pack_drain_multiplier = 0.1
         end
+        if quality.science_pack_drain_multiplier >= 1 then
+            quality.science_pack_drain_multiplier = 1
+        end
     end
 
 end
