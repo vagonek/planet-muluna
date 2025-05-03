@@ -10,6 +10,8 @@ local recycling_turbine=util.merge{table.deepcopy(fusion_generator),
         max_fluid_usage = 1.5,
         collision_box = {{-1.4, -3.4}, {1.4, 3.4}},
         selection_box = {{-1.5, -3.5}, {1.5, 3.5}},
+        icon = "__muluna-graphics__/graphics/icons/advanced-steam-turbine.png",
+        icon_size = 64,
     }
 
 }

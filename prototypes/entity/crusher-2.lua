@@ -15,7 +15,7 @@ crusher_2.energy_source.emissions_per_minute["pollution"] = crusher_2.energy_sou
 
 --crusher_2.energy_usage=crusher_2.crafting_speed*2
 crusher_2.localised_name={"",{"item-name.crusher"}," 2"}
-
+crusher_2.icon="__muluna-graphics__/graphics/icons/crusher-2.png"
 data:extend{crusher_2}
 
 data.raw["assembling-machine"]["crusher"].next_upgrade = crusher_2.name

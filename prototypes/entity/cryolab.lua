@@ -48,6 +48,15 @@ if mods["fluid-nutrients"] then
     emissions_per_minute = cryolab.energy_source.emissions_per_minute,
 }
 end
+cryolab.icons = {
+  {
+      icon="__muluna-graphics__/graphics/photometric-lab/photometric-lab-icon.png",
+      icon_size=64,
+      scale=0.25,
+      --tint = {r=0.7,g=0.7,b=1}
+  },
+  
+}
 cryolab.energy_usage="1.5MW"
 cryolab.minable = {mining_time = 0.5, result = "cryolab"}
 cryolab.researching_speed=cryolab.researching_speed*3
