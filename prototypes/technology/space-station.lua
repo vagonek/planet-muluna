@@ -1021,7 +1021,7 @@ data:extend{
         max_level = "infinite",
         unit = {
             --count = 1000,
-            count_formula = "500*1.5^(L-1)",
+            count_formula = "250*1.5^(L-1)",
             time = 60,
             ingredients = {
                 {"automation-science-pack", 1},
