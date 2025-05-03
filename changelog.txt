@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.9
+Date: 2025-05-03
+  Balancing:
+    - Halved cost of water recycling productivity technology.
+  Compatibility:
+    - Replaced icon for Corrundum's "Controlled petroleum combustion" recipe with icon that better fits in with Muluna's graphics for carbon dioxide.
+  Bugfixes:
+    - Corrected entity icons for several entities. https://github.com/nicholasgower/planet-muluna/issues/172
+---------------------------------------------------------------------------------------------------
 Version: 1.41.8
 Date: 2025-05-02
   Bugfixes:
