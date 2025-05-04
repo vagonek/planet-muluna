@@ -19,7 +19,7 @@ local greenhouse = {
     --effect_receiver = { base_effect = { productivity = 0.5 }},
     allowed_effects = {"consumption", "speed", "productivity", "pollution", "quality"},
     module_slots = 4,
-    heating_energy = "1.2MW",
+    heating_energy = "2.5MW",
     dying_explosion = "boiler-explosion",
     impact_category = "metal-large",
     match_animation_speed_to_activity = false,
