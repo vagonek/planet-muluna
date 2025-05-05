@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.41.10
+Date: 2025-05-05
+  Balancing:
+    - Added pollution absorption(-4) and spore production(12) statistics to greenhouse.
+    - Increased greenhouse heating energy from 1.2 MW to 2.5 MW.
+---------------------------------------------------------------------------------------------------
 Version: 1.41.9
 Date: 2025-05-03
   Balancing:
