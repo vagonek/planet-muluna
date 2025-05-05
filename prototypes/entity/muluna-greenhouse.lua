@@ -24,6 +24,7 @@ local greenhouse = {
     impact_category = "metal-large",
     match_animation_speed_to_activity = false,
     mode = "output-to-separate-pipe",
+    
     --working_sound = base_boiler.working_sound,
     --open_sound = base_boiler.open_sound,
     --close_sound = base_boiler.close_sound,
@@ -42,8 +43,11 @@ local greenhouse = {
     energy_source={
         type="electric",
         usage_priority = "primary-input",
-        emissions_per_minute = {},
-        drain = "25kW"
+        drain = "25kW",
+        emissions_per_minute = {
+          pollution = -4,
+          spores = 12,
+        },
     },
     collision_box = {{-width/2+gap, -height/2+gap}, {width/2-gap, height/2-gap}},
     selection_box = {{-width/2, -height/2}, {width/2, height/2}},
