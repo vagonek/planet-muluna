@@ -187,7 +187,9 @@ wood_crushing.order="b-aa-b"
 local recipes = {anorthite_crushing,alumina_crushing,stone_crushing,aluminum_plate,aluminum_cable,wood_crushing}
 
 for _,recipe in pairs(recipes) do
-    recipe.hide_from_signal_gui = false
+    if #recipe.results > 1 then  
+          recipe.hide_from_signal_gui = false
+    end 
 end
 
 data:extend(recipes)

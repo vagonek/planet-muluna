@@ -38,6 +38,7 @@ data:extend{
         subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
+        hide_from_signal_gui = false,
         surface_conditions = {
             {
                 property = "temperature",
@@ -65,6 +66,7 @@ data:extend{
         main_product = "muluna-sapling",
         max_productivity = 3,
         allow_productivity = true,
+        hide_from_signal_gui = false,
         surface_conditions = {
             {
                 property = "temperature",
@@ -91,6 +93,7 @@ data:extend{
         subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
+        hide_from_signal_gui = false,
         surface_conditions = {
             {
                 property = "temperature",
@@ -117,6 +120,7 @@ data:extend{
         subgroup="muluna-forestry",
         max_productivity = 3,
         allow_productivity = true,
+        hide_from_signal_gui = false,
         surface_conditions = {
             {
                 property = "temperature",
