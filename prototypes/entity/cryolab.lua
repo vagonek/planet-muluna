@@ -1,5 +1,5 @@
 local flib_bounding_box = require("__flib__/bounding-box")
-if data.raw["lab"]["biolab"] then
+if true or data.raw["lab"]["biolab"] then
   local cryolab=table.deepcopy(data.raw["lab"]["biolab"])
 
 cryolab.name="cryolab"
@@ -58,7 +58,11 @@ cryolab.icons = {
   
 }
 cryolab.energy_usage="1.5MW"
-cryolab.minable = {mining_time = 0.5, result = "cryolab"}
+--if data.raw["item"]["cryolab"] then
+  cryolab.minable = {mining_time = 0.5, result = "cryolab"}
+--end
+
+
 cryolab.researching_speed=cryolab.researching_speed*3
 cryolab.science_pack_drain_rate_percent=50
 cryolab.uses_quality_drain_modifier = true

@@ -1117,7 +1117,7 @@ data:extend{
 
 }
 
-if not data.raw["technology"]["biolab"] then
+if not data.raw["lab"]["biolab"] then
     data.raw["technology"]["cryolab"] = nil
   end
 

@@ -34,7 +34,7 @@ end
 crusher_2.results = {{type = "item",name = "crusher-2",amount = 1}}
 
 
-if data.raw["recipe"]["biolab"] then
+if true or data.raw["recipe"]["biolab"] then
     local cryolab = table.deepcopy(data.raw["recipe"]["biolab"])
 
     cryolab.name="cryolab"
@@ -43,7 +43,12 @@ if data.raw["recipe"]["biolab"] then
     --cryolab.subgroup="production-machine"
 
     --cryolab.enabled=true
-    cryolab.icons=data.raw["item"]["cryolab"].icons
+    cryolab.icons={{
+        icon="__muluna-graphics__/graphics/photometric-lab/photometric-lab-icon.png",
+        icon_size=64,
+        scale=0.25,
+        --tint = {r=0.7,g=0.7,b=1}
+    },}
     cryolab.localised_name={"entity-name.cryolab"}
     cryolab.results = {{type = "item",name = "cryolab",amount = 1}}
     cryolab.ingredients = {

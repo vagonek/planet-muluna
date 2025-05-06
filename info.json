@@ -43,7 +43,8 @@
     "(?) bioprocessing-tab",
     "! Wood_Gasification_updated",
     "(?) modular-trains",
-    "(?) solar-productivity"
+    "(?) solar-productivity",
+    "(?) Krastorio2-Spaced-Out"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
