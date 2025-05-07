@@ -59,7 +59,10 @@ local techs_interstellar = {
             "planet-pyroxsis",
             --"planet-discovery-lemures",
             
-        }
+        },
+    fusion_thruster = {
+        "fusion-thruster"
+    }
     
 }
 
