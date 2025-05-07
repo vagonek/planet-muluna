@@ -318,7 +318,7 @@ local greenhouse = {
           --       --   priority = "extra-high",
           --       --   width = 900,
           --       --   height = 500,
-          --       --   scale = 0.150,
+          --       --   scale = 0.125,
           --       --   shift = util.by_pixel(20.5, 9),
           --       --   draw_as_shadow = true
           --       -- }
