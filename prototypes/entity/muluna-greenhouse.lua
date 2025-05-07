@@ -1,3 +1,6 @@
+require("circuit-connector-sprites")
+require("circuit-connector-generated-definitions")
+
 local width = 9-0.00001 -- -0.001 is added to stop floating point error from causing the dimensions to be rounded up to the next highest value.
 local height = 9-0.00001
 local gap = 0
@@ -323,9 +326,29 @@ local greenhouse = {
           --   },
             
           -- },
-        }
+        },
     
-
+    circuit_wire_max_distance = 12,
+    circuit_connector = circuit_connector_definitions.create_vector
+    (
+      universal_connector_template,
+      {
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true }
+      }
+    ),
+    circuit_connector_flipped = circuit_connector_definitions.create_vector
+    (
+      universal_connector_template,
+      {
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true }
+      }
+    ), 
     
   }
 
