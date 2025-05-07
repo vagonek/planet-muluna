@@ -1,3 +1,6 @@
+require("circuit-connector-sprites")
+require("circuit-connector-generated-definitions")
+
 local width = 9-0.00001 -- -0.001 is added to stop floating point error from causing the dimensions to be rounded up to the next highest value.
 local height = 9-0.00001
 local gap = 0
@@ -43,7 +46,7 @@ local greenhouse = {
     energy_source={
         type="electric",
         usage_priority = "primary-input",
-        drain = "25kW",
+        drain = "50kW",
         emissions_per_minute = {
           pollution = -4,
           spores = 12,
@@ -144,7 +147,7 @@ local greenhouse = {
             --       line_length = 8,
             --       width = 340,
             --       height = 355,
-            --       animation_speed = 0.25,
+            --       animation_speed = 0.50,
             --       shift = util.by_pixel(0, -10),
             --       scale = scale,
             --       run_mode = "forward-then-backward",
@@ -194,7 +197,7 @@ local greenhouse = {
               light = {
                 type = "basic",
                 intensity = 1,
-                size = 25,
+                size = 50,
               },
               animation ={
                 stripes = {
@@ -315,7 +318,7 @@ local greenhouse = {
           --       --   priority = "extra-high",
           --       --   width = 900,
           --       --   height = 500,
-          --       --   scale = 0.125,
+          --       --   scale = 0.150,
           --       --   shift = util.by_pixel(20.5, 9),
           --       --   draw_as_shadow = true
           --       -- }
@@ -323,9 +326,29 @@ local greenhouse = {
           --   },
             
           -- },
-        }
+        },
     
-
+    circuit_wire_max_distance = 12,
+    circuit_connector = circuit_connector_definitions.create_vector
+    (
+      universal_connector_template,
+      {
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true }
+      }
+    ),
+    circuit_connector_flipped = circuit_connector_definitions.create_vector
+    (
+      universal_connector_template,
+      {
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true },
+        { variation = 18, main_offset = util.by_pixel(60, 86), shadow_offset = util.by_pixel(170, 135), show_shadow = true }
+      }
+    ), 
     
   }
 
