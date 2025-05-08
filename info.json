@@ -44,7 +44,9 @@
     "! Wood_Gasification_updated",
     "(?) modular-trains",
     "(?) solar-productivity",
-    "(?) Krastorio2-Spaced-Out"
+    "(?) Krastorio2-Spaced-Out",
+    "! nav-beacon",
+    "! nav-beacon-fork"
   ],
   "quality_required": true,
   "rail_bridges_required": true,
