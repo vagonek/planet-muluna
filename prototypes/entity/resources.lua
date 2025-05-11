@@ -111,6 +111,16 @@ data:extend {{
   order = u_ore_order.."4",
   richness = true
 }}
+if mods["cupric-asteroids"] then
+  data:extend {{
+    type = "autoplace-control",
+    category = "resource",
+    name = "cupric-asteroid-chunk",
+    localised_name = {"", "[item=cupric-asteroid-chunk]"," ", {"entity-name.cupric-asteroid-chunk"}},
+    order = u_ore_order.."5",
+    richness = true
+}}
+end
 
 data:extend {{
   type = "autoplace-control",
@@ -285,6 +295,36 @@ anorthite.stages =
     scale = 0.5,
   }
 }
+
+if mods["cupric-asteroids"] then
+  local cupric=resource(
+  {
+    name = "cupric-asteroid-chunk",
+    order = "b",
+    map_color = data.raw["resource"]["copper-ore"].map_color, -- {0.700, 0.700, 0.700},
+    mining_time = 1,
+    --walking_sound = sounds.ore,
+    --driving_sound = stone_driving_sound,
+    mining_visualisation_tint = {r = 0.900, g = 0.900, b = .900, a = 1.000}, -- #e4f6ffff
+    --factoriopedia_simulation = simulations.factoriopedia_iron_ore,
+  },
+  {
+    base_density = 4,
+    regular_rq_factor_multiplier = 1.10,
+    starting_rq_factor_multiplier = 1.5,
+    candidate_spot_count = 112, -- To match 0.17.50 placement
+  }
+)
+cupric.minable.result= "cupric-asteroid-chunk"
+cupric.minable.mining_time = 20
+cupric.autoplace.control="cupric-asteroid-chunk"
+cupric.icons=nil
+cupric.icon=data.raw["item"]["cupric-asteroid-chunk"].icon
+cupric.stages = data.raw["resource"]["copper-ore"].stages
+local cupric_chunk_particle = table.deepcopy(data.raw["optimized-particle"]["copper-ore-particle"])
+cupric_chunk_particle.name="cupric-asteroid-chunk-particle"
+data:extend{cupric,cupric_chunk_particle}
+end
 -- ice_ore.autoplace = {
 --     control = "ice",
 --     default_enabled = false,

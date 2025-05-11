@@ -254,6 +254,10 @@ local map_gen = {
 
 
 }
+if mods["cupric-asteroids"] then
+  map_gen.autoplace_controls["cupric-asteroid-chunk"] = {}
+  map_gen.autoplace_settings["entity"].settings["cupric-asteroid-chunk"] = {}
+end
 if mods["alien-biomes"] then
   map_gen.autoplace_settings["decorative"] = nil
   map_gen.autoplace_settings["entity"].settings["big-sand-rock"] = nil

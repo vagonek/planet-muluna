@@ -6,6 +6,9 @@ for _,force in pairs(game.forces) do
             force.technologies["carbonic-asteroid-crushing"].researched = true
             force.technologies["oxide-asteroid-crushing"].researched = true
             force.technologies["planet-discovery-muluna"].researched = true
+            if script.active_mods["cupric-asteroids"] then
+                force.technologies["cupric-asteroid-crushing"].researched = true
+            end
 
         end
 
@@ -39,5 +42,7 @@ for _,force in pairs(game.forces) do
             force.technologies["thruster-fuel-productivity"].researched = true
             force.technologies["thruster-fuel-productivity"].level = 6
         end
+
+        
     end
 end

@@ -837,3 +837,18 @@ require("compat.visible-planets")
 require("compat.dyson-sphere")
 require("compat.bzsilicon")
 require("prototypes.planet.planet-asteroids")
+
+if mods["cupric-asteroids"] then
+    local cupric_crushing = table.deepcopy(data.raw["technology"]["metallic-asteroid-crushing"])
+    cupric_crushing.name = "cupric-asteroid-crushing"
+    cupric_crushing.effects[1].recipe = "cupric-asteroid-crushing"
+    cupric_crushing.localised_name = {"recipe-name.cupric-asteroid-crushing"}
+    cupric_crushing.research_trigger = {
+            type = "mine-entity",
+            entity = "cupric-asteroid-chunk"
+        }
+    cupric_crushing.icons[2].icon = data.raw["item"]["cupric-asteroid-chunk"].icon
+    cupric_crushing.icons[2].icon_size = data.raw["item"]["cupric-asteroid-chunk"].icon_size
+    data:extend{cupric_crushing}
+    rro.remove(data.raw["technology"]["space-platform"].effects,{type = "unlock-recipe",recipe = "cupric-asteroid-crushing"})
+end
