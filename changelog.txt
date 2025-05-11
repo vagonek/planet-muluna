@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.42.5
+Date: 2025-05-11
+  Locale:
+    - Updated description of vanilla asteroid processing technologies to make intended progression clearer. https://github.com/nicholasgower/planet-muluna/issues/180
+---------------------------------------------------------------------------------------------------
 Version: 1.42.4
 Date: 2025-05-09
   Locale:
