@@ -95,6 +95,7 @@ data:extend{
     {
       type = "bool-setting",
       name = "enable-nav-beacon",
+      localised_name = {"mod-setting-name.enable-muluna-satellite-radar"},
       setting_type = "startup",
       default_value = true,
       order = "ba"
