@@ -1,0 +1,7 @@
+{
+    "entity":[
+            ["nav-beacon-planet", "muluna-satellite-radar"],
+            ["nav-beacon-platform", "muluna-satellite-radar"]
+        ]
+    }
+    

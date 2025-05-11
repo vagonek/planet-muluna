@@ -1,3 +1,5 @@
+local rro = require("lib.remove-replace-object")
+
 local function technology_icon_constant_productivity(technology_icon,new_icon_size)
     local icon_size = new_icon_size or 256
     local icons =

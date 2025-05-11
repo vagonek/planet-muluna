@@ -22,12 +22,12 @@ if settings.startup["enable-nav-beacon"].value == true then
     local navBeaconItem = util.merge({
         radarItem,
         {
-            name = "nav-beacon",
-            place_result = "nav-beacon",
+            name = "muluna-satellite-radar",
+            place_result = "muluna-satellite-radar",
             subgroup = "space-platform",
             order = "q[nav-beacon]",
             icon = "__muluna-graphics__/graphics/icons/nav-beacon-icon.png",
-            localised_description = { "item-description.nav-beacon"},
+            localised_description = { "item-description.muluna-satellite-radar"},
             icon_size = 64,
             stack_size = 10,
         }
@@ -40,7 +40,7 @@ if settings.startup["enable-nav-beacon"].value == true then
     local navBeaconEntity = util.merge({
         radarEntity,
         {
-            name = "nav-beacon",
+            name = "muluna-satellite-radar",
             subgroup = "space-platform",
             order = "q[nav-beacon]",
             module_slots=0,
@@ -49,14 +49,14 @@ if settings.startup["enable-nav-beacon"].value == true then
             supply_area_distance = 0,
             selection_box = flib_bounding_box.resize(radarEntity.selection_box,3),
             collision_box = flib_bounding_box.resize(radarEntity.collision_box,3),
-            minable = { mining_time = 2, result = "nav-beacon" },
-            fast_replaceable_group = "nav-beacon",
+            minable = { mining_time = 2, result = "muluna-satellite-radar" },
+            fast_replaceable_group = "muluna-satellite-radar",
             energy_per_sector = "1TJ",
             
             --max_distance_of_sector_revealed = 1,
             --max_distance_of_nearby_sector_revealed = 15,
             energy_per_nearby_scan = "1kJ",
-            localised_description = { "entity-description.nav-beacon"},
+            localised_description = { "entity-description.muluna-satellite-radar"},
             energy_source =
             {
                 type = "electric",
@@ -107,7 +107,7 @@ if settings.startup["enable-nav-beacon"].value == true then
             }
     local navBeaconEntity_Platform = table.deepcopy(navBeaconEntity)
     navBeaconEntity_Platform.name = navBeaconEntity_Platform.name .. "-platform"
-    navBeaconEntity_Platform.localised_name = { "entity-name.nav-beacon" }
+    navBeaconEntity_Platform.localised_name = { "entity-name.muluna-satellite-radar" }
     navBeaconEntity_Platform.energy_usage = settings.startup["platform-power-consumption"].value .. "MW"
 
     -- local navBeaconEntity_Planet = table.deepcopy(navBeaconEntity)
@@ -123,7 +123,7 @@ if settings.startup["enable-nav-beacon"].value == true then
     local navBeaconRecipe = util.merge({
         radarRecipe,
         {
-            name = "nav-beacon",
+            name = "muluna-satellite-radar",
             subgroup = "space-platform",
             order = "q[nav-beacon]",
             energy_required = 20,
@@ -136,7 +136,7 @@ if settings.startup["enable-nav-beacon"].value == true then
                 { type = "item", name = "tungsten-plate",          amount = 100 },
                 { type = "item", name = "aluminum-plate",          amount = 100 },
             },
-            results = { { type = "item", name = "nav-beacon", amount = 1 } },
+            results = { { type = "item", name = "muluna-satellite-radar", amount = 1 } },
         }
     })
 
@@ -148,14 +148,14 @@ if settings.startup["enable-nav-beacon"].value == true then
     local navBeaconTech = util.merge({
         radarTech,
         {
-            name = "nav-beacon",
-            localised_name = {"entity-name.nav-beacon"},
-            localised_description={"entity-description.nav-beacon"},
+            name = "muluna-satellite-radar",
+            localised_name = {"entity-name.muluna-satellite-radar"},
+            localised_description={"entity-description.muluna-satellite-radar"},
             effects =
             {
                 {
                     type = "unlock-recipe",
-                    recipe = "nav-beacon"
+                    recipe = "muluna-satellite-radar"
                 }
             },
             prerequisites = { "radar", "effect-transmission", "interstellar-science-pack","artillery"},

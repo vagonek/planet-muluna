@@ -121,7 +121,7 @@ local function built_nav_beacon(entity)
             raise_destroy = false
         })
         local nav = surface.create_entity({
-            name = "nav-beacon",
+            name = "muluna-satellite-radar",
             position = position,
             force = force,
             raise_built = false,
@@ -163,7 +163,7 @@ script.on_event(defines.events.on_space_platform_changed_state, function(e)
 end)
 
 local filter_built = {
-    {filter = "name", name = "nav-beacon"},
+    {filter = "name", name = "muluna-satellite-radar"},
     {filter = "name", name = "nav-beacon-platform"},
     {filter = "name", name = "nav-beacon-planet"},
 }
@@ -206,7 +206,7 @@ script.on_event(defines.events.on_tick, function(event)
                                     navSat = beacon
                                     if display_beacon_alert then
                                         player.add_custom_alert(beacon,
-                                            {type = "item", name = "nav-beacon"},
+                                            {type = "item", name = "muluna-satellite-radar"},
                                             {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}},
                                             false
                                         )
@@ -244,7 +244,7 @@ script.on_event(defines.events.on_tick, function(event)
                 end
                 --end
             else
-                player.remove_alert{type = defines.alert_type.custom, icon = {type = "item", name = "nav-beacon"},message = {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}}}
+                player.remove_alert{type = defines.alert_type.custom, icon = {type = "item", name = "muluna-satellite-radar"},message = {"alert.nav-beacon-available",{"space-location-name."..player.surface.name}}}
             end
         end
     end
