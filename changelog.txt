@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.42.6
+Date: 2025-05-11
+  Compatibility:
+    - Changed internal name of nav-beacon to mulun-satellite-radar.
+    - Changed internal name of nav-beacon to muluna-satellite-radar.
+    - Rolled back incompatibility with the Navigation Beacon mod.
+---------------------------------------------------------------------------------------------------
 Version: 1.42.5
 Date: 2025-05-11
   Locale:
