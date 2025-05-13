@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.42.7
+Date: 2025-05-13
+  Locale:
+    - Added locale for Helium entity https://github.com/nicholasgower/planet-muluna/issues/182 https://github.com/devdot/dqol-resource-monitor/issues/19
+---------------------------------------------------------------------------------------------------
 Version: 1.42.6
 Date: 2025-05-11
   Compatibility:
