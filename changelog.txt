@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.42.8
+Date: 2025-05-14
+  Balancing:
+    - Increased weight of Crusher 2 be be twice that of Crusher 1.
+  Bugfixes:
+    - Adjusted order of greenhouse items. https://github.com/nicholasgower/planet-muluna/issues/183
+---------------------------------------------------------------------------------------------------
 Version: 1.42.7
 Date: 2025-05-13
   Locale:

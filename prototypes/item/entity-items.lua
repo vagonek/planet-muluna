@@ -17,6 +17,7 @@ crusher_2.place_result = "crusher-2"
 crusher_2.icon = "__muluna-graphics__/graphics/icons/crusher-2.png"
 crusher_2.localised_name = {"",{"item-name.crusher"}," 2"}
 crusher_2.order = "cb[crusher-2]"
+crusher_2.weight = crusher_2.weight*2
 --local crusher_2=nil
 if data.raw["lab"]["biolab"] then
     local cryolab=table.deepcopy(data.raw["item"]["biolab"])
@@ -72,7 +73,7 @@ local greenhouse = util.merge{table.deepcopy(data.raw["item"]["chemical-plant"])
         icon_size = 64,
         --place_result = "muluna-greenhouse",
         subgroup = "agriculture",
-        order = "a[agricultural-tower]-c[muluna-greenhouse]",
+        order = "az-[muluna-greenhouse]",
         default_import_location = "muluna",
     }
     
@@ -98,7 +99,7 @@ local greenhouse_wood = util.merge{table.deepcopy(data.raw["item"]["chemical-pla
         },
         subgroup = "agriculture",
         place_result = "muluna-greenhouse-wood",
-        order = "a[agricultural-tower]-ca[muluna-greenhouse]",
+        order = "az-[muluna-greenhouse]-a[muluna-greenhouse-wood]",
         default_import_location = "muluna",
     }
     
